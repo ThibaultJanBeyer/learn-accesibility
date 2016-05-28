@@ -1,0 +1,20 @@
+@mixin layout-constraint {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $content-max-width;
+  padding-left: $gutter--medium;
+  padding-right: $gutter--medium;
+  width: 100%;
+}
+
+@mixin layout-constraint--narrow {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $content-max-width--narrow;
+  width: 100%;
+
+  @include media('<xlarge') {
+    padding-left: $gutter--medium;
+    padding-right: $gutter--medium;
+  }
+}

@@ -1,0 +1,10 @@
+// KERNING
+html, body {
+  color: #333;
+  -moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings: "liga" 1, "kern" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1, kern=1";
+	font-kerning: normal;
+}

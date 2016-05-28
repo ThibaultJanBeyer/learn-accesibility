@@ -1,0 +1,22 @@
+@mixin heading-alpha {
+  @include font-size-responsive($alpha);
+  font-weight: bold;
+  line-height: $line-height--small;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin heading-beta {
+  @include font-size-responsive($beta);
+  font-weight: bold;
+  line-height: $line-height--small;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin teaser-heading {
+  color: $primary;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: $line-height--small;
+  margin-bottom: $gutter--small;
+  -webkit-font-smoothing: antialiased;
+}

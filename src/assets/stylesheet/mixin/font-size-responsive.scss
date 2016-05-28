@@ -1,0 +1,7 @@
+@mixin font-size-responsive($sizes: $gamma) {
+  font-size: nth($sizes, 1) * 1px;
+
+  @include media('>medium') {
+    font-size: nth($sizes, 2) * 1px;
+  }
+}

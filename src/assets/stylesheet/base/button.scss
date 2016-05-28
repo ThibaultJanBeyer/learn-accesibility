@@ -1,0 +1,13 @@
+/**
+ * This is a reset base for further formatting our buttons with modifiers to look either like buttons or text links.
+ */
+.button {
+  font-size: 16px; // temp, has to be resetted to be responsive
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  padding: 0;
+  text-decoration: none;
+}

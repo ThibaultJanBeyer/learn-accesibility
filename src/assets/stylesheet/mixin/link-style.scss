@@ -1,0 +1,32 @@
+/**
+ * Link styles on light background.
+ */
+@mixin link-styles {
+  color: $primary;
+  text-decoration: none;
+
+  &:visited {
+    color: $primary;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Link styles on dark background.
+ */
+@mixin link-styles-alt {
+  color: $white;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
