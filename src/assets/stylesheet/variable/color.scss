@@ -1,14 +1,45 @@
-//Tibo’s Black	CMYK	10% 40% 70% 100%
-//				RGB		25,0,0
-//				HEX		#190000
 $black: #190000;
 
-//Tibo’s Red 		CMYK	3% 93,5% 98% 0%
-//				RGB		231,55,39
-//				HEX		#E73627
-$red: #E73627;
+/*
+ * Blue
+ */
+$blue: #177CCE;
+$off-blue: #115D9B;
+$dark-blue: #0D4574;
 
-//Whites:			CMYK	4% 3% 3% 0%
-//				RGB		242,242,242
-//				HEX		#f2f2f2
-$white: #f2f2f2; 
+/*
+ * grey
+ */
+$grey: #A2A2A2;
+$off-grey: #8B8B8B;
+$dark-grey: #6A6A6A;
+
+/*
+ * green
+ */
+$green: #B8E986;
+
+/*
+ * yellow
+ */
+$yellow: #FCE57B;
+$off-yellow: #BBA852;
+$dark-yellow: #84793F;
+
+/*
+ * White
+ */
+$white: #f6f6f6;
+
+/*
+ * Themes
+ */
+$visual-main: $blue;
+$visual-off: $off-blue;
+$visual-dark: $dark-blue;
+$audio-main: $grey;
+$audio-off: $off-grey;
+$audio-dark: $dark-grey;
+$cognitive-main: $yellow;
+$cognitive-off: $off-yellow;
+$cognitive-dark: $dark-yellow;

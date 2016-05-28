@@ -1,0 +1,48 @@
+.welcome {
+  height: 100%;
+  width: 100%;
+}
+
+.welcome__title {
+  @include heading;
+  @include vertical-rhythm;
+  text-align: center;
+  display: block;
+}
+
+.welcome__cards {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.welcome__card {
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0,0,0,.2);
+  height: 320px;
+  margin: 40px;
+  text-align: center;
+  width: 320px;
+}
+
+.welcome__card--visual {
+  background-color: $visual-main;
+  color: $visual-dark;
+}
+
+.welcome__card--audio {
+  background-color: $audio-main;
+  color: $audio-dark;
+}
+
+.welcome__card--cognitive {
+  background-color: $cognitive-main;
+  color: $cognitive-dark;
+}
+
+.welcome__cathegory {
+  @include font-size-responsive;
+  text-transform: uppercase;
+}

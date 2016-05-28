@@ -1,12 +1,5 @@
-@mixin heading-alpha {
-  @include font-size-responsive($alpha);
-  font-weight: bold;
-  line-height: $line-height--small;
-  -webkit-font-smoothing: antialiased;
-}
-
-@mixin heading-beta {
-  @include font-size-responsive($beta);
+@mixin heading($size: $mega) {
+  @include font-size-responsive($size);
   font-weight: bold;
   line-height: $line-height--small;
   -webkit-font-smoothing: antialiased;
