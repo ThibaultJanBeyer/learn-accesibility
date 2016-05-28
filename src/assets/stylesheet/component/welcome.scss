@@ -1,5 +1,5 @@
-$soft-black: rgba(0, 0, 0, 0.25);
-$sublte-black: rgba(0, 0, 0, 0.15);
+$soft-shadow: rgba(0, 0, 0, 0.25);
+$sublte-shadow: rgba(0, 0, 0, 0.15);
 
 .welcome {
   height: 100%;
@@ -10,24 +10,29 @@ $sublte-black: rgba(0, 0, 0, 0.15);
   @include heading;
   @include vertical-rhythm;
   color: $grey;
-  display: block;
   text-align: center;
   text-transform: lowercase;
+
+  @include media('>small') {
+    padding-top: 100px;
+  }
+}
+
+/*
+ * 1. Better optical vertical centering
+ */
+.welcome__container {
+  height: calc(85% - 300px); /* 1. */
 }
 
 .welcome__cards {
-  align-items: center;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: auto;
 }
 
 .welcome__card {
-  border-radius: 5px;
-  box-shadow: 0 10px 15px $soft-black;
+  box-shadow: 0 10px 15px $soft-shadow;
   height: 320px;
-  margin: 40px;
   text-align: center;
   width: 320px;
   transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
@@ -36,7 +41,12 @@ $sublte-black: rgba(0, 0, 0, 0.15);
   &:focus,
   &:active {
     transform: scale(1.05, 1.05);
-    box-shadow: 0 15px 20px $sublte-black;
+    box-shadow: 0 15px 20px $sublte-shadow;
+  }
+
+  @include media('>small') {
+    margin: 40px;
+    border-radius: 5px;
   }
 }
 
@@ -55,14 +65,20 @@ $sublte-black: rgba(0, 0, 0, 0.15);
   color: $cognitive-dark;
 }
 
+/*
+ * 1. Visually center svg in card
+ */
 .welcome__svg {
   height: 100px;
   width: 200px;
-  margin-top: 40px;
+  margin-top: 40px; /* 1. */
 }
 
+/*
+ * 1. Visually lower text
+ */
 .welcome__cathegory {
   @include font-size-responsive;
   text-transform: lowercase;
-  margin-top: 50px;
+  margin-top: 50px; /* 1. */
 }
