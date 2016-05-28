@@ -1,6 +1,7 @@
-@mixin heading($size: $mega) {
+@mixin heading($size: $mega, $family: $secondary-family, $weight: $secondary-weight) {
   @include font-size-responsive($size);
-  font-weight: bold;
+  font-family: $family;
+  font-weight: $weight;
   line-height: $line-height--small;
   -webkit-font-smoothing: antialiased;
 }

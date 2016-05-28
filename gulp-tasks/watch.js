@@ -10,8 +10,8 @@ module.exports = function () {
     gulp.watch('./src/data.json', ['html']).on('change', log),
     gulp.watch('./src/assets/svg/**/*.svg', ['svg']).on('change', log),
     gulp.watch('./src/assets/img/**/*.+(jpg|jpeg|gif|png)', ['img']).on('change', log),
-    gulp.watch('./src/assets/stylesheet/**/*.scss', ['sass']).on('change', log),
-    gulp.watch('./src/assets/javascript/**/*.js', ['javascript']).on('change', log)
+    gulp.watch('./src/assets/stylesheet/**/*.scss', ['sass', 'stylechecker']).on('change', log),
+    gulp.watch('./src/assets/javascript/**/*.js', ['javascript', 'stylechecker']).on('change', log)
   ];
   // When running this task via an npm script (i.e. `watch:sass` in package.json),
   // Ctrl+C no longer properly kills the watcher. This is a workaround to pass

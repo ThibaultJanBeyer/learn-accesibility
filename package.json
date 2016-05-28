@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "babel-preset-es2015": "*",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "*",
     "gulp-babel": "*",
     "gulp-clean": "*",
@@ -26,7 +27,8 @@
     "gulp-size": "*",
     "gulp-svg-sprite": "*",
     "gulp-uglify": "*",
-    "jshint-stylish": "^2.2.0"
+    "jshint-stylish": "^2.2.0",
+    "merge-stream": "^1.0.0"
   },
   "repository": {
     "type": "git",

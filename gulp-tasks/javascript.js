@@ -2,8 +2,6 @@ var gulp = require('gulp');
 var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
-var jshint = require('gulp-jshint');
-var jscs = require('gulp-jscs');
 var uglify = require('gulp-uglify');
 var size = require('gulp-size');
 
@@ -18,9 +16,6 @@ module.exports = function () {
         this.emit('end');
       }
     }))
-    .pipe(jscs())
-    .pipe(jshint({ esnext: true }))
-    .pipe(jshint.reporter('jshint-stylish'))
     .pipe(babel({ presets: ['es2015'] }))
     .pipe(concat('bundle.js'))
     .pipe(uglify())

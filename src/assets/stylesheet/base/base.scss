@@ -1,14 +1,11 @@
 /*
- * Fonts
- */
-@import url(https://fonts.googleapis.com/css?family=Fira+Sans:700;400);
-
-/*
  * Body
  */
-html, body, main {
-	height: 100%;
-	width: 100%;
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
 }
 
 /*
@@ -16,25 +13,24 @@ html, body, main {
  */
 .copy {
   -moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
-	font-variant-ligatures: common-ligatures;
-	font-feature-settings: "liga" 1, "kern" 1, "dlig" 1;
-  -moz-font-feature-settings: "liga=1, dlig=1, kern=1";
-	font-kerning: normal;
+  font-feature-settings: 'liga' 1, 'kern' 1, 'dlig' 1;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
 }
 
 /*
  * screen readers only (accessibility)
  */
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 
