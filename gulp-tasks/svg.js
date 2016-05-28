@@ -3,7 +3,7 @@ var imagemin = require('gulp-imagemin');
 var svgSprite = require('gulp-svg-sprite');
 var size = require('gulp-size');
 
-var svgSrc = './src/assets/svg/*.svg',
+var svgSrc = './src/assets/svg/**/*.svg',
     svgDst = './dist/assets/svg/';
 
 var svgOptions = {
@@ -19,10 +19,10 @@ var options = {
     xmlDeclaration: false
   },
   mode: {
-    symbol: {
-      dest: '',
-      sprite: 'sprite.svg'
-    }
+    stack: {
+        dest: '',
+        sprite: 'sprite.svg'
+      }
   }
 };
 

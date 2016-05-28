@@ -1,4 +1,5 @@
-$soft-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+$soft-black: rgba(0, 0, 0, 0.25);
+$sublte-black: rgba(0, 0, 0, 0.15);
 
 .welcome {
   height: 100%;
@@ -24,11 +25,19 @@ $soft-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 
 .welcome__card {
   border-radius: 5px;
-  box-shadow: $soft-shadow;
+  box-shadow: 0 10px 15px $soft-black;
   height: 320px;
   margin: 40px;
   text-align: center;
   width: 320px;
+  transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 15px 20px $sublte-black;
+  }
 }
 
 .welcome__card--visual {
@@ -46,7 +55,14 @@ $soft-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   color: $cognitive-dark;
 }
 
+.welcome__svg {
+  height: 100px;
+  width: 200px;
+  margin-top: 40px;
+}
+
 .welcome__cathegory {
   @include font-size-responsive;
   text-transform: lowercase;
+  margin-top: 50px;
 }
