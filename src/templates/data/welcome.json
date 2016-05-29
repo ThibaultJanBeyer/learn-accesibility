@@ -1,6 +1,7 @@
 {
   "welcome": {
-      "title": "Learn Accessibility",
+      "title_a": "Learn",
+      "title_b": "Accessibility",
       "visual": {
         "title": "visual accessibility",
         "description": "image of an eye"

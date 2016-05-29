@@ -14,7 +14,7 @@ $sublte-shadow: rgba(0, 0, 0, 0.15);
   text-transform: lowercase;
 
   @include media('>small') {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
 
@@ -45,8 +45,25 @@ $sublte-shadow: rgba(0, 0, 0, 0.15);
   &:hover,
   &:focus,
   &:active {
-    transform: scale(1.05, 1.05);
     box-shadow: 0 15px 20px $sublte-shadow;
+    transform: scale(1.05, 1.05);
+  }
+}
+
+/*
+ * 1. Overwrite normal focus behaviour
+ */
+.welcome__card--out {
+  box-shadow: 0;
+  position: relative;
+  transform: scale(10, 10);
+  z-index: 1;
+
+  &:hover,
+  &:focus,
+  &:active { /* 1. */
+    box-shadow: 0;
+    transform: scale(10, 10);
   }
 }
 

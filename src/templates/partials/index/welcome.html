@@ -1,41 +1,56 @@
 <!-- welcome nunjuck -->
 
 <section id="welcome" class="section welcome">
-  <h1 class="welcome__title copy">{{ welcome.title }}</h1>
+  <h1 class="welcome__title copy">
+    <span class="fly__container"><span class="fly--out">{{ welcome.title_a }}</span></span> 
+    <span class="fly__container"><span class="fly--out">{{ welcome.title_b }}</span></span>
+  </h1>
 
   <div class="welcome__container center-align">
     <div class="welcome__cards center-align">
 
-      <a href="#" class="welcome__card welcome__card--visual center-align">
+      <a href="#" class="welcome__card welcome__card--visual center-align fly">
         <div>
-          <svg class="welcome__svg" aria-labelledby="title desc" role="img">
-            <title id="title">{{ welcome.visual.title }}</title>
-            <desc id="desc">{{ welcome.visual.description }}</desc>
-            <use role="presentation" xlink:href="assets/svg/sprite.svg#visual-small"></use>
-          </svg>
-          <h2 class="welcome__cathegory copy">{{ welcome.subtitle.visual }}</h2>
+          <span class="fly__container fly__container--fullwidth">
+            <svg class="welcome__svg fly--out fly--in" aria-labelledby="title desc" role="img">
+              <title id="title">{{ welcome.visual.title }}</title>
+              <desc id="desc">{{ welcome.visual.description }}</desc>
+              <use role="presentation" xlink:href="assets/svg/sprite.svg#visual-small"></use>
+            </svg>
+          </span>
+          <span class="fly__container">
+            <h2 class="welcome__cathegory copy fly--out fly--in">{{ welcome.subtitle.visual }}</h2>
+          </span>
         </div>
       </a>
 
-      <a href="#" class="welcome__card welcome__card--audio center-align">
+      <a href="#" class="welcome__card welcome__card--audio center-align fly">
         <div>
-          <svg class="welcome__svg" aria-labelledby="title desc" role="img">
-            <title id="title">{{ welcome.audio.title }}</title>
-            <desc id="desc">{{ welcome.audio.description }}</desc>
-            <use role="presentation" xlink:href="assets/svg/sprite.svg#audio-small"></use>
-          </svg>
-          <h2 class="welcome__cathegory copy">{{ welcome.subtitle.audio }}</h2>
+          <span class="fly__container fly__container--fullwidth">
+            <svg class="welcome__svg fly--out fly--in" aria-labelledby="title desc" role="img">
+              <title id="title">{{ welcome.audio.title }}</title>
+              <desc id="desc">{{ welcome.audio.description }}</desc>
+              <use role="presentation" xlink:href="assets/svg/sprite.svg#audio-small"></use>
+            </svg>
+          </span>
+          <span class="fly__container">
+            <h2 class="welcome__cathegory copy fly--out fly--in">{{ welcome.subtitle.audio }}</h2>
+          </span>
         </div>
       </a>
 
-      <a href="#" class="welcome__card welcome__card--cognitive center-align">
+      <a href="#" class="welcome__card welcome__card--cognitive center-align fly">
         <div>
-          <svg class="welcome__svg" aria-labelledby="title desc" role="img">
-            <title id="title">{{ welcome.cognitive.title }}</title>
-            <desc id="desc">{{ welcome.cognitive.description }}</desc>
-            <use role="presentation" xlink:href="assets/svg/sprite.svg#cognitive-small"></use>
-          </svg>
-          <h2 class="welcome__cathegory copy">{{ welcome.subtitle.cognitive }}</h2>
+          <span class="fly__container fly__container--fullwidth">
+            <svg class="welcome__svg fly--out fly--in" aria-labelledby="title desc" role="img">
+              <title id="title">{{ welcome.cognitive.title }}</title>
+              <desc id="desc">{{ welcome.cognitive.description }}</desc>
+              <use role="presentation" xlink:href="assets/svg/sprite.svg#cognitive-small"></use>
+            </svg>
+          </span>
+          <span class="fly__container">
+            <h2 class="welcome__cathegory copy fly--out fly--in">{{ welcome.subtitle.cognitive }}</h2>
+          </span>
         </div>
       </a>
 

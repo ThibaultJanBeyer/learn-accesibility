@@ -1,0 +1,34 @@
+/**
+ * Core fly
+ * via http://codepen.io/ThibaultJanBeyer/pen/beGbaR
+ **/
+
+/*
+ * 1. set container size to text content size
+ * 2. Hide all overflow
+ */
+.fly__container {
+  display: inline-block; /* 1. */
+  overflow: hidden; /* 2 */
+}
+
+.fly__container--fullwidth {
+  width: 100%;
+}
+
+/*
+ * 1. Overflow Content
+ */
+.fly--out {
+  transform: translateY(110%); /* 1. */
+  transition: transform 0.7s ease-out;
+  display: inline-block;
+}
+
+/*
+ * 1. Reset original content position
+ */
+.fly--in {
+  transform: translateY(0); /* 1. */
+  transition: transform 0.7s ease-out;
+}
