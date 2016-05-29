@@ -20,6 +20,7 @@
     "gulp-imagemin": "*",
     "gulp-jscs": "^3.0.2",
     "gulp-jshint": "*",
+    "gulp-merge-json": "^0.4.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-plumber": "*",
     "gulp-sass": "*",

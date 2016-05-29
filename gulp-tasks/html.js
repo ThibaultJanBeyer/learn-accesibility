@@ -6,13 +6,17 @@ var htmlmin = require('gulp-htmlmin');
 var plumber = require('gulp-plumber');
 var size = require('gulp-size');
 var fs = require('fs');
+var merge = require('gulp-merge-json');
 
 var htmlSrc = './src/pages/**/*.+(html|nunjucks)',
     htmlDst = './dist';
     
 var getJsonData = function() {
-  //return require('./src/data.json');
-  return JSON.parse(fs.readFileSync('./src/data.json'));
+  gulp.src('./src/templates/data/**/*.json')
+      .pipe(merge('combined.json'))
+      .pipe(gulp.dest('./src/templates/'));
+
+  return JSON.parse( fs.readFileSync('./src/templates/combined.json') );
 };
 
 var htmlminOptions = {

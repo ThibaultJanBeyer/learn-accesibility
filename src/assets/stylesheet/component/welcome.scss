@@ -37,16 +37,16 @@ $sublte-shadow: rgba(0, 0, 0, 0.15);
   width: 320px;
   transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
 
+  @include media('>small') {
+    margin: 40px;
+    border-radius: 5px;
+  }
+
   &:hover,
   &:focus,
   &:active {
     transform: scale(1.05, 1.05);
     box-shadow: 0 15px 20px $sublte-shadow;
-  }
-
-  @include media('>small') {
-    margin: 40px;
-    border-radius: 5px;
   }
 }
 

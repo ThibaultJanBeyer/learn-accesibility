@@ -1,7 +1,7 @@
 <!-- welcome nunjuck -->
 
 <section id="welcome" class="section welcome">
-  <h1 class="welcome__title copy">Learn Accessibility</h1>
+  <h1 class="welcome__title copy">{{ welcome.title }}</h1>
 
   <div class="welcome__container center-align">
     <div class="welcome__cards center-align">
@@ -9,33 +9,33 @@
       <a href="#" class="welcome__card welcome__card--visual center-align">
         <div>
           <svg class="welcome__svg" aria-labelledby="title desc" role="img">
-            <title id="title">TODO</title>
-            <desc id="desc">TODO</desc>
+            <title id="title">{{ welcome.visual.title }}</title>
+            <desc id="desc">{{ welcome.visual.description }}</desc>
             <use role="presentation" xlink:href="assets/svg/sprite.svg#visual-small"></use>
           </svg>
-          <h2 class="welcome__cathegory copy">Visual</h2>
+          <h2 class="welcome__cathegory copy">{{ welcome.subtitle.visual }}</h2>
         </div>
       </a>
 
       <a href="#" class="welcome__card welcome__card--audio center-align">
         <div>
           <svg class="welcome__svg" aria-labelledby="title desc" role="img">
-            <title id="title">TODO</title>
-            <desc id="desc">TODO</desc>
+            <title id="title">{{ welcome.audio.title }}</title>
+            <desc id="desc">{{ welcome.audio.description }}</desc>
             <use role="presentation" xlink:href="assets/svg/sprite.svg#audio-small"></use>
           </svg>
-          <h2 class="welcome__cathegory copy">Color & Audio</h2>
+          <h2 class="welcome__cathegory copy">{{ welcome.subtitle.audio }}</h2>
         </div>
       </a>
 
       <a href="#" class="welcome__card welcome__card--cognitive center-align">
         <div>
           <svg class="welcome__svg" aria-labelledby="title desc" role="img">
-            <title id="title">TODO</title>
-            <desc id="desc">TODO</desc>
+            <title id="title">{{ welcome.cognitive.title }}</title>
+            <desc id="desc">{{ welcome.cognitive.description }}</desc>
             <use role="presentation" xlink:href="assets/svg/sprite.svg#cognitive-small"></use>
           </svg>
-          <h2 class="welcome__cathegory copy">Physical & Cognitive</h2>
+          <h2 class="welcome__cathegory copy">{{ welcome.subtitle.cognitive }}</h2>
         </div>
       </a>
 
