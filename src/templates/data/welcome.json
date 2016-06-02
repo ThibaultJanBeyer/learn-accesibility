@@ -1,23 +1,6 @@
 {
   "welcome": {
-      "title_a": "Learn",
-      "title_b": "Accessibility",
-      "visual": {
-        "title": "visual accessibility",
-        "description": "image of an eye"
-      },
-      "audio": {
-        "title": "color & audio accessibility",
-        "description": "image of an ear and an abstract half circle"
-      },
-      "cognitive": {
-        "title": "physical & cognitive accessibility",
-        "description": "image of a hand forming the peace sign the shape of a brain"
-      },
-      "subtitle": {
-        "visual": "visual",
-        "audio": "Color & Audio",
-        "cognitive": "Physical & Cognitive"
-      }
+      "text_1": "when you build",
+      "title_b": "Accessibility"
     }
 }

@@ -1,101 +1,59 @@
-$soft-shadow: rgba(0, 0, 0, 0.25);
-$sublte-shadow: rgba(0, 0, 0, 0.15);
-
 .welcome {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  background: $black;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .welcome__title {
-  @include heading;
-  @include vertical-rhythm;
-  color: $grey;
-  text-align: center;
-  text-transform: lowercase;
-
-  @include media('>small') {
-    padding-top: 80px;
-  }
+  @include heading($delta, $main-family, $main-weight);
+  color: $white;
+  margin: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-/*
- * 1. Better optical vertical centering
- */
-.welcome__container {
-  height: calc(85% - 300px); /* 1. */
-}
-
-.welcome__cards {
+.welcome__text {
+  @include heading($alpha);
+  color: $white;
+  width: 100%;
+  height: 100%;
   flex-wrap: wrap;
-  margin: auto;
 }
 
-.welcome__card {
-  box-shadow: 0 10px 15px $soft-shadow;
-  height: 320px;
+.welcome__text--special {
+  @include heading;
+  line-height: 0.5;
+}
+
+.welcome__wrapper {
+  width: 100%;
   text-align: center;
-  width: 320px;
-  transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
-
-  @include media('>small') {
-    margin: 40px;
-    border-radius: 5px;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    box-shadow: 0 15px 20px $sublte-shadow;
-    transform: scale(1.05, 1.05);
-  }
+  transition: opacity 1s 1s ease-out;
 }
 
-/*
- * 1. Overwrite normal focus behaviour
- */
-.welcome__card--out {
-  box-shadow: 0;
-  position: relative;
-  transform: scale(10, 10);
-  z-index: 1;
-
-  &:hover,
-  &:focus,
-  &:active { /* 1. */
-    box-shadow: 0;
-    transform: scale(10, 10);
-  }
+.welcome__button {
+  @include font-size-responsive($gamma);
+  color: $white;
 }
 
-.welcome__card--visual {
-  background-color: $visual-main;
-  color: $visual-dark;
+.welcome__button--skip {
+  @include font-size-responsive($delta);
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
-.welcome__card--audio {
-  background-color: $audio-main;
-  color: $audio-dark;
+.welcome__img-container {
+  width: 250px;
+  text-align: center;
 }
 
-.welcome__card--cognitive {
-  background-color: $cognitive-main;
-  color: $cognitive-dark;
+.welcome__img {
+  width: 150px;
+  margin: 50px;
+  margin-bottom: 0;
 }
 
-/*
- * 1. Visually center svg in card
- */
-.welcome__svg {
-  height: 100px;
-  width: 200px;
-  margin-top: 40px; /* 1. */
-}
-
-/*
- * 1. Visually lower text
- */
-.welcome__cathegory {
-  @include font-size-responsive;
-  text-transform: lowercase;
-  margin-top: 50px; /* 1. */
-}

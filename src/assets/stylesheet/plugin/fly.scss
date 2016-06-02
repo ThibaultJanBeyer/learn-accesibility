@@ -21,7 +21,7 @@
  */
 .fly--out {
   transform: translateY(110%); /* 1. */
-  transition: transform 0.7s ease-out;
+  transition: transform 1s ease-out;
   display: inline-block;
 }
 
@@ -30,5 +30,5 @@
  */
 .fly--in {
   transform: translateY(0); /* 1. */
-  transition: transform 0.7s ease-out;
+  transition: transform 1s ease-out;
 }

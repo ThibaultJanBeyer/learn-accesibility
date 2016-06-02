@@ -18,7 +18,7 @@ module.exports = function () {
     }))
     .pipe(babel({ presets: ['es2015'] }))
     .pipe(concat('bundle.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(size({title: 'JS'}))
     .pipe(gulp.dest(jsDst));
 };
