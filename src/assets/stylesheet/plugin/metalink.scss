@@ -1,5 +1,5 @@
 /* http://codepen.io/ThibaultJanBeyer/pen/vGprqE */
-/* 
+/*
  * 1. reset for normal link color in O-mini and old browsers
  * 2. increase distance of underline
  */
@@ -9,7 +9,7 @@
   background-size: 100% 220%;
   color: unset; /* 1. */
   text-decoration: none;
-  transition: background-position .1s ease-out, transform 1s ease-out;
+  transition: background-position 0.1s ease-out, transform 1s ease-out;
   padding-bottom: 3px; /* 2. */
 }
 

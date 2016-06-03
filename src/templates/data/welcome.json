@@ -1,6 +1,61 @@
 {
   "welcome": {
-      "text_1": "when you build",
-      "title_b": "Accessibility"
+      "title": "0. Why should you care?",
+      "screenReader": "Hello dear ScreenReader user, you are the best :)",
+      "skip": "skip intro to content",
+      "writings": [
+        {
+          "screenReader": "When you build a website or a webapp, you want it to be successfull. Right?",
+          "texts": [
+            "When you build a ",
+            "website",
+            "you want it to be",
+            "successfull",
+            "Right?"],
+          "button": "YES",
+          "img": "assets/img/wobble_success.gif"
+        },
+        {
+          "screenReader": "You want everyone to use it. Right?",
+          "texts": [
+            "You want ",
+            "everyone",
+            "to use it. Right?"],
+          "img": "assets/img/wobble_world.gif"
+        },
+        {
+          "screenReader": "So, why would you leave out eleven percent of the population?",
+          "texts": [
+            "So, why would you leave out ",
+            "around 11%",
+            "of the population?"],
+          "img": "assets/img/wobble_heartbreak.gif"
+        },
+        {
+          "screenReader": "Imagine increasing sales by eleven percent, while doing good. Neat right?",
+          "texts": [
+            "Imagine your",
+            "sales",
+            "increasing by 11% while",
+            "doing good",
+            "Neat. Right?"],
+          "img": "assets/img/wobble_money.gif"
+        },
+        {
+          "screenReader": "so...",
+          "texts": [
+            "&nbsp;",
+            "so..."]
+        },
+        {
+          "screenReader": "Open up your websites for the physically impaired. Make them accessible!",
+          "texts": [
+            "Open up your websites for the",
+            "physically impaired",
+            "make them",
+            "accessible!"],
+          "img": "assets/img/wobble_luv.gif"
+        }
+      ]
     }
 }

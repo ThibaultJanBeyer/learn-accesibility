@@ -11,9 +11,10 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
   var text = document.getElementsByClassName('welcome__text');
   var flyOut = document.getElementsByClassName('fly--out');
   var wText = [];
-  wText[0] = getChar(document.getElementsByClassName('writer__text--1'));
-  wText[1] = getChar(document.getElementsByClassName('writer__text--2'));
-  wText[2] = getChar(document.getElementsByClassName('writer__text--3'));
+
+  for (var i = 0; i < text.length; i++) {
+    wText[i] = getChar(document.getElementsByClassName('writer__text--' + (i + 1)));
+  }
 
   [].concat(_toConsumableArray(text)).forEach(function (el, i) {
     if (i !== 0) {
@@ -64,7 +65,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
           }, 1500);
         }, 500);
       }, true);
-    } else if (i >= 1) {
+    } else if (i >= 1 && i <= 8) {
       //add the next content block
       text[i].classList.remove('sr-only');
       //show the icon
@@ -72,11 +73,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         flyOut[cu].classList.add('fly--in');
       });
 
-      // writing second text
+      // writing text
       writeEach(wText[i], 0, wText[i].length - 1, function () {
         setTimeout(function () {
 
-          // deleting second text
+          // deleting text
           writeEach(wText[i], wText[i].length - 1, 0, function () {
             //when everything is deleted
             setTimeout(function () {

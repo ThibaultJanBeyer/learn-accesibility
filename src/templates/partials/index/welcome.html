@@ -2,68 +2,45 @@
 
 <section id="welcome" class="section welcome">
   <h1 class="welcome__title">
-      0. Why should you care?
+    {{ welcome.title }}
   </h1>
   <p class="sr-only">
-    Hello dear ScreenReader user, you are the best :)
+    {{ welcome.screenReader }}
   </p>
   <button role="button" class="button metalink metalink--alt welcome__button welcome__button--skip">
-    skip intro to content
+    {{ welcome.skip }}
   </button>
 
+  {% for writing in welcome.writings %}
+  {% set index = loop.index %}
   <div class="center-align welcome__text">
     <p class="sr-only">
-      When you build a website or a webapp, you want it to be successfull. Right?
+      {{ writing.screenReader }}
     </p>
     <p class="copy writer__text-container" aria-hidden="true" role="presentation">
-      <span class="writer__text--1">When you build a </span><br>
-      <span class="writer__text--1 welcome__text--special">website</span><br>
-      <span class="writer__text--1">you want it to be</span><br>
-      <span class="writer__text--1 welcome__text--special">successfull</span><br>
-      <span class="writer__text--1">Right?</span>
+    {% for text in writing.texts %}
+      {% if loop.index % 2 != 0 %}
+      <span class="writer__text--{{ index }}">{{ text | safe }}</span><br>
+      {% else %}
+      <span class="writer__text--{{ index }} welcome__text--special">{{ text | safe }}</span><br>
+      {% endif %}
+    {% endfor %}
     </p>
     <div class="welcome__img-container">
+      {% if writing.img %}
       <span class="fly__container">
-        <img src="assets/img/wobble_success.gif" aria-hidden="true" role="presentation" class="fly--out welcome__img">
+        <img src="{{ writing.img }}" aria-hidden="true" role="presentation" class="fly--out welcome__img">
       </span>
+      {% endif %}
+      {% if writing.button %}
       <span class="fly__container">
         <button aria-hidden="true" role="presentation"  class="button button--next metalink metalink--alt welcome__button fly--out">
-          YES
+          {{ writing.button }}
         </button>
       </span>
+      {% endif %}
     </div>
   </div>
-
-  <div class="center-align welcome__text">
-    <p class="sr-only" role="status">
-      You want everyone to use it. Right?
-    </p>
-    <p class="copy writer__text-container" aria-hidden="true" role="presentation">
-      <span class="writer__text--2">You want </span><br>
-      <span class="writer__text--2 welcome__text--special">everyone</span><br>
-      <span class="writer__text--2">to use it. Right?</span><br>
-    </p>
-    <div class="welcome__img-container">
-      <span class="fly__container">
-        <img src="assets/img/wobble_world.gif" aria-hidden="true" role="presentation" class="fly--out welcome__img">
-      </span>
-    </div>
-  </div>
-  
-  <div class="center-align welcome__text">
-    <p class="sr-only" role="status">
-      So, why would you leave out eleven percent of the population?
-    </p>
-    <p class="copy writer__text-container" aria-hidden="true" role="presentation">
-      <span class="writer__text--3">So, why would you leave out </span><br>
-      <span class="writer__text--3 welcome__text--special">around 11%</span><br>
-      <span class="writer__text--3">of the population?</span><br>
-    </p>
-    <div class="welcome__img-container">
-      <span class="fly__container">
-        <img src="assets/img/wobble_heartbreak.gif" aria-hidden="true" role="presentation" class="fly--out welcome__img">
-      </span>
-    </div>
-  </div>
+  {% endfor %}
 
 </section>
