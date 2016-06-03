@@ -14,9 +14,9 @@ gulp.task('stylechecker', require('./gulp-tasks/stylechecker'));
 gulp.task('watch', require('./gulp-tasks/watch'));
 
 // Globs
-gulp.task('build', ['html', 'sass', 'javascript', 'moving', 'svg', 'img', 'stylechecker']);
+//gulp.task('build', ['html', 'sass', 'javascript', 'moving', 'svg', 'img', 'stylechecker']);
 gulp.task('cln', ['clean']);
-gulp.task('devl', ['html', 'sass', 'javascript', 'moving', 'svg', 'watch', 'img', 'stylechecker']);
+gulp.task('build', ['html', 'sass', 'javascript', 'moving', 'svg', 'watch', 'img', 'stylechecker']);
 
 // Default task
-gulp.task('default', ['devl']);
+gulp.task('default', ['build']);
