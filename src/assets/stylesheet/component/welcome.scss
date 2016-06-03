@@ -1,26 +1,27 @@
 .welcome {
-  width: 100%;
-  height: 100%;
   background: $black;
-  overflow-y: auto;
+  height: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .welcome__title {
   @include heading($delta, $main-family, $main-weight);
   color: $white;
+  left: 0;
   margin: 10px;
   position: fixed;
   top: 0;
-  left: 0;
 }
 
 .welcome__text {
   @include heading($alpha);
   color: $white;
-  width: 100%;
-  height: 100%;
   flex-wrap: wrap;
+  height: 100%;
+  text-shadow: 0 0 15px black;
+  width: 100%;
 }
 
 .welcome__text--special {
@@ -29,9 +30,9 @@
 }
 
 .welcome__wrapper {
-  width: 100%;
   text-align: center;
   transition: opacity 1s 1s ease-out;
+  width: 100%;
 }
 
 .welcome__button {
@@ -41,19 +42,19 @@
 
 .welcome__button--skip {
   @include font-size-responsive($delta);
-  position: fixed;
   bottom: 0;
+  position: fixed;
   right: 0;
 }
 
 .welcome__img-container {
-  width: 250px;
   text-align: center;
+  width: 250px;
 }
 
 .welcome__img {
-  width: 150px;
-  margin: 50px;
   margin-bottom: 0;
+  margin: 50px;
+  width: 150px;
 }
 
