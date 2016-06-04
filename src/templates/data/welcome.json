@@ -2,15 +2,15 @@
   "welcome": {
       "title": "0. Why should you care?",
       "screenReader": "Hello dear ScreenReader user, you are the best :)",
-      "skip": "skip intro to content",
+      "skip": "skip intro",
       "writings": [
         {
           "screenReader": "When you build a website or a webapp, you want it to be successfull. Right?",
           "texts": [
-            "When you build a ",
-            "website",
+            "When you build a",
+            "website,",
             "you want it to be",
-            "successfull",
+            "successfull.",
             "Right?"],
           "button": "YES",
           "img": "assets/img/wobble_success.gif"
@@ -18,15 +18,15 @@
         {
           "screenReader": "You want everyone to use it. Right?",
           "texts": [
-            "You want ",
+            "You want",
             "everyone",
             "to use it. Right?"],
           "img": "assets/img/wobble_world.gif"
         },
         {
-          "screenReader": "So, why would you leave out eleven percent of the population?",
+          "screenReader": "Then, why would you leave out eleven percent of the population?",
           "texts": [
-            "So, why would you leave out ",
+            "Then, why would you leave out",
             "around 11%",
             "of the population?"],
           "img": "assets/img/wobble_heartbreak.gif"
@@ -34,27 +34,44 @@
         {
           "screenReader": "Imagine increasing sales by eleven percent, while doing good. Neat right?",
           "texts": [
-            "Imagine your",
-            "sales",
-            "increasing by 11% while",
-            "doing good",
-            "Neat. Right?"],
+            "Imagine your sales",
+            "increasing",
+            "by 11% while doing",
+            "good..."],
           "img": "assets/img/wobble_money.gif"
         },
         {
           "screenReader": "so...",
           "texts": [
-            "&nbsp;",
-            "so..."]
+            ".......",
+            "So..."]
         },
         {
           "screenReader": "Open up your websites for the physically impaired. Make them accessible!",
           "texts": [
-            "Open up your websites for the",
-            "physically impaired",
-            "make them",
-            "accessible!"],
+            "Open up your website.",
+            "Make it",
+            "accessible for",
+            "everyone!"],
           "img": "assets/img/wobble_luv.gif"
+        },
+        {
+          "screenReader": "It is not difficult, nor will it cost a fortune. You have no excuse.",
+          "texts": [
+            "It’s not difficult & it will",
+            "not cost",
+            "a fortune. You have",
+            "no excuse."],
+          "img": "assets/img/wobble_excuse.gif"
+        },
+        {
+          "screenReader": "Accessibility is like opening your door to everyone.",
+          "texts": [
+            "Accessibility is just like",
+            "opening",
+            "your door."],
+          "img": "assets/img/wobble_door-0.gif",
+          "last": "true"
         }
       ]
     }

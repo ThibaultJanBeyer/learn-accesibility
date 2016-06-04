@@ -5,13 +5,15 @@
  *
  * @param  [array] to be looped
  * 
- * @param  pos: Integer,            the starting index position in the array (usually starts at 0)
+ * @param  {integer} pos            the starting index position in the array (usually starts at 0)
  * 
- * @param  end: Integer,            how many times should it loop
+ * @param  {integer} end            how many times should it loop
  * 
  * @param  {Function} callback      This is what should happen when the run is over
  * 
- * @param  del: true/false          choose if it should write text or delete text
+ * @param  {boolean} del            choose if it should write text or delete text
+ * 
+ * @param  {boolean} splitter        do you want to split each character?
  * 
  * 
  * example:
@@ -26,14 +28,21 @@
  * });
  */
 // write each function that writes each element in an array one by one
-function writeEach(arr, pos, end, callback, del) {
+function writeEach(arr, pos, end, callback, del, splitter) {
   if(!del){
     //it loops through each character of the current element position in array 
     myLoop({ cd: arr[pos].char.length -1, dur: 100, cu: 0 }, (cd, dur, cu) => {
       //writes each char
-      arr[pos].el.innerHTML += arr[pos].char[cu];
+      if(!splitter) {
+        arr[pos].el.innerHTML += arr[pos].char[cu];
+      } else {
+        //handle spaces
+        if(arr[pos].char[cu] === ' ') { arr[pos].char[cu] = '&nbsp'; }
+        //write with splitter spanners
+        arr[pos].el.innerHTML += '<span class="wcc"><span class="wc">' + arr[pos].char[cu] + '</span></span>';
+      }
       //run the loop again but with the next position in array 
-      if(cd === 0 && pos < end) { writeEach(arr, ++pos, end, callback); }
+      if(cd === 0 && pos < end) { writeEach(arr, ++pos, end, callback, del, splitter); }
     });
   } else {
     myLoop({ cd: arr[pos].text.length -1, dur: 50, cu: 0 }, (cd, dur, cu) => {

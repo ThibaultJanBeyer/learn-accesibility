@@ -20,7 +20,7 @@
     <p class="copy writer__text-container" aria-hidden="true" role="presentation">
     {% for text in writing.texts %}
       {% if loop.index % 2 != 0 %}
-      <span class="writer__text--{{ index }}">{{ text | safe }}</span><br>
+      <span class="writer__text--{{ index }} welcome__text--normal">{{ text | safe }}</span><br>
       {% else %}
       <span class="writer__text--{{ index }} welcome__text--special">{{ text | safe }}</span><br>
       {% endif %}
@@ -30,6 +30,10 @@
       {% if writing.img %}
       <span class="fly__container">
         <img src="{{ writing.img }}" aria-hidden="true" role="presentation" class="fly--out welcome__img">
+        {% if writing.last %}
+          <div class="welcome__target"></div>
+          <div class="lock--locker"></div>
+        {% endif %}
       </span>
       {% endif %}
       {% if writing.button %}

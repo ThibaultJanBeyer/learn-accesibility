@@ -20,8 +20,13 @@
   color: $white;
   flex-wrap: wrap;
   height: 100%;
+  margin-top: 30px;
   text-shadow: 0 0 15px $black;
   width: 100%;
+
+  @include media('>small') {
+    margin-top: 0;
+  }
 }
 
 .welcome__text--special {
@@ -42,9 +47,10 @@
 
 .welcome__button--skip {
   @include font-size-responsive($delta);
-  bottom: 0;
+  margin: 0 5px;
   position: fixed;
   right: 0;
+  top: 0;
 }
 
 .welcome__img-container {
@@ -53,8 +59,19 @@
 }
 
 .welcome__img {
-  padding-bottom: 0;
-  padding: 50px;
+  padding: 0 50px;
   width: 180px;
+  width: calc(80% - 100px);
+
+  @include media('>small') {
+    width: calc(100% - 100px);
+  }
 }
 
+.welcome__target {
+  position: absolute;
+  width: 10px;
+  margin-top: -160px;
+  margin-left: 130px;
+  height: 10px;
+}
