@@ -7,9 +7,9 @@
   <p class="sr-only">
     {{ welcome.screenReader }}
   </p>
-  <button role="button" class="button metalink metalink--alt welcome__button welcome__button--skip">
+  <a href="home.html" class="button metalink metalink--alt welcome__button welcome__button--skip">
     {{ welcome.skip }}
-  </button>
+  </a>
 
   {% for writing in welcome.writings %}
   {% set index = loop.index %}

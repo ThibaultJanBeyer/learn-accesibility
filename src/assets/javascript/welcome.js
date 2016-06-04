@@ -176,6 +176,10 @@
               // css to fade it in with full white
               let lock = document.getElementsByClassName('lock--locker')[0];
               lock.classList.add('lock--locked');
+              
+              setTimeout(function() {
+                document.getElementsByClassName('welcome__button--skip')[0].click();
+              }, 400);
             }, 3000);
           });
         }, 2000);

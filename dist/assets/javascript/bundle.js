@@ -184,6 +184,10 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
               // css to fade it in with full white
               var lock = document.getElementsByClassName('lock--locker')[0];
               lock.classList.add('lock--locked');
+
+              setTimeout(function () {
+                document.getElementsByClassName('welcome__button--skip')[0].click();
+              }, 400);
             }, 3000);
           });
         }, 2000);
