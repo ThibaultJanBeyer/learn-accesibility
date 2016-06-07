@@ -1,0 +1,233 @@
+$color: $secondary;
+$left: 47%;
+
+body {
+  font-family: sans-serif;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+/************************
+ * Animations infinites *
+ ************************/
+
+/*
+ * Number Trembling
+ */
+.tremble {
+  animation: tremble 0.1s infinite;
+}
+
+@keyframes tremble {
+  0% { margin-left: 0; }
+  50% { margin-left: 5px; }
+  100% { margin-left: 0; }
+}
+
+/*
+ * Objects
+ */
+.object {
+  border: 2px solid $color;
+  position: absolute;
+}
+
+.circle { border-radius: 50%; }
+.diamond { transform: rotate(45deg); }
+
+@for $i from 1 through 15 {
+  .circle:nth-child(#{$i}),
+  .square:nth-child(#{$i}),
+  .diamond:nth-child(#{$i}) {
+    $temp: random(100);
+    height: $temp + px;
+    left: 1% * random(90);
+    width: $temp + px;
+  }
+
+  .object:nth-child(#{$i}) {
+    animation-duration: 1050ms - ($i * 50);
+    animation-fill-mode: both;
+    animation-iteration-count: 8;
+    animation-name: flyUp--#{$i};
+    opacity: 0.08 * $i;
+  }
+
+  @keyframes flyUp--#{$i} {
+    0% { bottom: -10%; }
+    100% { bottom: 120%; }
+  }
+}
+
+/***********************
+ * Animations timeline *
+ ***********************/
+/*
+ * ~~ 1
+ * Fall (from outside to lower center)
+ * start: 2, dur: ~3sec
+ */
+@for $i from 1 through 10 {
+  .fall--#{$i} {
+    animation-delay: 2s;
+    animation-duration: 3s - ($i / 8);
+    animation-fill-mode: both;
+    animation-name: falling--#{$i};
+    left: $left;
+    opacity: 0.1 * $i;
+    position: fixed;
+  }
+
+  @keyframes falling--#{$i} {
+    0% { top: -10%; }
+    100% { top: 70% + random($i); }
+  }
+}
+
+/*
+ * ~~ 2
+ * Fall (outside)
+ * start: 5sec, dur: ~1sec
+ */
+@for $i from 0 through 10 {
+  .bfall--#{$i} {
+    animation-delay: 5s;
+    animation-duration: 0.5s + ($i / 20);
+    animation-fill-mode: both;
+    animation-name: bfalling--#{$i};
+    position: relative;
+  }
+
+  @keyframes bfalling--#{$i} {
+    0% { top: 0; }
+    100% { top: -120vh; }
+  }
+}
+
+/*
+ * ~~ 3
+ * Water & Wobble
+ * start: 6sec, dur: 2sec
+ */
+.water {
+  animation: rising 1.5s 6s both;
+  background-color: $color;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+@keyframes rising {
+  0% { bottom: -200%; }
+  100% { bottom: -80%; }
+}
+
+/*
+ * ~~ 3
+ * Plonge
+ * start: 6.7sec, dur: 2sec
+ */
+@for $i from 0 through 10 {
+  .plonge--#{$i} {
+    animation-delay: 6.7s;
+    animation-duration: 1s - ($i / 10);
+    animation-fill-mode: both;
+    animation-name: plonge--#{$i};
+    position: relative;
+  }
+
+  @keyframes plonge--#{$i} {
+    0% { top: 0; }
+    100% {
+      margin: -1px * random(20);
+      padding: 1px * random(20);
+      top: 150vh;
+    }
+  }
+}
+
+/*
+ * ~~ 4
+ * Splash & Wobble/Trampoline
+ * start: 7sec, dur: ~1sec
+ */
+.splash {
+  background-color: $color;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.wobble {
+  margin-top: -40px;
+  position: absolute;
+  width: 100vw;
+}
+
+.trampoline {
+  fill: $color;
+}
+
+@for $i from 1 through 10 {
+  .splash--#{$i} {
+    $temp: random(20);
+    animation-delay: 7s;
+    animation-duration: 1.4s - ($i / 15);
+    animation-fill-mode: both;
+    animation-name: splash--#{$i};
+    height: $temp + px;
+    left: $left - 5 + random(5);
+    width: $temp + px;
+  }
+
+  @keyframes splash--#{$i} {
+    0% {
+      margin: 0;
+      opacity: 1;
+      padding: 1px * random(25);
+      top: 0;
+    }
+
+    100% {
+      margin: 1px * random(25);
+      opacity: 0;
+      padding: -1px * random(25);
+      top: -45px - random(70);
+    }
+  }
+}
+
+/*
+ * ~~ 5
+ * Water Fullrise
+ * start: 8.1sec, dur: 1sec
+ */
+.full-water {
+  animation: fullRising 1s 8.1s both;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+@keyframes fullRising {
+  0% { bottom: 0; }
+  100% { bottom: 80%; }
+}
+
+/*
+ * Finishing up
+ */
+.replay {
+  animation: appear 1s 10s both;
+  bottom: 10px;
+  left: 45%;
+  position: absolute;
+  top: 48%;
+  z-index: 999;
+}
+
+@keyframes appear {
+  0% { opacity: 0; height: 0; }
+  100% { opacity: 1; height: 10px; }
+}

@@ -29,6 +29,10 @@
   }
 }
 
+.writer__text-container {
+  min-width: 300px;
+}
+
 .welcome__text--special {
   @include heading;
   line-height: 0.5;

@@ -18,6 +18,7 @@ $dark-grey: #6A6A6A;
  * green
  */
 $green: #B8E986;
+$lime: #00FFBA;
 
 /*
  * yellow
@@ -44,4 +45,5 @@ $cognitive-main: $yellow;
 $cognitive-off: $off-yellow;
 $cognitive-dark: $dark-yellow;
 
-$primary: #A0DD6C;
+$primary: $lime;
+$secondary: $lime;
