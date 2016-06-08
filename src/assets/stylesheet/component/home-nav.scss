@@ -1,4 +1,4 @@
-$border: 1px solid rgba(0, 0, 0, 0.1);
+$border: 1px solid $black01;
 
 .home-nav {
   @include vertical-rhythm;
@@ -8,16 +8,16 @@ $border: 1px solid rgba(0, 0, 0, 0.1);
 
 .home-nav__options {
   background: $white;
-  box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.30);
+  box-shadow: 0 10px 40px 0 $black03;
   max-width: 320px;
   margin: auto;
 
-  @include media('>small'){
+  @include media('>small') {
     max-width: 400px;
     padding: $gutter--xlarge;
   }
 
-  @include media('>medium'){
+  @include media('>medium') {
     max-width: 641px;
     padding: $gutter--xlarge;
   }
@@ -28,7 +28,7 @@ $border: 1px solid rgba(0, 0, 0, 0.1);
   margin: $gutter--xlarge auto;
   width: 320px;
 
-  @include media('>medium'){
+  @include media('>medium') {
     display: inline-block;
     margin: 0;
   }
@@ -40,12 +40,18 @@ $border: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
+.home-nav__link-title,
+.home-nav__link-description {
+  position: relative;
+  z-index: 2;
+}
+
 .home-nav__link-title {
   @include heading($size: $mega, $family: $secondary-family, $weight: $secondary-weight);
   text-align: center;
 }
 
 .home-nav__link-description {
- @include font-size-responsive;
- text-align: center;
+  @include font-size-responsive;
+  text-align: center;
 }

@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.home__container {
+.home__content {
   @include gradient;
   @include vertical-rhythm($gutter--large);
   height: 100%;
@@ -12,11 +12,18 @@
   width: 100%;
 }
 
+.home__container,
+.home__title,
+.home__subtitle {
+  position: relative;
+  z-index: 2;
+}
+
 .home__title {
   @include heading($mega, $primary-family, 700);
   color: $primary;
   text-align: center;
-  text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.30);
+  text-shadow: 5px 10px 10px $black03;
   text-transform: uppercase;
 }
 
@@ -27,7 +34,7 @@
   margin-top: -50px;
   text-align: center;
 
-  @include media('>medium'){
+  @include media('>medium') {
     margin-top: -90px;
   }
 }

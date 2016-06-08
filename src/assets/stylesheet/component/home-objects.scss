@@ -1,0 +1,30 @@
+.home-objects__object {
+  position: absolute;
+  border: 3px solid $white;
+  z-index: 1;
+  transition: transform 0.1s ease-out;
+}
+
+/*
+ * ~~ 7
+ * Fill up with objects
+ * start: 15s, dur: 5s
+ */
+
+@for $i from 1 through 30 {
+  .home-objects__object:nth-child(#{$i}) {
+    top: 10% + random(80);
+    left: 5% + random(95);
+    animation-duration: 5000ms - ($i * random(300));
+    animation-fill-mode: backwards;
+    animation-delay: 10s;
+    animation-name: oFillUp--#{$i};
+  }
+
+  @keyframes oFillUp--#{$i} {
+    from {
+      left: -150%;
+      top: 150%;
+    }
+  }
+}

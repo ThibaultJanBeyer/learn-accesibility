@@ -1,16 +1,22 @@
 <!-- home nunjuck -->
 
 <section id="home" class="section home">
+
   <div class="start" aria-hidden="true" role="presentation">
     {% include "partials/home/_home_animation.html" %}
   </div>
-  <div class="end sr-only home__container">
-    <h1 class="home__title">
-      Accessibility
-    </h1>
-    <span class="home__subtitle">
-      for everyone
-    </span>
-    {% include "partials/home/_home_nav.html" %}
+
+  <div class="end sr-only home__content">
+
+    <div class="home__container">
+      <h1 id="accessibility" class="home__title">Accessibility</h1>
+      <span class="home__subtitle">for everyone</span>
+
+      {% include "partials/home/_home_nav.html" %}
+
+      {% include "partials/home/_home_objects.html" %}
+    </div>
+
   </div>
+
 </section>
