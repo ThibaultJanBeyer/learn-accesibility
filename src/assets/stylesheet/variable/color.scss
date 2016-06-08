@@ -1,49 +1,22 @@
+/*
+ * Standard
+ */
 $black: #190000;
+$white: #F6F6F6;
 
 /*
  * Blue
  */
 $blue: #177CCE;
-$off-blue: #115D9B;
-$dark-blue: #0D4574;
 
 /*
- * grey
+ * main
  */
-$grey: #A2A2A2;
-$off-grey: #8B8B8B;
-$dark-grey: #6A6A6A;
-
-/*
- * green
- */
-$green: #B8E986;
 $lime: #00FFBA;
-
-/*
- * yellow
- */
-$yellow: #FCE57B;
-$off-yellow: #BBA852;
-$dark-yellow: #84793F;
-
-/*
- * White
- */
-$white: #F6F6F6;
+$aqua: #00FFDE;
 
 /*
  * Themes
  */
-$visual-main: $blue;
-$visual-off: $off-blue;
-$visual-dark: $dark-blue;
-$audio-main: $grey;
-$audio-off: $off-grey;
-$audio-dark: $dark-grey;
-$cognitive-main: $yellow;
-$cognitive-off: $off-yellow;
-$cognitive-dark: $dark-yellow;
-
 $primary: $lime;
-$secondary: $lime;
+$secondary: $aqua;
