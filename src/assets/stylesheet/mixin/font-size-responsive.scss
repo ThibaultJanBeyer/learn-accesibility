@@ -1,4 +1,4 @@
-@mixin font-size-responsive($sizes: $gamma, $family: $main-family, $weight: $main-weight) {
+@mixin font-size-responsive($sizes: $gamma, $family: $primary-family, $weight: $primary-weight) {
   font-size: nth($sizes, 1) * 1px;
   font-family: $family;
   font-weight: $weight;

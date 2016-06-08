@@ -4,13 +4,15 @@
 }
 
 .home__container {
+  @include gradient;
   @include vertical-rhythm($gutter);
   height: 100%;
+  overflow: auto;
   width: 100%;
 }
 
 .home__title {
-  @include heading($mega, $main-family, 700);
+  @include heading($mega, $primary-family, 700);
   color: $primary;
   margin-top: 10px;
   text-align: center;

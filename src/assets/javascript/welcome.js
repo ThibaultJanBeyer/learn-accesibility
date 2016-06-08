@@ -1,4 +1,5 @@
-(function () {
+(function () { if( R_WELCOME ){
+  
   // stores the values of the elements we need
   var text = document.getElementsByClassName('welcome__text');
   var flyOut = document.getElementsByClassName('fly--out');
@@ -187,4 +188,4 @@
     });
   }
 
-})();
+}})();

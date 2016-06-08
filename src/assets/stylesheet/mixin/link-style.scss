@@ -16,17 +16,19 @@
 }
 
 /**
- * Link styles on dark background.
+ * Menu Link styles
  */
-@mixin link-styles-alt {
-  color: $white;
+@mixin link-styles-menu {
+  color: $black;
 
   &:visited {
-    color: $white;
+    color: $black;
   }
 
   &:hover,
   &:focus {
+    @include gradient;
+    color: $black;
     text-decoration: none;
   }
 }
