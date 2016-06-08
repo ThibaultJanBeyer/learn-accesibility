@@ -16,7 +16,7 @@
 }
 
 .welcome__text {
-  @include heading($alpha);
+  @include heading($alpha, $intro-family, $intro-weight);
   color: $white;
   flex-wrap: wrap;
   height: 100%;
@@ -34,7 +34,7 @@
 }
 
 .welcome__text--special {
-  @include heading;
+  @include heading($mega, $intro-family, $intro-weight);
   line-height: 0.5;
 }
 

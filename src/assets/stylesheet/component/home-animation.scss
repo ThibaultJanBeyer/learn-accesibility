@@ -1,5 +1,6 @@
-$color: $secondary;
-$left: 47%;
+$color: $primary;
+$left: 44%;
+$numberOfLetters: 20;
 
 body {
   font-family: sans-serif;
@@ -15,6 +16,7 @@ body {
  * Number Trembling
  */
 .tremble {
+  @include heading($alpha, $intro-family, $intro-weight);
   animation: tremble 0.1s infinite;
 }
 
@@ -67,20 +69,20 @@ body {
  * Fall (from outside to lower center)
  * start: 2, dur: ~3sec
  */
-@for $i from 1 through 10 {
+@for $i from 1 through $numberOfLetters {
   .fall--#{$i} {
     animation-delay: 2s;
     animation-duration: 3s - ($i / 8);
     animation-fill-mode: both;
     animation-name: falling--#{$i};
-    left: $left;
-    opacity: 0.1 * $i;
+    left: $left + random(4);
+    opacity: 0.1 * ($i/2.5);
     position: fixed;
   }
 
   @keyframes falling--#{$i} {
-    0% { top: -10%; }
-    100% { top: 70% + random($i); }
+    0% { top: -15%; }
+    100% { top: 65% + random($i); }
   }
 }
 
@@ -89,7 +91,7 @@ body {
  * Fall (outside)
  * start: 5sec, dur: ~1sec
  */
-@for $i from 0 through 10 {
+@for $i from 0 through $numberOfLetters {
   .bfall--#{$i} {
     animation-delay: 5s;
     animation-duration: 0.5s + ($i / 20);
@@ -107,12 +109,12 @@ body {
 /*
  * ~~ 3
  * Water & Wobble
- * start: 6sec, dur: 2sec
+ * start: 6sec, dur: 3.7sec
  */
 .water {
-  animation: rising 1.5s 6s both;
-  background-color: $color;
-  height: 100%;
+  @include gradientV;
+  animation: rising 3.7s 6s both;
+  height: 120%;
   left: 0;
   position: absolute;
   width: 100%;
@@ -120,7 +122,8 @@ body {
 
 @keyframes rising {
   0% { bottom: -200%; }
-  100% { bottom: -80%; }
+  20% { bottom: -80%; }
+  100% { bottom: -100%; }
 }
 
 /*
@@ -212,13 +215,13 @@ body {
 
 @keyframes fullRising {
   0% { bottom: 0; }
-  100% { bottom: 80%; }
+  100% { bottom: 100%; }
 }
 
 /*
  * Finishing up
  */
-.replay {
+.end {
   animation: appear 1s 10s both;
   bottom: 10px;
   left: 45%;

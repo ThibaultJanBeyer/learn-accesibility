@@ -1,4 +1,4 @@
-@mixin gradient($from: $lime, $to: $aqua, $type: 'to bottom') {
-  background: $from; // Old browsers
-  background: linear-gradient($type, $from 0%, $to 100%);
+@mixin gradientV($from: $lime, $to: $aqua) {
+  background-color: $from; // fallback
+  background-image: linear-gradient($from, $to);
 }

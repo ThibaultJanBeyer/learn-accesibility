@@ -1,4 +1,4 @@
-@mixin heading($size: $mega, $family: $secondary-family, $weight: $secondary-weight) {
+@mixin heading($size: $mega, $family: $main-family, $weight: $main-weight) {
   @include font-size-responsive($size);
   font-family: $family;
   font-weight: $weight;

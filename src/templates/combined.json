@@ -1,4 +1,28 @@
 {
+	"home": {
+		"letters": [
+			"A",
+			"c",
+			"c",
+			"e",
+			"s",
+			"s",
+			"i",
+			"b",
+			"i",
+			"l",
+			"i",
+			"t",
+			"y",
+			"i",
+			"s",
+			"j",
+			"u",
+			"s",
+			"t",
+			"l"
+		]
+	},
 	"welcome": {
 		"title": "0. Why should you care?",
 		"screenReader": "Hello dear ScreenReader user, you are the best :)",

@@ -1,11 +1,11 @@
 <!-- nunjucks home animation partial -->
 
 <div class="letters">
-  {% for i in range(1, 10) %}
+  {% for letter in home.letters %}
   <span class="fall--{{ loop.index }}">
     <span class="bfall--{{ loop.index }}">
       <span class="plonge--{{ loop.index }}">
-        <span class="tremble">{{ loop.index }}</span>
+        <span class="tremble">{{ letter }}</span>
       </span>
     </span>
   </span>
