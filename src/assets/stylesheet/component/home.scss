@@ -1,4 +1,26 @@
 .home {
+  @include vertical-rhythm;
   height: 100%;
   width: 100%;
+}
+
+.home__title {
+  @include heading($mega, $main-family, 700);
+  color: $primary;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.30);
+  text-transform: uppercase;
+}
+
+.home__subtitle {
+  @include heading($mega, $cursive-family, $cursive-weight);
+  color: $white;
+  display: block;
+  margin-top: -50px;
+  text-align: center;
+
+  @include media('>medium'){
+    margin-top: -90px;
+  }
 }
