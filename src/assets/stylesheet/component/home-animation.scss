@@ -162,9 +162,13 @@ body {
 }
 
 .wobble {
-  margin-top: -40px;
+  margin-top: -30px;
   position: absolute;
   width: 100vw;
+
+  @include media('>small'){
+    margin-top: -40px;
+  }
 }
 
 .trampoline {

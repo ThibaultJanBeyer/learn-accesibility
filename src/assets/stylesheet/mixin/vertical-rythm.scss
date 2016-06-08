@@ -1,4 +1,4 @@
-@mixin vertical-rhythm {
-  padding-top: $gutter--xlarge;
-  padding-bottom: $gutter--xlarge;
+@mixin vertical-rhythm($space: $gutter--xlarge) {
+  padding-top: $space;
+  padding-bottom: $space;
 }
