@@ -5,16 +5,16 @@
 
 .home__container {
   @include gradient;
-  @include vertical-rhythm($gutter);
+  @include vertical-rhythm($gutter--large);
   height: 100%;
   overflow: auto;
+  overflow-x: hidden;
   width: 100%;
 }
 
 .home__title {
   @include heading($mega, $primary-family, 700);
   color: $primary;
-  margin-top: 10px;
   text-align: center;
   text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.30);
   text-transform: uppercase;

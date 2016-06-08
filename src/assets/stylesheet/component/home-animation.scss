@@ -224,21 +224,20 @@ $numberOfLetters: 20;
 .start {
   animation: appear 1s 10s reverse both;
 }
+
 .end {
   animation: appear 1s 10s both;
 }
 
+.home {
+  animation: gradient 1s 9s forwards;
+}
+
 @keyframes appear {
-  0% { 
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    visibility: hidden;
-  }
-  100% { 
-    opacity: 1;
-    pointer-events: all;
-    position: inherit;
-    visibility: visible;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes gradient {
+  100% { @include gradient; }
 }

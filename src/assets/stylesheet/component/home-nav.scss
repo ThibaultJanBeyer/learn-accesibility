@@ -2,8 +2,8 @@ $border: 1px solid rgba(0, 0, 0, 0.1);
 
 .home-nav {
   @include vertical-rhythm;
-  max-width: 750px;
-  margin: auto;
+  max-width: 760px;
+  margin: 0 auto $gutter--xlarge;
 }
 
 .home-nav__options {
@@ -11,7 +11,6 @@ $border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.30);
   max-width: 320px;
   margin: auto;
-  padding: $gutter--xlarge 0;
 
   @include media('>small'){
     max-width: 400px;
