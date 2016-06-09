@@ -40,10 +40,9 @@ $border: 1px solid $black01;
   width: 100%;
 }
 
-.home-nav__link-title,
-.home-nav__link-description {
+.home-nav__link-container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .home-nav__link-title {

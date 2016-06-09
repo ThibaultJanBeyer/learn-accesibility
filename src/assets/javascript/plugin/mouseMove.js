@@ -27,5 +27,5 @@ function handleMouseMove(event) {
         (doc && doc.clientTop  || body && body.clientTop  || 0 );
   }
   // Use event.pageX / event.pageY here
-  MOUSE = {x: event.pageX, y: event.pageY}
+  MOUSE = {x: event.pageX, y: event.pageY};
 }
