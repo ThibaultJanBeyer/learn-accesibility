@@ -6,7 +6,7 @@
 }
 
 @for $i from 1 through 4 {
-  .home-leaving__target:nth-child(#{$i}){
+  .home-leaving__target:nth-child(#{$i}) {
     top: -65px + (80 * $i);
   }
 }

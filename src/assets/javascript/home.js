@@ -81,7 +81,7 @@
         links[i].addEventListener('click', function (e) {
           e.preventDefault(); // prevent default pageleaving
           var link = this.href;
-          
+
           for (let i = 0; i < linkContainers.length; i++) {
             // give the containers a fixed position
             linkContainers[i].style.position = 'fixed';
@@ -92,16 +92,16 @@
             });
           }
           // delay needed for mover to work properly
-          setTimeout(function() {
+          setTimeout(function () {
             // add the leaving class, 'home-leaving.scss' will handle all the rest
             BODY.classList.add('leaving');
-            
+
             for (let i = 0; i < linkContainers.length; i++) {
               mover(linkContainers[i], homeLeaveringTargets[i]);
             }
 
             // after some time
-            setTimeout(function() {
+            setTimeout(function () {
               // go to location
               window.location.href = link;
             }, 3000);

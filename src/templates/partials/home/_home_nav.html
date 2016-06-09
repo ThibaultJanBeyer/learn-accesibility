@@ -1,54 +1,27 @@
 <!-- nunjucks home nav -->
 
 <nav class="home-nav" role="navigation" aria-labelledby="mainmenu">
-  <h2 id="mainmenu" class="sr-only">Main Menu</h2>
+  <h2 id="mainmenu" class="sr-only">{{ home.nav.mainmenu }}</h2>
   <ul class="home-nav__options">
 
+    {% for option in home.nav.options %}
+    {% if loop.index % 2 != 0 %}
     <div class="home-nav__options-container">
+    {% endif %}
       <li class="home-nav__option">
-        <a href="#" class="home-nav__link center-align">
+        <a href="{{ option.url }}" class="home-nav__link center-align">
           <div class="home-nav__link-holder">
             <div class="home-nav__link-container">
-              <p class="home-nav__link-title">V</p>
-              <p class="home-nav__link-description">visual <span class="sr-only">accessibility</span></p>
+              <p class="home-nav__link-title">{{ option.title }}</p>
+              <p class="home-nav__link-description">{{ option.description }}<span class="sr-only">{{ option.sr }}</span></p>
             </div>
           </div>
         </a>
       </li>
-      <li class="home-nav__option">
-        <a href="#" class="home-nav__link center-align">
-          <div class="home-nav__link-holder">
-            <div class="home-nav__link-container">
-              <p class="home-nav__link-title">A</p>
-              <p class="home-nav__link-description">audio <span class="sr-only">accessibility</span></p>
-            </div>
-          </div>
-        </a>
-      </li>
+    {% if loop.index % 2 == 0 %}
     </div>
-
-    <div class="home-nav__options-container">
-      <li class="home-nav__option">
-        <a href="#" class="home-nav__link center-align">
-          <div class="home-nav__link-holder">
-            <div class="home-nav__link-container">
-              <p class="home-nav__link-title">P</p>
-              <p class="home-nav__link-description">physical <span class="sr-only">accessibility</span></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="home-nav__option">
-        <a href="#" class="home-nav__link center-align">
-          <div class="home-nav__link-holder">
-            <div class="home-nav__link-container">
-              <p class="home-nav__link-title">C</p>
-              <p class="home-nav__link-description">cognitive <span class="sr-only">accessibility</span></p>
-            </div>
-          </div>
-        </a>
-      </li>
-    </div>
+    {% endif %}
+    {% endfor %}
 
   </ul>
 </nav>

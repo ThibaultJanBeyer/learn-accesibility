@@ -1,5 +1,38 @@
 {
   "home": {
-    "letters": [ "A","c","c","e","s","s","i","b","i","l","i","t","y","i","s" ]
+    "letters": [ "A","c","c","e","s","s","i","b","i","l","i","t","y","i","s" ],
+    "title": "Accessibility",
+    "subtitle": "for everyone",
+    "nav": 
+      {
+        "mainmenu": "Main menu",
+        "options": 
+          [
+            {
+              "url": "#v",
+              "title": "V",
+              "description": "visual",
+              "sr": "accessibility"
+            },
+            {
+              "url": "#a",
+              "title": "A",
+              "description": "audio",
+              "sr": "accessibility"
+            },
+            {
+              "url": "#p",
+              "title": "P",
+              "description": "physical",
+              "sr": "accessibility"
+            },
+            {
+              "url": "#c",
+              "title": "C",
+              "description": "Cognitive",
+              "sr": "accessibility"
+            }
+          ]
+      }
   }
 }

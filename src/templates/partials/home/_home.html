@@ -9,20 +9,15 @@
   <div class="end sr-only home__content">
 
     <div class="home__container">
-      <h1 id="accessibility" class="home__title">Accessibility</h1>
-      <span class="home__subtitle">for everyone</span>
+      <h1 id="accessibility" class="home__title">{{ home.title }}</h1>
+      <span class="home__subtitle">{{ home.subtitle }}</span>
 
       {% include "partials/home/_home_nav.html" %}
 
       {% include "partials/home/_home_objects.html" %}
     </div>
 
-    <div class="home-leaving">
-      <div class="home-leaving__target"></div>
-      <div class="home-leaving__target"></div>
-      <div class="home-leaving__target"></div>
-      <div class="home-leaving__target"></div>
-    </div>
+    {% include "partials/home/_home_leaving.html" %}
 
   </div>
 

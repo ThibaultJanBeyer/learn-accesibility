@@ -16,7 +16,38 @@
 			"y",
 			"i",
 			"s"
-		]
+		],
+		"title": "Accessibility",
+		"subtitle": "for everyone",
+		"nav": {
+			"mainmenu": "Main menu",
+			"options": [
+				{
+					"url": "#v",
+					"title": "V",
+					"description": "visual",
+					"sr": "accessibility"
+				},
+				{
+					"url": "#a",
+					"title": "A",
+					"description": "audio",
+					"sr": "accessibility"
+				},
+				{
+					"url": "#p",
+					"title": "P",
+					"description": "physical",
+					"sr": "accessibility"
+				},
+				{
+					"url": "#c",
+					"title": "C",
+					"description": "Cognitive",
+					"sr": "accessibility"
+				}
+			]
+		}
 	},
 	"welcome": {
 		"title": "0. Why should you care?",
