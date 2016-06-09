@@ -30,21 +30,7 @@
     });
   }, false);
 
-  var buttonNext = document.getElementsByClassName('button--next');
-  // bind actions to each button
-  [...buttonNext].forEach((el, i) => {
-    // first remove the disabled attrubute
-    el.removeAttribute('disabled');
-    // then add an onclick listener
-    el.addEventListener('click', () => {
-      el.setAttribute('disabled', 'true');
-      // run the next function with the appropriate button number
-      next(i);
-    });
-  });
-
-  function next(i) {
-
+  var next = (i) => {
     if (i === 0) {
       // same as above but with delete option on true to delete the text
       writeEach(wText[i], wText[i].length - 1, 0, () => {
@@ -58,7 +44,7 @@
             // and remove that first contentblock after some time
             text[i].classList.add('sr-only');
             // go to next animation
-            next(i + 1);
+            next(6 + 1);
           }, 1500);
         }, 500);
       }, true);
@@ -113,10 +99,9 @@
         }, 1000);
       }, false, true);
     }
+  };
 
-  }
-  
-  function finishing(i) {
+  var finishing = (i) => {
     /*
      * open the door 
      */
@@ -158,8 +143,31 @@
           * fly elements into the door
           */
           var target = document.getElementsByClassName('welcome__target')[0];
-          mover(specialWc, target);
-          mover(wc, target, () => {
+
+          // this is what should happen with each letter
+          var specialMove = (el, xT, yT, xE, yE, i) => {
+            setTimeout(() => {
+              // scramble the elements
+              if(i % 2 === 0) {
+                el.style.left = (xE - Math.floor(Math.random() * 101)) + 'px';
+                el.style.top = (yE + Math.floor(Math.random() * 101)) + 'px';
+              } else {
+                el.style.left = (xE + Math.floor(Math.random() * 101)) + 'px';
+                el.style.top = (yE - Math.floor(Math.random() * 101)) + 'px';
+              }
+              setTimeout(() => {
+                // then move one after another towards the door
+                el.style.left = xT + 'px';
+                el.style.top = yT + 'px';
+                el.style.fontSize = '1px';
+              }, 500);
+            }, 5);
+          };
+          // move large text
+          mover(specialWc, target, specialMove);
+          // move normal text
+          mover(wc, target, specialMove, () => {
+
             /*
             * fly through door
             */
@@ -179,13 +187,26 @@
               lock.classList.add('lock--locked');
               
               setTimeout(function() {
-                document.getElementsByClassName('welcome__button--skip')[0].click();
+                //document.getElementsByClassName('welcome__button--skip')[0].click();
               }, 400);
             }, 3000);
           });
         }, 2000);
       }
     });
-  }
+  };
+
+  var buttonNext = document.getElementsByClassName('button--next');
+  // bind actions to each button
+  [...buttonNext].forEach((el, i) => {
+    // first remove the disabled attrubute
+    el.removeAttribute('disabled');
+    // then add an onclick listener
+    el.addEventListener('click', () => {
+      el.setAttribute('disabled', 'true');
+      // run the next function with the appropriate button number
+      next(i);
+    });
+  });
 
 }})();

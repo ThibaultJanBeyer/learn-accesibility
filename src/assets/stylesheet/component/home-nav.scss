@@ -40,13 +40,17 @@ $border: 1px solid $black01;
   width: 100%;
 }
 
+.home-nav__link-holder {
+  display: inline-block;
+}
+
 .home-nav__link-container {
   position: relative;
   z-index: 3;
 }
 
 .home-nav__link-title {
-  @include heading($size: $mega, $family: $secondary-family, $weight: $secondary-weight);
+  @include heading($mega, $secondary-family, $secondary-weight);
   text-align: center;
 }
 

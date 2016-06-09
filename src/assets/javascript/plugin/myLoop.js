@@ -24,10 +24,10 @@
  *     thibaultImgMain.setAttribute('src', 'assets/img/thibault-jan-beyer_' + cd + '.jpg');
  * });
  */
-function myLoop(options, callback, scope) { // pass number of iterations and dur in ms and counter 
+function myLoop(options, callback, scope) { // pass number of iterations and dur in ms and counter
     callback.call(scope, options.cd, options.dur, options.cu); // passes back stuff we need to callback into
     options.cu++;
-    if (--options.cd >= 0) { 
+    if (--options.cd >= 0) {
       setTimeout(function () {
         myLoop(options, callback, scope); // decrement cd and call myLoop again if cd >= 0
       }, options.dur);

@@ -1,0 +1,52 @@
+.home-leaving__target {
+  height: 5px;
+  position: absolute;
+  right: 75px;
+  width: 5px;
+}
+
+@for $i from 1 through 4 {
+  .home-leaving__target:nth-child(#{$i}){
+    top: -65px + (80 * $i);
+  }
+}
+
+.leaving .home-nav__link-title {
+  @include heading($gamma, $secondary-family, $secondary-weight);
+  transition: font-size 1s;
+}
+
+.leaving .home-nav__link-description {
+  @include font-size-responsive($delta);
+  transition: font-size 1s;
+}
+
+.leaving .home-nav__link-container {
+  min-width: 60px;
+  position: fixed;
+  transition: top 1s 1s, left 1s 1s, position 0.5s;
+  z-index: 3;
+}
+
+.leaving .home__content {
+  overflow: hidden;
+}
+
+.leaving .home-nav__options {
+  background: transparent;
+  box-shadow: none;
+  transition: background 1s, box-shadow 1s;
+}
+
+.leaving .home__title,
+.leaving .home__subtitle,
+.leaving .home-objects {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.leaving .home-nav__link:hover,
+.leaving .home-nav__link:focus {
+  background: transparent;
+  transition: background 1s;
+}
