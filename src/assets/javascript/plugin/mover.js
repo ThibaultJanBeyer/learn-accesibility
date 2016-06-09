@@ -9,8 +9,6 @@
  *
  * @param  {Function} callback          This is what should happen each run 
  * 
- * @param  {Function} endCallback       This is what should happen after the run
- * 
  * example:
  * 
  * mover({
