@@ -11,7 +11,7 @@
 
 .site--open {
   width: 100%;
-  
+
   @include media('>small') {
     width: calc(100% + 100px);
   }
@@ -23,18 +23,18 @@
   width: 90%;
   width: calc(100% - 100px);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .site__toggler {
   height: 30px;
-  position: absolute;
+  position: fixed;
   margin-left: -140px;
   width: 30px;
   top: 5px;
   transform: rotate(0deg);
   transition: transform 0.5s, background 1s;
-  z-index: 2;
+  z-index: 3;
 
   @include media('>small') {
     transform: rotate(-90deg);

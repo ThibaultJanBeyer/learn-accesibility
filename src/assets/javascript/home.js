@@ -2,6 +2,7 @@
   if (R_HOME) {
 
     BODY.classList.add('lock');
+    BODYCONTAINER.classList.add('lock');
 
     // after the animation
     setTimeout(() => {

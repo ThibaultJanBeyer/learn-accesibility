@@ -3,7 +3,7 @@
 {% macro nav(nav, key, options) %}
 <nav class="nav" role="navigation" aria-label="mainmenu">
   <h2 id="mainmenu" class="sr-only">{{ nav.title }}</h2>
-  <ul>
+  <ul class="nav__container">
     {% for option in nav.options %}
     <li>
       <a href="{{ option.url }}" class="nav__link center-align {{ option.title }} {{ 'nav__link--selected' if option.title == key.letter }}">
@@ -17,5 +17,12 @@
     </li>
     {% endfor %}
   </ul>
+  <div class="nav__objects">
+    {% for i in range(1, 10) %}
+    <div class="nav__object nav__circle"></div>
+    <div class="nav__object nav__square"></div>
+    <div class="nav__object nav__diamond"></div>
+    {% endfor %}
+  </div>
 </nav>
 {% endmacro %}

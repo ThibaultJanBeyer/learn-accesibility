@@ -6,6 +6,12 @@
   z-index: 0;
 }
 
+.nav__container {
+  position: fixed;
+  width: 100px;
+  z-index: 1;
+}
+
 .nav__link {
   @include link-styles-menu;
   height: 100%;

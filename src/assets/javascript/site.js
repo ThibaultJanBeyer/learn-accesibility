@@ -18,12 +18,10 @@
     navLink[i].addEventListener('click', () => {
       let clicked = this;
       for (let i = 0; i < navLink.length; i++) {
-        navLink[i].classList.remove('nav__link--selected')
+        navLink[i].classList.remove('nav__link--selected');
       }
       clicked.classList.add('nav__link--selected');
     });
   }
-
-
 
 }})();

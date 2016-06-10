@@ -1,5 +1,6 @@
 //.
-const BODY = document.getElementsByTagName('body')[0];
+const BODY = document.body;
+const BODYCONTAINER = document.getElementsByClassName('body__container')[0]; 
 const WELCOME = document.getElementById('welcome');
 var MOUSE = {};
 var LOCATION = window.location.href;
