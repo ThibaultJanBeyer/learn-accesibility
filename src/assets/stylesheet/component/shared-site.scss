@@ -1,0 +1,74 @@
+.site {
+  display: flex;
+  justify-content: space-between;
+  transition: width 0.5s;
+  width: calc(100% + 100px);
+
+  @include media('>small') {
+    width: 100%;
+  }
+}
+
+.site--open {
+  width: 100%;
+  
+  @include media('>small') {
+    width: calc(100% + 100px);
+  }
+}
+
+.site__content {
+  background: $white;
+  box-shadow: 10px 0 40px $black03;
+  width: 90%;
+  width: calc(100% - 100px);
+  position: relative;
+  z-index: 1;
+}
+
+.site__toggler {
+  height: 30px;
+  position: absolute;
+  margin-left: -140px;
+  width: 30px;
+  top: 5px;
+  transform: rotate(0deg);
+  transition: transform 0.5s, background 1s;
+  z-index: 2;
+
+  @include media('>small') {
+    transform: rotate(-90deg);
+  }
+
+  &:hover,
+  &:focus {
+    background: $primary;
+  }
+}
+
+.site__toggler--open {
+  transform: rotate(-90deg);
+
+  @include media('>small') {
+    transform: rotate(0deg);
+  }
+}
+
+.site__toggler-bar,
+.site__toggler-bar::before,
+.site__toggler-bar::after {
+  width: 30px;
+  height: 5px;
+  background: $primary;
+  position: absolute;
+}
+
+.site__toggler-bar::before {
+  margin: -10px -15px;
+  content: '';
+}
+
+.site__toggler-bar::after {
+  margin: 10px -15px;
+  content: '';
+}

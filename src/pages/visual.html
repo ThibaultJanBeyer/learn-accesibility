@@ -1,0 +1,27 @@
+<!-- visual nunjucks -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="site">
+
+    <main class="site__content" id="main" aria-label="Content">
+
+      {% import "partials/shared/_toc.html" as toc %}    
+      {{ toc.toc(shared.toc, visual) }}
+
+      {% include "partials/visual/_visual.html" %}
+
+    </main>
+    
+    {% import "partials/shared/_nav.html" as nav %}    
+    {{ nav.nav(shared.nav, visual) }}
+
+    <button type="button" class="site__toggler button" aria-hidden="true" role="presentation">
+      <div class="site__toggler-bar"></div>
+    </button>
+
+  </div>
+
+{% endblock %}

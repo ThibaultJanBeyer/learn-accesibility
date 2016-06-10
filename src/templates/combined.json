@@ -23,7 +23,7 @@
 			"mainmenu": "Main menu",
 			"options": [
 				{
-					"url": "visual-accessibility.html",
+					"url": "visual.html",
 					"title": "V",
 					"description": "visual",
 					"sr": "accessibility"
@@ -79,18 +79,6 @@
 					"title": "C",
 					"description": "Cognitive",
 					"sr": "accessibility"
-				},
-				{
-					"url": "/home",
-					"description": "Home"
-				},
-				{
-					"url": "#about",
-					"description": "About"
-				},
-				{
-					"url": "#sitemap",
-					"description": "Sitemap"
 				}
 			]
 		}
