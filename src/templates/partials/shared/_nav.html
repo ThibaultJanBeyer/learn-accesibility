@@ -1,0 +1,21 @@
+<!-- macro nav nunjuck -->
+
+{% macro nav(nav, key) %}
+<nav class="nav" role="navigation" aria-label="mainmenu">
+  <h2 id="mainmenu">{{ nav.title }}</h2>
+  <ul>
+    {% for option in nav.options %}
+    <li class="{{ 'selected' if key.letter == 'V' }} nav__option">
+      <a href="{{ option.url }}" class="nav__link center-align {{ option.title }}">
+        <div class="nav__link-container">
+          <p class="nav__link-title">{{ option.title }}</p>
+          <p class="nav__link-description">
+            {{ option.description }} <span class="sr-only">{{ option.sr }}</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endmacro %}

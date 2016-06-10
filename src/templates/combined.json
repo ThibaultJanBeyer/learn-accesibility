@@ -23,7 +23,7 @@
 			"mainmenu": "Main menu",
 			"options": [
 				{
-					"url": "#v",
+					"url": "visual-accessibility.html",
 					"title": "V",
 					"description": "visual",
 					"sr": "accessibility"
@@ -48,6 +48,105 @@
 				}
 			]
 		}
+	},
+	"shared": {
+		"toc": {
+			"title": "Table of contents for"
+		},
+		"nav": {
+			"title": "Main menu",
+			"options": [
+				{
+					"url": "#v",
+					"title": "V",
+					"description": "visual",
+					"sr": "accessibility"
+				},
+				{
+					"url": "#a",
+					"title": "A",
+					"description": "audio",
+					"sr": "accessibility"
+				},
+				{
+					"url": "#p",
+					"title": "P",
+					"description": "physical",
+					"sr": "accessibility"
+				},
+				{
+					"url": "#c",
+					"title": "C",
+					"description": "Cognitive",
+					"sr": "accessibility"
+				},
+				{
+					"url": "/home",
+					"description": "Home"
+				},
+				{
+					"url": "#about",
+					"description": "About"
+				},
+				{
+					"url": "#sitemap",
+					"description": "Sitemap"
+				}
+			]
+		}
+	},
+	"visual": {
+		"title": "Visual",
+		"subtitle": "Accessibility",
+		"letter": "V",
+		"intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
+		"sections": [
+			{
+				"title": "Section 1 abla",
+				"paragraphs": [
+					{
+						"p": "lorem ipsum"
+					},
+					{
+						"p": "dolor sit."
+					}
+				],
+				"subs": [
+					{
+						"title": "Section 1.1.",
+						"paragraphs": [
+							{
+								"p": "hahaha"
+							}
+						]
+					},
+					{
+						"title": "New Sub",
+						"paragraphs": [
+							{
+								"p": "hahaha"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Section2",
+				"paragraphs": [
+					{
+						"p": "dolor sit"
+					},
+					{
+						"img": "only img"
+					}
+				],
+				"subs": [
+					{
+						"title": "test2"
+					}
+				]
+			}
+		]
 	},
 	"welcome": {
 		"title": "0. Why should you care?",

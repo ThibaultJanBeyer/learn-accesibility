@@ -42,10 +42,10 @@
   top: 0;
   padding: 0;
   transition: width 1s 1.5s, height 1s 1.5s, right 1s 1.5s, padding 1s 1.5s;
-}
 
-.leaving .home__content.top {
-  transition: top 1s;
+  &.top {
+    transition: top 1s;
+  }
 }
 
 .leaving .home-nav__options {
@@ -66,6 +66,7 @@
   background: transparent;
   transition: background 1s;
 }
+
 .home-leaving__contentfaker {
   position: fixed;
   background: $white;

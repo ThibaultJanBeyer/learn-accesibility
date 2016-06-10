@@ -1,0 +1,49 @@
+{
+  "shared": {
+    "toc": {
+      "title": "Table of contents for" 
+    },
+    "nav": {
+      "title": "Main menu",
+      "options": 
+        [
+          {
+            "url": "#v",
+            "title": "V",
+            "description": "visual",
+            "sr": "accessibility"
+          },
+          {
+            "url": "#a",
+            "title": "A",
+            "description": "audio",
+            "sr": "accessibility"
+          },
+          {
+            "url": "#p",
+            "title": "P",
+            "description": "physical",
+            "sr": "accessibility"
+          },
+          {
+            "url": "#c",
+            "title": "C",
+            "description": "Cognitive",
+            "sr": "accessibility"
+          },
+          {
+            "url": "/home",
+            "description": "Home"
+          },
+          {
+            "url": "#about",
+            "description": "About"
+          },
+          {
+            "url": "#sitemap",
+            "description": "Sitemap"
+          }
+        ] 
+    }
+  }
+}

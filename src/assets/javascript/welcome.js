@@ -44,7 +44,7 @@
             // and remove that first contentblock after some time
             text[i].classList.add('sr-only');
             // go to next animation
-            next(6 + 1);
+            next(i + 1);
           }, 1500);
         }, 500);
       }, true);
@@ -187,7 +187,7 @@
               lock.classList.add('lock--locked');
               
               setTimeout(function() {
-                //document.getElementsByClassName('welcome__button--skip')[0].click();
+                document.getElementsByClassName('welcome__button--skip')[0].click();
               }, 400);
             }, 3000);
           });

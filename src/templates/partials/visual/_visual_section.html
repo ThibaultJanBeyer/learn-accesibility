@@ -1,0 +1,29 @@
+<!-- visual section nunjuck -->
+
+{% for section in visual.sections %}
+<section class="visual" aria-labelledby="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}">
+  <h2 id="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}">{{ section.title }}</h2>
+
+  {% for paragraph in section.paragraphs %}
+
+  {% if paragraph.p %}
+  <p> {{ paragraph.p }} </p>
+  {% endif %}
+
+  {% endfor %}
+
+  {% if section.subs %}
+  {% for sub in section.subs %}
+    <h3 id="{{ sub.title | replace(r/[^A-Za-z0-9]/g, '-') }}">{{ sub.title }}</h3>
+    {% for paragraph in sub.paragraphs %}
+
+    {% if paragraph.p %}
+    <p> {{ paragraph.p }} </p>
+    {% endif %}
+
+    {% endfor %}
+  {% endfor %}
+  {% endif %}
+
+</section>
+{% endfor %}
