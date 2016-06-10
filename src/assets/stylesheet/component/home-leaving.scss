@@ -11,6 +11,11 @@
   }
 }
 
+.leaving .home {
+  background: transparent !important;
+  transition: background 1s;
+}
+
 .leaving .home-nav__link-title {
   @include heading($gamma, $secondary-family, $secondary-weight);
   transition: font-size 1s;
@@ -24,12 +29,23 @@
 .leaving .home-nav__link-container {
   min-width: 60px;
   position: fixed;
-  transition: top 1s 1s, left 1s 1s, position 0.5s;
+  transition: top 1s 0.5s, left 1s 0.5s, position 0.5s;
   z-index: 3;
 }
 
 .leaving .home__content {
   overflow: hidden;
+  position: fixed;
+  width: 100px;
+  height: 80px;
+  right: 0;
+  top: 0;
+  padding: 0;
+  transition: width 1s 1.5s, height 1s 1.5s, right 1s 1.5s, padding 1s 1.5s;
+}
+
+.leaving .home__content.top {
+  transition: top 1s;
 }
 
 .leaving .home-nav__options {
@@ -49,4 +65,18 @@
 .leaving .home-nav__link:focus {
   background: transparent;
   transition: background 1s;
+}
+.home-leaving__contentfaker {
+  position: fixed;
+  background: $white;
+  box-shadow: 10px 0 40px $black03;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -150%;
+}
+
+.leaving .home-leaving__contentfaker {
+  left: -100px;
+  transition: left 1s 3s;
 }

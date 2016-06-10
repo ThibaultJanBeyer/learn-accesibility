@@ -80,7 +80,9 @@
         // add the click listener to the links
         links[i].addEventListener('click', function (e) {
           e.preventDefault(); // prevent default pageleaving
-          var link = this.href;
+          var aLink = this;
+          console.log(this);
+          console.log(e);
 
           for (let i = 0; i < linkContainers.length; i++) {
             // give the containers a fixed position
@@ -100,11 +102,22 @@
               mover(linkContainers[i], homeLeaveringTargets[i]);
             }
 
-            // after some time
-            setTimeout(function () {
-              // go to location
-              window.location.href = link;
-            }, 3000);
+            // move the selection to the right item
+            setTimeout(function() {
+              homeContent.classList.add('top');
+              if (aLink.classList.contains('A')) {
+                homeContent.style.top = '75px';
+              } else if (aLink.classList.contains('P')) {
+                homeContent.style.top = '155px';
+              } else if (aLink.classList.contains('C')) {
+                homeContent.style.top = '235px';
+              }
+
+              setTimeout(function() {
+                // go to location
+                window.location.href = aLink.href;
+              }, 1000);
+            }, 2500);
           }, 200);
         });
       }
