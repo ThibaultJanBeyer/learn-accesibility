@@ -11,7 +11,7 @@
       <span class="toc__value copy">{{ key.title }} {{ key.subtitle }}</span>
     </h2>
 
-    <ul>
+    <ol>
       {% for section in key.sections %}
       {% set outer_loop = loop %}
       <li>
@@ -31,7 +31,7 @@
         {% endif %}
       </li>
       {% endfor %}
-    </ul>
+    </ol>
 
   </div>
 </nav>

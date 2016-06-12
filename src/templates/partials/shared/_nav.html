@@ -8,6 +8,9 @@
     {% for option in nav.options %}
     <li>
       <a href="{{ option.url }}" class="nav__link center-align {{ option.title }} {{ 'nav__link--selected' if option.title == key.letter }}">
+        {% if option.title == key.letter %}
+        <span class="sr-only">{{ nav.selected }}</span>
+        {% endif %}
         <div class="nav__link-container">
           <p class="nav__link-title copy">{{ option.title }}</p>
           <p class="nav__link-description copy">

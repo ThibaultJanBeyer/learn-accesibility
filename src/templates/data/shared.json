@@ -9,6 +9,7 @@
     },
     "nav": {
       "title": "Main menu",
+      "selected": "current:",
       "options": 
         [
           {

@@ -34,7 +34,7 @@
   }
 
   @include media('>medium') {
-    margin: -30px 0 200px 225px;
+    margin: -26px 0 200px 225px; /* 1. */
   }
 }
 
