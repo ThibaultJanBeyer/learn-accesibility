@@ -2,6 +2,7 @@
   font-size: nth($sizes, 1) * 1px;
   font-family: $family;
   font-weight: $weight;
+  line-height: $line-height;
 
   @include media('>medium') {
     font-size: nth($sizes, 2) * 1px;

@@ -4,7 +4,7 @@
  * 2. increase distance of underline
  */
 .metalink {
-  background-image: linear-gradient(to top, transparent 0%, transparent 43%, $primary 43%, $primary 60%, transparent 60%, transparent 100%);
+  background-image: linear-gradient(to top, transparent 0%, transparent 43%, $blue 43%, $blue 60%, transparent 60%, transparent 100%);
   background-position: 0% 0%;
   background-size: 100% 220%;
   color: unset; /* 1. */

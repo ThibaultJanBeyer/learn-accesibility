@@ -1,0 +1,25 @@
+.toc {
+  @include font-size-responsive($delta);
+  position: fixed;
+  top: 40px;
+  left: 0;
+  border-left: 10px solid $primary;
+  padding-left: 10px;
+}
+
+.toc__link {
+  @include link-styles-alt;
+}
+
+.toc__link .toc__value {
+  background-image: linear-gradient(to top, transparent 0%, transparent 2%, $blue 2%, $blue 6%, transparent 6%, transparent 100%);
+}
+
+.toc__index {
+  width: 35px;
+  display: inline-block;
+}
+
+.toc__value {
+  display: inline-block;
+}

@@ -2,16 +2,34 @@
  * Link styles on light background.
  */
 @mixin link-styles {
-  color: $primary;
+  color: $blue;
   text-decoration: none;
+  background-image: linear-gradient(to top, transparent 0%, transparent 2%, $blue 2%, $blue 6%, transparent 6%, transparent 100%);
 
   &:visited {
-    color: $primary;
+    color: $blue;
   }
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    background-image: linear-gradient(to top, transparent 0%, transparent 0%, $primary 0%, $primary 100%, transparent 100%, transparent 100%);
+  }
+}
+
+/**
+ * Alt
+ */
+@mixin link-styles-alt {
+  color: $blue;
+  text-decoration: none;
+
+  &:visited {
+    color: $blue;
+  }
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(to top, transparent 0%, transparent 0%, $primary 0%, $primary 100%, transparent 100%, transparent 100%);
   }
 }
 
@@ -32,3 +50,8 @@
     text-decoration: none;
   }
 }
+
+/**
+ * Link styles toc.
+ */
+
