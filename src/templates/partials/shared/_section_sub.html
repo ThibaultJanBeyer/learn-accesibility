@@ -15,6 +15,9 @@
     {% if paragraph.pre %}
     <pre class="section-sub__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
     {% endif %}
+    {% if paragraph.img %}
+    <img src="{{ paragraph.img.src }}" alt="{{ paragraph.img.alt }}" class="section-sub__img">
+    {% endif %}
   
   {% endfor %}
   </ul>

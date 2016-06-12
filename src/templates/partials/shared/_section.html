@@ -9,8 +9,11 @@
   <div class="section__separation"></div>
 
   <p class="section__intro copy">
-    {{ key.intro }}
+    {{ key.intro.p }}
   </p>
+  {% if key.intro.img %}
+    <img src="{{ key.intro.img.src }}" alt="{{ key.intro.img.alt }}" class="section__img">
+  {% endif %}
 
 </section>
 

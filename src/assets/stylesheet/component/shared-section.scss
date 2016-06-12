@@ -1,7 +1,7 @@
 .section {
   margin: auto;
-  max-width: 500px;
-  padding: 0 100px;
+  max-width: 450px;
+  padding: 0 $outbreaks;
 }
 
 .section__separation {
@@ -13,4 +13,13 @@
 
 .section__intro {
   @include font-size-responsive;
+}
+
+.section__img {
+  // scss-lint:disable DuplicateProperty
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+  margin-left: -$outbreaks;
+  width: 100%;
+  width: calc(100% + #{$outbreaks});
 }

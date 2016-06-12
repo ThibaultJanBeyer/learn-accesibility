@@ -1,13 +1,24 @@
 {
-  "visual": {
+  "visual": 
+  {
     "title": "Visual",
     "subtitle": "Accessibility",
     "letter": "V",
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
-    "sections": [
+    "intro": 
+    {
+      "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
+      "img": 
+      {
+        "src": "assets/img/dummy.png",
+        "alt": "alt"
+      }
+    },
+    "sections": 
+    [
       {
         "title": "Hiding Elements",
-        "paragraphs": [
+        "paragraphs": 
+        [
           {
             "li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
           },
@@ -17,10 +28,12 @@
             "preLang": "css"
           }
         ],
-        "subs": [
+        "subs": 
+        [
           {
             "title": "Section 1.1.",
-            "paragraphs": [
+            "paragraphs": 
+            [
               {
                 "li": "hahaha"
               }
@@ -28,7 +41,8 @@
           },
           {
             "title": "New Sub",
-            "paragraphs": [
+            "paragraphs":
+            [
               {
                 "li": "hahaha"
               }
@@ -38,7 +52,8 @@
       },
       {
         "title": "Section2",
-        "paragraphs": [
+        "paragraphs":
+        [
           {
             "p": "dolor sit"
           },
@@ -46,7 +61,8 @@
             "img": "only img"
           }
         ],
-        "subs": [
+        "subs":
+        [
           {
             "title": "test2"
           }
