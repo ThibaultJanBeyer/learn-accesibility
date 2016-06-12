@@ -97,7 +97,7 @@
 				"title": "Hiding Elements",
 				"paragraphs": [
 					{
-						"li": "Most SR Obey display:none and visibility:hidden by not reading the text "
+						"li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
 					},
 					{
 						"li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",

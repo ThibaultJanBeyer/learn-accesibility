@@ -10,10 +10,10 @@
   {% for paragraph in section.paragraphs %}
 
     {% if paragraph.li %}
-    <li class="section-sub__li copy"> {{ paragraph.li }} </li>
+    <li class="section-sub__li copy"> {{ paragraph.li | safe }} </li>
     {% endif %}
     {% if paragraph.pre %}
-    <pre class="section-sub__pre"><code class="language-{{ paragraph.preLang }}"> {{ paragraph.pre }} </code></pre>
+    <pre class="section-sub__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
     {% endif %}
   
   {% endfor %}
