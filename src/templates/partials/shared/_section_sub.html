@@ -13,7 +13,7 @@
     <li class="section-sub__li copy"> {{ paragraph.li }} </li>
     {% endif %}
     {% if paragraph.pre %}
-    <pre class="section-sub__pre"> {{ paragraph.pre }} </pre>
+    <pre class="section-sub__pre"><code class="language-{{ paragraph.preLang }}"> {{ paragraph.pre }} </code></pre>
     {% endif %}
   
   {% endfor %}

@@ -101,7 +101,8 @@
 					},
 					{
 						"li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",
-						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}"
+						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
+						"preLang": "css"
 					}
 				],
 				"subs": [

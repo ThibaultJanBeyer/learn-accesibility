@@ -12,12 +12,12 @@
 }
 
 .section-sub__title::after {
-    @include gradient;
-    content: '';
-    width: 250px;
-    height: 50px;
-    display: block;
-    margin: -35px -35px 0px;
+  @include gradient;
+  content: '';
+  width: 250px;
+  height: 50px;
+  display: block;
+  margin: -35px -35px 0;
 }
 
 .section-sub__li {

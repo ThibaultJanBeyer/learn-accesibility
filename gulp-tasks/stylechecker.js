@@ -5,11 +5,11 @@ var jscs = require('gulp-jscs');
 var merge = require('merge-stream');
 
 var scssSrc = 
-  gulp.src('./src/assets/stylesheet/**/*.scss')
+  gulp.src(['./src/assets/stylesheet/**/*.scss','!./src/assets/stylesheet/plugin/prism.scss'])
   .pipe(scsslint());
 
 var jsSrc =
-  gulp.src('./src/assets/javascript/**/*.js')
+  gulp.src(['./src/assets/javascript/**/*.js', '!./src/assets/javascript/plugin/prism.js'])
   .pipe(jscs())
   .pipe(jshint({ esnext: true }))
   .pipe(jshint.reporter('jshint-stylish'));

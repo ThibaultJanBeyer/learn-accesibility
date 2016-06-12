@@ -12,6 +12,7 @@
 }
 
 .leaving .home {
+  // scss-lint:disable ImportantRule
   background: transparent !important;
   transition: background 1s;
 }

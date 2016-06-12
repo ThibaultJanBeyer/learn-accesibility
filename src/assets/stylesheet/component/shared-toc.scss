@@ -12,6 +12,7 @@
 }
 
 .toc__link .toc__value {
+  // scss-lint:disable MergeableSelector
   background-image: linear-gradient(to top, transparent 0%, transparent 6%, $blue 6%, $blue 10%, transparent 10%, transparent 100%);
 }
 

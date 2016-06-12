@@ -4,13 +4,13 @@
   padding: 0 100px;
 }
 
-.section_separation {
+.section__separation {
   background-color: $primary;
   height: 5px;
   width: 50px;
   margin: $gutter--medium 0;
 }
 
-.section_intro {
+.section__intro {
   @include font-size-responsive;
 }
