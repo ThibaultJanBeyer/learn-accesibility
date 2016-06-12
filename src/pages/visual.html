@@ -3,26 +3,23 @@
 {% extends "layout.html" %}
 
 {% block content %}
+{% set route = visual %}
 
-  <div class="site">
+<main class="site__content site__content--open" id="main" aria-label="Content">
 
-    <main class="site__content" id="main" aria-label="Content">
+  {% import "partials/shared/_toc.html" as toc %}    
+  {{ toc.toc(shared.toc, route) }}
 
-      {% import "partials/shared/_toc.html" as toc %}    
-      {{ toc.toc(shared.toc, visual) }}
+  {% import "partials/shared/_section.html" as section %}    
+  {{ section.section(route) }}
 
-      {% import "partials/shared/_section.html" as section %}    
-      {{ section.section(visual) }}
+</main>
 
-    </main>
-    
-    {% import "partials/shared/_nav.html" as nav %}    
-    {{ nav.nav(shared.nav, visual) }}
+{% import "partials/shared/_nav.html" as nav %}    
+{{ nav.nav(shared.nav, route) }}
 
-    <button type="button" class="site__toggler button" aria-hidden="true" role="presentation">
-      <div class="site__toggler-bar"></div>
-    </button>
-
-  </div>
+<button type="button" class="site__toggler button" aria-hidden="true" role="presentation">
+  <div class="site__toggler-bar"></div>
+</button>
 
 {% endblock %}

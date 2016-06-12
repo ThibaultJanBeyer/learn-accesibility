@@ -1,3 +1,12 @@
+.nav__objects {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 0px;
+  pointer-events: none;
+  z-index: -1;
+}
+
 .nav__object {
   position: absolute;
   border: 2px solid $primary;
@@ -19,10 +28,8 @@
 
 @for $i from 1 through 30 {
   .nav__object:nth-child(#{$i}) {
-    $temp: 1% * random(90);
-    $temp2: -1% * random(50);
-    top: $temp;
-    left: $temp2 + $temp;
+    bottom: 1% + random(80);
+    right: 1px + (random(250) - random(200));
     animation-duration: 5000ms - ($i * random(300));
     animation-fill-mode: backwards;
     animation-delay: 1s;
@@ -31,7 +38,7 @@
 
   @keyframes navFillUp--#{$i} {
     from {
-      left: -150%;
+      bottom: -150%;
     }
   }
 }

@@ -3,11 +3,11 @@
   /*
    * Navigation
    */
-  var site = document.getElementsByClassName('site')[0];
+  var siteContent = document.getElementsByClassName('site__content')[0];
   var siteToggler = document.getElementsByClassName('site__toggler')[0];
 
   siteToggler.addEventListener('click', () => {
-    site.classList.toggle('site--open');
+    siteContent.classList.toggle('site__content--open');
     siteToggler.classList.toggle('site__toggler--open');
   });
 
@@ -23,5 +23,14 @@
       clicked.classList.add('nav__link--selected');
     });
   }
+
+  /*
+   * Objects
+   */
+  var navObjects = document.getElementsByClassName('nav__objects')[0];
+  navObjects.style.height = siteContent.offsetHeight + 'px';
+  console.log(siteContent.offsetHeight);
+  console.log(navObjects.style.height);
+  
 
 }})();

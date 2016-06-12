@@ -1,6 +1,7 @@
 <!-- macro nav nunjuck -->
 
 {% macro nav(nav, key) %}
+
 <nav class="nav" role="navigation" aria-label="mainmenu">
   <h2 id="mainmenu" class="sr-only">{{ nav.title }}</h2>
   <ul class="nav__container">
@@ -17,12 +18,14 @@
     </li>
     {% endfor %}
   </ul>
-  <div class="nav__objects">
-    {% for i in range(1, 10) %}
-    <div class="nav__object nav__circle"></div>
-    <div class="nav__object nav__square"></div>
-    <div class="nav__object nav__diamond"></div>
-    {% endfor %}
-  </div>
 </nav>
+
+<div class="nav__objects">
+  {% for i in range(1, 10) %}
+  <div class="nav__object nav__circle"></div>
+  <div class="nav__object nav__square"></div>
+  <div class="nav__object nav__diamond"></div>
+  {% endfor %}
+</div>
+
 {% endmacro %}

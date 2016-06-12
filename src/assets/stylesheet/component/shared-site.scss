@@ -1,22 +1,3 @@
-.site {
-  display: flex;
-  justify-content: space-between;
-  transition: width 0.5s;
-  width: calc(100% + 100px);
-
-  @include media('>small') {
-    width: 100%;
-  }
-}
-
-.site--open {
-  width: 100%;
-
-  @include media('>small') {
-    width: calc(100% + 100px);
-  }
-}
-
 .site__content {
   // scss-lint:disable DuplicateProperty
   background: $white;
@@ -25,20 +6,34 @@
   width: calc(100% - 100px);
   position: relative;
   z-index: 2;
+  transition: width 0.5s;
+
+  @include media('>small') {
+    width: 99.9%;
+  }
+}
+
+.site__content--open {
+  width: 99.9%;
+
+  @include media('>small') {
+    width: calc(100% - 100px);
+  }
 }
 
 .site__toggler {
   height: 30px;
   opacity: 0.3;
   position: fixed;
-  margin-left: -140px;
-  width: 30px;
+  right: 15px;
   top: 5px;
   transform: rotate(0deg);
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, right 0.5s;
+  width: 30px;
   z-index: 3;
 
   @include media('>small') {
+    right: 105px;
     transform: rotate(-90deg);
   }
 
@@ -49,9 +44,11 @@
 }
 
 .site__toggler--open {
+  right: 105px;
   transform: rotate(-90deg);
 
   @include media('>small') {
+    right: 15px;
     transform: rotate(0deg);
   }
 }

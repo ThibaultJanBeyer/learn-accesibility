@@ -1,15 +1,15 @@
 .nav {
+  position: fixed;
+  right: 0;
+  top: 0;
   width: 100px;
-  vertical-align: top;
-  background: $white;
-  position: relative;
-  z-index: -1;
+  z-index: 0;
+  height: 100%;
 }
 
 .nav__container {
-  position: fixed;
   width: 100px;
-  z-index: -1;
+  height: 100%;
 }
 
 .nav__link {
