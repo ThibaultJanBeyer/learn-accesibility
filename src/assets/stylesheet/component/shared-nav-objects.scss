@@ -1,3 +1,5 @@
+$objects: 30;
+
 .nav__objects {
   position: absolute;
   width: 100%;
@@ -17,7 +19,7 @@
 .nav__circle { border-radius: 50%; }
 .nav__diamond { transform: rotate(45deg); }
 
-@for $i from 1 through 30 {
+@for $i from 1 through $objects {
   .nav__circle:nth-child(#{$i}),
   .nav__square:nth-child(#{$i}),
   .nav__diamond:nth-child(#{$i}),
@@ -26,11 +28,11 @@
   }
 }
 
-@for $i from 1 through 30 {
+@for $i from 1 through $objects {
   .nav__object:nth-child(#{$i}) {
     bottom: 1% + random(80);
     right: 1px + (random(250) - random(200));
-    animation-duration: 5000ms - ($i * random(300));
+    animation-duration: 5000ms - random(5000);
     animation-fill-mode: backwards;
     animation-delay: 1s;
     animation-name: navFillUp--#{$i};
