@@ -3,6 +3,7 @@
   /*
    * Navigation
    */
+  // main
   var siteContent = document.getElementsByClassName('site__content')[0];
   var siteToggler = document.getElementsByClassName('site__toggler')[0];
 
@@ -24,13 +25,19 @@
     });
   }
 
+  // toc
+  var tocTogger = document.getElementsByClassName('toc__toggler')[0];
+  var tocContainer = document.getElementsByClassName('toc__container')[0];
+
+  tocTogger.addEventListener('click', () => {
+    tocTogger.classList.toggle('toc__toggler--open');
+    tocContainer.classList.toggle('toc__container--open');
+  });
+
   /*
    * Objects
    */
   var navObjects = document.getElementsByClassName('nav__objects')[0];
   navObjects.style.height = siteContent.offsetHeight + 'px';
-  console.log(siteContent.offsetHeight);
-  console.log(navObjects.style.height);
-  
 
 }})();

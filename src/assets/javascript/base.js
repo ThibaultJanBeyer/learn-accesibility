@@ -8,8 +8,12 @@ var LOCATION = window.location.href;
 // Routes
 if ( LOCATION.indexOf('home') >= 0 ) {
   const R_HOME = true;
-} else if ( LOCATION.indexOf('visual') >= 0 ) {
+} else if ( LOCATION.indexOf('visual') >= 0 ||
+LOCATION.indexOf('audio') >= 0 ||
+LOCATION.indexOf('physical') >= 0 ||
+LOCATION.indexOf('cognitive') >= 0 ) {
   const R_SITE = true;
+  
 } else {
   const R_WELCOME = true;
 }

@@ -2,32 +2,37 @@
 
 {% macro toc(toc, key) %}
 <nav class="toc" role="navigation" aria-labelledby="toc">
-  <h2 id="toc">
-    <span class="sr-only">{{ toc.title }} </span>
-    <span class="toc__index copy">{{ toc[key.letter] }}.</span>
-    <span class="toc__value copy">{{ key.title }} {{ key.subtitle }}</span>
-  </h2>
+  <button type="button" class="toc__toggler toc__toggler--open button" aria-hidden="true" role="presentation"></button>
+  <div class="toc__container toc__container--open">
 
-  <ul>
-    {% for section in key.sections %}
-    {% set outer_loop = loop %}
-    <li>
-      <a href="#{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="toc__link">
-        <span class="toc__index copy">{{ toc[key.letter] }}.{{ loop.index }}.</span>
-        <span class="toc__value copy">{{ section.title}}</span>
-      </a>
-      {% if section.subs %}
-      {% for sub in section.subs %}
+    <h2 id="toc">
+      <span class="sr-only">{{ toc.title }} </span>
+      <span class="toc__index copy">{{ toc[key.letter] }}.</span>
+      <span class="toc__value copy">{{ key.title }} {{ key.subtitle }}</span>
+    </h2>
+
+    <ul>
+      {% for section in key.sections %}
+      {% set outer_loop = loop %}
       <li>
-        <a href="#{{ sub.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="toc__link">
-          <span class="toc__index copy">{{ toc[key.letter] }}.{{ outer_loop.index }}.{{ loop.index }}.</span>
-          <span class="toc__value copy">{{ sub.title }}</span>
+        <a href="#{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="toc__link">
+          <span class="toc__index copy">{{ toc[key.letter] }}.{{ loop.index }}.</span>
+          <span class="toc__value copy">{{ section.title}}</span>
         </a>
+        {% if section.subs %}
+        {% for sub in section.subs %}
+        <li>
+          <a href="#{{ sub.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="toc__link">
+            &nbsp;&nbsp;<span class="toc__index copy">{{ toc[key.letter] }}.{{ outer_loop.index }}.{{ loop.index }}.</span>
+            <span class="toc__value copy">{{ sub.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+        {% endif %}
       </li>
       {% endfor %}
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+    </ul>
+
+  </div>
 </nav>
 {% endmacro %}

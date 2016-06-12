@@ -15,19 +15,19 @@
               "sr": "accessibility"
             },
             {
-              "url": "#a",
+              "url": "audio.html",
               "title": "A",
               "description": "audio",
               "sr": "accessibility"
             },
             {
-              "url": "#p",
+              "url": "physical.html",
               "title": "P",
               "description": "physical",
               "sr": "accessibility"
             },
             {
-              "url": "#c",
+              "url": "cognitive.html",
               "title": "C",
               "description": "Cognitive",
               "sr": "accessibility"

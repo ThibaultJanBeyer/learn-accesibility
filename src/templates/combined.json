@@ -60,6 +60,67 @@
 			}
 		]
 	},
+	"cognitive": {
+		"title": "Cognitive",
+		"subtitle": "Accessibility",
+		"letter": "C",
+		"intro": {
+			"p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
+			"img": {
+				"src": "assets/img/dummy.png",
+				"alt": "alt"
+			}
+		},
+		"sections": [
+			{
+				"title": "Hiding Elements",
+				"paragraphs": [
+					{
+						"li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
+					},
+					{
+						"li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",
+						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
+						"preLang": "css"
+					}
+				],
+				"subs": [
+					{
+						"title": "Section 1.1.",
+						"paragraphs": [
+							{
+								"li": "hahaha"
+							}
+						]
+					},
+					{
+						"title": "New Sub",
+						"paragraphs": [
+							{
+								"li": "hahaha"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Section2",
+				"paragraphs": [
+					{
+						"p": "dolor sit"
+					},
+					{
+						"img": "only img"
+					}
+				],
+				"subs": [
+					{
+						"title": "test2"
+					}
+				]
+			}
+		]
+	},
 	"home": {
 		"letters": [
 			"A",
@@ -90,25 +151,86 @@
 					"sr": "accessibility"
 				},
 				{
-					"url": "#a",
+					"url": "audio.html",
 					"title": "A",
 					"description": "audio",
 					"sr": "accessibility"
 				},
 				{
-					"url": "#p",
+					"url": "physical.html",
 					"title": "P",
 					"description": "physical",
 					"sr": "accessibility"
 				},
 				{
-					"url": "#c",
+					"url": "cognitive.html",
 					"title": "C",
 					"description": "Cognitive",
 					"sr": "accessibility"
 				}
 			]
 		}
+	},
+	"physical": {
+		"title": "Physical",
+		"subtitle": "Accessibility",
+		"letter": "P",
+		"intro": {
+			"p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
+			"img": {
+				"src": "assets/img/dummy.png",
+				"alt": "alt"
+			}
+		},
+		"sections": [
+			{
+				"title": "Hiding Elements",
+				"paragraphs": [
+					{
+						"li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
+					},
+					{
+						"li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",
+						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
+						"preLang": "css"
+					}
+				],
+				"subs": [
+					{
+						"title": "Section 1.1.",
+						"paragraphs": [
+							{
+								"li": "hahaha"
+							}
+						]
+					},
+					{
+						"title": "New Sub",
+						"paragraphs": [
+							{
+								"li": "hahaha"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Section2",
+				"paragraphs": [
+					{
+						"p": "dolor sit"
+					},
+					{
+						"img": "only img"
+					}
+				],
+				"subs": [
+					{
+						"title": "test2"
+					}
+				]
+			}
+		]
 	},
 	"shared": {
 		"toc": {

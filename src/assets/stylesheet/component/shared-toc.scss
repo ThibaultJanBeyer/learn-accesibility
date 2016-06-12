@@ -3,8 +3,70 @@
   position: fixed;
   top: 40px;
   left: 0;
-  border-left: 10px solid $primary;
-  padding-left: 10px;
+}
+
+.toc__toggler {
+  @include gradient;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+
+  @include media('>medium') {
+    width: 30px;
+  }
+}
+
+.toc__toggler--open {
+  width: 30px;
+
+  @include media('>medium') {
+    width: 10px;
+  }
+}
+
+.toc__toggler::before {
+  @include font-size-responsive($delta);
+  content: '';
+  margin: -10px -75px;
+  position: absolute;
+  transform: rotate(90deg);
+  width: 0;
+  z-index: 1;
+
+  @include media('>medium') {
+    content: 'table of content';
+    width: 150px;
+  }
+}
+
+.toc__toggler--open::before {
+  content: 'table of content';
+  width: 150px;
+
+  @include media('>medium') {
+    content: '';
+    width: 0;
+  }
+}
+
+.toc__container {
+  background: $white;
+  margin-left: 10px;
+  padding: 10px;
+  transform: translateX(0);
+  transition: transform 0.5s;
+
+  @include media('>medium') {
+    transform: translateX(-150%);
+  }
+}
+
+.toc__container--open {
+  transform: translateX(-150%);
+
+  @include media('>medium') {
+    transform: translateX(0);
+  }
 }
 
 .toc__link {
@@ -14,13 +76,10 @@
 // scss-lint:disable MergeableSelector
 .toc__link .toc__value {
   background-image: linear-gradient(to top, transparent 0%, transparent 6%, $blue 6%, $blue 10%, transparent 10%, transparent 100%);
+  text-shadow: 1px 0 $white, -1px 0 $white, -2px 0 $white, 2px 0 $white;
 }
 
-.toc__index {
-  width: 35px;
-  display: inline-block;
-}
-
-.toc__value {
-  display: inline-block;
+.toc__link:hover .toc__value,
+.toc__link:focus .toc__value {
+  text-shadow: 1px 0 $primary, -1px 0 $primary, -2px 0 $primary, 2px 0 $primary;
 }
