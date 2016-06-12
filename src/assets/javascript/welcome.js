@@ -37,7 +37,7 @@
         // when everything is deleted
         setTimeout(function () {
           // hide the image and the text
-          myLoop({ cd: flyOut.length - 1, dur: 10, cu: 0 }, (cd, dur, cu) => {
+          myLoop({ cd: flyOut.length - 1, dur: 5, cu: 0 }, (cd, dur, cu) => {
             flyOut[cu].classList.remove('fly--in');
           });
           setTimeout(function () {
@@ -55,7 +55,7 @@
       // unhide the content block
       text[i].classList.remove('sr-only');
       // fly in the icon element
-      myLoop({ cd: flyOut.length - 1, dur: 10, cu: 0 }, (cd, dur, cu) => {
+      myLoop({ cd: flyOut.length - 1, dur: 5, cu: 0 }, (cd, dur, cu) => {
         flyOut[cu].classList.add('fly--in');
       });
       //  write the text
@@ -79,7 +79,7 @@
               }, 1500);
             }, 500);
           }, true);
-        }, 4000);
+        }, 2500);
       }, false);
     }
     
@@ -96,7 +96,7 @@
         // when the writing is over, timeout the animation for some seconds
         setTimeout(function () {
           finishing(i);
-        }, 1000);
+        }, 500);
       }, false, true);
     }
   };
@@ -139,11 +139,11 @@
             specialWc[j].style.transition = 'font-size 1.5s ease-out, left 1s ease-out, top 1s ease-out';
             specialWc[j].style.textShadow = 'none';
           }
+
           /*
           * fly elements into the door
           */
           var target = document.getElementsByClassName('welcome__target')[0];
-
           // this is what should happen with each letter
           var specialMove = (el, xT, yT, xE, yE, i) => {
             setTimeout(() => {
@@ -160,7 +160,7 @@
                 el.style.left = xT + 'px';
                 el.style.top = yT + 'px';
                 el.style.fontSize = '1px';
-              }, 500);
+              }, 400);
             }, 5);
           };
           // move large text
@@ -189,7 +189,7 @@
               setTimeout(function() {
                 document.getElementsByClassName('welcome__button--skip')[0].click();
               }, 400);
-            }, 3000);
+            }, 1000);
           });
         }, 2000);
       }
