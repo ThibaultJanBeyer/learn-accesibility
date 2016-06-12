@@ -1,6 +1,16 @@
-.shared-section {
+.section {
   margin: auto;
   max-width: 500px;
   padding: 0 100px;
-  min-height: 400px;
+}
+
+.section_separation {
+  background-color: $primary;
+  height: 5px;
+  width: 50px;
+  margin: $gutter--medium 0;
+}
+
+.section_intro {
+  @include font-size-responsive;
 }

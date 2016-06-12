@@ -3,13 +3,13 @@
   vertical-align: top;
   background: $white;
   position: relative;
-  z-index: 0;
+  z-index: -1;
 }
 
 .nav__container {
   position: fixed;
   width: 100px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .nav__link {

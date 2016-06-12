@@ -2,6 +2,7 @@
   position: absolute;
   border: 2px solid $primary;
   transition: transform 0.1s;
+  z-index: -2;
 }
 
 .nav__circle { border-radius: 50%; }
@@ -12,16 +13,15 @@
   .nav__square:nth-child(#{$i}),
   .nav__diamond:nth-child(#{$i}),
   .nav__skew:nth-child(#{$i}) {
-    margin: random(250) + px 0;
     padding: random(30) + px;
   }
 }
 
 @for $i from 1 through 30 {
   .nav__object:nth-child(#{$i}) {
-    $temp: 1% * random(50);
+    $temp: 1% * random(90);
     $temp2: -1% * random(50);
-    top: calc(200px + #{$temp});
+    top: $temp;
     left: $temp2 + $temp;
     animation-duration: 5000ms - ($i * random(300));
     animation-fill-mode: backwards;

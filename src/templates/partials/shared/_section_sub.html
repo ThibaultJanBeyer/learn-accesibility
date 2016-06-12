@@ -1,0 +1,31 @@
+<!-- key section sub nunjuck -->
+
+{% for section in key.sections %}
+<section class="section-sub" aria-labelledby="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}">
+  <h2 id="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="section-sub__title copy">
+    {{ section.title }}
+  </h2>
+
+  <ul>
+  {% for paragraph in section.paragraphs %}
+
+    {% if paragraph.li %}
+    <li class="section-sub__li copy"> {{ paragraph.li }} </li>
+    {% endif %}
+    {% if paragraph.pre %}
+    <pre class="section-sub__pre"> {{ paragraph.pre }} </pre>
+    {% endif %}
+  
+  {% endfor %}
+  </ul>
+
+  {% if section.subs %}
+  {% for sub in section.subs %}
+  
+    {% include "partials/shared/_section_sub_sub.html" %}
+
+  {% endfor %}
+  {% endif %}
+
+</section>
+{% endfor %}

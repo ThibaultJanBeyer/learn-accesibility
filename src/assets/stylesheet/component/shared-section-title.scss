@@ -1,0 +1,45 @@
+.section-title__line-container {
+  position: relative;
+}
+
+.section-title__line {
+  border-top: 1px solid $black01;
+  position: absolute;
+  width: 100%;
+  transform: rotate(-45deg);
+  margin-top: 200px;
+  z-index: -1;
+}
+
+.section-title__letter {
+  @include heading($ultra, $secondary-family, $secondary-weight);
+  color: $white;
+  display: block;
+  text-align: center;
+  text-shadow: 5px 10px 20px $black03;
+  text-transform: uppercase;
+}
+
+.section-title__title-container {
+  text-align: center;
+  margin-top: -350px;
+}
+
+.section-title__title {
+  @include heading($mega, $cursive-family, $cursive-weight);
+  background-image: linear-gradient(to top, transparent 0%, transparent 30%, $secondary70 30%, $primary70 80%, transparent 80%, transparent 100%);
+  display: inline;
+  padding: 0 20px;
+}
+
+.section-title__subtitle-container {
+  margin: -30px 0 200px 240px;
+}
+
+.section-title__subtitle {
+  @include heading($gamma, $primary-family, $primary-weight);
+  background-color: $secondary70;
+  display: inline;
+  text-transform: lowercase;
+  padding: 10px;
+}

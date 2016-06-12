@@ -1,0 +1,19 @@
+<!-- section nunjuck -->
+
+{% macro section(key) %}
+
+<section class="section" aria-labelledby="visualTitle">
+
+  {% include "partials/shared/_section_title.html" %}
+
+  <div class="section_separation"></div>
+
+  <p class="section_intro copy">
+    {{ key.intro }}
+  </p>
+
+</section>
+
+{% include "partials/shared/_section_sub.html" %}
+
+{% endmacro %}

@@ -1,0 +1,26 @@
+.section-sub {
+  @include vertical-rhythm;
+  margin: auto;
+  max-width: 500px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.section-sub__title {
+  @include heading($alpha, $primary-family, 700);
+  @include vertical-rhythm($gutter--medium);
+}
+
+.section-sub__title::after {
+    @include gradient;
+    content: '';
+    width: 250px;
+    height: 50px;
+    display: block;
+    margin: -35px -35px 0px;
+}
+
+.section-sub__li {
+  @include font-size-responsive;
+  list-style: disc;
+}

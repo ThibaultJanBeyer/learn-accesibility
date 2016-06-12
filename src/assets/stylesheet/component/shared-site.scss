@@ -28,12 +28,13 @@
 
 .site__toggler {
   height: 30px;
+  opacity: 0.3;
   position: fixed;
   margin-left: -140px;
   width: 30px;
   top: 5px;
   transform: rotate(0deg);
-  transition: transform 0.5s, background 1s;
+  transition: transform 0.5s, opacity 0.5s;
   z-index: 3;
 
   @include media('>small') {
@@ -42,7 +43,7 @@
 
   &:hover,
   &:focus {
-    background: $primary;
+    opacity: 1;
   }
 }
 
@@ -59,7 +60,7 @@
 .site__toggler-bar::after {
   width: 30px;
   height: 5px;
-  background: $primary;
+  background: $black;
   position: absolute;
 }
 
