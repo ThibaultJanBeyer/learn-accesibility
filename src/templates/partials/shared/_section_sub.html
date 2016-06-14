@@ -1,34 +1,14 @@
 <!-- key section sub nunjuck -->
 
-{% for section in key.sections %}
-<section class="section-sub" aria-labelledby="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}">
-  <h2 id="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="section-sub__title copy">
-    {{ section.title }}
-  </h2>
+<div class="section">
+  <h3 id="{{ sub.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="section__title section__title--sub copy">
+    {{ sub.title }}
+  </h3>
+  {% for paragraph in sub.paragraphs %}
 
-  <ul>
-  {% for paragraph in section.paragraphs %}
-
-    {% if paragraph.li %}
-    <li class="section-sub__li copy"> {{ paragraph.li | safe }} </li>
-    {% endif %}
-    {% if paragraph.pre %}
-    <pre class="section-sub__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
-    {% endif %}
-    {% if paragraph.img %}
-    <img src="{{ paragraph.img.src }}" alt="{{ paragraph.img.alt }}" class="section-sub__img">
-    {% endif %}
-  
-  {% endfor %}
-  </ul>
-
-  {% if section.subs %}
-  {% for sub in section.subs %}
-  
-    {% include "partials/shared/_section_sub_sub.html" %}
-
-  {% endfor %}
+  {% if paragraph.p %}
+  <p> {{ paragraph.p }} </p>
   {% endif %}
 
-</section>
-{% endfor %}
+  {% endfor %}
+</div>

@@ -1,4 +1,4 @@
-.section-title__letter {
+.section-head__letter {
   @include heading($ultra, $secondary-family, $secondary-weight);
   color: $white;
   display: block;
@@ -7,7 +7,7 @@
   text-transform: uppercase;
 }
 
-.section-title__title-container {
+.section-head__title-container {
   text-align: center;
   margin-top: -195px;
 
@@ -16,7 +16,7 @@
   }
 }
 
-.section-title__title {
+.section-head__title {
   @include heading($mega, $cursive-family, $cursive-weight);
   background-image: linear-gradient(to top, transparent 0%, transparent 30%, $secondary70 30%, $primary70 80%, transparent 80%, transparent 100%);
   display: inline;
@@ -26,7 +26,7 @@
 /*
  * 1. Visually inline with top element
  */
-.section-title__subtitle-container {
+.section-head__subtitle-container {
   margin: -10px 0 145px 35%; /* 1. */
 
   @include media('>small') {
@@ -38,7 +38,7 @@
   }
 }
 
-.section-title__subtitle {
+.section-head__subtitle {
   @include heading($gamma, $primary-family, $primary-weight);
   background-color: $secondary70;
   display: inline;

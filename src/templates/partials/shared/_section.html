@@ -1,22 +1,40 @@
-<!-- section nunjuck -->
+<!-- key section nunjuck -->
 
 {% macro section(key) %}
 
-<section class="section" aria-labelledby="sectionTitle">
+{% include "partials/shared/_section_intro.html" %}
 
-  {% include "partials/shared/_section_title.html" %}
+{% for section in key.sections %}
+<section class="section" aria-labelledby="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}">
+  <h2 id="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="section__title copy">
+    {{ section.title }}
+  </h2>
 
-  <div class="section__separation"></div>
+  <ul>
+  {% for paragraph in section.paragraphs %}
 
-  <p class="section__intro copy">
-    {{ key.intro.p }}
-  </p>
-  {% if key.intro.img %}
-    <img src="{{ key.intro.img.src }}" alt="{{ key.intro.img.alt }}" class="section__img">
+    {% if paragraph.li %}
+    <li class="section__li copy"> {{ paragraph.li | safe }} </li>
+    {% endif %}
+    {% if paragraph.pre %}
+    <pre class="section__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
+    {% endif %}
+    {% if paragraph.img %}
+    <img src="{{ paragraph.img.src }}" alt="{{ paragraph.img.alt }}" class="section__img">
+    {% endif %}
+  
+  {% endfor %}
+  </ul>
+
+  {% if section.subs %}
+  {% for sub in section.subs %}
+  
+    {% include "partials/shared/_section_sub.html" %}
+
+  {% endfor %}
   {% endif %}
 
 </section>
-
-{% include "partials/shared/_section_sub.html" %}
+{% endfor %}
 
 {% endmacro %}

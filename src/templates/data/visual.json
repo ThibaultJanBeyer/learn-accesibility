@@ -6,12 +6,17 @@
     "letter": "V",
     "intro": 
     {
-      "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
-      "img": 
+      "p": "Speaking of web-accessibility, the visually impaired have the most painpoints. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the european population is blind or partially sighted. They use screen reader. A screen reader is a tool that reads content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text.",
+      "img":
       {
-        "src": "assets/img/dummy.png",
-        "alt": "alt"
-      }
+        "src": "assets/img/sr-stats.png",
+        "alt": "Chart of primary screen reader usage showing decreases in JAWS, NVDA, VoiceOver, SA and significant increases in ZoomText and Window-Eyes.",
+        "caption": "Chart based on Data from <a href=\"http://webaim.org/projects/screenreadersurvey6/#primary\">webaim.org</a> a textual description can be found there."
+      },
+      "ul":
+      [
+        "All concepts introduced on this page were tested with VoiceOver and JAWS in June 2016."
+      ]
     },
     "sections": 
     [
@@ -20,10 +25,10 @@
         "paragraphs": 
         [
           {
-            "li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
+            "li": "Almost all screen reader obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by ignoring the element"
           },
           {
-            "li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",
+            "li": "To have elements visually hidden but still accessible for screen readers the <a href=\"https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements\">W3C suggests</a> this css method:",
             "pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
             "preLang": "css"
           }
