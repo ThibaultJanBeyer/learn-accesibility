@@ -4,7 +4,7 @@
   <h1 class="welcome__title">
     {{ welcome.title }}
   </h1>
-  <p class="sr-only">
+  <p class="visuallyhidden">
     {{ welcome.screenReader }}
   </p>
   <a href="home.html" class="button metalink metalink--alt welcome__button welcome__button--skip">
@@ -14,7 +14,7 @@
   {% for writing in welcome.writings %}
   {% set index = loop.index %}
   <div class="center-align welcome__text">
-    <p class="sr-only">
+    <p class="visuallyhidden">
       {{ writing.screenReader }}
     </p>
     <p class="copy writer__text-container" aria-hidden="true" role="presentation">
@@ -33,7 +33,7 @@
         {% if writing.last %}
           <div class="welcome__target"></div>
           <div class="lock--locker"></div>
-            <a href="home.html" class="sr-only">
+            <a href="home.html" class="visuallyhidden">
               {{ writing.last }}
             </a>
         {% endif %}

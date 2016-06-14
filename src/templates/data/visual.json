@@ -6,7 +6,7 @@
     "letter": "V",
     "intro": 
     {
-      "p": "Speaking of web-accessibility, the visually impaired have the most painpoints. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the european population is blind or partially sighted. They use screen reader. A screen reader is a tool that reads content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text.",
+      "p": "Speaking of web-accessibility, the visually impaired have the most painpoints. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the european population is blind or partially sighted. They use screen reader. A screen reader is a tool that reads content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
       "img":
       {
         "src": "assets/img/sr-stats.png",
@@ -21,16 +21,44 @@
     "sections": 
     [
       {
+        "title": "Basic Facts",
+        "paragraphs":
+        [
+          {
+            "li": "Screen reader can read text, and interpret special attributes written in HTML, most modern screen reader can also list common items as all headers, links, forms and tables."
+          },
+          {
+            "li": "The usual painpoints are a bad page strukture, images, svg, graphs, videos, forms, tables, repetitive elements, visual features, popups."
+          },
+          {
+            "li": "Screen readers have <a href=\"http://webaim.org/projects/screenreadersurvey4/#javascript\">no problems using javascript</a>."
+          }
+        ]
+      },
+      {
         "title": "Hiding Elements",
         "paragraphs": 
         [
           {
-            "li": "Almost all screen reader obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by ignoring the element"
+            "li": "Almost all screen reader obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by ignoring the element."
           },
           {
             "li": "To have elements visually hidden but still accessible for screen readers the <a href=\"https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements\">W3C suggests</a> this css method:",
             "pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
             "preLang": "css"
+          },
+          {
+            "li": "Of course you can also do the contrary. Hide text for screen readers but show it visually by using <code class='language-markup'>aria-hidden=\"true\"</code>. The support for aria-hidden is <a href=\"http://www.html5accessibility.com/tests/hidden2013.html\">brilliant</a>."
+          },
+          {
+            "li": "This is how a screenreader would typically interpret the different hiding methods:",
+            "example":
+            {
+              "pre": "I love\n <span style=\"display:none;\">bees</span>\n <span class=\"visuallyhidden\">cats</span>\n <span aria-hidden=\"true\">& you</span>\n <span hidden>not</span>",
+              "preLang": "markup",
+              "play": "Listen ♫",
+              "audio": "I love cats."
+            }
           }
         ],
         "subs": 

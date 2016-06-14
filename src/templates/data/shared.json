@@ -37,6 +37,11 @@
             "sr": "accessibility"
           }
         ] 
+    },
+    "sections": {
+      "output": "Visual Output",
+      "audio": "Audio Output",
+      "example": "Code example"
     }
   }
 }

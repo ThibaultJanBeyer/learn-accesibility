@@ -12,7 +12,7 @@
   // hide all texts except the first one
   [...text].forEach((el, i) => {
     if (i !== 0) {
-      el.classList.add('sr-only');
+      el.classList.add('visuallyhidden');
     }
   });
 
@@ -42,7 +42,7 @@
           });
           setTimeout(function () {
             // and remove that first contentblock after some time
-            text[i].classList.add('sr-only');
+            text[i].classList.add('visuallyhidden');
             // go to next animation
             next(i + 1);
           }, 1500);
@@ -53,7 +53,7 @@
     // for any animation up ultil the last
     else if (i < text.length - 1) {
       // unhide the content block
-      text[i].classList.remove('sr-only');
+      text[i].classList.remove('visuallyhidden');
       // fly in the icon element
       myLoop({ cd: flyOut.length - 1, dur: 5, cu: 0 }, (cd, dur, cu) => {
         flyOut[cu].classList.add('fly--in');
@@ -73,7 +73,7 @@
               // wait again some seconds
               setTimeout(function () {
                 // and remove that first contentblock
-                text[i].classList.add('sr-only');
+                text[i].classList.add('visuallyhidden');
                 // then go to the next animation
                 next(i + 1);
               }, 1500);
@@ -86,7 +86,7 @@
     // for the last animation
     else if (i >= text.length - 1) {
       // unhide the content block
-      text[i].classList.remove('sr-only');
+      text[i].classList.remove('visuallyhidden');
       // fly in the icon element
       myLoop({ cd: flyOut.length - 1, dur: 10, cu: 0 }, (cd, dur, cu) => {
         flyOut[cu].classList.add('fly--in');

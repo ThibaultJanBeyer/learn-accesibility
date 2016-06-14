@@ -1,6 +1,6 @@
 <!-- key section nunjuck -->
 
-{% macro section(key) %}
+{% macro section(key, shared) %}
 
 {% include "partials/shared/_section_intro.html" %}
 
@@ -17,10 +17,30 @@
     <li class="section__li copy"> {{ paragraph.li | safe }} </li>
     {% endif %}
     {% if paragraph.pre %}
-    <pre class="section__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
+    <div role="group" aria-label="{{ shared.sections.example }}">
+      <pre class="section__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
+    </div>
     {% endif %}
     {% if paragraph.img %}
     <img src="{{ paragraph.img.src }}" alt="{{ paragraph.img.alt }}" class="section__img">
+    {% endif %}
+    {% if paragraph.example %}
+    <div role="group" aria-label="{{ shared.sections.example }}">
+      <pre class="section__pre"><code class="language-{{ paragraph.example.preLang }}">{{ paragraph.example.pre }}</code></pre>
+      <div class="section__example">
+        <button type="button" class="button section__play" data-audio="{{ paragraph.example.audio }}" aria-hidden="true">
+          {{ paragraph.example.play }}
+        </button>
+        <div class="section__example-code">
+          <span class="section__output">{{ shared.sections.output }}:</span>
+          {{ paragraph.example.pre | safe }}
+        </div> 
+        <span class="section__transcript" aria-hidden="true">
+          <span class="section__output">{{ shared.sections.audio }}:</span>
+          “{{ paragraph.example.audio }}”
+        </span>
+      </div>
+    </div>
     {% endif %}
   
   {% endfor %}

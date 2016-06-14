@@ -3,18 +3,18 @@
 {% macro nav(nav, key) %}
 
 <nav class="nav" role="navigation" aria-label="mainmenu">
-  <h2 id="mainmenu" class="sr-only">{{ nav.title }}</h2>
+  <h2 id="mainmenu" class="visuallyhidden">{{ nav.title }}</h2>
   <ul class="nav__container">
     {% for option in nav.options %}
     <li>
       <a href="{{ option.url }}" class="nav__link center-align {{ option.title }} {{ 'nav__link--selected' if option.title == key.letter }}">
         {% if option.title == key.letter %}
-        <span class="sr-only">{{ nav.selected }}</span>
+        <span class="visuallyhidden">{{ nav.selected }}</span>
         {% endif %}
         <div class="nav__link-container">
           <p class="nav__link-title copy">{{ option.title }}</p>
           <p class="nav__link-description copy">
-            {{ option.description }} <span class="sr-only">{{ option.sr }}</span>
+            {{ option.description }} <span class="visuallyhidden">{{ option.sr }}</span>
           </p>
         </div>
       </a>

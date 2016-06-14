@@ -9,8 +9,8 @@
       var start = document.getElementsByClassName('start')[0];
       var end = document.getElementsByClassName('end')[0];
 
-      start.classList.add('sr-only');
-      end.classList.remove('sr-only');
+      start.classList.add('visuallyhidden');
+      end.classList.remove('visuallyhidden');
 
       // reset window position to top
       window.location.hash = '#accessibility';

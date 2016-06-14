@@ -40,4 +40,15 @@
   var navObjects = document.getElementsByClassName('nav__objects')[0];
   navObjects.style.height = siteContent.offsetHeight + 'px';
 
+  /*
+   * Read examples
+   */
+  var audioExamples = document.getElementsByClassName('section__play');
+  for (let i = 0; i < audioExamples.length; i++) {
+    audioExamples[i].addEventListener('click', function(){
+      responsiveVoice.speak(this.getAttribute('data-audio'));
+    });
+    
+  }
+
 }})();

@@ -12,8 +12,8 @@
 .section__separation {
   background-color: $primary;
   height: 5px;
-  width: 50px;
   margin: $gutter--medium 0;
+  width: 50px;
 }
 
 .section__intro {
@@ -22,9 +22,9 @@
 
 .section__img {
   // scss-lint:disable DuplicateProperty
-  margin-top: $gutter;
   margin-bottom: $gutter--large;
   margin-left: -$outbreaks;
+  margin-top: $gutter;
   width: 100%;
   width: calc(100% + #{$outbreaks});
 }
@@ -41,11 +41,11 @@
 .section__title::after {
   @include gradient;
   content: '';
-  width: 300px;
-  height: 50px;
   display: block;
-  margin-top: -35px;
+  height: 50px;
   margin-left: -$outbreaks;
+  margin-top: -35px;
+  width: 300px;
 }
 
 .section__title--sub {
@@ -60,9 +60,9 @@
 .section__li {
   @include font-size-responsive;
   list-style: disc;
-  padding-left: 10px;
-  margin-left: -10px;
   margin-bottom: $gutter--medium;
+  margin-left: -10px;
+  padding-left: 10px;
 }
 
 code {
@@ -74,7 +74,69 @@ code {
   @include font-size-responsive($gamma, $code-family, $code-weight);
   background-color: $black;
   color: $grey;
-  margin-top: -$gutter;
   margin-bottom: $gutter--medium;
   margin-right: -$outbreaks;
+  margin-top: -$gutter;
+}
+
+.section__example {
+  @include font-size-responsive;
+  border: 1px solid $black;
+  margin-bottom: $gutter--medium;
+  margin-right: -$outbreaks;
+  margin-top: -$gutter--medium;
+  padding-left: 40px;
+  padding: 15px;
+}
+
+.section__output {
+  color: $grey;
+}
+
+.section__play {
+  background: $white;
+  border: 1px solid $primary;
+  margin: 0 -90px;
+  padding: 0 5px;
+  position: absolute;
+}
+
+/*
+ * 1. remove 1px jump 
+ */
+.section__play:hover,
+.section__play:focus {
+  @include gradient;
+  border: 1px solid transparent; /* 1. */
+}
+
+/*
+ * 1. add 1px jump 
+ */
+.section__play:active {
+  @include gradient;
+  border: 0; /* 1. */
+}
+
+/*
+ * yes display none, since the SR users are able to listen and the deaf are able to see 
+ */
+.section__transcript {
+  display: none;
+}
+
+/*
+ * exchange the text with the transcript 
+ */
+.section__play:hover ~ .section__example-code,
+.section__play:focus ~ .section__example-code {
+  display: none;
+}
+
+/*
+ * exchange the text with the transcript 
+ */
+.section__play:hover ~ .section__transcript,
+.section__play:focus ~ .section__transcript {
+  display: inline;
 }

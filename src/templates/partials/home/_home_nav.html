@@ -1,7 +1,7 @@
 <!-- nunjucks home nav -->
 
 <nav class="home-nav" role="navigation" aria-labelledby="mainmenu">
-  <h2 id="mainmenu" class="sr-only">{{ home.nav.mainmenu }}</h2>
+  <h2 id="mainmenu" class="visuallyhidden">{{ home.nav.mainmenu }}</h2>
   <ul class="home-nav__options">
 
     {% for option in home.nav.options %}
@@ -13,7 +13,7 @@
           <div class="home-nav__link-holder">
             <div class="home-nav__link-container">
               <p class="home-nav__link-title">{{ option.title }}</p>
-              <p class="home-nav__link-description">{{ option.description }}<span class="sr-only">{{ option.sr }}</span></p>
+              <p class="home-nav__link-description">{{ option.description }}<span class="visuallyhidden">{{ option.sr }}</span></p>
             </div>
           </div>
         </a>
