@@ -6,7 +6,7 @@
 
 {% for section in key.sections %}
 {% set temp = loop.index %}
-<section class="section anchor--aria-labelledby" data-aria-labelledby="{{ section.title }}">
+<section role="region" class="section anchor--aria-labelledby" data-aria-labelledby="{{ section.title }}">
   <h2 class="section__title copy add-anchor">
     {{ section.title }}
   </h2>
@@ -17,45 +17,21 @@
     {% if paragraph.li %}
     <li class="section__li copy add-anchor"> {{ paragraph.li | safe }} </li>
     {% endif %}
+
     {% if paragraph.pre %}
-      {% if section.paragraphs[loop.index].li %}
-      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.paragraphs[loop.index].li }}">{{ shared.sections.skip }}</a>
-      {% elif key.sections[temp].subs %}
-      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].subs[0].title }}">{{ shared.sections.skip }}</a>
-      {% elif key.sections[temp].title %}
-      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].title }}">{{ shared.sections.skip }}</a>
-      {% endif %}
-    <div role="group" aria-label="{{ shared.sections.example }}">
-      <pre class="section__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
-    </div>
+    {% include "partials/shared/elements/_element_pre.html" %}
     {% endif %}
+
     {% if paragraph.img %}
     <img src="{{ paragraph.img.src }}" alt="{{ paragraph.img.alt }}" class="section__img">
     {% endif %}
+
     {% if paragraph.example %}
-      {% if section.paragraphs[loop.index].li %}
-      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.paragraphs[loop.index].li }}">{{ shared.sections.skip }}</a>
-      {% elif section.subs %}
-      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.subs[0].title }}">{{ shared.sections.skip }}</a>
-      {% elif key.sections[temp].title %}
-      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].title }}">{{ shared.sections.skip }}</a>
-      {% endif %}
-    <div role="group" aria-label="{{ shared.sections.example }}">
-      <pre class="section__pre"><code class="language-{{ paragraph.example.preLang }}">{{ paragraph.example.pre }}</code></pre>
-      <div class="section__example">
-        <button type="button" class="button section__play" data-audio="{{ paragraph.example.audio }}" aria-hidden="true">
-          {{ paragraph.example.play }}
-        </button>
-        <div class="section__example-code">
-          <span class="section__output">{{ shared.sections.output }}:</span>
-          {{ paragraph.example.pre | safe }}
-        </div> 
-        <span class="section__transcript" aria-hidden="true">
-          <span class="section__output">{{ shared.sections.audio }}:</span>
-          {{ paragraph.example.audio }}
-        </span>
-      </div>
-    </div>
+      {% include "partials/shared/elements/_element_example.html" %}
+    {% endif %}
+
+    {% if paragraph.table %}
+    {% include "partials/shared/elements/_element_table.html" %}
     {% endif %}
   
   {% endfor %}

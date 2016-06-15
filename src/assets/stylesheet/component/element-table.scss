@@ -1,0 +1,24 @@
+.element-table {
+  border: 1px solid $black03;
+  margin: auto;
+}
+
+.element-table__caption {
+  @include font-size-responsive($gamma, $primary-family, 700);
+}
+
+.element-table__tr {
+  &:nth-child(2) {
+    background: $black01;
+  }
+}
+
+.element-table__th {
+  @include font-size-responsive($delta, $primary-family, 700);
+  padding: 10px;
+}
+
+.element-table__td {
+  @include font-size-responsive($delta);
+  padding: 5px;
+}

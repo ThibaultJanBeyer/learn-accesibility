@@ -279,7 +279,8 @@
 			"output": "Visual output",
 			"audio": "Screen reader",
 			"example": "Code example",
-			"skip": "skip code example to next item"
+			"skip": "skip code example to next item",
+			"warning": "> Note: two dashes -- means that the next element is only read when the user press the 'next item' button on his screen reader.<br> > Note: that the audio output when pressing on listen is not always 100% accurate. But the text above this notes is."
 		}
 	},
 	"visual": {
@@ -302,15 +303,12 @@
 				"title": "Basic Facts",
 				"paragraphs": [
 					{
-						"anchor": "what screen reader can do",
 						"li": "Screen reader can read text, and interpret special attributes written in HTML, most modern screen reader can also list common items as all headers, links, forms and tables."
 					},
 					{
-						"anchor": "screen reader painpoints",
 						"li": "The usual painpoints are a bad page strukture, images, svg, graphs, videos, forms, tables, repetitive elements, visual features, popups."
 					},
 					{
-						"anchor": "screen reader javascript",
 						"li": "Screen readers have <a href=\"http://webaim.org/projects/screenreadersurvey4/#javascript\">no problems using javascript</a>."
 					}
 				]
@@ -319,21 +317,17 @@
 				"title": "Hiding Elements",
 				"paragraphs": [
 					{
-						"anchor": "screen reader display none",
 						"li": "Almost all screen reader obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by ignoring the element."
 					},
 					{
-						"anchor": "screen reader visually hidden",
 						"li": "To have elements visually hidden but still accessible for screen readers the <a href=\"https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements\">W3C suggests</a> this css method:",
 						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
 						"preLang": "css"
 					},
 					{
-						"anchor": "screen reader aria hidden",
 						"li": "Of course you can also do the contrary. Hide text for screen readers but show it visually by using <code class='language-markup'>aria-hidden=\"true\"</code>. The support for aria-hidden is <a href=\"http://www.html5accessibility.com/tests/hidden2013.html\">brilliant</a>."
 					},
 					{
-						"anchor": "screen reader hiding example",
 						"li": "This is how a screenreader would typically interpret the different hiding methods:",
 						"example": {
 							"pre": "I love\n <span style=\"display:none;\">bees</span>\n <span class=\"visuallyhidden\">cats</span>\n <span hidden>and</span>\n <span aria-hidden=\"true\">you</span>",
@@ -342,28 +336,83 @@
 							"audio": "I love cats"
 						}
 					}
-				],
-				"subs": [
+				]
+			},
+			{
+				"title": "Structure",
+				"paragraphs": [
 					{
-						"title": "Section 1.1.",
-						"paragraphs": [
-							{
-								"li": "hahaha"
-							}
-						]
+						"li": "The typical behaviour of screen reader is to read the page from top to bottom. So it is critical that all your element positioning follows the HTML flow. As all modern screen reader use and understand CSS and JavaScript it is important not to mess with that logical flow."
 					},
 					{
-						"title": "New Sub",
-						"paragraphs": [
-							{
-								"li": "hahaha"
-							}
-						]
+						"li": "The document outline should be respected. Read more on this in the <a href=\"#headings\">Headings section</a>. A tool to check your document outline is the <a href=\"https://gsnedders.html5.org/outliner/\">html5 outliner</a>."
+					},
+					{
+						"li": "Use the <code>header</code> tag with <code>role=\"banner\"</code> for the heading of your website (often containing the logo and a searchbar). I.e. like this:",
+						"example": {
+							"pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Banner, 2 items. -- Google image. -- Search, 2 items. -- search input. -- search button."
+						}
+					},
+					{
+						"li": "Any navigation should be contained in a <code>nav</code> tag with <code>role=\"navigation\"</code>. This way some screen reader will be able to list all the navigation elements on your page. Learn more on navigations in the <a href=\"#Navigation\">Navigation section</a>."
+					},
+					{
+						"li": "The main content should be in a <code>main</code> tag with <code>role=\"main\"</code>. A page should always have main section. Some screen reader allow users to jump directly into the main section of a page and thus skipping the navigation or headings."
+					},
+					{
+						"li": "The global footer should be in a <code>footer</code> tag with the <code>role=\"contentinfo\"</code> to differentiate it from other footers on the page."
+					},
+					{
+						"li": "Any supplementary element (that do not fit in the main tag) belong in an <code>aside</code> tag with <code>role=\"complementary\"</code>."
+					},
+					{
+						"li": "The searchbar (with its input, label, button, etc.) should be in a container (can be a form element) with <code>role=\"search\"</code>. Some screen reader allow users to jump directly to the search bar."
+					},
+					{
+						"li": "To group content of a page you can divide it in sections with the <code>section</code> tag and the generic <code>role=\"region\"</code>. However, don’t overuse it as it adds text for the screen reader to read. On this page the different sections were groupes using this method, but not their subsections. Like this:",
+						"example": {
+							"pre": "<section role=\"region\" aria-labelledby=\"SomeTitle\">\n  <h2 id=\"SomeTitle\">\n    Structure\n  </h2>\n\n  [...]\n\n  <div>\n    <h3 id=\"SomeSubtitle\">\n      Subtitle of Structure\n    </h3>\n\n    [...]\n\n  </div>\n</section>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Region 'Structure', 4 items. -- Heading Level 2, Structure. -- content. -- Heading Level 3, Subtitle of Structure. -- content."
+						}
+					},
+					{
+						"li": "When structuring your element, use the <code>aria-labelledby</code> attribute and give it the <code>id</code> of the elements heading. If there is no descriptive heading the <code>aria-label</code> attribute should be used. Let’s demonstrate the different behaviours:",
+						"example": {
+							"pre": "<section role=\"region\" aria-label=\"about\">\n  <h2 id=\"about\">About Sharks</h2>\n  [...]\n</section>\nOR\n<section role=\"region\" aria-label=\"Shark Fakts\">\n  [...]\n</section>\nOR\n<section role=\"region\">\n  [...]\n</section>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Region 'About Sharks' 2 items. -- Heading Level 2, About Sharks. -- content. | OR. -- Region 'Shark Fakts' 1 item. -- content. | OR. -- Region 1 item. -- content."
+						}
+					},
+					{
+						"li": "Use the right tags for the job:",
+						"table": {
+							"caption": "which tag is for what?",
+							"heads": [
+								"tag",
+								"job"
+							],
+							"rows": [
+								[
+									"ol",
+									"ordered list"
+								],
+								[
+									"ul",
+									"unordered list"
+								]
+							]
+						}
 					}
 				]
 			},
 			{
-				"title": "Section2",
+				"title": "Example Section",
 				"paragraphs": [
 					{
 						"p": "dolor sit"

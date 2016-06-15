@@ -3,10 +3,10 @@
   margin: auto;
   max-width: 450px;
   padding: 0 $outbreaks;
-}
 
-.section a {
-  @include link-styles;
+  a {
+    @include link-styles;
+  }
 }
 
 .section__separation {
@@ -81,13 +81,14 @@ code {
 
 .section__example {
   @include font-size-responsive;
-  margin-bottom: $gutter--medium;
+  margin-bottom: $gutter--large;
   margin-top: -$gutter--medium;
   padding-left: 40px;
   padding: $gutter 15px 0 0;
 }
 
 .section__output {
+  display: block;
   color: $grey;
 }
 
@@ -101,7 +102,7 @@ code {
 }
 
 /*
- * 1. remove 1px jump 
+ * 1. remove 1px jump
  */
 .section__play:hover,
 .section__play:focus {
@@ -110,7 +111,7 @@ code {
 }
 
 /*
- * 1. add 1px jump 
+ * 1. add 1px jump
  */
 .section__play:active {
   @include gradient;
@@ -118,16 +119,24 @@ code {
 }
 
 /*
- * yes display none, since the SR users are able to listen and the deaf are able to see 
+ * yes display none, since the SR users are able to listen and the deaf are able to see
  */
 .section__transcript {
   display: none;
 }
 
 /*
- * show the transcript 
+ * show the transcript
  */
 .section__play:hover ~ .section__transcript,
-.section__play:focus ~ .section__transcript {
+.section__play:focus ~ .section__transcript,
+.section__play:checked ~ .section__transcript {
   display: block;
+}
+
+.section__warning {
+  @include font-size-responsive($delta);
+  display: block;
+  padding: 10px 5px;
+  width: 100%;
 }

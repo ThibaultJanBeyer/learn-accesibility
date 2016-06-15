@@ -1,0 +1,12 @@
+<!-- section element pre nunjuck -->
+
+{% if section.paragraphs[loop.index].li %}
+<a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.paragraphs[loop.index].li }}">{{ shared.sections.skip }}</a>
+{% elif key.sections[temp].subs %}
+<a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].subs[0].title }}">{{ shared.sections.skip }}</a>
+{% elif key.sections[temp].title %}
+<a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].title }}">{{ shared.sections.skip }}</a>
+{% endif %}
+<div role="group" aria-label="{{ shared.sections.example }}">
+  <pre class="section__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
+</div>
