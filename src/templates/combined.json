@@ -270,6 +270,11 @@
 				}
 			]
 		},
+		"skipLinks": {
+			"toContent": "Content",
+			"toToc": "Table of Content",
+			"toNav": "Navigation"
+		},
 		"sections": {
 			"output": "Visual output",
 			"audio": "Screen reader",
