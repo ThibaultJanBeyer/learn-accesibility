@@ -1,0 +1,20 @@
+.anchor {
+  background: transparent !important;
+  display: inline-block;
+  margin-left: -20px;
+  opacity: 0;
+  padding-right: 5px;
+  text-decoration: none;
+  visibility: hidden;
+  width: 15px;
+  position: relative;
+  transition: visibility 0.4s 0.4s, opacity 0.5s 0.5s;
+}
+
+.add-anchor:hover .anchor,
+.add-anchor:focus .anchor {
+  display: inline-block;
+  visibility: visible;
+  opacity: 0.6;
+  transition: visibility 0s 0s, opacity 0.5s;
+}

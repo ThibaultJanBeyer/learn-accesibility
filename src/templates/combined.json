@@ -271,9 +271,10 @@
 			]
 		},
 		"sections": {
-			"output": "Visual Output",
-			"audio": "Audio Output",
-			"example": "Code example"
+			"output": "Visual output",
+			"audio": "Screen reader",
+			"example": "Code example",
+			"skip": "skip code example to next item"
 		}
 	},
 	"visual": {
@@ -296,12 +297,15 @@
 				"title": "Basic Facts",
 				"paragraphs": [
 					{
+						"anchor": "what screen reader can do",
 						"li": "Screen reader can read text, and interpret special attributes written in HTML, most modern screen reader can also list common items as all headers, links, forms and tables."
 					},
 					{
+						"anchor": "screen reader painpoints",
 						"li": "The usual painpoints are a bad page strukture, images, svg, graphs, videos, forms, tables, repetitive elements, visual features, popups."
 					},
 					{
+						"anchor": "screen reader javascript",
 						"li": "Screen readers have <a href=\"http://webaim.org/projects/screenreadersurvey4/#javascript\">no problems using javascript</a>."
 					}
 				]
@@ -310,23 +314,27 @@
 				"title": "Hiding Elements",
 				"paragraphs": [
 					{
+						"anchor": "screen reader display none",
 						"li": "Almost all screen reader obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by ignoring the element."
 					},
 					{
+						"anchor": "screen reader visually hidden",
 						"li": "To have elements visually hidden but still accessible for screen readers the <a href=\"https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements\">W3C suggests</a> this css method:",
 						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
 						"preLang": "css"
 					},
 					{
+						"anchor": "screen reader aria hidden",
 						"li": "Of course you can also do the contrary. Hide text for screen readers but show it visually by using <code class='language-markup'>aria-hidden=\"true\"</code>. The support for aria-hidden is <a href=\"http://www.html5accessibility.com/tests/hidden2013.html\">brilliant</a>."
 					},
 					{
+						"anchor": "screen reader hiding example",
 						"li": "This is how a screenreader would typically interpret the different hiding methods:",
 						"example": {
-							"pre": "I love\n <span style=\"display:none;\">bees</span>\n <span class=\"visuallyhidden\">cats</span>\n <span aria-hidden=\"true\">& you</span>\n <span hidden>not</span>",
+							"pre": "I love\n <span style=\"display:none;\">bees</span>\n <span class=\"visuallyhidden\">cats</span>\n <span hidden>and</span>\n <span aria-hidden=\"true\">you</span>",
 							"preLang": "markup",
 							"play": "Listen ♫",
-							"audio": "I love cats."
+							"audio": "I love cats"
 						}
 					}
 				],

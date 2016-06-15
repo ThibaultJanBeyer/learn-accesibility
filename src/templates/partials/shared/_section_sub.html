@@ -1,7 +1,7 @@
 <!-- key section sub nunjuck -->
 
 <div class="section">
-  <h3 id="{{ sub.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="section__title section__title--sub copy">
+  <h3 class="section__title section__title--sub copy add-anchor">
     {{ sub.title }}
   </h3>
   {% for paragraph in sub.paragraphs %}

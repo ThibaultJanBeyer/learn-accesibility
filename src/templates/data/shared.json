@@ -39,9 +39,10 @@
         ] 
     },
     "sections": {
-      "output": "Visual Output",
-      "audio": "Audio Output",
-      "example": "Code example"
+      "output": "Visual output",
+      "audio": "Screen reader",
+      "example": "Code example",
+      "skip": "skip code example to next item"
     }
   }
 }

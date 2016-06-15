@@ -81,12 +81,10 @@ code {
 
 .section__example {
   @include font-size-responsive;
-  border: 1px solid $black;
   margin-bottom: $gutter--medium;
-  margin-right: -$outbreaks;
   margin-top: -$gutter--medium;
   padding-left: 40px;
-  padding: 15px;
+  padding: $gutter 15px 0 0;
 }
 
 .section__output {
@@ -96,9 +94,10 @@ code {
 .section__play {
   background: $white;
   border: 1px solid $primary;
-  margin: 0 -90px;
+  margin-left: 440px;
   padding: 0 5px;
   position: absolute;
+  width: 60px;
 }
 
 /*
@@ -126,17 +125,9 @@ code {
 }
 
 /*
- * exchange the text with the transcript 
- */
-.section__play:hover ~ .section__example-code,
-.section__play:focus ~ .section__example-code {
-  display: none;
-}
-
-/*
- * exchange the text with the transcript 
+ * show the transcript 
  */
 .section__play:hover ~ .section__transcript,
 .section__play:focus ~ .section__transcript {
-  display: inline;
+  display: block;
 }

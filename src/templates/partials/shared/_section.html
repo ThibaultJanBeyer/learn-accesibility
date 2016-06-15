@@ -5,8 +5,9 @@
 {% include "partials/shared/_section_intro.html" %}
 
 {% for section in key.sections %}
-<section class="section" aria-labelledby="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}">
-  <h2 id="{{ section.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="section__title copy">
+{% set temp = loop.index %}
+<section class="section anchor--aria-labelledby" data-aria-labelledby="{{ section.title }}">
+  <h2 class="section__title copy add-anchor">
     {{ section.title }}
   </h2>
 
@@ -14,9 +15,16 @@
   {% for paragraph in section.paragraphs %}
 
     {% if paragraph.li %}
-    <li class="section__li copy"> {{ paragraph.li | safe }} </li>
+    <li class="section__li copy add-anchor"> {{ paragraph.li | safe }} </li>
     {% endif %}
     {% if paragraph.pre %}
+      {% if section.paragraphs[loop.index].li %}
+      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.paragraphs[loop.index].li }}">{{ shared.sections.skip }}</a>
+      {% elif key.sections[temp].subs %}
+      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].subs[0].title }}">{{ shared.sections.skip }}</a>
+      {% elif key.sections[temp].title %}
+      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].title }}">{{ shared.sections.skip }}</a>
+      {% endif %}
     <div role="group" aria-label="{{ shared.sections.example }}">
       <pre class="section__pre"><code class="language-{{ paragraph.preLang }}">{{ paragraph.pre }}</code></pre>
     </div>
@@ -25,6 +33,13 @@
     <img src="{{ paragraph.img.src }}" alt="{{ paragraph.img.alt }}" class="section__img">
     {% endif %}
     {% if paragraph.example %}
+      {% if section.paragraphs[loop.index].li %}
+      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.paragraphs[loop.index].li }}">{{ shared.sections.skip }}</a>
+      {% elif section.subs %}
+      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.subs[0].title }}">{{ shared.sections.skip }}</a>
+      {% elif key.sections[temp].title %}
+      <a class="visuallyhidden anchor--skiplink" data-skiplink="{{ key.sections[temp].title }}">{{ shared.sections.skip }}</a>
+      {% endif %}
     <div role="group" aria-label="{{ shared.sections.example }}">
       <pre class="section__pre"><code class="language-{{ paragraph.example.preLang }}">{{ paragraph.example.pre }}</code></pre>
       <div class="section__example">
@@ -37,7 +52,7 @@
         </div> 
         <span class="section__transcript" aria-hidden="true">
           <span class="section__output">{{ shared.sections.audio }}:</span>
-          “{{ paragraph.example.audio }}”
+          {{ paragraph.example.audio }}
         </span>
       </div>
     </div>
