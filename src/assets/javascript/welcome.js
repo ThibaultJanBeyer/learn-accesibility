@@ -44,7 +44,7 @@
             // and remove that first contentblock after some time
             text[i].classList.add('visuallyhidden');
             // go to next animation
-            next(i + 1);
+            next(i + 5);
           }, 1500);
         }, 500);
       }, true);

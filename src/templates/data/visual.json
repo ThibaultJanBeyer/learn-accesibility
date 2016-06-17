@@ -108,7 +108,7 @@
             }
           },
           {
-            "li": "When structuring your element, use the <code>aria-labelledby</code> attribute and give it the <code>id</code> of the elements heading. If there is no descriptive heading the <code>aria-label</code> attribute should be used. Let’s demonstrate the different behaviours:",
+            "li": "When structuring your element, the best practice is to use the <code>aria-labelledby</code> attribute and give it the <code>id</code> of the elements heading since all modern screen readers can list headings but not sections. If there is no descriptive heading, at least the <code>aria-label</code> attribute should be used. Let’s demonstrate the different behaviours:",
             "example":
             {
               "pre": "<section role=\"region\" aria-label=\"about\">\n  <h2 id=\"about\">About Sharks</h2>\n  [...]\n</section>\nOR\n<section role=\"region\" aria-label=\"Shark Fakts\">\n  [...]\n</section>\nOR\n<section role=\"region\">\n  [...]\n</section>",
@@ -125,20 +125,158 @@
               "heads": 
               [
                 "tag",
-                "job"
+                "job",
+                "learn more"
               ],
               "rows":
               [
                 [
                   "ol",
-                  "ordered list"
+                  "ordered list",
+                  "<a href=\"https://developer.mozilla.org/en/docs/Web/HTML/Element/ol\">MDN</a>"
                 ],
                 [
                   "ul",
-                  "unordered list"
+                  "unordered list",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul\">MDN</a>"
+                ],
+                [
+                  "dl",
+                  "definition list",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl\">MDN</a>"
+                ],
+                [
+                  "table",
+                  "tabular data",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table\">MDN</a>"
+                ],
+                [
+                  "blockquote",
+                  "quotes",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl\">MDN</a>"
+                ],
+                [
+                  "q",
+                  "inline quotes",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q\">MDN</a>"
+                ],
+                [
+                  "img",
+                  "images",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img\">MDN</a>"
+                ],
+                [
+                  "em",
+                  "emphasis (italic text)",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em\">MDN</a>"
+                ],
+                [
+                  "strong",
+                  "bold/highlighted text",
+                  "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong\">MDN</a>"
+                ],
+                [
+                  {
+                    "manyMoreTitle": "Few more",
+                    "manyMoreSpan": "3",
+                    "manyMore":
+                    [
+                      "abbr",
+                      "address",
+                      "audio",
+                      "base",
+                      "button",
+                      "colgroup",
+                      "datalist",
+                      "del",
+                      "details",
+                      "figure",
+                      "i",
+                      "kbd",
+                      "map",
+                      "mark",
+                      "meter",
+                      "noscript",
+                      "output",
+                      "progress",
+                      "s",
+                      "sub",
+                      "sup",
+                      "track",
+                      "video"
+                    ]
+                  }
                 ]
               ]
             }
+          }
+        ]
+      },
+      {
+        "title": "Headings",
+        "paragraphs":
+        [
+          {
+            "li": "Beside giving a visual clue, screen reader can list all headings. A screen reader user will typically scan a pages headings and then jump imediately to that section. Therefor the logical flow of headings is more than important. Nest headings accordingly: h1 > h2 > h3 > ... without skipping a level."
+          },
+          {
+            "li": "therefore it is also important to give all your page sections a specific heading with <code>aria-labelledby</code> <a href=\"#Structure-10\">as seen before under Structure</a>."
+          },
+          {
+            "li": "Wen browsing over a heading, its level is read aloud:",
+            "example":
+            {
+              "pre": "<h6>Example Heading</h6>",
+              "preLang": "markup",
+              "play": "Listen ♫",
+              "audio": "Heading Level 6, Example Heading."
+            }
+          },
+          {
+            "li": "The <code>role=\"heading\"</code> is not necessary if you use h tags. It might be used to declare another element than an h tag as a heading with <code>role=\"heading\" aria-level=\"7\"</code>. I.e. to get deeper than h6"
+          }
+        ],
+        "subs":
+        [
+          {
+            "title": "writing good headings",
+            "paragraphs":
+            [
+              {
+                "li": "Write the key information at the beginning.",
+                "pre": "<!-- DO: -->\n<li>Great White Shark Facts</li>\n<li>Hammerhead Shark Facts</li>\n<!-- DONT: -->\n<li>Facts about great white sharks</li>\n<li>Facts about Hammerhead sharks</li>",
+                "preLang": "markup"
+              },
+              {
+                "li": "Usually the first heading is the page name or the overall heading, the second headings indicate the different sections"
+              },
+              {
+                "li": "Also have a look at the guidelines regarding <a href=\"headings\">headings for people with cognitive disabilities</a>."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Menus",
+        "paragraphs":
+        [
+          {
+            "li": "Use list of links to help screen readers announce the number of links a menu has. Generally use unordered lists <code>ul</code> but when the order matters as in table of contents use ordered lists <code>ol</code>."
+          },
+          {
+            "li": "Let screen reader users know where they are by adding 'Current:' infront of the current element in the menu. Additionally you might want to unlink it. See the nex example below."
+          },
+          {
+            "li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. That heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
+            "pre": "<nav class=\"nav\" role=\"navigation\" aria-label=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#about\">About</a></li>\n    <li><a href=\"#contact\">Contact</a></li>\n  </ul>\n</nav>",
+            "preLang": "markup"
+          }
+        ],
+        "subs":
+        [
+          {
+            "title": "test2"
           }
         ]
       },

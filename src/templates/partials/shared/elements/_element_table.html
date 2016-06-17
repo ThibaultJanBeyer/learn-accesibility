@@ -12,7 +12,16 @@
   {% for row in paragraph.table.rows %}
   <tr class="element-table__tr">
     {% for cell in row %}
-    <td class="element-table__td copy" scope="{{ 'row' if loop.index == 1 }}">{{ cell }}</td>
+    {% if cell.manyMore %}
+      <td class="element-table__td copy" scope="{{ 'row' if loop.index == 1 }}" colspan="{{ cell.manyMoreSpan }}">
+        {{ cell.manyMoreTitle }}:
+      {% for more in cell.manyMore %}
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/{{ more }}">{{ more }}</a>
+      {% endfor %}
+      </td>
+    {% else %}
+    <td class="element-table__td copy" scope="{{ 'row' if loop.index == 1 }}">{{ cell | safe }}</td>
+    {% endif %}
     {% endfor %}
   </tr>
   {% endfor %}

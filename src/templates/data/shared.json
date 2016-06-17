@@ -48,7 +48,7 @@
       "audio": "Screen reader",
       "example": "Code example",
       "skip": "skip code example to next item",
-      "warning": "> Note: two dashes -- means that the next element is only read when the user press the 'next item' button on his screen reader.<br> > Note: that the audio output when pressing on listen is not always 100% accurate. But the text above this notes is."
+      "warning": "> Note: this arrow ⇥ means that the next element is only read when the user press the 'next item' button on his screen reader.<br> > Note: that the audio output when pressing on listen is not always 100% accurate. But the text above this notes is."
     }
   }
 }

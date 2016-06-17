@@ -43,7 +43,7 @@
   /*
    * Read examples
    */
-  var audioExamples = document.getElementsByClassName('section__play');
+  var audioExamples = document.getElementsByClassName('play');
   for (let i = 0; i < audioExamples.length; i++) {
     audioExamples[i].addEventListener('click', function(){
       responsiveVoice.speak(this.getAttribute('data-audio'));

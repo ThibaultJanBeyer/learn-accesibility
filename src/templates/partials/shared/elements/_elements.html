@@ -1,0 +1,32 @@
+<!-- elements nunjuck -->
+
+{% macro elements(section, page, sectionIndex, shared) %}
+<ul>
+{% for paragraph in section.paragraphs %}
+
+  {% if paragraph.li %}
+  {% include "partials/shared/elements/_element_li.html" %}
+  {% endif %}
+
+  {% if paragraph.pre %}
+    {% import "partials/shared/elements/_element_example.html" as example %}
+    {{ example.example(section, page, sectionIndex, shared, paragraph, loop.index, false) }}
+  {% endif %}
+
+  {% if paragraph.img %}
+    {% import "partials/shared/elements/_element_img.html" as img %}    
+    {{ img.img(paragraph.img) }}
+  {% endif %}
+
+  {% if paragraph.example %}
+    {% import "partials/shared/elements/_element_example.html" as example %}    
+    {{ example.example(section, page, sectionIndex, shared, paragraph, loop.index, true) }}
+  {% endif %}
+
+  {% if paragraph.table %}
+  {% include "partials/shared/elements/_element_table.html" %}
+  {% endif %}
+
+{% endfor %}
+</ul>
+{% endmacro %}

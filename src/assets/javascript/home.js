@@ -107,11 +107,11 @@
             setTimeout(function() {
               homeContent.classList.add('top');
               if (aLink.classList.contains('A')) {
-                homeContent.style.top = '75px';
+                homeContent.style.top = '110px';
               } else if (aLink.classList.contains('P')) {
-                homeContent.style.top = '155px';
+                homeContent.style.top = '220px';
               } else if (aLink.classList.contains('C')) {
-                homeContent.style.top = '235px';
+                homeContent.style.top = '330px';
               }
 
               setTimeout(function() {

@@ -1,0 +1,7 @@
+.element-li {
+  @include font-size-responsive;
+  list-style: disc;
+  margin-bottom: $gutter--medium;
+  margin-left: -10px;
+  padding-left: 10px;
+}

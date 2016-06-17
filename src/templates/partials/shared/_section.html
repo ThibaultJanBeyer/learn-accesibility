@@ -1,41 +1,17 @@
 <!-- key section nunjuck -->
 
-{% macro section(key, shared) %}
+{% macro section(page, shared) %}
 
 {% include "partials/shared/_section_intro.html" %}
 
-{% for section in key.sections %}
-{% set temp = loop.index %}
+{% for section in page.sections %}
 <section role="region" class="section anchor--aria-labelledby" data-aria-labelledby="{{ section.title }}">
-  <h2 class="section__title copy add-anchor">
+  <h2 class="section__title copy anchor--add">
     {{ section.title }}
   </h2>
 
-  <ul>
-  {% for paragraph in section.paragraphs %}
-
-    {% if paragraph.li %}
-    <li class="section__li copy add-anchor"> {{ paragraph.li | safe }} </li>
-    {% endif %}
-
-    {% if paragraph.pre %}
-    {% include "partials/shared/elements/_element_pre.html" %}
-    {% endif %}
-
-    {% if paragraph.img %}
-    <img src="{{ paragraph.img.src }}" alt="{{ paragraph.img.alt }}" class="section__img">
-    {% endif %}
-
-    {% if paragraph.example %}
-      {% include "partials/shared/elements/_element_example.html" %}
-    {% endif %}
-
-    {% if paragraph.table %}
-    {% include "partials/shared/elements/_element_table.html" %}
-    {% endif %}
-  
-  {% endfor %}
-  </ul>
+  {% import "partials/shared/elements/_elements.html" as elements %}    
+  {{ elements.elements(section, page, loop.index, shared) }}
 
   {% if section.subs %}
   {% for sub in section.subs %}

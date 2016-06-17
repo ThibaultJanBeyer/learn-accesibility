@@ -9,6 +9,10 @@
   }
 }
 
+.section--sub {
+  padding: 0 5px;
+}
+
 .section__separation {
   background-color: $primary;
   height: 5px;
@@ -18,19 +22,6 @@
 
 .section__intro {
   @include font-size-responsive;
-}
-
-.section__img {
-  // scss-lint:disable DuplicateProperty
-  margin-bottom: $gutter--large;
-  margin-left: -$outbreaks;
-  margin-top: $gutter;
-  width: 100%;
-  width: calc(100% + #{$outbreaks});
-}
-
-.section__img-caption {
-  @include font-size-responsive($delta);
 }
 
 .section__title {
@@ -57,86 +48,7 @@
   display: none;
 }
 
-.section__li {
-  @include font-size-responsive;
-  list-style: disc;
-  margin-bottom: $gutter--medium;
-  margin-left: -10px;
-  padding-left: 10px;
-}
-
 code {
   @include font-size-responsive($gamma, $code-family, $code-weight);
   border: 1px solid $black01;
-}
-
-.section__pre {
-  @include font-size-responsive($gamma, $code-family, $code-weight);
-  background-color: $black;
-  color: $grey;
-  margin-bottom: $gutter--medium;
-  margin-right: -$outbreaks;
-  margin-top: -$gutter;
-}
-
-.section__example {
-  @include font-size-responsive;
-  margin-bottom: $gutter--large;
-  margin-top: -$gutter--medium;
-  padding-left: 40px;
-  padding: $gutter 15px 0 0;
-}
-
-.section__output {
-  display: block;
-  color: $grey;
-}
-
-.section__play {
-  background: $white;
-  border: 1px solid $primary;
-  margin-left: 440px;
-  padding: 0 5px;
-  position: absolute;
-  width: 60px;
-}
-
-/*
- * 1. remove 1px jump
- */
-.section__play:hover,
-.section__play:focus {
-  @include gradient;
-  border: 1px solid transparent; /* 1. */
-}
-
-/*
- * 1. add 1px jump
- */
-.section__play:active {
-  @include gradient;
-  border: 0; /* 1. */
-}
-
-/*
- * yes display none, since the SR users are able to listen and the deaf are able to see
- */
-.section__transcript {
-  display: none;
-}
-
-/*
- * show the transcript
- */
-.section__play:hover ~ .section__transcript,
-.section__play:focus ~ .section__transcript,
-.section__play:checked ~ .section__transcript {
-  display: block;
-}
-
-.section__warning {
-  @include font-size-responsive($delta);
-  display: block;
-  padding: 10px 5px;
-  width: 100%;
 }

@@ -1,14 +1,11 @@
 <!-- key section sub nunjuck -->
 
-<div class="section">
-  <h3 class="section__title section__title--sub copy add-anchor">
+<div class="section section--sub">
+  <h3 class="section__title section__title--sub copy anchor--add">
     {{ sub.title }}
   </h3>
-  {% for paragraph in sub.paragraphs %}
+  
+  {% import "partials/shared/elements/_elements.html" as elements %}    
+  {{ elements.elements(sub) }}
 
-  {% if paragraph.p %}
-  <p> {{ paragraph.p }} </p>
-  {% endif %}
-
-  {% endfor %}
 </div>

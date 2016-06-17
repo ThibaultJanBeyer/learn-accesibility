@@ -7,7 +7,7 @@
 
 @for $i from 1 through 4 {
   .home-leaving__target:nth-child(#{$i}) {
-    top: -65px + (80 * $i);
+    top: -65px + (100 * $i);
   }
 }
 
@@ -18,7 +18,7 @@
 }
 
 .leaving .home-nav__link-title {
-  @include heading($gamma, $secondary-family, $secondary-weight);
+  @include heading($beta, $secondary-family, $secondary-weight);
   transition: font-size 1s;
 }
 
@@ -37,8 +37,8 @@
 .leaving .home__content {
   overflow: hidden;
   position: fixed;
-  width: 100px;
-  height: 80px;
+  width: 120px;
+  height: 110px;
   right: 0;
   top: 0;
   padding: 0;

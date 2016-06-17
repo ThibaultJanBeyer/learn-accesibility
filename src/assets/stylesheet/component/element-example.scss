@@ -1,0 +1,74 @@
+.element-example__pre {
+  @include font-size-responsive($gamma, $code-family, $code-weight);
+  background-color: $black;
+  color: $grey;
+  margin-bottom: $gutter--medium;
+  margin-right: -$outbreaks;
+  margin-top: -$gutter;
+}
+
+.element-example {
+  @include font-size-responsive;
+  margin-bottom: $gutter--large;
+  margin-top: -$gutter--medium;
+  padding-left: 40px;
+  padding: $gutter 15px 0 0;
+}
+
+.element-example__output {
+  display: block;
+  color: $grey;
+}
+
+.element-example__code strong {
+  font-weight: 700;
+}
+
+.element-example__play {
+  background: $white;
+  border: 1px solid $primary;
+  margin-left: 440px;
+  padding: 0 5px;
+  position: absolute;
+  width: 60px;
+}
+
+/*
+ * 1. remove 1px jump
+ */
+.element-example__play:hover,
+.element-example__play:focus {
+  @include gradient;
+  border: 1px solid transparent; /* 1. */
+}
+
+/*
+ * 1. add 1px jump
+ */
+.element-example__play:active {
+  @include gradient;
+  border: 0; /* 1. */
+}
+
+/*
+ * yes display none, since the SR users are able to listen and the deaf are able to see
+ */
+.element-example__transcript {
+  display: none;
+}
+
+/*
+ * show the transcript
+ */
+.element-example__play:hover ~ .element-example__transcript,
+.element-example__play:focus ~ .element-example__transcript,
+.element-example__play:checked ~ .element-example__transcript {
+  display: block;
+}
+
+.element-example__warning {
+  @include font-size-responsive($delta);
+  display: block;
+  padding: 10px 5px;
+  width: 100%;
+}

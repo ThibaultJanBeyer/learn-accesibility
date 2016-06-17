@@ -7,20 +7,16 @@
   <div class="section__separation"></div>
 
   <p class="section__intro copy">
-    {{ key.intro.p | safe }}
+    {{ page.intro.p | safe }}
   </p>
-  {% if key.intro.img %}
-  <figure role="group" class="section__img">
-    <img src="{{ key.intro.img.src }}" alt="{{ key.intro.img.alt }}">
-    <figcaption class="section__img-caption copy">
-      {{ key.intro.img.caption | safe }}
-    </figcaption>
-  </figure>
+  {% if page.intro.img %}
+    {% import "partials/shared/elements/_element_img.html" as img %}    
+    {{ img.img(page.intro.img) }}
   {% endif %}
-  {% if key.intro.ul %}
+  {% if page.intro.ul %}
   <ul>
-  {% for li in key.intro.ul %}
-    <li class="section__li copy">{{ li | safe }}</li>
+  {% for li in page.intro.ul %}
+    <li class="element-li copy">{{ li | safe }}</li>
   {% endfor %}
   </ul>
   {% endif %}

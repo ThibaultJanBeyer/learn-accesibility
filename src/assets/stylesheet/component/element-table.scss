@@ -1,5 +1,5 @@
 .element-table {
-  border: 1px solid $black03;
+  border: 1px solid $black01;
   margin: auto;
 }
 
@@ -8,8 +8,8 @@
 }
 
 .element-table__tr {
-  &:nth-child(2) {
-    background: $black01;
+  &:nth-child(2n) {
+    background: $black005;
   }
 }
 
@@ -20,5 +20,20 @@
 
 .element-table__td {
   @include font-size-responsive($delta);
-  padding: 5px;
+  padding: 5px;  
+}
+
+/* all credits to Lea Verou for this hack */
+div.no-use {
+  @for $i from 1 through 5 {
+    &:first-child:nth-last-child(#{$i}),
+    &:first-child:nth-last-child(#{$i}) ~ & {
+      $temp: 100 / $i;
+      width: 1% * $temp;
+    }
+  }
+
+  &:last-child {
+    text-align: right;
+  }
 }

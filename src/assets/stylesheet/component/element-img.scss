@@ -1,0 +1,12 @@
+.element-img {
+  // scss-lint:disable DuplicateProperty
+  margin-bottom: $gutter--large;
+  margin-left: -$outbreaks;
+  margin-top: $gutter;
+  width: 100%;
+  width: calc(100% + #{$outbreaks});
+}
+
+.element-img__caption {
+  @include font-size-responsive($delta);
+}
