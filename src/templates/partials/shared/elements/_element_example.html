@@ -1,12 +1,16 @@
 <!-- element example nunjuck -->
 
 {% macro example(section, page, sectionIndex, shared, paragraph, paragraphIndex, example) %}
+<!-- Skiplinks:
+if the next paragraph has a li element, hence if the next element is a li -->
 {% if section.paragraphs[paragraphIndex].li %}
-<a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.paragraphs[paragraphIndex].li }}">{{ shared.sections.skip }}</a>
+<a class="visuallyhidden anchor--skiplink" data-skiplink-title="{{ section.title }}" data-skiplink-index="{{ paragraphIndex + 1 }}">{{ shared.sections.skip }}</a>
+<!-- if the next element is a subtitle -->
 {% elif section.subs %}
-<a class="visuallyhidden anchor--skiplink" data-skiplink="{{ section.subs[0].title }}">{{ shared.sections.skip }}</a>
+<a class="visuallyhidden anchor--skiplink" data-skiplink-title="{{ section.subs[0].title }}">{{ shared.sections.skip }}</a>
+<!-- if the next element is a title -->
 {% elif page.sections[sectionIndex].title %}
-<a class="visuallyhidden anchor--skiplink" data-skiplink="{{ page.sections[sectionIndex].title }}">{{ shared.sections.skip }}</a>
+<a class="visuallyhidden anchor--skiplink" data-skiplink-title="{{ page.sections[sectionIndex].title }}">{{ shared.sections.skip }}</a>
 {% endif %}
 <div role="group" aria-label="{{ shared.sections.example }}">
   {% if example == true %}

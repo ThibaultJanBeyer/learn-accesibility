@@ -579,8 +579,17 @@
 					},
 					{
 						"li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually but display them on focus to improve the usability of your page for keyboard users as well:",
-						"pre": "<nav role=\"navigation\" aria-labelledby=\"exampleNav1\">\n  <h2 id=\"exampleNav1\">Some Example Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li><a href=\"#link\">Section2</a>\n      <!-- submenu start -->\n      <ul class=\"visuallyhidden\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n      <!-- submenu end -->\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
-						"preLang": "markup"
+						"pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
+						"preLang": "javascript",
+						"example": {
+							"pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Skip annoying content to next item</a>\n<p>Annoying Content</p>\n<p id=\"linkNext\">Next item</p>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Item. -- Link, Skip annoying content to next item. -- Press link: Skip annoying content to next item -- Next item."
+						}
+					},
+					{
+						"li": "It is a good practice to have a table of content linking to each heading within a long text. A table of content is nothing other than a <a href=\"#Menus\">navigation menu</a>."
 					}
 				]
 			},

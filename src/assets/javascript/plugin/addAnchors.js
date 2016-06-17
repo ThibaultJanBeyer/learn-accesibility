@@ -27,15 +27,21 @@ for(var i = 0; i < anchorElements.length; i++) {
 var anchorSkip = document.getElementsByClassName('anchor--skiplink');
 for (var j = 0; j < anchorSkip.length; j++) {
   var elJ = anchorSkip[j];
-  var labelSkip = elJ.getAttribute('data-skiplink');
+  var dataSkiplinkTitle = elJ.getAttribute('data-skiplink-title');
+  var dataSkiplinkIndex = elJ.getAttribute('data-skiplink-index');
 
-  if(labelSkip.length > 25) { // shorten text if super long
-    labelSkip = labelSkip.substring(0,25);
+  if(dataSkiplinkTitle.length > 25) { // shorten text if super long
+    dataSkiplinkTitle = dataSkiplinkTitle.substring(0,25);
   }
-  labelSkip = labelSkip.replace(/[^A-Za-z0-9]/g, '-');
+  dataSkiplinkTitle = dataSkiplinkTitle.replace(/[^A-Za-z0-9]/g, '-');
 
-  elJ.setAttribute('href', '#' + labelSkip);
-  elJ.removeAttribute('data-skiplink');
+  if(!dataSkiplinkIndex) {
+    elJ.setAttribute('href', '#' + dataSkiplinkTitle);
+  } else {
+    elJ.setAttribute('href', '#' + dataSkiplinkTitle + '-' + dataSkiplinkIndex);
+    elJ.removeAttribute('data-skiplink-index');
+  }
+  elJ.removeAttribute('data-skiplink-title');
 }
 
 // add ria-labeledbys
