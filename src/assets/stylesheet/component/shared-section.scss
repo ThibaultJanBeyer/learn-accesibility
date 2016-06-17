@@ -47,8 +47,3 @@
 .section__title--sub::after {
   display: none;
 }
-
-code {
-  @include font-size-responsive($gamma, $code-family, $code-weight);
-  border: 1px solid $black01;
-}

@@ -1,5 +1,12 @@
+.element-example {
+  @include font-size-responsive($gamma);
+  margin-bottom: $gutter--large;
+  margin-top: -$gutter--medium;
+  padding-left: 40px;
+  padding: $gutter 15px 0 0;
+}
+
 .element-example__pre {
-  @include font-size-responsive($gamma, $code-family, $code-weight);
   background-color: $black;
   color: $grey;
   margin-bottom: $gutter--medium;
@@ -7,12 +14,8 @@
   margin-top: -$gutter;
 }
 
-.element-example {
-  @include font-size-responsive;
-  margin-bottom: $gutter--large;
-  margin-top: -$gutter--medium;
-  padding-left: 40px;
-  padding: $gutter 15px 0 0;
+.element-example__pre code {
+  @include font-size-responsive($delta, $code-family, $code-weight);
 }
 
 .element-example__output {
@@ -71,4 +74,12 @@
   display: block;
   padding: 10px 5px;
   width: 100%;
+}
+
+/*
+ * inline code
+ */
+code {
+  @include font-size-responsive($gamma, $code-family, $code-weight);
+  border: 1px solid $black01;
 }
