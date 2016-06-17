@@ -48,7 +48,20 @@
     audioExamples[i].addEventListener('click', function(){
       responsiveVoice.speak(this.getAttribute('data-audio'));
     });
-    
+  }
+
+  /*
+   * Unhide Skiplinks on focus
+   */
+  var skiplinks = document.querySelectorAll('a.visuallyhidden');
+  for (let i = 0; i < skiplinks.length; i++) {
+    let e = skiplinks[i];
+    e.addEventListener('focus', () => {
+      e.classList.remove('visuallyhidden');
+    });
+    e.addEventListener('blur', () => {
+      e.classList.add('visuallyhidden');
+    });
   }
 
 }})();
