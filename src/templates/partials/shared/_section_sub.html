@@ -6,6 +6,6 @@
   </h3>
   
   {% import "partials/shared/elements/_elements.html" as elements %}    
-  {{ elements.elements(sub) }}
+  {{ elements.elements(sub, page, loop.index, shared) }}
 
 </div>

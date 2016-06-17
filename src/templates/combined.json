@@ -280,7 +280,7 @@
 			"audio": "Screen reader",
 			"example": "Code example",
 			"skip": "skip code example to next item",
-			"warning": "> Note: ⇥ means that next element is only read when user press 'next item' button on his screen reader.<br> > Note: audio output when pressing on listen is not always accurate. But the text above this notes is."
+			"warning": "> Note: ⇥ means that next element is only read when user press 'next item' button on his screen reader.<br> > Note: audio output when pressing on listen is not always accurate. But the text above these notes is."
 		}
 	},
 	"visual": {
@@ -505,7 +505,7 @@
 				],
 				"subs": [
 					{
-						"title": "writing good headings",
+						"title": "Good headings",
 						"paragraphs": [
 							{
 								"li": "Write the key information at the beginning.",
@@ -534,10 +534,10 @@
 					{
 						"li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. That heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
 						"example": {
-							"pre": "<nav role=\"navigation\" aria-label=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#about\">About</a></li>\n    <li><a href=\"#contact\">Contact</a></li>\n  </ul>\n</nav>",
+							"pre": "<nav role=\"navigation\" aria-label=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
 							"preLang": "markup",
 							"play": "Listen ♫",
-							"audio": "Navigation, 'Main Menu', 2 items. -- Heading Level 2, Main Menu. -- Current. -- Home. -- Link, about. -- Link, contact."
+							"audio": "Navigation 'Main Menu', 2 items. -- Heading Level 2, Main Menu. -- Current. -- Home. -- Link, about. -- Link, contact."
 						}
 					}
 				],
@@ -546,14 +546,41 @@
 						"title": "Drop Downs",
 						"paragraphs": [
 							{
-								"li": "Drop downs should be accessible via screen reader. If the items are hidden for everyone before hover they won’t be accessible. See <a href=\"#Hiding-Elements\">hiding elements</a> for more information."
+								"li": "Drop downs should be only visually hidden to be accessible for screen reader. Ideally the visuallyhidden class would then be toggled via javascript. See <a href=\"#Hiding-Elements\">hiding elements</a> and <a href=\"#Drop-Downs-2\">the example below</a> for further information."
 							},
 							{
-								"li": "Usually a drop down is another odered or unordered list inside the li of the first ordered or unordered list.",
-								"pre": "<nav role=\"navigation\" aria-labelledby=\"exampleNav1\">\n  <h2 id=\"exampleNav1\">Some Example Navigation</h2>\n  <ul>\n    <li><a href=\"#section1\">Section1</a></li>\n    <li><a href=\"#section2\">Section2</a>\n      <!-- submenu start -->\n      <ul>\n        <li><a href=\"#section2-1\">Section2-1</a></li>\n        <li><a href=\"#section2-2\">Section2-2</a></li>\n      </ul>\n      <!-- submenu end -->\n    </li>\n    <li><a href=\"#section3\">Section3</a></li>\n  </ul>\n</nav>",
+								"li": "Usually a drop down is another odered or unordered list inside the list item of the first ordered or unordered list:",
+								"pre": "<nav role=\"navigation\" aria-labelledby=\"exampleNav1\">\n  <h2 id=\"exampleNav1\">Some Example Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li><a href=\"#link\">Section2</a>\n      <!-- submenu start -->\n      <ul class=\"visuallyhidden\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n      <!-- submenu end -->\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
 								"preLang": "markup"
 							}
 						]
+					},
+					{
+						"title": "Breadcrumbs",
+						"paragraphs": [
+							{
+								"li": "Use a <code>nav</code> tag with <code>role=\"navigation\"</code> and <code>aria-label=\"you are here\"</code>. Also add a visually hidden indice “current” to the last item.",
+								"example": {
+									"pre": "<nav class=\"breadcrumb\" role=\"navigation\" aria-label=\"You are here:\">\n  <a href=\"#link\">Home</a>\n  >\n  <a href=\"#link\">About Sharks</a>\n  >\n  <span class=\"visuallyhidden\">Current:</span> Hammerhead Shark Facts.\n</nav>\n",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Navigation 'You are here', 6 items. -- Link, Home. -- > -- Link, About Sharks. -- > -- Current. -- Hammerhead Shark Facts."
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Skip Links",
+				"paragraphs": [
+					{
+						"li": "Not every screen reader has advanced mechanism to jump to sections, headings, links, etc. or to skip repetitive codeblocks as Tables, Codeblocks, etc. So, this is probably one of the most important thing for a good screen reader user experience is providing links to jump immediatly to relevant sections and/or to skip repetitive content. On this page skip links were added before each code example to skip it. Moreover a visually hidden skip link was added at the begining of the page granting screen reader users the possibility to jump directly to either the table of contents, the menu or the content. PS: There is also a visually hidden easter egg somewhere, can you spot it?"
+					},
+					{
+						"li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually but display them on focus to improve the usability of your page for keyboard users as well:",
+						"pre": "<nav role=\"navigation\" aria-labelledby=\"exampleNav1\">\n  <h2 id=\"exampleNav1\">Some Example Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li><a href=\"#link\">Section2</a>\n      <!-- submenu start -->\n      <ul class=\"visuallyhidden\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n      <!-- submenu end -->\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
+						"preLang": "markup"
 					}
 				]
 			},
