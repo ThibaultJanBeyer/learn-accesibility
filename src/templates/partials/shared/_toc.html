@@ -20,14 +20,16 @@
           <span class="toc__value copy">{{ section.title}}</span>
         </a>
         {% if section.subs %}
-        {% for sub in section.subs %}
-        <li>
-          <a href="#{{ sub.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="toc__link">
-            &nbsp;&nbsp;<span class="toc__index copy">{{ toc[key.letter] }}.{{ outer_loop.index }}.{{ loop.index }}.</span>
-            <span class="toc__value copy">{{ sub.title }}</span>
-          </a>
-        </li>
-        {% endfor %}
+        <ol>
+          {% for sub in section.subs %}
+          <li>
+            <a href="#{{ sub.title | replace(r/[^A-Za-z0-9]/g, '-') }}" class="toc__link">
+              &nbsp;&nbsp;<span class="toc__index copy">{{ toc[key.letter] }}.{{ outer_loop.index }}.{{ loop.index }}.</span>
+              <span class="toc__value copy">{{ sub.title }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ol>
         {% endif %}
       </li>
       {% endfor %}
