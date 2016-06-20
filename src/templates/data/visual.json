@@ -259,7 +259,7 @@
         ]
       },
       {
-        "title": "Menus",
+        "title": "Navigation/Menus",
         "paragraphs":
         [
           {
@@ -310,30 +310,92 @@
                 }
               }
             ]
+          },
+          {
+            "title": "Skip Links",
+            "paragraphs":
+            [
+              {
+                "li": "Not every screen reader has advanced mechanism to jump to sections, headings, links, etc. or to skip repetitive codeblocks as Tables, Codeblocks, etc. So, this is probably one of the most important thing for a good screen reader user experience is providing links to jump immediatly to relevant sections and/or to skip repetitive content. On this page skip links were added before each code example to skip it. Moreover a visually hidden skip link was added at the begining of the page granting screen reader users the possibility to jump directly to either the table of contents, the menu or the content. PS: There is also a visually hidden easter egg somewhere, can you spot it?"
+              },
+              {
+                "li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually but display them on focus to improve the usability of your page for keyboard users as well:",
+                "pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
+                "preLang": "javascript",
+                "example":
+                {
+                  "pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Skip annoying content to next item</a>\n<p>Annoying Content</p>\n<p id=\"linkNext\">Next item</p>",
+                  "preLang": "markup",
+                  "play": "Listen ♫",
+                  "audio": "Item. -- Link, Skip annoying content to next item. -- Press link: Skip annoying content to next item -- Next item."
+                }
+              },
+              {
+                "li": "It is a good practice to have a table of content linking to each heading within a long text. A table of content is nothing other than a <a href=\"#Navigation-Menus\">navigation menu</a>."
+              }
+            ]
           }
         ]
       },
       {
-        "title": "Skip Links",
+        "title": "Tables",
         "paragraphs":
         [
           {
-            "li": "Not every screen reader has advanced mechanism to jump to sections, headings, links, etc. or to skip repetitive codeblocks as Tables, Codeblocks, etc. So, this is probably one of the most important thing for a good screen reader user experience is providing links to jump immediatly to relevant sections and/or to skip repetitive content. On this page skip links were added before each code example to skip it. Moreover a visually hidden skip link was added at the begining of the page granting screen reader users the possibility to jump directly to either the table of contents, the menu or the content. PS: There is also a visually hidden easter egg somewhere, can you spot it?"
+            "li": "Any tabular data should be written in Tables as some screen reader have special features to recognise tables."
           },
           {
-            "li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually but display them on focus to improve the usability of your page for keyboard users as well:",
-            "pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
-            "preLang": "javascript",
+            "li": "Add a caption to your table explaining what it is about. Hide it visually if it is obvious for visual users."
+          },
+          {
+            "li": "To make sure that the screen readers read your tables correctly include scoping. Use <code>scope=\"col\"</code> to identify the columns and <code>scope=\"row\"</code> to identify rows and <code>scope=\"colgroup\"</code> whenever a column spans over more than one item. This is how a complex accessible table could look like:",
             "example":
             {
-              "pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Skip annoying content to next item</a>\n<p>Annoying Content</p>\n<p id=\"linkNext\">Next item</p>",
+              "pre": "<table class=\"exampletable\">\n  <caption>Edible elements:</caption>\n  <tr>\n    <td scope=\"col\"></td>\n    <th scope=\"col\">Edible</th>\n    <th colspan=\"2\" scope=\"colgroup\">Not Edible</th>\n    <th scope=\"col\">Maybe Edible</th>\n  </tr>\n  <tr>\n    <th>Apple</th>\n    <td scope=\"row\">Fruit</td>\n    <td>Computer</td>\n    <td>Corporation</td>\n    <td>Special</td>\n  </tr>\n</table>",
               "preLang": "markup",
               "play": "Listen ♫",
-              "audio": "Item. -- Link, Skip annoying content to next item. -- Press link: Skip annoying content to next item -- Next item."
+              "audio": "Edible elements, table 5 columns, 2 rows. -- Edible, column 2. -- Spans 2 columns, Not edible, column 3. -- Maybe edible, colum 5. -- Row 2, Apple. -- Edible, Fruit, column 2. -- Not edible, Computer, column 3 -- Corporation. -- Maybe edible, Special, column 5."
             }
           },
           {
-            "li": "It is a good practice to have a table of content linking to each heading within a long text. A table of content is nothing other than a <a href=\"#Menus\">navigation menu</a>."
+            "li": "Do not use tables for layout purpose, that is not what they are intendet for. It would probably mess up the screen reader."
+          },
+          {
+            "li": "Keep it simple. If you have complex data, use several Tables to represent it instead of one. [V][A][P][C]"
+          },
+          {
+            "li": "Give table data a different look to table headings. [A][P][C]"
+          },
+          {
+            "li": "Zebra tables (where every second row has a light background) are good practice for long tables so that the user don’t get lost [A][P][C]"
+          }
+        ]
+      },
+      {
+        "title": "SVG",
+        "paragraphs":
+        [
+          {
+            "li": "You can use your SVGs within an <code>img</code> tag, then the <a href=\"#images\">same rules as for images</a> apply."
+          },
+          {
+            "li": "If you inline your SVG and they are a collection of elements that form an image. Then add <code>role=\"img\"</code> to your container. Then, add a <code>role=\"presentation\"</code> to the svg elements to hide them from the screen reader, as seen in the <a href=\"#SVG-3\">example below</a>."
+          },
+          {
+            "li": "If they are not <a href=\"#purely-decorative-elements\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labeledby=\"titleID\"</code> will be sufficient. However, if you have a complex image that you want to fully describe, provide da <code>desc</code> tag and link it in the same <code>aria-labeledby=\"titleID descID\"</code>. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
+            "example":
+            {
+              "pre": "<svg xmlns=http://www.w3.org/2000/svg role=\"img\" aria-labelledby=\"title  desc\">\n   <title id=\"title\">Circle</title>\n   <desc id=\"desc\">Large circle with a fat border</desc>\n   <circle role=\"presentation\" cy=\"60\" cx=\"60\" r=\"35\" stroke=\"black\" stroke-width=\"2\" \n   fill=\"grey\" />\n</svg>",
+              "preLang": "markup",
+              "play": "Listen ♫",
+              "audio": "Circle large circle with a fat border, image."
+            }
+          },
+          {
+            "li": "You can use text and links within svg."
+          },
+          {
+            "li": "If your SVG contains content that is interactive, you’ll need to make sure that the interactive elements are targetable. Give the elements a <code>role=\"link\"</code>."
           }
         ]
       },

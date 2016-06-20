@@ -60,7 +60,7 @@
 
           }
         }
-      }, 100);
+      }, 50);
 
       /*
        * Leaving animation

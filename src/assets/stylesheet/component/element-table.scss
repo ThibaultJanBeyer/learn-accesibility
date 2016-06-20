@@ -20,20 +20,5 @@
 
 .element-table__td {
   @include font-size-responsive($delta);
-  padding: 5px;  
-}
-
-/* all credits to Lea Verou for this hack */
-div.no-use {
-  @for $i from 1 through 5 {
-    &:first-child:nth-last-child(#{$i}),
-    &:first-child:nth-last-child(#{$i}) ~ & {
-      $temp: 100 / $i;
-      width: 1% * $temp;
-    }
-  }
-
-  &:last-child {
-    text-align: right;
-  }
+  padding: 5px;
 }
