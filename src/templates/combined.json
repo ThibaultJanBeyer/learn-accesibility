@@ -635,7 +635,7 @@
 						"li": "If you inline your SVG and they are a collection of elements that form an image. Then add <code>role=\"img\"</code> to your container. Then, add a <code>role=\"presentation\"</code> to the svg elements to hide them from the screen reader, as seen in the <a href=\"#SVG-3\">example below</a>."
 					},
 					{
-						"li": "If they are not <a href=\"#Purely-Decorative-Element\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labeledby=\"titleID\"</code> will be sufficient. However, if you have a complex image that you want to fully describe, provide da <code>desc</code> tag and link it in the same <code>aria-labeledby=\"titleID descID\"</code>. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
+						"li": "If they are not <a href=\"#Purely-Decorative\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labeledby=\"titleID\"</code> will be sufficient. However, if you have a complex image that you want to fully describe, provide da <code>desc</code> tag and link it in the same <code>aria-labeledby=\"titleID descID\"</code>. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
 						"example": {
 							"pre": "<svg xmlns=http://www.w3.org/2000/svg role=\"img\" aria-labelledby=\"title  desc\">\n   <title id=\"title\">Circle</title>\n   <desc id=\"desc\">Large circle with a fat border</desc>\n   <circle role=\"presentation\" cy=\"60\" cx=\"60\" r=\"35\" stroke=\"black\" stroke-width=\"2\" \n   fill=\"grey\" />\n</svg>",
 							"preLang": "markup",
@@ -656,7 +656,7 @@
 						"li": "If your SVG contains content that is interactive, you’ll need to make sure that the interactive elements are targetable. That might be done with the <code>role=\"link\"</code>."
 					},
 					{
-						"li": "To know if your SVG is purely decorative and what to do, have a look at the <a href=\"#Purely-Decorative-Element\">purely decorative elements</a> section."
+						"li": "To know if your SVG is purely decorative and what to do, have a look at the <a href=\"#Purely-Decorative\">purely decorative elements</a> section."
 					},
 					{
 						"li": "To learn when to add a title and description see <a href=\"#alternative-description\">Alternative Description</a> section."
@@ -667,7 +667,7 @@
 				"title": "Images",
 				"paragraphs": [
 					{
-						"li": "If your image provides information and is not <a href=\"#Purely-Decorative-Element\">purely decorative</a> provide it with a <a href=\"#alternative-description\">good alternative description</a>.",
+						"li": "If your image provides information and is not <a href=\"#Purely-Decorative\">purely decorative</a> provide it with a <a href=\"#alternative-description\">good alternative description</a>.",
 						"example": {
 							"pre": "<img src=\"img.jpg\" alt=\"Dog with a bell attached to its collar\" style=\"height: 50px;\">",
 							"preLang": "markup",
@@ -685,7 +685,7 @@
 						}
 					},
 					{
-						"li": "In some cases the image is <a href=\"#Purely-Decorative-Element\">purely decorative</a>. If so, you should still provide an alt attribute but leave it empty. Otherwise some sceen reader will read the image filename instead. To be sure that it does not get read add a <code>role=\"presentation\"</code> and/or <code>aria-hidden=\"true\"</code>.",
+						"li": "In some cases the image is <a href=\"#Purely-Decorative\">purely decorative</a>. If so, you should still provide an alt attribute but leave it empty. Otherwise some sceen reader will read the image filename instead. To be sure that it does not get read add a <code>role=\"presentation\"</code> and/or <code>aria-hidden=\"true\"</code>.",
 						"pre": "<img src=\"img.jpg\" alt=\"\" aria-hidden=\"true\">",
 						"preLang": "markup"
 					},
@@ -704,7 +704,7 @@
 				"title": "alternative description",
 				"paragraphs": [
 					{
-						"li": "Here you will learn common cases when and how to label based on images but same comes true for any other visual element. The <a href=\"#good-alternatives\">good alternatives</a> sub-section gives you more general information on how to label. Also, have a look at the <a href=\"#Purely-Decorative-Element\">purely decorative elements</a> sub-section to know when not to label."
+						"li": "Here you will learn common cases when and how to label based on images but same comes true for any other visual element. The <a href=\"#good-alternatives\">good alternatives</a> sub-section gives you more general information on how to label. Also, have a look at the <a href=\"#Purely-Decorative\">purely decorative elements</a> sub-section to know when not to label."
 					},
 					{
 						"li": "Any element with text should be accessible. So, if there is text in your image add an <code>alt=\"Text\"</code> attribute containing that text. However, nowadays it is possible to style text with css. Textual be should be real text. For Mathematical Formulas see <a href=\"https://www.w3.org/Math/\">MathML</a>."
@@ -760,10 +760,10 @@
 				],
 				"subs": [
 					{
-						"title": "Write good alternatives",
+						"title": "Good alt-ernatives",
 						"paragraphs": [
 							{
-								"li": "don’t describe your elements if they are <a href=\"#Purely-Decorative-Element\">purely decorative</a>."
+								"li": "don’t describe your elements if they are <a href=\"#Purely-Decorative\">purely decorative</a>."
 							},
 							{
 								"li": "Aim to put the most important information at the beginning of your sentence.",
@@ -803,7 +803,200 @@
 						]
 					},
 					{
-						"title": "Purely Decorative Elements"
+						"title": "Purely Decorative",
+						"paragraphs": [
+							{
+								"li": "Do not to add titles, descriptions or anything that could possibly be read. For images, make sure that there is an empty alt attribute without any space characters <code>alt=\"\"</code> otherwise most screen reader will read the filename instead. To make it even more unlikely that the element is read, add the <code>role=\"presentation\"</code> or/and <code>aria-hidden=\"true\"</code> which are supported by modern screen reader."
+							},
+							{
+								"li": "Note that the traditional methods used to hide elements as <code>visibility=\"hidden\"</code> or <code>display=\"none\"</code> hide the element for everyone, also for screen reader. If you want to hide elements for visual users but keep them available for screen reader use the technique described in the <a href=\"Hiding-Elements\">Hiding Elements section</a>. If you want to hide elements only for screen reader users and keep them visible for visual users use the attribute <code>aria-hidden=\"true\"</code>"
+							},
+							{
+								"li": "The Web Content Accessibility Guidelines 2.0 defines purely decorative images as: “serving only an aesthetic purpose, providing no information, and having no functionality”"
+							},
+							{
+								"li": "Elements used as part of the design as borders, ornaments and similar are purely decorative elements and should not be accessible."
+							},
+							{
+								"li": "Images and other elements that are part of links mostly to increase the clickable area and provide Structure and call to action anchorpoints for the eye are annoying for screen reader users, thus should not be accessible."
+							},
+							{
+								"li": "When the text alternative is adjacent to the element, the element itself should not be accessible to prevent hearing redundant information.",
+								"pre": "<img src=\"grandmothers.jpg\" alt=\"\">\n<strong>Grandmothers play an important role in our development:</strong>",
+								"preLang": "markup"
+							},
+							{
+								"li": "Elements used for ambience may not be accessible unless those elements convey information."
+							},
+							{
+								"li": "Elements that convey branding, feelings, moods and anything else that is not related to the content are purely decorative. Face the fact that most users are there for the information not to check out how cool the branding is. Brand values or messages can be communicated in text, but they require something more creative than a simple description of the content of an image."
+							},
+							{
+								"li": "According to <a href=\"http://4syllables.com.au/articles/decorative-images/\">Dey Alexanders observations</a> during usertest, Screen reader users, even very experienced ones, sometimes become confused by text alternatives for decorative images. Some might even try to click on images (that aren’t links) because the text alternative mentioned a word or phrase related to their task."
+							},
+							{
+								"li": "Background images, article banners, thumbnails and small elements supporting links are most likely purely decorative."
+							},
+							{
+								"li": "The W3C Web Accessibility initiative put up a valuable <a href=\"https://www.w3.org/WAI/tutorials/images/decision-tree/\">decision tree</a> to support your decisions."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Forms",
+				"paragraphs": [
+					{
+						"li": "Use the right types for your fields. As filling out forms is one of the most important task on the web, the screen reader support ist very good.",
+						"table": {
+							"caption": "which type is for what?",
+							"heads": [
+								"type",
+								"job",
+								"learn more"
+							],
+							"rows": [
+								[
+									"range",
+									"range selectors",
+									"<a href=\"https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input\">MDN</a>"
+								],
+								[
+									"file",
+									"file selection",
+									"<a href=\"https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input\">MDN</a>"
+								],
+								[
+									"color",
+									"color selection",
+									"<a href=\"https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input\">MDN</a>"
+								],
+								[
+									{
+										"manyMoreTitle": "More",
+										"manyMoreSpan": "3",
+										"manyMoreUrl": "https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+										"manyMore": [
+											"button",
+											"checkbox",
+											"date",
+											"datetime-local",
+											"email",
+											"hidden",
+											"image",
+											"month",
+											"number",
+											"password",
+											"radio",
+											"reset",
+											"search",
+											"submit",
+											"tel",
+											"text",
+											"time",
+											"url",
+											"week"
+										]
+									}
+								]
+							]
+						}
+					},
+					{
+						"li": "Most screen reader do not read placeholders."
+					},
+					{
+						"li": "Group elements that belong together using <code>fieldset</code> and <code>legend</code> tags. Enhance the support by using the <code>group</code> role and <code>aria-labeledby</code>",
+						"pre": "<fieldset role=\"group\" aria-labelledby=\"output\">\n<legend id=\"output\">Output format</legend>\n  <div>\n    <input type=\"radio\" name=\"format\" id=\"pdf\" value=\"txt\" checked>\n    <label for=\"pdf\">PDF file</label>\n  </div>\n  <div>\n    <input type=\"radio\" name=\"format\" id=\"png\" value=\"csv\">\n    <label for=\"png\">PNG file</label>\n  </div>\n</fieldset>",
+						"preLang": "markup"
+					},
+					{
+						"li": "Provide instructions that apply to the form when necessary. For example, indicate any required and optional input, allowable data formats, input format and timing limitations."
+					}
+				],
+				"subs": [
+					{
+						"title": "Labels",
+						"paragraphs": [
+							{
+								"li": "Buttons don’t require labels but the if they have no text, then they need a <code>value=\"\"</code> attribute"
+							},
+							{
+								"li": "Always add labels. Use <code>for=\"\"</code> attributes matching the form fields ID. If the context is clear visually you might <a href=\"#Hiding-Elements\">visually hide</a> the labels or only add an <code>aria-label=\"Search\"</code> attribute. If IDs cannot be provided you might encapsulate the field with its label.",
+								"example": {
+									"pre": "<label for=\"exampleName\">Name:</label>\n<input type=\"text\" name=\"name\" id=\"exampleName\">\n<!-- or -->\n<input type=\"email\" name=\"email\" aria-label=\"email:\">\n<!-- or -->\n<label>\n  Subscribe to newsletter: \n  <input type=\"checkbox\" name=\"subscribe\">\n</label>",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Name:. -- Name:, edit text. -- Email:, edit text. -- Subscribe to newsletter:. -- Subscribe to newsletter:, checkbox."
+								}
+							}
+						]
+					},
+					{
+						"title": "Errors",
+						"paragraphs": [
+							{
+								"li": "Show errors not only with color. Write them out. Adding a text explaining which part was incorrect and why near the label and bundled errors on top (ideally with <a href=\"#Skip-Links\">skiplinks</a> to jump to the incorrect formfield)."
+							},
+							{
+								"li": "Use <code>role=\"alert\"</code> with <code>aria-life=\"assertive\"</code> or <code>aria-life=\"polite\"</code>. Assertive will be pushed immediately to the screen reader as soon as the ellement appears while Polite will wait until the screen reader is done with its current task. <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role\">Read more on MDN</a>. It is a good practice to add it on the title of your error summaries.",
+								"pre": "<h1 role=\"alert\" aria-life=\"assertive\">3 Errors: [...]</h1>",
+								"preLang": "markup"
+							},
+							{
+								"li": "Also, change the title of the page accordingly: “3 Errors –” or “Success –”"
+							}
+						]
+					},
+					{
+						"title": "Anti Spam",
+						"paragraphs": [
+							{
+								"li": "As a general usability rule, try to avoid active anti-spams whenever possible."
+							},
+							{
+								"li": "If you use captchas make sure to also provide voice checks and add an alternative way to still reach the goal even if the captcha fails. I.e. an email address for direct contact."
+							},
+							{
+								"li": "Simple tests as “write ‘Hello World’ into this field:” are o.k. just make sure not to ask for things a blind person could not answer i.e. asking for colors."
+							},
+							{
+								"li": "Always make sure that your anti spam solutions are usable for everyone. Google did an o.k. job with their <a href=\"https://www.google.com/recaptcha/intro/index.html\">newest captcha</a>."
+							}
+						]
+					},
+					{
+						"title": "Required Fields",
+						"paragraphs": [
+							{
+								"li": "Indicate required fields not only visually. It has become a convention to add an asterisk * but explain that asterisk somewhere. You can also simply add the keyword “required”. Provide inline instructions when necessary."
+							},
+							{
+								"li": "Use the <code>required</code> attribute and the <code>aria-required=\"true\"</code> on required fields.",
+								"pre": "<label for=\"name\">Name (required): </label>\n<input type=\"text\" name=\"name\" id=\"name\" required aria-required=\"true\">",
+								"preLang": "markup"
+							},
+							{
+								"li": "Users should be able to check their own input and correct it if the data is important."
+							},
+							{
+								"li": "require user confirmation for irreversible actions & provide undo mechanisms for reversible actions."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Javascript",
+				"paragraphs": [
+					{
+						"li": "dolor sit"
+					}
+				],
+				"subs": [
+					{
+						"title": "test2"
 					}
 				]
 			},
@@ -811,10 +1004,7 @@
 				"title": "Example Section",
 				"paragraphs": [
 					{
-						"p": "dolor sit"
-					},
-					{
-						"img": "only img"
+						"li": "dolor sit"
 					}
 				],
 				"subs": [
