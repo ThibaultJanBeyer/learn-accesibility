@@ -5,7 +5,8 @@
 {% for paragraph in section.paragraphs %}
 
   {% if paragraph.li %}
-  {% include "partials/shared/elements/_element_li.html" %}
+    {% import "partials/shared/elements/_element_li.html" as li %}
+    {{ li.li(paragraph.li, section, loop.index) }}
   {% endif %}
 
   {% if paragraph.pre %}
@@ -24,7 +25,7 @@
   {% endif %}
 
   {% if paragraph.table %}
-  {% include "partials/shared/elements/_element_table.html" %}
+    {% include "partials/shared/elements/_element_table.html" %}
   {% endif %}
 
 {% endfor %}

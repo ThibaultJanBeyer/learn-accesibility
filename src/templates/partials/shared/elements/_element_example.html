@@ -25,7 +25,7 @@ if the next paragraph has a li element, hence if the next element is a li -->
     </div> 
     <span class="element-example__transcript" aria-hidden="true">
       <span class="element-example__output">{{ shared.sections.audio }}:</span>
-      {{ paragraph.example.audio | replace(r/\|/g, '<br>') | replace(r/--/g, '⇥') | safe }}
+      {{ paragraph.example.audio | replace(r/\|/g, '<br>') | replace(r/--/g, '⇥') | replace(r/-../g, '↧') | safe }}
       <span class="element-example__warning">{{ shared.sections.warning | safe }}</span>
     </span>
   </div>

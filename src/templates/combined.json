@@ -635,7 +635,7 @@
 						"li": "If you inline your SVG and they are a collection of elements that form an image. Then add <code>role=\"img\"</code> to your container. Then, add a <code>role=\"presentation\"</code> to the svg elements to hide them from the screen reader, as seen in the <a href=\"#SVG-3\">example below</a>."
 					},
 					{
-						"li": "If they are not <a href=\"#purely-decorative-elements\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labeledby=\"titleID\"</code> will be sufficient. However, if you have a complex image that you want to fully describe, provide da <code>desc</code> tag and link it in the same <code>aria-labeledby=\"titleID descID\"</code>. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
+						"li": "If they are not <a href=\"#Purely-Decorative-Element\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labeledby=\"titleID\"</code> will be sufficient. However, if you have a complex image that you want to fully describe, provide da <code>desc</code> tag and link it in the same <code>aria-labeledby=\"titleID descID\"</code>. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
 						"example": {
 							"pre": "<svg xmlns=http://www.w3.org/2000/svg role=\"img\" aria-labelledby=\"title  desc\">\n   <title id=\"title\">Circle</title>\n   <desc id=\"desc\">Large circle with a fat border</desc>\n   <circle role=\"presentation\" cy=\"60\" cx=\"60\" r=\"35\" stroke=\"black\" stroke-width=\"2\" \n   fill=\"grey\" />\n</svg>",
 							"preLang": "markup",
@@ -644,10 +644,166 @@
 						}
 					},
 					{
-						"li": "You can use text and links within svg."
+						"li": "You can use text and links within svg. For modern screen reader, the <code>text</code> tag is accessible by default but you should add a <code>role=\"link\"</code> to your links",
+						"example": {
+							"pre": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"30\" viewBox=\"0 0 300 300\">\n  <a xlink:href=\"#link\">\n    <text x=\"-300\" y=\"150\" font-family=\"Verdana\" font-size=\"125\">\n      Hello out there\n    </text>\n  </a>\n</svg>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Link, Hello out there"
+						}
 					},
 					{
-						"li": "If your SVG contains content that is interactive, you’ll need to make sure that the interactive elements are targetable. Give the elements a <code>role=\"link\"</code>."
+						"li": "If your SVG contains content that is interactive, you’ll need to make sure that the interactive elements are targetable. That might be done with the <code>role=\"link\"</code>."
+					},
+					{
+						"li": "To know if your SVG is purely decorative and what to do, have a look at the <a href=\"#Purely-Decorative-Element\">purely decorative elements</a> section."
+					},
+					{
+						"li": "To learn when to add a title and description see <a href=\"#alternative-description\">Alternative Description</a> section."
+					}
+				]
+			},
+			{
+				"title": "Images",
+				"paragraphs": [
+					{
+						"li": "If your image provides information and is not <a href=\"#Purely-Decorative-Element\">purely decorative</a> provide it with a <a href=\"#alternative-description\">good alternative description</a>.",
+						"example": {
+							"pre": "<img src=\"img.jpg\" alt=\"Dog with a bell attached to its collar\" style=\"height: 50px;\">",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Dog with a bell attached to its collar, Image"
+						}
+					},
+					{
+						"li": "To provide textual information to any reader, you can add a <code>caption</code> to your image. Give it the <code>role=\"group\"</code> to semantically group the caption and image",
+						"example": {
+							"pre": "<figure role=\"group\">\n  <img src=\"img.jpg\" alt=\"Dog with a bell attached to its collar\" style=\"height: 50px;\">\n  <figcaption>The bell worn by off-duty guide dogs helps the blind owner keep track of the dog’s location.</figcaption>\n</figure>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Group 2 items. -- Dog with a bell attached to its collar, Image. -- The bell worn by off-duty guide dogs helps the blind owner keep track of the dog’s location. -- End of group."
+						}
+					},
+					{
+						"li": "In some cases the image is <a href=\"#Purely-Decorative-Element\">purely decorative</a>. If so, you should still provide an alt attribute but leave it empty. Otherwise some sceen reader will read the image filename instead. To be sure that it does not get read add a <code>role=\"presentation\"</code> and/or <code>aria-hidden=\"true\"</code>.",
+						"pre": "<img src=\"img.jpg\" alt=\"\" aria-hidden=\"true\">",
+						"preLang": "markup"
+					},
+					{
+						"li": "If you use image maps, add alt attributes and make sure not to use any id or name twice on the same document.",
+						"example": {
+							"pre": "<img src=\"img.jpg\" alt=\"Chairmen of XY Corp\" usemap=\"#Map\" style=\"height:50px;\">\n<map id=\"Map\" name=\"Map\">\n    <area alt=\"Davy Jones\" shape=\"rect\" coords=\"176,14,323,58\" href=\"#link\" style=\"background-color: red;\">\n    <area alt=\"Harry Brown\" shape=\"rect\" coords=\"6,138,155,182\" href=\"#link\" style=\"background-color: red;\">\n</map>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Chairmen of XY Corp, image map -.. | Interact with Chairmen of XY Corp, image map, two items, link Davy Jones. -- Link, Harry Brown"
+						}
+					}
+				]
+			},
+			{
+				"title": "alternative description",
+				"paragraphs": [
+					{
+						"li": "Here you will learn common cases when and how to label based on images but same comes true for any other visual element. The <a href=\"#good-alternatives\">good alternatives</a> sub-section gives you more general information on how to label. Also, have a look at the <a href=\"#Purely-Decorative-Element\">purely decorative elements</a> sub-section to know when not to label."
+					},
+					{
+						"li": "Any element with text should be accessible. So, if there is text in your image add an <code>alt=\"Text\"</code> attribute containing that text. However, nowadays it is possible to style text with css. Textual be should be real text. For Mathematical Formulas see <a href=\"https://www.w3.org/Math/\">MathML</a>."
+					},
+					{
+						"li": "When the elemnt labels other information, add an alt attribute with the respective information.",
+						"pre": "<img src=\"phone.png\" alt=\"Phone:\"> 0123 456 7890",
+						"preLang": "markup"
+					},
+					{
+						"li": "When your element supplements other information, add an alternative",
+						"pre": "<img src=\"fire-extinguisher-car.jpg\" alt=\"Fire extinguisher in a cars’ trunk.\">\nDon’t forget to equip you car with a fire extinguisher",
+						"preLang": "markup"
+					},
+					{
+						"li": "Instructions should be accessible.",
+						"pre": "<img src=\"instruction.jpg\" alt=\"Turn the biggest knob ontop of your ghetto blaster to the right to increase volume and to the left to decrease volume\">",
+						"preLang": "markup"
+					},
+					{
+						"li": "If your elements convey clear impressions or emotions it makes sense to provide them to everyone.",
+						"pre": "<img src=\"children-play-area.jpg\" alt=\"we’re family friendly\">",
+						"preLang": "markup"
+					},
+					{
+						"li": "Showing the format of a file",
+						"pre": "<a href=\"#link\">\n  <img src=\"pdf.png\" alt=\"PDF:\">\n  Download ticket\n</a>",
+						"preLang": "markup"
+					},
+					{
+						"li": "Do not describe your logos in detail (no matter how cool it is), the brands name and maybe claim is sufficient."
+					},
+					{
+						"li": "Conveying information within link text:",
+						"pre": "<a href=\"#link\" target=\"_blank\">\n  Google <img src=\"new-window.png\" alt=\"open in new window\">\n</a>\n<!-- svg -->\n<a href=\"#link\" target=\"_blank\">\n  Google\n  <svg xmlns=http://www.w3.org/2000/svg role=\"img\" aria-labelledby=\"title\">\n    <title id=\"title\">open in new window</title>\n    <circle role=\"presentation\" cy=\"60\" cx=\"60\" r=\"35\" stroke=\"black\" stroke-width=\"2\" fill=\"grey\" />\n  </svg>\n</a>",
+						"preLang": "markup"
+					},
+					{
+						"li": "Have accessible functional elements.",
+						"pre": "<a href=\"javascript:print()\">\n  <img src=\"print.png\" alt=\"Print this page\">\n</a>\n<!-- instead of alt=\"Printer\" -->",
+						"preLang": "markup"
+					},
+					{
+						"li": "For complex images you’ll need a two-part alternative. The first part is a brief description to identify the image, the second part is a long description near the visual element as text or on as an external link pointing to a text. Use the <code>longdesc=\"#longdesc\"</code> attribute to link to the long description and <code>aria-describedby=\"longdesc\"</code> if the long description is not directly adjacent. Using the longdesc alone is not a good idea since it lacks of support and it leaves out visual users. See the <a href=\"#SVG-3\">SVG example<a> for SVGs.",
+						"pre": "<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london\">\n  <figcaption>\n    <a href=\"#link\">Ethnic groups (text description of the pie chart)</a>\n  </figcaption>\n</figure>\n<!-- or -->\n<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london, described in detail below.\"\n    longdesc=\"#chart-longdesc\">\n  <figcaption id=\"chart-longdesc\">\n    <h2>Values</h2>\n    <table>\n      [...]\n    </table>\n  </figcaption>\n</figure>",
+						"preLang": "markup"
+					},
+					{
+						"li": "When multiple images convey one information you only have to add a description to the first one.",
+						"pre": "<img src=\"star-full.jpg\"  alt=\"1.5 out of 3 stars\">\n<img src=\"star-half.jpg\"  alt=\"\">\n<img src=\"star-empty.jpg\"  alt=\"\">",
+						"preLang": "markup"
+					}
+				],
+				"subs": [
+					{
+						"title": "Write good alternatives",
+						"paragraphs": [
+							{
+								"li": "don’t describe your elements if they are <a href=\"#Purely-Decorative-Element\">purely decorative</a>."
+							},
+							{
+								"li": "Aim to put the most important information at the beginning of your sentence.",
+								"pre": "Green Apples\nRed Apples\nYellow Apples\n<!-- Instead of -->\nApples - Green\nApples - Red\nApples - Yellow",
+								"preLang": "markup"
+							},
+							{
+								"li": "Add a <a href=\"#alternative-description-11\">long description</a> if anything more than a short phrase is needed to describe the element."
+							},
+							{
+								"li": "Use normal punctuation in your alternative just like normal text."
+							},
+							{
+								"li": "Avoid Abbreviations."
+							},
+							{
+								"li": "The text has to give the same information as the image. That is, if someone cannot see the image, they get the important information from the image. If you were helping someone read and interact with the web page and they cannot see it, how would you describe the image?"
+							},
+							{
+								"li": "Keywords as “image”, “button”, “icon”, or “picture” in the alternative are redundant."
+							},
+							{
+								"li": "Examples for extensive descriptions (borrowed from <a href=\"http://4syllables.com.au/articles/decorative-images/\">4syllabes</a>):",
+								"pre": "“Two staff members wearing safety gear, shown working outdoors collecting information on a laptop and mobile phone”, \n“Eucalypt leaf, Tidbinbilla Nature Reserve, Australian Capital Territory”,\n“A researcher draws blood from a patient’s arm”,\n“3 young children, two boys and a girl, play with 2 golden labrador puppies, soon to be trained as seeing eye dogs”",
+								"preLang": "markup"
+							},
+							{
+								"li": "Typically the alternative is not a literal description of the image but conveys the meaning of the image. Here are some examples <a href=\"https://www.w3.org/TR/WCAG20-TECHS/G94\">from w3</a> to illustrate that fact:",
+								"pre": "> A chart showing sales for October has an short text alternative of \"October sales chart\". It also has a long description that provides all of the information on the chart.\n> A search button uses an image of a magnifying glass. The text alternative is \"search\" and not \"magnifying glass\".\n> A picture shows how a knot is tied including arrows showing how the ropes go to make the knot. The text alternative describes how to tie the knot, not what the picture looks like.\n> A picture shows what a toy looks like from the front. The text alternative describes a front view of the toy.\n> An animation shows how to change a tire. A short text alternative describes what the animation is about. A long text alternative describes how to change a tire.\n> The text alternative should be “print this page” rather than “(image of a) printer”, “search” rather than “magnifying lens” or “Example.com home page” rather than “Example.com logo”.",
+								"preLang": "markup"
+							},
+							{
+								"li": "DO NOT use short descriptions as:",
+								"pre": "“banner”, “news item graphic”, “smiling people”,\n“plant”, “open day photo”, “decorative element”,\n“funny bread”, “needle”, “kids with toys”,\n etc.",
+								"preLang": "markup"
+							}
+						]
+					},
+					{
+						"title": "Purely Decorative Elements"
 					}
 				]
 			},
