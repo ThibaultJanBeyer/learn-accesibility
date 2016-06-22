@@ -4,6 +4,11 @@
 <ul>
 {% for paragraph in section.paragraphs %}
 
+  {% if paragraph.p %}
+    {% import "partials/shared/elements/_element_p.html" as p %}
+    {{ p.p(paragraph.p) }}
+  {% endif %}
+
   {% if paragraph.li %}
     {% import "partials/shared/elements/_element_li.html" as li %}
     {{ li.li(paragraph.li, section, loop.index) }}

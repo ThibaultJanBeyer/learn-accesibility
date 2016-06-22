@@ -20,10 +20,6 @@
   width: 50px;
 }
 
-.section__intro {
-  @include font-size-responsive;
-}
-
 .section__title {
   @include heading($alpha, $primary-family, 700);
   @include vertical-rhythm($gutter--large);

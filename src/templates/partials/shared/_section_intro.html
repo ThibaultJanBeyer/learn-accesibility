@@ -6,9 +6,9 @@
 
   <div class="section__separation"></div>
 
-  <p class="section__intro copy">
-    {{ page.intro.p | safe }}
-  </p>
+  {% import "partials/shared/elements/_element_p.html" as p %}    
+  {{ p.p(page.intro.p) }}
+
   {% if page.intro.img %}
     {% import "partials/shared/elements/_element_img.html" as img %}    
     {{ img.img(page.intro.img) }}

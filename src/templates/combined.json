@@ -534,7 +534,7 @@
 					{
 						"li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. That heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
 						"example": {
-							"pre": "<nav role=\"navigation\" aria-label=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
+							"pre": "<nav role=\"navigation\" aria-labeledby=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
 							"preLang": "markup",
 							"play": "Listen ♫",
 							"audio": "Navigation 'Main Menu', 2 items. -- Heading Level 2, Main Menu. -- Current. -- Home. -- Link, about. -- Link, contact."
@@ -904,9 +904,6 @@
 						}
 					},
 					{
-						"li": "Most screen reader do not read placeholders."
-					},
-					{
 						"li": "Group elements that belong together using <code>fieldset</code> and <code>legend</code> tags. Enhance the support by using the <code>group</code> role and <code>aria-labeledby</code>",
 						"pre": "<fieldset role=\"group\" aria-labelledby=\"output\">\n<legend id=\"output\">Output format</legend>\n  <div>\n    <input type=\"radio\" name=\"format\" id=\"pdf\" value=\"txt\" checked>\n    <label for=\"pdf\">PDF file</label>\n  </div>\n  <div>\n    <input type=\"radio\" name=\"format\" id=\"png\" value=\"csv\">\n    <label for=\"png\">PNG file</label>\n  </div>\n</fieldset>",
 						"preLang": "markup"
@@ -962,7 +959,7 @@
 								"li": "Simple tests as “write ‘Hello World’ into this field:” are o.k. just make sure not to ask for things a blind person could not answer i.e. asking for colors."
 							},
 							{
-								"li": "Always make sure that your anti spam solutions are usable for everyone. Google did an o.k. job with their <a href=\"https://www.google.com/recaptcha/intro/index.html\">newest captcha</a>."
+								"li": "Always make sure that your anti spam solutions are usable for everyone. Google did an <a href=\"http://simplyaccessible.com/article/googles-no-captcha/\">o.k. job</a> with their <a href=\"https://www.google.com/recaptcha/intro/index.html\">newest captcha</a>."
 							}
 						]
 					},
@@ -991,25 +988,110 @@
 				"title": "Javascript",
 				"paragraphs": [
 					{
-						"li": "dolor sit"
-					}
-				],
-				"subs": [
+						"li": "A common myth is that screen reader do not support javascript. However, the shiny truth is that <a href=\"http://webaim.org/projects/screenreadersurvey5/#javascript\">they do support javascript</a>. That is great news. None the less, accessibility is not only about screen reader users and there are <a href=\"https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/\">~1% of users without javascript</a> for <a href=\"http://www.punkchip.com/why-support-javascript-disabled/\">diverse reasons</a>. Ideally build your websites so that they work without javascript and then add a javascript layer on top of it."
+					},
 					{
-						"title": "test2"
+						"li": "Have accessibility in mind when using javascript. Provide a way to have users be aware of changes triggered via javascript, try to not disable the normal functionalities of the browser, make it device independant. Unfortunately there is no one-fits-all solutions. However, a common mistake is i.e. removing the link href and adding an onclick event that handles the link. A better approach is to keep the default but then prevent it with javascript:",
+						"pre": "add example from book",
+						"preLang": "markup"
+					},
+					{
+						"li": "Another thought problem is on how to make ajax request accessible. Since they are asyncron it is difficult for a screen reader user to tell what is happening. <a href=\"http://webaim.org/techniques/ajax/\">Webaim.org suggests</a> to give your users controll over dynamical updates such as by activating a link or button. Also, not to remove the keyboard focus. The <a href=\"https://www.w3.org/TR/WCAG20/#time-limits-pause\">WCAG 2.0 suggests</a> that content updating dynamically for more than 5 seconds must provide the ability to pause, stop, or hide that dynamic content."
+					},
+					{
+						"li": "Inform users about updates using <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions\">ARIA live regions</a>, <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role\">alert roles</a> or by setting focus to the newly updated content area."
 					}
 				]
 			},
 			{
-				"title": "Example Section",
+				"title": "WAI-ARIA & Roles",
 				"paragraphs": [
 					{
-						"li": "dolor sit"
+						"li": "WAI-ARIA stands for Web Accessibility Initiative - Accessible Rich Internet Applications. It is a W3C Standard thus those features should be used even if announced by screen readers. If it is not supported yet, it will be in the near future. It also give screen readers usefull semantic information. WAI-ARIA allows interaction with even extremely complex websites declaring certain elements on the page with roles and attributes. It works by adding metadata to the HTML tags. Here, some of the most important are explained. A full reference is up on W3C for all <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties\">attributes</a>, <a href=\"https://www.w3.org/TR/wai-aria/roles\">roles and landmarks</a>."
 					}
 				],
 				"subs": [
 					{
-						"title": "test2"
+						"title": "Attributes",
+						"paragraphs": [
+							{
+								"p": "info"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-busy\">aria-busy</a> indicates when an element is loading. I.e. when elements are loaded dynamically aria-busy can be set to true while loading and to false when finished. Elements being loaded within the <code>role=\"mustContain\"</code> have to be marked with <code>aria-busy=\"true\"</code>. If there is an error aria-invalid should be set. (not announced by VoiceOver 2016)",
+								"pre": "<ul aria-busy=\"true\">\n  <li>Loading...</li>\n</ul>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls\">aria-controls</a> identify elements whose contents are controlled by the current element. (not announced by VoiceOver 2016)",
+								"pre": "<button role=\"button\" aria-controls=\"amount\">Increase amount by 1</button>\n<p id=\"amount\">1</p>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby\">aria-describedby</a> identify elements that describe the current element. (not announced by VoiceOver 2016)",
+								"pre": "<div aria-describedby=\"#exampleDescription\">Strange Thing</div>\n<p id=\"exampleDescription\">Representing [...]</p>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled\">aria-disabled</a> should be placed on all disabled elements, those should additionally be visually geyed out and the tabindex should be removed.",
+								"example": {
+									"pre": "<input type=\"checkbox\" aria-disabled=\"true\" disabled>",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "dimmed, checkbox."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed\">aria-grabbed</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">aria-dropeffect</a> indicates the state in a drag and drop operation. <code>aria-grabbed=\"true\"</code> indicates that an element is currently being dragged. <code>aria-grabbed=\"false\"</code> indicates that the element not being dragged but can be. The <code>aria-dropeffect</code> should be added to all elements where the currently dragged element can be dropped. It can have multiple values separated by a blank space: <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">copy</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">move</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">link</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">execute</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">popup</a>. (not announced by VoiceOver 2016)",
+								"pre": "<div aria-grabbed=\"false\">Draggable</div>\n<div aria-dropeffect=\"move execute\">Target</div>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content. (not announced by VoiceOver 2016)",
+								"pre": "<li aria-haspopup=\"true\">\n  <button role=\"button\">Click me to reach sublevel</button>\n  <ul>\n    <li>Sub Level</li>\n  </ul>\n</li>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content. (not announced by VoiceOver 2016)",
+								"pre": "<li aria-haspopup=\"true\">\n  <button role=\"button\">Click me to reach sublevel</button>\n  <ul>\n    <li>Sub Level</li>\n  </ul>\n</li>",
+								"preLang": "markup"
+							},
+							{
+								"li": "As seen in the <a href=\"Hiding-Elements\">hiding elements</a> section <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden\">aria-hidden</a> hides elements from the screen reader.",
+								"example": {
+									"pre": "<p>This is <span aria-hidden=\"true\">hidden</span>.</p>",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "This is."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid\">aria-invalid</a> announce screen reader users that the elements have invalid data. I.e. you should add this to any form where the value entered by the user has failed validation.",
+								"example": {
+									"pre": "<input type=\"text\" aria-invalid=\"true\">\n<input type=\"text\" aria-invalid=\"grammar\">\n<input type=\"text\" aria-invalid=\"spelling\">",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Invalid data, edit text. -- Invalid grammar, edit text. -- Invalid spelling, edit text."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-label\">aria-label</a> is, with aria-labeledby probably the most used WAI-ARIA attribute. It defines a string value that labels the current element. Used for example in <a href=\"Structure-10\">structure</a>, <a href=\"#Structure-3\">searchfields</a>, <a href=\"#Breadcrumbs-1\">breadcrumbs</a> and <a href=\"#Labels-2\">inputs</a>. If the label is visible in the document you should use aria-labeledby instead.",
+								"example": {
+									"pre": "<input type=\"email\" name=\"email\" aria-label=\"email:\">",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Email:, edit text."
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Testing & ressources",
+				"paragraphs": [
+					{
+						"li": "dolor sit"
 					}
 				]
 			}

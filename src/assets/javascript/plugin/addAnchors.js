@@ -13,9 +13,6 @@ for(var i = 0; i < anchorElements.length; i++) {
   var el = anchorElements[i];
   var content = el.innerHTML;
   var contentText = (el.innerText || el.textContent);
-  if(contentText.length > 25) { // shorten text if super long
-    contentText = contentText.substring(0,25);
-  }
   var replaceText = contentText.replace(/[^A-Za-z0-9]/g, '-');
   var anchor = '<a class="anchor" href="#' + replaceText + '" aria-hidden="true">';
 
@@ -29,10 +26,6 @@ for (var j = 0; j < anchorSkip.length; j++) {
   var elJ = anchorSkip[j];
   var dataSkiplinkTitle = elJ.getAttribute('data-skiplink-title');
   var dataSkiplinkIndex = elJ.getAttribute('data-skiplink-index');
-
-  if(dataSkiplinkTitle.length > 25) { // shorten text if super long
-    dataSkiplinkTitle = dataSkiplinkTitle.substring(0,25);
-  }
   dataSkiplinkTitle = dataSkiplinkTitle.replace(/[^A-Za-z0-9]/g, '-');
 
   if(!dataSkiplinkIndex) {
@@ -49,10 +42,6 @@ var anchorAria = document.getElementsByClassName('anchor--aria-labelledby');
 for (var k = 0; k < anchorAria.length; k++) {
   var elK = anchorAria[k];
   var labelAria = elK.getAttribute('data-aria-labelledby');
-
-  if(labelAria.length > 25) { // shorten text if super long
-    labelAria = labelAria.substring(0,25);
-  }
   labelAria = labelAria.replace(/[^A-Za-z0-9]/g, '-');
 
   elK.setAttribute('aria-labelledby', labelAria);
@@ -66,10 +55,6 @@ for (var l = 0; l < anchorLi.length; l++) {
   var contentL = elL.innerHTML;
   var sectionTitle = elL.getAttribute('data-section-title');
   var index = elL.getAttribute('data-index');
-
-  if(sectionTitle.length > 25) { // shorten text if super long
-    sectionTitle = sectionTitle.substring(0,25);
-  }
   sectionTitle = sectionTitle.replace(/[^A-Za-z0-9]/g, '-');
   var anchorL = '<a class="anchor" href="#' + sectionTitle + '-' + index + '" aria-hidden="true">';
   

@@ -1,0 +1,4 @@
+.element-p {
+  @include font-size-responsive;
+  margin-bottom: $gutter--medium;
+}
