@@ -14,7 +14,7 @@
         <div class="nav__link-container">
           <p class="nav__link-title copy">{{ option.title }}</p>
           <p class="nav__link-description copy">
-            {{ option.description }} <span class="visuallyhidden">{{ option.sr }}</span>
+            {{ option.description | safe }} <span class="visuallyhidden">{{ option.sr }}</span>
           </p>
         </div>
       </a>

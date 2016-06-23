@@ -1,8 +1,18 @@
 .toc {
   @include font-size-responsive($delta);
-  position: fixed;
-  top: 40px;
   left: 0;
+  max-height: 25vh;
+  position: fixed;
+  top: 0;
+
+  @include media('>small') {
+    max-height: 35vh;
+    top: 40px;
+  }
+
+  @include media('>medium') {
+    max-height: 90vh;
+  }
 }
 
 .toc__toggler {
@@ -11,7 +21,7 @@
   height: 100%;
   position: absolute;
 
-  @include media('>medium') {
+  @include media('>large') {
     width: 30px;
   }
 }
@@ -19,7 +29,7 @@
 .toc__toggler--open {
   width: 30px;
 
-  @include media('>medium') {
+  @include media('>large') {
     width: 10px;
   }
 }
@@ -33,7 +43,7 @@
   width: 0;
   z-index: 1;
 
-  @include media('>medium') {
+  @include media('>large') {
     content: 'table of content';
     width: 150px;
   }
@@ -43,34 +53,46 @@
   content: 'table of content';
   width: 150px;
 
-  @include media('>medium') {
+  @include media('>large') {
     content: '';
     width: 0;
   }
 }
 
+/*
+ * 1. To beautifully display an overflow scroll 
+ */
 .toc__container {
   background: $white;
   margin-left: 10px;
+  min-width: 160px; /* 1. */
+  max-height: 400px; /* 1. */
+  max-height: calc( 100vh - 80px ); /* 1. */
+  overflow: auto; /* 1. */
   padding: 10px;
   transform: translateX(0);
   transition: transform 0.5s;
 
-  @include media('>medium') {
+  @include media('>large') {
     transform: translateX(-150%);
+    min-width: 230px; /* 1. */
   }
 }
 
 .toc__container--open {
   transform: translateX(-150%);
 
-  @include media('>medium') {
+  @include media('>large') {
     transform: translateX(0);
   }
 }
 
 .toc__link {
   @include link-styles-alt;
+}
+
+.toc__link--current {
+  font-weight: 700;
 }
 
 // scss-lint:disable MergeableSelector

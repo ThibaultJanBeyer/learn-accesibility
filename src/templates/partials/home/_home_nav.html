@@ -14,7 +14,7 @@
             <div class="home-nav__link-holder">
               <div class="home-nav__link-container">
                 <p class="home-nav__link-title">{{ option.title }}</p>
-                <p class="home-nav__link-description">{{ option.description }}<span class="visuallyhidden">{{ option.sr }}</span></p>
+                <p class="home-nav__link-description">{{ option.description | safe }}<span class="visuallyhidden">{{ option.sr }}</span></p>
               </div>
             </div>
           </a>

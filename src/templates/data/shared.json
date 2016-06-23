@@ -24,13 +24,13 @@
           {
             "url": "vision-color.html",
             "title": "L",
-            "description": "low vision + color",
+            "description": "low vision<br>+ color",
             "sr": "accessibility"
           },
           {
             "url": "physical-audio.html",
             "title": "P",
-            "description": "physical + audio",
+            "description": "physical<br>+ audio",
             "sr": "accessibility"
           },
           {
