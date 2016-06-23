@@ -1,27 +1,28 @@
 <!-- nunjucks home nav -->
 
 <nav class="home-nav" role="navigation" aria-labelledby="mainmenu">
-  <h2 id="mainmenu" class="visuallyhidden">{{ home.nav.mainmenu }}</h2>
+  <h2 id="mainmenu" class="visuallyhidden">{{ shared.nav.title }}</h2>
   <ul class="home-nav__options">
 
-    {% for option in home.nav.options %}
-    {% if loop.index % 2 != 0 %}
-    <div class="home-nav__options-container">
-    {% endif %}
-      <li class="home-nav__option">
-        <a href="{{ option.url }}" class="home-nav__link center-align {{ option.title }}">
-          <div class="home-nav__link-holder">
-            <div class="home-nav__link-container">
-              <p class="home-nav__link-title">{{ option.title }}</p>
-              <p class="home-nav__link-description">{{ option.description }}<span class="visuallyhidden">{{ option.sr }}</span></p>
+    {% for option in shared.nav.options %}
+    {% if option.title %}
+      {% if loop.index % 2 != 0 %}
+      <div class="home-nav__options-container">
+      {% endif %}
+        <li class="home-nav__option">
+          <a href="{{ option.url }}" class="home-nav__link center-align {{ option.title }}">
+            <div class="home-nav__link-holder">
+              <div class="home-nav__link-container">
+                <p class="home-nav__link-title">{{ option.title }}</p>
+                <p class="home-nav__link-description">{{ option.description }}<span class="visuallyhidden">{{ option.sr }}</span></p>
+              </div>
             </div>
-          </div>
-        </a>
-      </li>
-    {% if loop.index % 2 == 0 %}
-    </div>
+          </a>
+        </li>
+      {% if loop.index % 2 == 0 %}
+      </div>
+      {% endif %}
     {% endif %}
     {% endfor %}
-
   </ul>
 </nav>

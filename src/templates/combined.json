@@ -121,56 +121,6 @@
 			}
 		]
 	},
-	"home": {
-		"letters": [
-			"A",
-			"c",
-			"c",
-			"e",
-			"s",
-			"s",
-			"i",
-			"b",
-			"i",
-			"l",
-			"i",
-			"t",
-			"y",
-			"i",
-			"s"
-		],
-		"title": "Accessibility",
-		"subtitle": "for everyone",
-		"nav": {
-			"mainmenu": "Main menu",
-			"options": [
-				{
-					"url": "visual.html",
-					"title": "V",
-					"description": "visual",
-					"sr": "accessibility"
-				},
-				{
-					"url": "audio.html",
-					"title": "A",
-					"description": "audio",
-					"sr": "accessibility"
-				},
-				{
-					"url": "physical.html",
-					"title": "P",
-					"description": "physical",
-					"sr": "accessibility"
-				},
-				{
-					"url": "cognitive.html",
-					"title": "C",
-					"description": "Cognitive",
-					"sr": "accessibility"
-				}
-			]
-		}
-	},
 	"physical": {
 		"title": "Physical",
 		"subtitle": "Accessibility",
@@ -251,21 +201,21 @@
 					"sr": "accessibility"
 				},
 				{
-					"url": "audio.html",
-					"title": "A",
-					"description": "audio",
+					"url": "vision-color.html",
+					"title": "L",
+					"description": "low vision + color",
 					"sr": "accessibility"
 				},
 				{
-					"url": "physical.html",
+					"url": "physical-audio.html",
 					"title": "P",
-					"description": "physical",
+					"description": "physical + audio",
 					"sr": "accessibility"
 				},
 				{
 					"url": "cognitive.html",
 					"title": "C",
-					"description": "Cognitive",
+					"description": "cognitive",
 					"sr": "accessibility"
 				}
 			]
@@ -281,6 +231,27 @@
 			"example": "Code example",
 			"skip": "skip code example to next item",
 			"warning": "> Note: ⇥ means that next element is only read when user press 'next item' button on his screen reader.<br> > Note: audio output when pressing on listen is not always accurate. But the text above these notes is."
+		},
+		"home": {
+			"letters": [
+				"A",
+				"c",
+				"c",
+				"e",
+				"s",
+				"s",
+				"i",
+				"b",
+				"i",
+				"l",
+				"i",
+				"t",
+				"y",
+				"i",
+				"s"
+			],
+			"title": "Accessibility",
+			"subtitle": "for everyone"
 		}
 	},
 	"visual": {
@@ -1469,7 +1440,7 @@
 				"title": "Testing & ressources",
 				"paragraphs": [
 					{
-						"p": "Found an error or have an addition? Please <a href=\"@REPLACE\">contribute</a> to this project via github."
+						"p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project via github."
 					},
 					{
 						"li": "There are some automated testing tools as <a href=\"http://www.cynthiasays.com/\">CynthiaSays</a> and <a href=\"http://wave.webaim.org/\">WAVE</a> but because they can not do judgment calls, they are not as good as a human testing. So, the best way to test your website for visual accessibility is to actually use a screen reader yourself. Now as you don’t want to spend thousands of dollars use the ones you can get for free. On a Mac OS you can use the built in <a href=\"https://www.apple.com/voiceover/info/guide/\">VoiceOver</a>. On a Windows OS there is <a href=\"http://www.nvaccess.org/\">NVDA</a> which is backed by users and huge companies as Adobe and Google."

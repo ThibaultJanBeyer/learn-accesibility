@@ -1,13 +1,16 @@
 {
-  "shared": {
-    "toc": {
+  "shared": 
+  {
+    "toc": 
+    {
       "title": "Table of contents for",
       "V": 1,
       "A": 2,
       "P": 3,
       "C": 4
     },
-    "nav": {
+    "nav": 
+    {
       "title": "Main menu",
       "selected": "current:",
       "options": 
@@ -19,36 +22,44 @@
             "sr": "accessibility"
           },
           {
-            "url": "audio.html",
-            "title": "A",
-            "description": "audio",
+            "url": "vision-color.html",
+            "title": "L",
+            "description": "low vision + color",
             "sr": "accessibility"
           },
           {
-            "url": "physical.html",
+            "url": "physical-audio.html",
             "title": "P",
-            "description": "physical",
+            "description": "physical + audio",
             "sr": "accessibility"
           },
           {
             "url": "cognitive.html",
             "title": "C",
-            "description": "Cognitive",
+            "description": "cognitive",
             "sr": "accessibility"
           }
         ] 
     },
-    "skipLinks": {
+    "skipLinks": 
+    {
       "toContent": "Content",
       "toToc": "Table of Content",
       "toNav": "Navigation"
     },
-    "sections": {
+    "sections": 
+    {
       "output": "Visual output",
       "audio": "Screen reader",
       "example": "Code example",
       "skip": "skip code example to next item",
       "warning": "> Note: ⇥ means that next element is only read when user press 'next item' button on his screen reader.<br> > Note: audio output when pressing on listen is not always accurate. But the text above these notes is."
+    },
+    "home":
+    {
+      "letters": [ "A","c","c","e","s","s","i","b","i","l","i","t","y","i","s" ],
+      "title": "Accessibility",
+      "subtitle": "for everyone"
     }
   }
 }
