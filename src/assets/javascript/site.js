@@ -81,7 +81,7 @@
     // set that bool = true if we do
     window.onscroll = () => { scrolling = true; };
 
-    // every 2,5 seconds check if a scroll has happened
+    // every x seconds check if a scroll has happened
     setInterval(function() {
       if (scrolling) {
         // is so, then store the scroll position
@@ -105,7 +105,7 @@
       }
       // and set the scrolling to false again until next scroll
       scrolling = false;
-    }, 2500);
+    }, 1500);
   }, 1000);
 
 }})();
