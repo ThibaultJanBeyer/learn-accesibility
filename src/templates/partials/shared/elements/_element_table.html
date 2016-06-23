@@ -16,10 +16,12 @@
       <td class="element-table__td copy" scope="{{ 'row' if loop.index == 1 }}" colspan="{{ cell.manyMoreSpan }}">
         {{ cell.manyMoreTitle }}:
       {% for more in cell.manyMore %}
-        {% if cell.manyMoreUrl %}
+        {% if cell.manyMoreUrlHash == 'NO' %}
+        <a href="{{ cell.manyMoreUrl }}{{ cell.manyMoreUrlHash }}{{ more }}">{{ more }}</a>
+        {% elif cell.manyMoreUrlHash %}
         <a href="{{ cell.manyMoreUrl }}">{{ more }}</a>
         {% else %}
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/{{ more }}">{{ more }}</a>
+        <a href="{{ cell.manyMoreUrl }}{{ more }}">{{ more }}</a>
         {% endif %}
       {% endfor %}
       </td>

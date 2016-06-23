@@ -449,6 +449,7 @@
 									{
 										"manyMoreTitle": "Few more",
 										"manyMoreSpan": "3",
+										"manyMoreUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/",
 										"manyMore": [
 											"abbr",
 											"address",
@@ -534,7 +535,7 @@
 					{
 						"li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. That heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
 						"example": {
-							"pre": "<nav role=\"navigation\" aria-labeledby=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
+							"pre": "<nav role=\"navigation\" aria-labelledby=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
 							"preLang": "markup",
 							"play": "Listen ♫",
 							"audio": "Navigation 'Main Menu', 2 items. -- Heading Level 2, Main Menu. -- Current. -- Home. -- Link, about. -- Link, contact."
@@ -635,7 +636,7 @@
 						"li": "If you inline your SVG and they are a collection of elements that form an image. Then add <code>role=\"img\"</code> to your container. Then, add a <code>role=\"presentation\"</code> to the svg elements to hide them from the screen reader, as seen in the <a href=\"#SVG-3\">example below</a>."
 					},
 					{
-						"li": "If they are not <a href=\"#Purely-Decorative\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labeledby=\"titleID\"</code> will be sufficient. However, if you have a complex image that you want to fully describe, provide da <code>desc</code> tag and link it in the same <code>aria-labeledby=\"titleID descID\"</code>. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
+						"li": "If they are not <a href=\"#Purely-Decorative\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labelledby=\"titleID descID\"</code>. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
 						"example": {
 							"pre": "<svg xmlns=http://www.w3.org/2000/svg role=\"img\" aria-labelledby=\"title  desc\">\n   <title id=\"title\">Circle</title>\n   <desc id=\"desc\">Large circle with a fat border</desc>\n   <circle role=\"presentation\" cy=\"60\" cx=\"60\" r=\"35\" stroke=\"black\" stroke-width=\"2\" \n   fill=\"grey\" />\n</svg>",
 							"preLang": "markup",
@@ -852,7 +853,7 @@
 						"table": {
 							"caption": "which type is for what?",
 							"heads": [
-								"type",
+								"type=\"\"",
 								"job",
 								"learn more"
 							],
@@ -860,23 +861,24 @@
 								[
 									"range",
 									"range selectors",
-									"<a href=\"https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input\">MDN</a>"
+									"<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes\">MDN</a>"
 								],
 								[
 									"file",
 									"file selection",
-									"<a href=\"https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input\">MDN</a>"
+									"<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes\">MDN</a>"
 								],
 								[
 									"color",
 									"color selection",
-									"<a href=\"https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input\">MDN</a>"
+									"<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes\">MDN</a>"
 								],
 								[
 									{
 										"manyMoreTitle": "More",
 										"manyMoreSpan": "3",
-										"manyMoreUrl": "https://https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+										"manyMoreUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes",
+										"manyMoreUrlHash": "NO",
 										"manyMore": [
 											"button",
 											"checkbox",
@@ -904,7 +906,7 @@
 						}
 					},
 					{
-						"li": "Group elements that belong together using <code>fieldset</code> and <code>legend</code> tags. Enhance the support by using the <code>group</code> role and <code>aria-labeledby</code>",
+						"li": "Group elements that belong together using <code>fieldset</code> and <code>legend</code> tags. Enhance the support by using the <code>group</code> role and <code>aria-labelledby</code>",
 						"pre": "<fieldset role=\"group\" aria-labelledby=\"output\">\n<legend id=\"output\">Output format</legend>\n  <div>\n    <input type=\"radio\" name=\"format\" id=\"pdf\" value=\"txt\" checked>\n    <label for=\"pdf\">PDF file</label>\n  </div>\n  <div>\n    <input type=\"radio\" name=\"format\" id=\"png\" value=\"csv\">\n    <label for=\"png\">PNG file</label>\n  </div>\n</fieldset>",
 						"preLang": "markup"
 					},
@@ -937,8 +939,8 @@
 								"li": "Show errors not only with color. Write them out. Adding a text explaining which part was incorrect and why near the label and bundled errors on top (ideally with <a href=\"#Skip-Links\">skiplinks</a> to jump to the incorrect formfield)."
 							},
 							{
-								"li": "Use <code>role=\"alert\"</code> with <code>aria-life=\"assertive\"</code> or <code>aria-life=\"polite\"</code>. Assertive will be pushed immediately to the screen reader as soon as the ellement appears while Polite will wait until the screen reader is done with its current task. <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role\">Read more on MDN</a>. It is a good practice to add it on the title of your error summaries.",
-								"pre": "<h1 role=\"alert\" aria-life=\"assertive\">3 Errors: [...]</h1>",
+								"li": "Use <code>role=\"alert\"</code> with <code>aria-live=\"assertive\"</code> or <code>aria-live=\"polite\"</code>. Assertive will be pushed immediately to the screen reader as soon as the ellement appears while Polite will wait until the screen reader is done with its current task. <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role\">Read more on MDN</a>. It is a good practice to add it on the title of your error summaries.",
+								"pre": "<h1 role=\"alert\" aria-live=\"assertive\">3 Errors: [...]</h1>",
 								"preLang": "markup"
 							},
 							{
@@ -970,9 +972,13 @@
 								"li": "Indicate required fields not only visually. It has become a convention to add an asterisk * but explain that asterisk somewhere. You can also simply add the keyword “required”. Provide inline instructions when necessary."
 							},
 							{
-								"li": "Use the <code>required</code> attribute and the <code>aria-required=\"true\"</code> on required fields.",
-								"pre": "<label for=\"name\">Name (required): </label>\n<input type=\"text\" name=\"name\" id=\"name\" required aria-required=\"true\">",
-								"preLang": "markup"
+								"li": "Use the <code>required</code> attribute and the <code>aria-required=\"true\"</code> on required fields. Note that the screen reader will read required twice (once from the label and once from the aria)",
+								"example": {
+									"pre": "<label for=\"name\">Name (required): </label>\n<input type=\"text\" name=\"name\" id=\"name\" required aria-required=\"true\">",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Name (required). -- Name (required), required, edit text."
+								}
 							},
 							{
 								"li": "Users should be able to check their own input and correct it if the data is important."
@@ -1007,7 +1013,7 @@
 				"title": "WAI-ARIA & Roles",
 				"paragraphs": [
 					{
-						"li": "WAI-ARIA stands for Web Accessibility Initiative - Accessible Rich Internet Applications. It is a W3C Standard thus those features should be used even if announced by screen readers. If it is not supported yet, it will be in the near future. It also give screen readers usefull semantic information. WAI-ARIA allows interaction with even extremely complex websites declaring certain elements on the page with roles and attributes. It works by adding metadata to the HTML tags. Here, some of the most important are explained. A full reference is up on W3C for all <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties\">attributes</a>, <a href=\"https://www.w3.org/TR/wai-aria/roles\">roles and landmarks</a>."
+						"p": "WAI-ARIA stands for Web Accessibility Initiative - Accessible Rich Internet Applications. It is a W3C Standard thus those features should be used even if announced by screen readers. If it is not supported yet, it will be in the near future. It also give screen readers usefull semantic information. WAI-ARIA allows interaction with even extremely complex websites declaring certain elements on the page with roles and attributes. It works by adding metadata to the HTML tags. Here, some of the most important are explained. A full reference is up on W3C for all <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties\">attributes</a>, <a href=\"https://www.w3.org/TR/wai-aria/roles\">roles and landmarks</a>."
 					}
 				],
 				"subs": [
@@ -1015,25 +1021,22 @@
 						"title": "Attributes",
 						"paragraphs": [
 							{
-								"p": "info"
-							},
-							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-busy\">aria-busy</a> indicates when an element is loading. I.e. when elements are loaded dynamically aria-busy can be set to true while loading and to false when finished. Elements being loaded within the <code>role=\"mustContain\"</code> have to be marked with <code>aria-busy=\"true\"</code>. If there is an error aria-invalid should be set. (not announced by VoiceOver 2016)",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-busy\">aria-busy</a> indicates when an element is loading. I.e. when elements are loaded dynamically aria-busy can be set to true while loading and to false when finished. Elements being loaded within the <code>role=\"mustContain\"</code> have to be marked with <code>aria-busy=\"true\"</code>. If there is an error aria-invalid should be set.",
 								"pre": "<ul aria-busy=\"true\">\n  <li>Loading...</li>\n</ul>",
 								"preLang": "markup"
 							},
 							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls\">aria-controls</a> identify elements whose contents are controlled by the current element. (not announced by VoiceOver 2016)",
-								"pre": "<button role=\"button\" aria-controls=\"amount\">Increase amount by 1</button>\n<p id=\"amount\">1</p>",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls\">aria-controls</a> identify elements whose contents are controlled by the current element. Similar to the <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-owns\">aria-owns</a> attribute which identifies a visual, functional, or contextual parent/child relationship when it cannot be provided in the markup. (both not announced by VoiceOver2016)",
+								"pre": "<button role=\"button\" aria-controls=\"amount\">Increase amount by 1</button>\n<p id=\"amount\">1</p>\n\n<div aria-owns=\"child\">Parent</div>\n<div id=\"child\">Child</div>",
 								"preLang": "markup"
 							},
 							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby\">aria-describedby</a> identify elements that describe the current element. (not announced by VoiceOver 2016)",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby\">aria-describedby</a> identify elements that describe the current element.",
 								"pre": "<div aria-describedby=\"#exampleDescription\">Strange Thing</div>\n<p id=\"exampleDescription\">Representing [...]</p>",
 								"preLang": "markup"
 							},
 							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled\">aria-disabled</a> should be placed on all disabled elements, those should additionally be visually geyed out and the tabindex should be removed.",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled\">aria-disabled</a> indicate disabled elements, those should additionally be visually geyed out and the tabindex should be removed. While <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly\">aria-readonly</a> indicate elements where the user cannot change the value but in contrast to disabled elements is still able to navigate to descendants.",
 								"example": {
 									"pre": "<input type=\"checkbox\" aria-disabled=\"true\" disabled>",
 									"preLang": "markup",
@@ -1042,17 +1045,17 @@
 								}
 							},
 							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed\">aria-grabbed</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">aria-dropeffect</a> indicates the state in a drag and drop operation. <code>aria-grabbed=\"true\"</code> indicates that an element is currently being dragged. <code>aria-grabbed=\"false\"</code> indicates that the element not being dragged but can be. The <code>aria-dropeffect</code> should be added to all elements where the currently dragged element can be dropped. It can have multiple values separated by a blank space: <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">copy</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">move</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">link</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">execute</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">popup</a>. (not announced by VoiceOver 2016)",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed\">aria-grabbed</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">aria-dropeffect</a> indicates the state in a drag and drop operation. <code>aria-grabbed=\"true\"</code> indicates that an element is currently being dragged. <code>aria-grabbed=\"false\"</code> indicates that the element not being dragged but can be. The <code>aria-dropeffect</code> should be added to all elements where the currently dragged element can be dropped. It can have multiple values separated by a blank space: <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">copy</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">move</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">link</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">execute</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">popup</a>.",
 								"pre": "<div aria-grabbed=\"false\">Draggable</div>\n<div aria-dropeffect=\"move execute\">Target</div>",
 								"preLang": "markup"
 							},
 							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content. (not announced by VoiceOver 2016)",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content.",
 								"pre": "<li aria-haspopup=\"true\">\n  <button role=\"button\">Click me to reach sublevel</button>\n  <ul>\n    <li>Sub Level</li>\n  </ul>\n</li>",
 								"preLang": "markup"
 							},
 							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content. (not announced by VoiceOver 2016)",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content.",
 								"pre": "<li aria-haspopup=\"true\">\n  <button role=\"button\">Click me to reach sublevel</button>\n  <ul>\n    <li>Sub Level</li>\n  </ul>\n</li>",
 								"preLang": "markup"
 							},
@@ -1075,12 +1078,387 @@
 								}
 							},
 							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-label\">aria-label</a> is, with aria-labeledby probably the most used WAI-ARIA attribute. It defines a string value that labels the current element. Used for example in <a href=\"Structure-10\">structure</a>, <a href=\"#Structure-3\">searchfields</a>, <a href=\"#Breadcrumbs-1\">breadcrumbs</a> and <a href=\"#Labels-2\">inputs</a>. If the label is visible in the document you should use aria-labeledby instead.",
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-label\">aria-label</a> is, with <a href=\"#Attributes-12\">aria-labelledby</a> probably the most used WAI-ARIA attribute. It defines a string that labels the current element. Used for example in <a href=\"#Structure-10\">structure</a>, <a href=\"#Structure-3\">searchfields</a>, <a href=\"#Breadcrumbs-1\">breadcrumbs</a> and <a href=\"#Labels-2\">inputs</a>. If the label is visible in the document you should use <a href=\"#Attributes-12\">aria-labelledby</a> instead.",
 								"example": {
 									"pre": "<input type=\"email\" name=\"email\" aria-label=\"email:\">",
 									"preLang": "markup",
 									"play": "Listen ♫",
 									"audio": "Email:, edit text."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby\">aria-labelledby</a> is, with <a href=\"#Attributes-11\">aria-label</a> probably the most used WAI-ARIA attribute. It defines a element that labels the current element. Used for example in <a href=\"#Structure-9\">structuring sections</a>, <a href=\"#Drop-Downs-2\">navigations</a>, <a href=\"#SVG-3\">SVGs</a> and <a href=\"#Forms-2\">fieldsets</a>. If the label is not visible in the document you should use <a href=\"#Attributes-11\">aria-label</a> instead.",
+								"example": {
+									"pre": "<section aria-labelledby=\"example\">\n  <h2 id=\"example\">This is an example.</h2>\n</section>",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Region 'This is an example', one item. -- Heading level 2, This is an example."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-live\">aria-live</a> indicates that an element will be updated. I.e. used with the <a href=\"@REPLACE\">alert role</a> it sets the tipe of allert. Polite will wait for the screen reader to end its current task and then read the element aloud while assertive reads it out aloud immediately. Note: that it will be read out aloud as soon as its rendered and visible. It is a good practice to use it when fields have <a href=\"#Errors-2\">errors</a>.",
+								"pre": "<section aria-labelledby=\"example\">\n  <h2 id=\"example\">This is an example.</h2>\n</section>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-flowto\">aria-flowto</a> is used to change the regular flow of a doument. (<a href=\"http://3needs.org/en/testing/code/aria-flowto.html\">poor support</a>)",
+								"pre": "<div aria-flowto=\"second\">1</div>\n<div>3</div>\n<div id=\"second\">2</div>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete\">aria-autocomplete</a> indicate if completion suggestions are provided.",
+								"pre": "<textarea aria-autocomplete=\"inline\">The suggestions are provided inline, after the users input.</textarea>\n<textarea aria-autocomplete=\"list\">A list of choices appears from which the user can choose.</textarea>\n<textarea aria-autocomplete=\"both\">Both types are provided.</textarea>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded\">aria-expanded</a> indicate if the element is currently collapsed or expanded.",
+								"example": {
+									"pre": "<button aria-expanded=\"false\" role=\"button\">Toggle 1</button>\n<button aria-expanded=\"true\" role=\"button\">Toggle 2</button>",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Toggle 1, collapsed, button. -- Toggle 2, expanded, button."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-level\">aria-level</a> indicate the level of an element. I.e. to <a href=\"#Headings-4\">expand headings</a> further down than level 6.",
+								"example": {
+									"pre": "<p role=\"heading\" aria-level=\"9000\">wow</p>",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "heading, level 9000, wow."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-multiline\">aria-multiline</a> indicates whether a text box accepts multiple lines of input or only a single line. This changes the default behaviour in forms, if set to true the enter button will not submit the form.",
+								"pre": "<textarea aria-autocomplete=\"inline\">The suggestions are provided inline, after the users input.</textarea>\n<textarea aria-autocomplete=\"list\">A list of choices appears from which the user can choose.</textarea>\n<textarea aria-autocomplete=\"both\">Both types are provided.</textarea>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable\">aria-multiselectable</a> Indicates that the user may select more than one item from the current selectable descendants. Here is an example by <a href=\"http://cookiecrook.com/test/aria/multiselect/listbox.html\">James Craig</a>.",
+								"pre": "<div role=\"application\">\n  <h1 id=\"listlabel\">ARIA Multiselectable Listbox Example</h1>\n  <ul id=\"list0\" role=\"listbox\" aria-labelledby=\"listlabel\" aria-activedescendant=\"list0_item1\" aria-multiselectable=\"true\" tabindex=\"0\">\n    <li id=\"list0_item0\" role=\"option\" aria-selected=\"false\">foo</li>\n    <li id=\"list0_item1\" role=\"option\" aria-selected=\"false\">bar</li>\n    <li id=\"list0_item2\" role=\"option\" aria-selected=\"false\">baz</li>\n  </ul>\n</div>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation\">aria-orientation</a> used in scrollbar, separator and slider to Indicates whether the element and orientation is horizontal or vertical. Example via <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute\">MDN</a>.",
+								"pre": "<a href=\"#\" id=\"handle_zoomSlider\"\n   role=\"slider\"\n   aria-orientation=\"vertical\"\n   aria-valuemin=\"0\"\n   aria-valuemax=\"17\"\n   aria-valuenow=\"14\">\n  <span>11</span>\n</a>",
+								"preLang": "markup"
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-pressed\">aria-pressed</a> as for <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-pressed\">aria-checked</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-pressed\">aria-selected</a> does what the name suggest, they indicate whether the element is checked, selected or pressed. They can be set to true, false or mixed where mixed is a mixed mode value for a tri-state element. However, selected has no mixed value. Ususally when using standart html elements as buttons the state is identified by default and does not require extra aria attributes. They might make sense if you construct your own elements."
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-required\">aria-required</a> indicates that user input is required. As seen under <a href=\"#Required-Fields-2\">required fields</a> This should be added to any required formfield, don’t forget to provide a visual indice as well.",
+								"example": {
+									"pre": "<input type=\"text\" name=\"name\" required aria-required=\"true\">",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Required, edit text."
+								}
+							},
+							{
+								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-sort\">aria-sort</a> indicates if items in a table or grid are sorted in ascending or descending order. Simplified example of <a href=\"http://maxdesign.com.au/jobs/sample-accessibility/07-tables/15-sortable.html\">maxdesign</a>:",
+								"pre": "<table id=\"exampleTable\">\n  <thead>\n  <tr>\n    <th aria-label=\"Account name: Ascending sort applied, activate to apply a descending sort\" aria-sort=\"ascending\" aria-controls=\"exampleTable\" role=\"columnheader\" scope=\"col\" tabindex=\"0\">\n      Account name </th>\n  </tr>\n  </thead>\n  <tbody aria-relevant=\"all\" aria-live=\"polite\">\n  <tr>\n    <td>Personal account</td>\n    <td>Main Account</td>\n  </tr>\n  </tbody>\n</table>",
+								"preLang": "markup"
+							}
+						]
+					},
+					{
+						"title": "Roles",
+						"paragraphs": [
+							{
+								"p": "This section has to be completed, see the roles listing at "
+							},
+							{
+								"li": "Here is a convenient list or roles extracted from the <a href=\"https://www.w3.org/TR/wai-aria/roles\">W3C Reference</a> in alphabetical order.",
+								"table": {
+									"caption": "which role is for what?",
+									"heads": [
+										"role=\"\"",
+										"job",
+										"learn more"
+									],
+									"rows": [
+										[
+											"alert",
+											"A message with important, and usually time-sensitive, information. See related alertdialog and status.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#alert\">W3C</a>"
+										],
+										[
+											"alertdialog",
+											"A type of dialog that contains an alert message, where initial focus goes to an element within the dialog. See related alert and dialog.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#alertdialog\">W3C</a>"
+										],
+										[
+											"article",
+											"A section of a page that consists of a composition that forms an independent part of a document, page, or site.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#article\">W3C</a>"
+										],
+										[
+											"banner",
+											"A region that contains mostly site-oriented content, rather than page-specific content.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#banner\">W3C</a>"
+										],
+										[
+											"button",
+											"An input that allows for user-triggered actions when clicked or pressed.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#button\">W3C</a>"
+										],
+										[
+											"checkbox",
+											"A checkable input that has three possible values: true, false, or mixed.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#checkbox\">W3C</a>"
+										],
+										[
+											"columnheader",
+											"A cell containing header information for a column.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#columnheader\">W3C</a>"
+										],
+										[
+											"combobox",
+											"A presentation of a select; usually similar to a textbox where users can type ahead to select an option, or type to enter arbitrary text as a new item in the list.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#combobox\">W3C</a>"
+										],
+										[
+											"command",
+											"A form of widget that performs an action but does not receive input data.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#command\">W3C</a>"
+										],
+										[
+											"complementary",
+											"A supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful when separated from the main content.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#complementary\">W3C</a>"
+										],
+										[
+											"composite",
+											"A widget that may contain navigable descendants or owned children.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#composite\">W3C</a>"
+										],
+										[
+											"contentinfo",
+											"A large perceivable region that contains information about the parent document.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#contentinfo\">W3C</a>"
+										],
+										[
+											"definition",
+											"A definition of a term or concept.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#definition\">W3C</a>"
+										],
+										[
+											"dialog",
+											"A dialog is an application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#dialog\">W3C</a>"
+										],
+										[
+											"directory",
+											"A list of references to members of a group, such as a static table of contents.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#directory\">W3C</a>"
+										],
+										[
+											"form",
+											"A landmark region that contains a collection of items and objects that, as a whole, combine to create a form. See related search.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#form\">W3C</a>"
+										],
+										[
+											"grid",
+											"An interactive control which contains cells of tabular data arranged in rows and columns, like a table. Also, see <a href=\"http://www.w3.org/TR/wai-aria/roles#gridcell\">gridcell</a>",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#grid\">W3C</a>"
+										],
+										[
+											"group",
+											"A set of user interface objects which are not intended to be included in a page summary or table of contents by assistive technologies.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#group\">W3C</a>"
+										],
+										[
+											"heading",
+											"A heading for a section of the page.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#heading\">W3C</a>"
+										],
+										[
+											"img",
+											"A container for a collection of elements that form an image.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#img\">W3C</a>"
+										],
+										[
+											"input",
+											"A generic type of widget that allows user input.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#input\">W3C</a>"
+										],
+										[
+											"landmark",
+											"A region of the page intended as a navigational landmark.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#landmark\">W3C</a>"
+										],
+										[
+											"link",
+											"An interactive reference to an internal or external resource that, when activated, causes the user agent to navigate to that resource. See related button.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#link\">W3C</a>"
+										],
+										[
+											"list",
+											"A group of non-interactive list items. See related <a href=\"http://www.w3.org/TR/wai-aria/roles#listbox\">listbox</a> and <a href=\"http://www.w3.org/TR/wai-aria/roles#listitem\">listitem</a>.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#list\">W3C</a>"
+										],
+										[
+											"log",
+											"A type of live region where new information is added in meaningful order and old information may disappear.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#log\">W3C</a>"
+										],
+										[
+											"main",
+											"The main content of a document.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#main\">W3C</a>"
+										],
+										[
+											"marquee",
+											"A type of live region where non-essential information changes frequently.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#marquee\">W3C</a>"
+										],
+										[
+											"math",
+											"Content that represents a mathematical expression.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#math\">W3C</a>"
+										],
+										[
+											"menu",
+											"A type of widget that offers a list of choices to the user. See related: <a href=\"http://www.w3.org/TR/wai-aria/roles#menuitem\">menuitem</a>, <a href=\"http://www.w3.org/TR/wai-aria/roles#menuitemcheckbox\">menuitemcheckbox</a> and <a href=\"http://www.w3.org/TR/wai-aria/roles#menuitemradio\">menuitemradio</a>",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#menu\">W3C</a>"
+										],
+										[
+											"menubar",
+											"A presentation of menu that usually remains visible and is usually presented horizontally. Related: <a href=\"http://www.w3.org/TR/wai-aria/roles#menuitem\">menuitem</a>, <a href=\"http://www.w3.org/TR/wai-aria/roles#menuitemcheckbox\">menuitemcheckbox</a> and <a href=\"http://www.w3.org/TR/wai-aria/roles#menuitemradio\">menuitemradio</a>",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#menubar\">W3C</a>"
+										],
+										[
+											"navigation",
+											"A collection of navigational elements (usually links) for navigating the document or related documents.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#navigation\">W3C</a>"
+										],
+										[
+											"note",
+											"A section whose content is parenthetic or ancillary to the main content of the resource.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#note\">W3C</a>"
+										],
+										[
+											"option",
+											"A selectable item in a select list.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#option\">W3C</a>"
+										],
+										[
+											"presentation",
+											"An element whose implicit native role semantics will not be mapped to the accessibility API.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#presentation\">W3C</a>"
+										],
+										[
+											"progressbar",
+											"An element that displays the progress status for tasks that take a long time.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#progressbar\">W3C</a>"
+										],
+										[
+											"radio",
+											"A checkable input in a group of radio roles, only one of which can be checked at a time. Related: <a href=\"http://www.w3.org/TR/wai-aria/roles#radiogroup\">radiogroup</a>.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#radio\">W3C</a>"
+										],
+										[
+											"range",
+											"An input representing a range of values that can be set by the user.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#range\">W3C</a>"
+										],
+										[
+											"region",
+											"A large perceivable section of a web page or document, that is important enough to be included in a page summary or table of contents, for example, an area of the page containing live sporting event statistics.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#region\">W3C</a>"
+										],
+										[
+											"roletype",
+											"The base role from which all other roles in this taxonomy inherit.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#roletype\">W3C</a>"
+										],
+										[
+											"scrollbar",
+											"A graphical object that controls the scrolling of content within a viewing area, regardless of whether the content is fully displayed within the viewing area.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#scrollbar\">W3C</a>"
+										],
+										[
+											"search",
+											"A landmark region that contains a collection of items and objects that, as a whole, combine to create a search facility. See related form.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#search\">W3C</a>"
+										],
+										[
+											"section",
+											"A renderable structural containment unit in a document or application. Related: <a href=\"http://www.w3.org/TR/wai-aria/roles#sectionhead\">sectionhead</a>.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#section\">W3C</a>"
+										],
+										[
+											"select",
+											"A form widget that allows the user to make selections from a set of choices.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#select\">W3C</a>"
+										],
+										[
+											"slider",
+											"A user input where the user selects a value from within a given range.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#slider\">W3C</a>"
+										],
+										[
+											"spinbutton",
+											"A form of range that expects the user to select from among discrete choices.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#spinbutton\">W3C</a>"
+										],
+										[
+											"status",
+											"A container whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar. See related alert.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#status\">W3C</a>"
+										],
+										[
+											"structure",
+											"A document structural element.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#structure\">W3C</a>"
+										],
+										[
+											"tab",
+											"A grouping label providing a mechanism for selecting the tab content that is to be rendered to the user. See related: <a href=\"http://www.w3.org/TR/wai-aria/roles#tablist\">tablist</a> and <a href=\"http://www.w3.org/TR/wai-aria/roles#tabpanel\">tabpanel</a>.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#tab\">W3C</a>"
+										],
+										[
+											"timer",
+											"A type of live region containing a numerical counter which indicates an amount of elapsed time from a start point, or the time remaining until an end point.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#timer\">W3C</a>"
+										],
+										[
+											"toolbar",
+											"A collection of commonly used function buttons or controls represented in compact visual form.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#toolbar\">W3C</a>"
+										],
+										[
+											"tooltip",
+											"A contextual popup that displays a description for an element.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#tooltip\">W3C</a>"
+										],
+										[
+											"tree",
+											"A type of list that may contain sub-level nested groups that can be collapsed and expanded. Also, see: <a href=\"http://www.w3.org/TR/wai-aria/roles#treegrid\">treegrid</a> and <a href=\"http://www.w3.org/TR/wai-aria/roles#treeitem\">treeitem</a>.",
+											"<a href=\"http://www.w3.org/TR/wai-aria/roles#tree\">W3C</a>"
+										],
+										[
+											{
+												"manyMoreTitle": "Less common",
+												"manyMoreSpan": "3",
+												"manyMoreUrl": "http://www.w3.org/TR/wai-aria/roles",
+												"manyMoreUrlHash": "#",
+												"manyMore": [
+													"application",
+													"document",
+													"row",
+													"rowgroup",
+													"rowheader",
+													"separator",
+													"structure",
+													"textbox",
+													"widget",
+													"window"
+												]
+											}
+										]
+									]
 								}
 							}
 						]
@@ -1091,7 +1469,19 @@
 				"title": "Testing & ressources",
 				"paragraphs": [
 					{
-						"li": "dolor sit"
+						"p": "Found an error or have an addition? Please <a href=\"@REPLACE\">contribute</a> to this project via github."
+					},
+					{
+						"li": "There are some automated testing tools as <a href=\"http://www.cynthiasays.com/\">CynthiaSays</a> and <a href=\"http://wave.webaim.org/\">WAVE</a> but because they can not do judgment calls, they are not as good as a human testing. So, the best way to test your website for visual accessibility is to actually use a screen reader yourself. Now as you don’t want to spend thousands of dollars use the ones you can get for free. On a Mac OS you can use the built in <a href=\"https://www.apple.com/voiceover/info/guide/\">VoiceOver</a>. On a Windows OS there is <a href=\"http://www.nvaccess.org/\">NVDA</a> which is backed by users and huge companies as Adobe and Google."
+					},
+					{
+						"li": "References/Ressources used to write this page: <br>The Standart<br><a href=\"https://www.w3.org/TR/wai-aria/\">W3.org</a>, <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/\">MDN</a>, <a href=\"https://dev.opera.com/articles/introduction-to-wai-aria/\">dev.opera</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://www.section508.gov/content/learn\">Section508.gov</a>, <a href=\"https://www.paciellogroup.com/blog/\">Paciello Group</a> and <a href=\"https://www.w3.org/TR/WCAG20/\">WCAG 2.0</a>, <a href=\"https://www.w3.org/WAI/\">Web Accessibility Initiative</a>.<br>Other:</br> <a href=\"http://www.standards-schmandards.com/\">Peter Krantz Blog</a>, <a href=\"http://4syllables.com.au/category/articles/accessibility/\">4syllables</a>, <a href=\"http://stackoverflow.com/questions/tagged/accessibility\">Stackoverflow</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
+					},
+					{
+						"p": "Open up the web for everyone!"
+					},
+					{
+						"p": "}&#x3C;)))*&#x3E;"
 					}
 				]
 			}
