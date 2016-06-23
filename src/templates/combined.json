@@ -495,7 +495,7 @@
 				]
 			},
 			{
-				"title": "Navigation/Menus",
+				"title": "Navigation / Menus",
 				"paragraphs": [
 					{
 						"li": "Use list of links to help screen readers announce the number of links a menu has. Generally use unordered lists <code>ul</code> but when the order matters as in table of contents use ordered lists <code>ol</code>."

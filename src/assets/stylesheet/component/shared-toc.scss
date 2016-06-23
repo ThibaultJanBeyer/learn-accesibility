@@ -4,6 +4,7 @@
   max-height: 25vh;
   position: fixed;
   top: 0;
+  z-index: 2;
 
   @include media('>small') {
     max-height: 35vh;
@@ -17,7 +18,7 @@
 
 .toc__toggler {
   @include gradient;
-  width: 10px;
+  width: 15px;
   height: 100%;
   position: absolute;
 
@@ -30,7 +31,7 @@
   width: 30px;
 
   @include media('>large') {
-    width: 10px;
+    width: 15px;
   }
 }
 
@@ -65,7 +66,6 @@
 .toc__container {
   background: $white;
   margin-left: 10px;
-  min-width: 160px; /* 1. */
   max-height: 400px; /* 1. */
   max-height: calc( 100vh - 80px ); /* 1. */
   overflow: auto; /* 1. */
@@ -75,7 +75,6 @@
 
   @include media('>large') {
     transform: translateX(-150%);
-    min-width: 230px; /* 1. */
   }
 }
 
@@ -89,9 +88,11 @@
 
 .toc__link {
   @include link-styles-alt;
+  transition: font-size 1s;
 }
 
 .toc__link--current {
+  @include font-size-responsive($gamma);
   font-weight: 700;
 }
 

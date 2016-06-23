@@ -30,10 +30,19 @@
 .element-example__play {
   background: $white;
   border: 1px solid $primary;
-  margin-left: 440px;
   padding: 0 5px;
   position: absolute;
+  right: 10px;
   width: 60px;
+
+  @include media('>small') {
+    right: 30px;
+  }
+
+  @include media('>medium') {
+    margin-left: 430px;
+    right: auto;
+  }
 }
 
 /*
