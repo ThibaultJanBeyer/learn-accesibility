@@ -38,7 +38,11 @@
   text-align: center;
 }
 
+/*
+ * 1. have a nice break
+ */
 .nav__link-description {
   @include font-size-responsive($delta);
   text-align: center;
+  padding: 0 6px; /* 1. */
 }
