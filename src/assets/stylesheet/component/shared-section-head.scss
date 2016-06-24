@@ -1,3 +1,8 @@
+.section-head {
+  margin-left: -$outbreaks;
+  margin-right: -$outbreaks;
+}
+
 .section-head__letter {
   @include heading($ultra, $secondary-family, $secondary-weight);
   color: $white;
