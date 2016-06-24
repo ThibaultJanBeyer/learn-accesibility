@@ -75,7 +75,7 @@ $number-of-letters: 15;
   }
 
   @keyframes falling--#{$i} {
-    0% { top: -15%; }
+    0% { top: -20%; }
     100% { top: 65% + random($i); }
   }
 }
@@ -139,7 +139,7 @@ $number-of-letters: 15;
     100% {
       margin: -1px * random(20);
       padding: 1px * random(20);
-      top: 150vh;
+      top: 180vh;
     }
   }
 }

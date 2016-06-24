@@ -86,10 +86,11 @@
           console.log(e);
 
           for (let i = 0; i < linkContainers.length; i++) {
+            let el = linkContainers[i];
             // give the containers a fixed position
-            linkContainers[i].style.position = 'fixed';
+            el.style.position = 'fixed';
             // move the now fixed containers to their original position 
-            mover(linkContainers[i], linkHolders[i], (element, xT, yT, xE, yE) => {
+            mover(el, linkHolders[i], (element, xT, yT, xE, yE) => {
               element.style.left = xT + 'px';
               element.style.top = (yT - homeContent.scrollTop) + 'px';
             });
@@ -100,18 +101,33 @@
             BODY.classList.add('leaving');
 
             for (let i = 0; i < linkContainers.length; i++) {
-              mover(linkContainers[i], homeLeaveringTargets[i]);
+              let target = homeLeaveringTargets[i];
+              let element = linkContainers[i];
+              // move the elements to the targets
+              mover(element, target);
             }
 
             // move the selection to the right item
             setTimeout(function() {
               homeContent.classList.add('top');
-              if (aLink.classList.contains('A')) {
+              if (aLink.classList.contains('L')) {
                 homeContent.style.top = '110px';
               } else if (aLink.classList.contains('P')) {
                 homeContent.style.top = '220px';
               } else if (aLink.classList.contains('C')) {
                 homeContent.style.top = '330px';
+              }
+
+              // duplicate the elements
+              // move the elements to the outer DOM position to remove weird flickering bug in chrome
+              let temp = linkContainers.length - 1;
+              for (let i = 0; i < temp; i++) {
+                let element = linkContainers[i];
+                let target = homeLeaveringTargets[i];
+                let clone = document.importNode(element, true);
+                BODY.appendChild(clone);
+                console.log(clone, i, target);
+                mover(clone, target);
               }
 
               setTimeout(function() {

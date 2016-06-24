@@ -37,8 +37,9 @@ function mover(elements, target, callback, endCallback){
       elements[cu].style.top = yE + 'px';
       // set their position to the target position
       // the animation is a simple css transition
-      if (callback) { callback(elements[cu], xT, yT, xE, yE, cu); }
-      else {
+      if (callback) { 
+        callback(elements[cu], xT, yT, xE, yE, cu); 
+      } else {
         setTimeout(function() {
           elements[cu].style.left = xT + 'px';
           elements[cu].style.top = yT + 'px';
@@ -59,6 +60,7 @@ function mover(elements, target, callback, endCallback){
       elements.style.left = xT + 'px';
       elements.style.top = yT + 'px';
     }, 500); }
-    // note that it doesn’t need an end callback
+    // note that it doesn’t need an end callback since
+    // it is only one element to perfrom the action on
   }     
 }
