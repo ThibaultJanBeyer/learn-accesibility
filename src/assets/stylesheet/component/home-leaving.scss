@@ -1,7 +1,7 @@
 .home-leaving__target {
   height: 5px;
   position: absolute;
-  right: 75px;
+  right: 80px;
   width: 5px;
 }
 
@@ -12,21 +12,39 @@
  *  to the left to visually inline them vertically (because they have a linebreak)
  */
 .home-leaving__target:nth-child(1) {
-  top: 35px;
+  top: 20px;  
+
+  @include media('>medium') {
+    top: 20px;
+  }
 }
 
 .home-leaving__target:nth-child(2) {
-  top: 135px;
-  right: 90px;
+  top: 100px;
+  right: 100px;
+
+  @include media('>medium') {
+    top: 135px;
+    right: 95px;
+  }
 }
 
 .home-leaving__target:nth-child(3) {
-  top: 235px;
-  right: 90px;
+  top: 180px;
+  right: 100px;
+
+  @include media('>medium') {
+    top: 250px;
+    right: 95px;
+  }
 }
 
 .home-leaving__target:nth-child(4) {
-  top: 335px;
+  top: 260px;
+
+  @include media('>medium') {
+    top: 370px;
+  }
 }
 
 
