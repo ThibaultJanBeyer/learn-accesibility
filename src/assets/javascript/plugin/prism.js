@@ -1,3 +1,4 @@
+(function(){
 /**
  * Prism is a Syntax highliter.
  * (via Lea Verou, Golmote & co. via http://prismjs.com)
@@ -681,3 +682,5 @@ if (Prism.languages.markup) {
 }
 
 Prism.languages.js = Prism.languages.javascript;
+
+})();

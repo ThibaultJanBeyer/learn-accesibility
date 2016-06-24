@@ -65,7 +65,7 @@
   }
 
   /*
-   * Check which sections the user is on to update the TOC accordingly
+   * Check which sections the user is on to update the TOC flow accordingly
    */
   setTimeout(function() { // a small delay so that everything else is successfully rendered
     // store the position of each section - 1/4 of the window height in an array
@@ -73,11 +73,12 @@
     [...document.getElementsByClassName('section__title')].forEach((e, i) => {
       sectionsPos.push(e.offsetTop - window.innerHeight / 4);
     });
+    sectionsPos.push(siteContent.offsetHeight);
     
     // store all Links in a variable.
     let tocLinks = document.getElementsByClassName('toc__link');
     // set a boolean that will see if we are scrolling
-    let scrolling = false;
+    let scrolling = true;
     // set that bool = true if we do
     window.onscroll = () => { scrolling = true; };
 
@@ -86,8 +87,9 @@
       if (scrolling) {
         // is so, then store the scroll position
         let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        
         // and compare it to each sections position
-        for (let i = 0; i < sectionsPos.length; i++) {
+        for (let i = 0; i < tocLinks.length; i++) {
           // store the corresponding link. How convenient, that we always have the same amout of links as sections
           let tocLink = tocLinks[i];
           // if it is within the range from the current one to the next one
@@ -97,7 +99,7 @@
             tocLink.setAttribute('aria-label', 'current');
             window.hash = tocLink.href;
           } else {
-            // if it is not in gange, then remove the class
+            // if it is not in range, then remove the class
             tocLink.classList.remove('toc__link--current');
             tocLink.removeAttribute('aria-label');
           }
@@ -105,7 +107,7 @@
       }
       // and set the scrolling to false again until next scroll
       scrolling = false;
-    }, 1500);
+    }, 500);
   }, 1000);
 
 }})();

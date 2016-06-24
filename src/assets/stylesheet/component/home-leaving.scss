@@ -12,7 +12,7 @@
  *  to the left to visually inline them vertically (because they have a linebreak)
  */
 .home-leaving__target:nth-child(1) {
-  top: 20px;  
+  top: 20px;
 
   @include media('>medium') {
     top: 20px;
