@@ -125,7 +125,7 @@
 		"toc": {
 			"title": "Table of contents for",
 			"V": 1,
-			"A": 2,
+			"L": 2,
 			"P": 3,
 			"C": 4
 		},
@@ -198,41 +198,96 @@
 		"subtitle": "& Color Accessibility",
 		"letter": "L",
 		"intro": {
-			"p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
-			"img": {
-				"src": "assets/img/dummy.png",
-				"alt": "alt"
+			"p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses don’t help or are not worn) and/or sees colors differently. He may adjust the settings of his monitor, might use a screen magnifier or custom stylesheet but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the european population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8,5% of the US population is affected by colorblindness. Compared to a city that would be more than three times the population of New York. This section focuses on the partially sighted wo don’t use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
+			"table": {
+				"caption": "types of color blindness",
+				"heads": [
+					"type",
+					"what is it",
+					"percentage"
+				],
+				"rows": [
+					[
+						"Deuteranopia",
+						"Red and Green appear similar, but same intensity.",
+						"~1.5%"
+					],
+					[
+						"Deuteranomaly",
+						"Greens are muted.",
+						"~5.4%"
+					],
+					[
+						"Monochromasy",
+						"All colors are affected, user see dimmed colors or only shades of gray and has a very poor vision.",
+						"&#x3C;1%"
+					],
+					[
+						"Protanomaly",
+						"Reds are less intense and might appear black.",
+						"~1%"
+					],
+					[
+						"Protanopia",
+						"Red and Green appears similar. Some colors appear more intense than normal.",
+						"~1%"
+					],
+					[
+						"Tritanopia & Tritanomaly",
+						"Blue and Yellow appear similar.",
+						"&#x3C;1%"
+					]
+				]
 			}
 		},
 		"sections": [
 			{
-				"title": "Hiding Elements",
+				"title": "Basics",
 				"paragraphs": [
 					{
-						"li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
+						"li": "Make sure that your images are of adequate resolution."
 					},
 					{
-						"li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",
-						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
-						"preLang": "css"
+						"li": "Your website should be responsive."
+					},
+					{
+						"li": "Always have in mind that some users cannot differenciate/see colors."
 					}
-				],
-				"subs": [
+				]
+			},
+			{
+				"title": "Images",
+				"paragraphs": [
 					{
-						"title": "Section 1.1.",
-						"paragraphs": [
+						"li": "Users might zoom into the page to see details in visual elements, so make sure that your images are of adequate resolution. Find a good balance between loading time and resolution. Compress your images i.e. with <a href=\"https://tinypng.com/\">tiny png</a>. It might also be helpful to <a href=\"https://en.wikipedia.org/wiki/Lazy_loading\">lazyload</a> your graphical ressources or to use different images based on the window size."
+					},
+					{
+						"li": "If you have a layer of text ontop of your images, make sure that the contrast does not solely rely on colors. Some contrasts might be perfect for us but are a nightmare for color blind users:",
+						"imgs": [
 							{
-								"li": "hahaha"
+								"src": "assets/img/examples/vision/images1_0.png",
+								"alt": "Reg on Green contrast.",
+								"caption": "Users with <code>Deuteranopia</code> will have difficulties with red on green and vice versa."
+							},
+							{
+								"src": "assets/img/examples/vision/images1_1.png",
+								"alt": "Reg on Green contrast.",
+								"caption": "Also users with <code>Protanopia</code> will have difficulties with red on green and vice versa."
+							},
+							{
+								"src": "assets/img/examples/vision/images1_2.png",
+								"alt": "Blue on Yellow contrast.",
+								"caption": "Users with <code>Tritanopia</code> will have difficulties with a blue and yellow combination."
+							},
+							{
+								"src": "assets/img/examples/vision/images1_3.png",
+								"alt": "Green on Blue with the same brightness.",
+								"caption": "For users with <code>Monochromacy</code> colors with simmiliar brightness will blend."
 							}
 						]
 					},
 					{
-						"title": "New Sub",
-						"paragraphs": [
-							{
-								"li": "hahaha"
-							}
-						]
+						"li": "Always have in mind that some people cannot differenciate/see colors."
 					}
 				]
 			},
@@ -259,15 +314,17 @@
 		"subtitle": "Accessibility",
 		"letter": "V",
 		"intro": {
-			"p": "Speaking of web-accessibility, the visually impaired have the most painpoints. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the european population is blind or partially sighted. They use screen reader. A screen reader is a tool that reads content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
-			"img": {
-				"src": "assets/img/sr-stats.png",
-				"alt": "Chart of primary screen reader usage showing decreases in JAWS, NVDA, VoiceOver, SA and significant increases in ZoomText and Window-Eyes.",
-				"caption": "Chart based on Data from <a href=\"http://webaim.org/projects/screenreadersurvey6/#primary\">webaim.org</a> a textual description can be found there."
-			},
+			"p": "Visual Accessibility covers every user that is using a screen reader. This group the most painpoints when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7,5 million people are blind or have a significant vision loss. That is approximatively twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
+			"imgs": [
+				{
+					"src": "assets/img/sr-stats.png",
+					"alt": "Chart of primary screen reader usage showing decreases in JAWS, NVDA, VoiceOver, SA and significant increases in ZoomText and Window-Eyes.",
+					"caption": "Chart based on Data from <a href=\"http://webaim.org/projects/screenreadersurvey6/#primary\">webaim.org</a> a textual description can be found there."
+				}
+			],
 			"ul": [
-				"All concepts introduced on this page were tested with VoiceOver and JAWS in June 2016.",
-				"In all outputs under the examples, the headings where replaced by strong tags in order to not confuse screen reader users browsing this page."
+				"All concepts introduced on this page were tested with VoiceOver June 2016.",
+				"In all outputs under the examples, the headings where replaced by strong tags to not confuse screen reader users browsing this page."
 			]
 		},
 		"sections": [

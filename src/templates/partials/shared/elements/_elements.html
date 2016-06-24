@@ -19,9 +19,9 @@
     {{ example.example(section, page, sectionIndex, shared, paragraph, loop.index, false) }}
   {% endif %}
 
-  {% if paragraph.img %}
-    {% import "partials/shared/elements/_element_img.html" as img %}    
-    {{ img.img(paragraph.img) }}
+  {% if paragraph.imgs %}
+    {% import "partials/shared/elements/_element_imgs.html" as imgs %}    
+    {{ imgs.imgs(paragraph.imgs) }}
   {% endif %}
 
   {% if paragraph.example %}
@@ -30,7 +30,8 @@
   {% endif %}
 
   {% if paragraph.table %}
-    {% include "partials/shared/elements/_element_table.html" %}
+    {% import "partials/shared/elements/_element_table.html" as table %}
+    {{ table.table(paragraph.table) }}
   {% endif %}
 
 {% endfor %}

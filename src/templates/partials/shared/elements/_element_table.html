@@ -1,15 +1,19 @@
-<!-- section element table nunjuck -->
+<!-- makro table nunjuck -->
 
+{% macro table(key) %}
 <table class="element-table">
-  <caption class="element-table__caption copy">{{ paragraph.table.caption }}</caption>
+  <caption class="element-table__caption copy">{{ key.caption }}</caption>
 
+  {% if key.heads %}
   <tr class="element-table__tr">
-    {% for head in paragraph.table.heads %}
+    {% for head in key.heads %}
     <th class="element-table__th copy" scope="col">{{ head }}</th>
     {% endfor %}
   </tr>
+  {% endif %}
 
-  {% for row in paragraph.table.rows %}
+  {% if key.rows %}
+  {% for row in key.rows %}
   <tr class="element-table__tr">
     {% for cell in row %}
     {% if cell.manyMore %}
@@ -31,5 +35,6 @@
     {% endfor %}
   </tr>
   {% endfor %}
-
+  {% endif %}
 </table>
+{% endmacro %}

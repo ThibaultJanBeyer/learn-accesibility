@@ -6,17 +6,19 @@
     "letter": "V",
     "intro": 
     {
-      "p": "Speaking of web-accessibility, the visually impaired have the most painpoints. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the european population is blind or partially sighted. They use screen reader. A screen reader is a tool that reads content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
-      "img":
-      {
-        "src": "assets/img/sr-stats.png",
-        "alt": "Chart of primary screen reader usage showing decreases in JAWS, NVDA, VoiceOver, SA and significant increases in ZoomText and Window-Eyes.",
-        "caption": "Chart based on Data from <a href=\"http://webaim.org/projects/screenreadersurvey6/#primary\">webaim.org</a> a textual description can be found there."
-      },
+      "p": "Visual Accessibility covers every user that is using a screen reader. This group the most painpoints when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7,5 million people are blind or have a significant vision loss. That is approximatively twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
+      "imgs":
+      [
+        {
+          "src": "assets/img/sr-stats.png",
+          "alt": "Chart of primary screen reader usage showing decreases in JAWS, NVDA, VoiceOver, SA and significant increases in ZoomText and Window-Eyes.",
+          "caption": "Chart based on Data from <a href=\"http://webaim.org/projects/screenreadersurvey6/#primary\">webaim.org</a> a textual description can be found there."
+        }
+      ],
       "ul":
       [
-        "All concepts introduced on this page were tested with VoiceOver and JAWS in June 2016.",
-        "In all outputs under the examples, the headings where replaced by strong tags in order to not confuse screen reader users browsing this page."
+        "All concepts introduced on this page were tested with VoiceOver June 2016.",
+        "In all outputs under the examples, the headings where replaced by strong tags to not confuse screen reader users browsing this page."
       ]
     },
     "sections": 

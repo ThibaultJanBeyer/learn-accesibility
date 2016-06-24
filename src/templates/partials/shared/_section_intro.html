@@ -9,10 +9,16 @@
   {% import "partials/shared/elements/_element_p.html" as p %}    
   {{ p.p(page.intro.p) }}
 
-  {% if page.intro.img %}
-    {% import "partials/shared/elements/_element_img.html" as img %}    
-    {{ img.img(page.intro.img) }}
+  {% if page.intro.imgs %}
+    {% import "partials/shared/elements/_element_imgs.html" as imgs %}    
+    {{ imgs.imgs(page.intro.imgs) }}
   {% endif %}
+
+  {% if page.intro.table %}
+    {% import "partials/shared/elements/_element_table.html" as table %}
+    {{ table.table(page.intro.table) }}
+  {% endif %}
+
   {% if page.intro.ul %}
   <ul>
   {% for li in page.intro.ul %}

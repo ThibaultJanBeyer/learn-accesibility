@@ -1,0 +1,12 @@
+<!-- element imgs nunjuck -->
+
+{% macro imgs(key) %}
+{% for img in key %}
+<figure role="group" class="element-img">
+  <img src="{{ img.src }}" alt="{{ img.alt }}">
+  <figcaption class="element-img__caption copy">
+    {{ img.caption | safe }}
+  </figcaption>
+</figure>
+{% endfor %}
+{% endmacro %}
