@@ -37,25 +37,36 @@
 
 .toc__toggler::before {
   @include font-size-responsive($delta);
-  content: '';
-  margin: -10px -75px;
+  content: '✖';
+  margin: 0;
   position: absolute;
+  top: 0;
   transform: rotate(90deg);
+  transition: margin 0.5s;
   width: 0;
   z-index: 1;
 
   @include media('>large') {
     content: 'table of content';
+    margin: -10px -75px;
+    top: inherit;
+    transition: margin 0s;
     width: 150px;
   }
 }
 
 .toc__toggler--open::before {
   content: 'table of content';
+  margin: -10px -75px;
+  top: inherit;
+  transition: margin 0s;
   width: 150px;
 
   @include media('>large') {
-    content: '';
+    content: '✖';
+    margin: 0;
+    top: 0;
+    transition: margin 0.5s;
     width: 0;
   }
 }
@@ -65,7 +76,7 @@
  */
 .toc__container {
   background: $white;
-  margin-left: 10px;
+  margin-left: 15px;
   max-height: 400px; /* 1. */
   max-height: calc(100vh - 80px); /* 1. */
   overflow: auto; /* 1. */
