@@ -62,42 +62,156 @@
 	},
 	"physical": {
 		"title": "Physical",
-		"subtitle": "Accessibility",
+		"subtitle": "& audio Accessibility",
 		"letter": "P",
 		"intro": {
-			"p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
-			"img": {
-				"src": "assets/img/dummy.png",
-				"alt": "alt"
-			}
+			"p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use his keyboard only and/or special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of all american adults report having troubles hearing. Also, <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">according to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf bus also covers public places where the user might not be able to use audio. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eyetracking software or the like."
 		},
 		"sections": [
 			{
-				"title": "Hiding Elements",
+				"title": "Basics",
 				"paragraphs": [
 					{
-						"li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
+						"li": "While background music can be ignored, any important audio content should have captions and/or visual equivalents i.e. visual alerts for live feeds."
 					},
 					{
-						"li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",
-						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
-						"preLang": "css"
+						"li": "Use visual bells when captioning does not make sense. I.e. a flashing/blinking element and/or blinking text in browsertabs."
+					}
+				]
+			},
+			{
+				"title": "Videos",
+				"paragraphs": [
+					{
+						"p": "Add captions of high quality to your videos. The caption should be in sync with the spoken content, the people who are speaking should be indentified when they speak and the important sounds should be included (i.e. footsteps approaching, doors opening, water boiler overheating)."
+					},
+					{
+						"li": "The captions should be placed on a banner with distinctive background to be able to read it at any time. If it is only floating text, it might sometimes have bad contrast with its background."
+					},
+					{
+						"li": "Make sure that the captions do not cover up important parts of the video."
+					},
+					{
+						"li": "Style your captions so that they are easy to read. A common mistake is using all caps white text on black background. That is awefully difficult to read. The same principles as for normal text apply to captions. The most readable is a highly readable typeface in <a href=\"vision.html#Typography-2\">off-black on off-white</a> background."
+					},
+					{
+						"li": "Style sounds differently than spoken content. I.e. write your sounds in italic."
+					},
+					{
+						"li": "It is a good practice to add transcripts for videos & Audio. Doing so, not only people with hearing deficits and cognitive disabilities will benefit from it but also everyone who preffers reading over watching."
+					}
+				]
+			},
+			{
+				"title": "Forms",
+				"paragraphs": [
+					{
+						"li": "Make sure that all elements can be accessed by tabbing and are in the right order. Usually users expect content to be read from left to right, top to bottom."
+					},
+					{
+						"li": "One field per line is way easier to navigate."
+					},
+					{
+						"li": "The standart for radio buttons is to be able to use arrow keys to select the right one. This should be implemented by default when using the <code>fieldset</code> tag. Here is an example of accessible radio buttons borrowed from <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
+						"example": {
+							"pre": "<fieldset>\n  <legend>Choose a shipping method:</legend>\n  <input id=\"overnight\" type=\"radio\" name=\"shipping\" value=\"overnight\">\n  <label for=\"overnight\">Overnight</label>\n\n  <input id=\"twoday\" type=\"radio\" name=\"shipping\" value=\"twoday\">\n  <label for=\"twoday\">Two day</label>\n\n  <input id=\"ground\" type=\"radio\" name=\"shipping\" value=\"ground\">\n  <label for=\"ground\">Ground</label>\n</fieldset>",
+							"preLang": "markup"
+						}
+					},
+					{
+						"li": "If you have too many options, use a dropdown list. It can be selected by typing the first letters so make sure that the information at the start is not redundant so that the elements can be selected as fast as possible. Another example via <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
+						"example": {
+							"pre": "<label for=\"favcity\">Choose your favorite city:</label>\n<select id=\"favcity\" name=\"select\">\n  <option value=\"1\">Amsterdam</option>\n  <option value=\"2\">Berlin</option>\n  <option value=\"3\">Delhi</option>\n  <option value=\"4\">Hong Kong</option>\n  <option value=\"5\">London</option>\n  <option value=\"6\">New York</option>\n  <option value=\"7\">Sao Paulo</option>\n  <option value=\"8\">Tokyo</option>\n</select>",
+							"preLang": "markup"
+						}
+					},
+					{
+						"li": "If the form fails, display a summary of errors at the top of the form additionally to those inline. Only inline might fail silently as the user might not scroll/look down. Ideally errors in the summary are also linked to the respective fields, so that the user can quickly jump to them."
+					}
+				]
+			},
+			{
+				"title": "Popups",
+				"paragraphs": [
+					{
+						"p": "Popups are often a nightmare for usability, especially when they open easily (i.e. on hover or focus). They often break the reading flow and are hard to close (i.e. to small close button or not closable via keyboard). However, if done right, popups can add value to a page as for giving more information without leaving the page."
+					},
+					{
+						"li": "Popups should be easy to close and should only open if the user wants them to."
+					},
+					{
+						"li": "If a popup is opened the first thing that has focus should be the close button. Also, it is a good idea to “trap” the focus within its popup until closed. This mimics the normal behaviour and prevents the keyboard user from losing focus."
+					},
+					{
+						"li": "The user should be able to close popups by hitting the esc button."
+					},
+					{
+						"li": "Hugo Giraudel did quite a good job on <a href=\"https://github.com/edenspiekermann/a11y-dialog\">an accessible popup</a> for edenspiekermann_."
+					}
+				]
+			},
+			{
+				"title": "Navigation & Menu",
+				"paragraphs": [
+					{
+						"p": "Complex navigation hurt everyones usability. Reduce your navigation to a minimun."
+					},
+					{
+						"li": "Don’t remove the focus outline.. Avoid messing around with the tabindex. All usable elements have to be tabable."
+					},
+					{
+						"li": "Indicate the current page in your menu."
+					},
+					{
+						"li": "Have clear hover & focus states on your interactive elements. Try doing more than just a simple colorchange."
+					},
+					{
+						"li": "All elements including the drop-down should be usable with the keyboard."
+					},
+					{
+						"li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a best practice. That way the user do not have to taverse a lot of elements but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus.",
+						"pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
+						"preLang": "javascript",
+						"example": {
+							"pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Jump to wanted link</a>\n<p>Annoying content</p>\n<a href=\"#link\">Annoying Link</a>\n<p id=\"linkNext\">Next item</p>\n<a href=\"#link\">Wanted Link</p>",
+							"preLang": "markup"
+						}
+					},
+					{
+						"li": "It is a good practice to have a table of content linking to each heading within a long text."
 					}
 				],
 				"subs": [
 					{
-						"title": "Section 1.1.",
+						"title": "Drop Downs",
 						"paragraphs": [
 							{
-								"li": "hahaha"
+								"p": "If possible try to reduce the complexity of your navigation before implementing drop downs."
+							},
+							{
+								"li": "Usually Submenus are individual lists <code>ul</code> or <code>ol</code>, nested in the parent’s list item <code>li</code>."
+							},
+							{
+								"li": "Drop downs should stay dropped down once activated or have a tolerance for a wavering mouse. This way prevents the menu from unintentionally closing when used by people with reduced dexterity. Same holds true for all appearing/disappearing elements. On this website an easy CSS technique was used to show/hide the link anchors with a delay. Here is a simplified example:",
+								"pre": "/*\n * 1. the second number is the animations delay\n */\n.anchor {\n  opacity: 0;\n  transition: opacity 0.5s 0.5s; /* 1. */\n}\n\n/*\n * 1. overwrite the delay and show it immediately\n *  if the element is not hovered (thus on blur) \n *  the rule above takes effect and add a delay\n */\n.anchor--li:hover .anchor,\n.anchor--li:focus .anchor {\n  opacity: 1;\n  transition: opacity 0.5s; /* 1. */\n}",
+								"preLang": "css"
+							},
+							{
+								"li": "Don’t open the submenu as soon as the focus enters the top-level menu item. A keyboard don’t want to step through all the submenu links to get to the next top-level item. One way would is that the top level is actually not a link but just an opener for the elements below. If this top level item should remain a real link you can delay the drop down on focus so that the user would be able to quickly fly over it. However, that comes with the disadvantage that the user will have to rest some time before seeing the subnav. Another solution would be to have the being able to navigate through the menu using the arrow keys. Left and right to navigate the top buttons then down and up to access the drop down. That is quite a bit tricky to code and some users might not get it. The easiest and probably best solution is to add, additionally to the hover of the whole item, a separate “show submenu” button (i.e. an arrowhead) that is accessible and will toggle the submenu. Here is an example:",
+								"pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly we have to set the focus on the first link element,\n      // otherwise screenreader do not notice the change\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
+								"preLang": "javascript",
+								"example": {
+									"pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2\">\n  <h2 id=\"exampleNav2\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
+									"preLang": "markup"
+								}
 							}
 						]
 					},
 					{
-						"title": "New Sub",
+						"title": "Scrolling",
 						"paragraphs": [
 							{
-								"li": "hahaha"
+								"li": ""
 							}
 						]
 					}
@@ -248,7 +362,7 @@
 						"li": "Make sure that your images are of adequate resolution."
 					},
 					{
-						"li": "Your website should be responsive."
+						"li": "Users will increase the general page size. When increasing the Zoom it is like decreasing the screen size, thus a responsive design will cover this."
 					},
 					{
 						"li": "Always have in mind that some users cannot differenciate/see colors."
@@ -256,22 +370,31 @@
 				]
 			},
 			{
-				"title": "Images",
+				"title": "Graphical elements",
 				"paragraphs": [
 					{
-						"li": "Users might zoom into the page to see details in visual elements, so make sure that your images are of adequate resolution. Find a good balance between loading time and resolution. Compress your images i.e. with <a href=\"https://tinypng.com/\">tiny png</a>. It might also be helpful to <a href=\"https://en.wikipedia.org/wiki/Lazy_loading\">lazyload</a> your graphical ressources or to use different images based on the window size."
+						"p": "Important graphical elements with high failure potential are image with text, maps, diagrams and graphs. Those should always <a href=\"#Testing---ressources\">be tested</a> against the various types."
+					},
+					{
+						"li": "For graphs and maps a legend/key tested against the various types should be provided. <a href=\"http://colorbrewer2.org/\">Colorbrewer</a> is a tool that provides you with a colorbling friendly color palette."
+					},
+					{
+						"li": "Not solely rely on colors, whenever possible also give other visual clues as the style, thickness, luminance/shades, contrast."
+					},
+					{
+						"li": "Users should be able to zoom into the page to see details in visual elements. Your images should scale as well. So make sure that your images are of adequate resolution. Find a good balance between loading time and resolution. Compress your images i.e. with <a href=\"https://tinypng.com/\">tiny png</a>. It might also be helpful to <a href=\"https://en.wikipedia.org/wiki/Lazy_loading\">lazyload</a> your graphical ressources or to use different images based on the window size."
 					},
 					{
 						"li": "If you have a layer of text ontop of your images, make sure that the contrast does not solely rely on colors. Some contrasts might be perfect for us but are a nightmare for color blind users:",
 						"imgs": [
 							{
 								"src": "assets/img/examples/vision/images1_0.png",
-								"alt": "Reg on Green contrast.",
+								"alt": "Red on Green contrast.",
 								"caption": "Users with <code>Deuteranopia</code> will have difficulties with red on green and vice versa."
 							},
 							{
 								"src": "assets/img/examples/vision/images1_1.png",
-								"alt": "Reg on Green contrast.",
+								"alt": "Red on Green contrast.",
 								"caption": "Also users with <code>Protanopia</code> will have difficulties with red on green and vice versa."
 							},
 							{
@@ -287,23 +410,110 @@
 						]
 					},
 					{
-						"li": "Always have in mind that some people cannot differenciate/see colors."
+						"li": "Have a contrast of 4.5:1 on your colors. Snook made a <a href=\"https://snook.ca/technical/colour_contrast/colour.html#fg=FFFFFF,bg=000000\">handy tool</a> to check your color contrasts."
 					}
 				]
 			},
 			{
-				"title": "Section2",
+				"title": "Typography",
 				"paragraphs": [
 					{
-						"p": "dolor sit"
+						"p": "If you want that people actually read what you write a good typography is crucial."
 					},
 					{
-						"img": "only img"
-					}
-				],
-				"subs": [
+						"li": "A common false belief is that full black on full white is the best contrast. While the higher the contrast the better pure color combination are <a href=\"http://uxmovement.com/content/when-to-use-white-text-on-a-dark-background/\">actually very tiring</a> for the eye. Therefore, to reduce eye straint, use off black against off white. I.e. the text on this page is written in <code>#191919</code> black on <code>#F6F6F6</code> white."
+					},
 					{
-						"title": "test2"
+						"li": "Some users will have their own stylesheet that overwrite yours. It is important to allow that. That is one of the reasons why you should avoid using the <code>!important</code> rule in your css, which can not be easily overwritten."
+					},
+					{
+						"li": "The user should be able to resize the text to 200% of its size anywhere on the page, without the text being cut off or overlapping other text. You can test this by increasing your browsers zoom. On firefox under view > zoom."
+					},
+					{
+						"li": "While 12 pixels is a good reading size for printed documents, the font-size on screens should be higher. As a rule of thumb: between 16-18 for desktop and 12-14 on mobile."
+					},
+					{
+						"li": "Usually links are blue with a 4.5:1 contrast because almost all users will be able to differenciate blue. However, people with Tritanopia and those seeing only in Monochrome will still not be able to identify them. That is why inline/in-text links need an underline to help people with low vision and colorblinds distinguish them from the rest of the text. Also, that is why no other underlining should be used on the page. However, this rule is not necessary on other elements i.e. menu items do not have to be underlined or colored if it is obvious that the element is a menu."
+					},
+					{
+						"li": "Make sure to have hover & focus states that differ the initial state of your interactive elements. Optimally not subtle and not only by color. Otherwise, the user might not get that he can operate the element.",
+						"pre": ".interactive-elment {\n  color: blue;\n  text-decoration: underline;\n}\n\n.interactive-elment:hover,\n.interactive-elment:focus {\n  color: red;\n  text-decoration: none;\n}",
+						"preLang": "css"
+					},
+					{
+						"li": "Due to resizing issues it is a good practice to not have any text as image. Use real text styled with CSS or SVG text."
+					}
+				]
+			},
+			{
+				"title": "Menu / Navigation",
+				"paragraphs": [
+					{
+						"p": "A menu server multiple purposes. To navigate a website but also to orientate the user."
+					},
+					{
+						"li": "Indicate the page the user is currently on. Have another indicator than just color. Here you have a full background on the selected page and the sections in the table of content are highlighted by weigth and size."
+					},
+					{
+						"li": "Avoid absolute sizing of elements. Use relative sizing so that the website adjusts as the screen size changes."
+					}
+				]
+			},
+			{
+				"title": "Forms",
+				"paragraphs": [
+					{
+						"p": "Your user should always be aware of where he is and what has to be done to achieve his goal."
+					},
+					{
+						"li": "Position highlights may be styled but should never be removed. They should stay prominent and obvious. It is important for the user to know where he is, blinking cursor lines are easily overlooked."
+					},
+					{
+						"li": "The fields with error should not only be highlighted with color. I.e. show a cross or exclamation on error and a checkmark on success."
+					},
+					{
+						"li": "Add a summary of all errors on top of the page briefly explaining why there was an error and how to fix it. This ways the errors can not be overseen. Global error messages should have a title tag and errors listed in an ul or ol. Ideally the errors are be linked to the corresponding field and those indicated on click."
+					},
+					{
+						"li": "It has somewhat become a standart to add asterisk to required fields. But you should still explain what those asterisk mean. You may just add the keyword “required”."
+					},
+					{
+						"li": "If you use background colors to indicate your errors, then make sure that everyone can see them. While black on red might be a bad idea, white on red has a very high contrast.",
+						"imgs": [
+							{
+								"src": "assets/img/examples/vision/forms1_0.png",
+								"alt": "Black on red.",
+								"caption": "Users with <code>Monochromasy</code> will have difficulties to see this color contrast."
+							},
+							{
+								"src": "assets/img/examples/vision/forms1_1.png",
+								"alt": "White on red.",
+								"caption": "No user should have any difficulty with this contrast."
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Testing & ressources",
+				"paragraphs": [
+					{
+						"p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project."
+					},
+					{
+						"li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down on having responsive websites and stylesheets that can be overwritten."
+					},
+					{
+						"li": "There are a lot of tools to test your websites on color blindness. The most popular ones are <a href=\"http://colororacle.org/\">Color Oracle</a> (lacks of tests for Monochromasy) and <a href=\"https://michelf.ca/projects/sim-daltonism/\">Sim Daltonism</a> (Mac only). There is also a popular <a href=\"http://colorfilter.wickline.org/\">webpage checker</a>. None of the tests is 100% accurate but they give you a good glimpse."
+					},
+					{
+						"li": "References/Ressources used to write this page: <br>The Standart:<br><a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>.<br>Other:</br> <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
+					},
+					{
+						"p": "Open up the web for everyone!"
+					},
+					{
+						"p": "}&#x3C;)))*&#x3E;"
 					}
 				]
 			}
@@ -350,7 +560,7 @@
 					},
 					{
 						"li": "To have elements visually hidden but still accessible for screen readers the <a href=\"https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements\">W3C suggests</a> this css method:",
-						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
+						"pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
 						"preLang": "css"
 					},
 					{
@@ -563,7 +773,7 @@
 					{
 						"li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. That heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
 						"example": {
-							"pre": "<nav role=\"navigation\" aria-labelledby=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
+							"pre": "<nav role=\"navigation\" aria-labelledby=\"menu\">\n  <h2 id=\"menu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
 							"preLang": "markup",
 							"play": "Listen ♫",
 							"audio": "Navigation 'Main Menu', 2 items. -- Heading Level 2, Main Menu. -- Current. -- Home. -- Link, about. -- Link, contact."
@@ -581,6 +791,17 @@
 								"li": "Usually a drop down is another odered or unordered list inside the list item of the first ordered or unordered list:",
 								"pre": "<nav role=\"navigation\" aria-labelledby=\"exampleNav1\">\n  <h2 id=\"exampleNav1\">Some Example Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li><a href=\"#link\">Section2</a>\n      <!-- submenu start -->\n      <ul class=\"visuallyhidden\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n      <!-- submenu end -->\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
 								"preLang": "markup"
+							},
+							{
+								"li": "Consider having a toggling mechanism hiding/showing elements for screen readers as well if you have a very complex. This might be done by toggling the <code>aria-hidden</code> attribute. Here is an example:",
+								"pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly we have to set the focus on the first link element,\n      // otherwise screenreader do not notice the change (note how the button-pressing is not announced)\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
+								"preLang": "javascript",
+								"example": {
+									"pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2\">\n  <h2 id=\"exampleNav2\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
+									"preLang": "markup",
+									"play": "Listen ♫",
+									"audio": "Navigation, 'Example Accessible Navigation', 2 items. -- Heading Level 2, Example Accessible Navigation. -- Link, Section 1. -- Link, Section 2. -- Open submenu for section 2, button. -.- Link, Section 2-1. -- Link, Section 2-2. -- Link, Section 3."
+								}
 							}
 						]
 					},
@@ -724,7 +945,7 @@
 							"pre": "<img src=\"img.jpg\" alt=\"Chairmen of XY Corp\" usemap=\"#Map\" style=\"height:50px;\">\n<map id=\"Map\" name=\"Map\">\n    <area alt=\"Davy Jones\" shape=\"rect\" coords=\"176,14,323,58\" href=\"#link\" style=\"background-color: red;\">\n    <area alt=\"Harry Brown\" shape=\"rect\" coords=\"6,138,155,182\" href=\"#link\" style=\"background-color: red;\">\n</map>",
 							"preLang": "markup",
 							"play": "Listen ♫",
-							"audio": "Chairmen of XY Corp, image map -.. | Interact with Chairmen of XY Corp, image map, two items, link Davy Jones. -- Link, Harry Brown"
+							"audio": "Chairmen of XY Corp, image map -.- | Interact with Chairmen of XY Corp, image map, two items, link Davy Jones. -- Link, Harry Brown"
 						}
 					}
 				]
@@ -1075,11 +1296,6 @@
 							{
 								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed\">aria-grabbed</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">aria-dropeffect</a> indicates the state in a drag and drop operation. <code>aria-grabbed=\"true\"</code> indicates that an element is currently being dragged. <code>aria-grabbed=\"false\"</code> indicates that the element not being dragged but can be. The <code>aria-dropeffect</code> should be added to all elements where the currently dragged element can be dropped. It can have multiple values separated by a blank space: <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">copy</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">move</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">link</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">execute</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">popup</a>.",
 								"pre": "<div aria-grabbed=\"false\">Draggable</div>\n<div aria-dropeffect=\"move execute\">Target</div>",
-								"preLang": "markup"
-							},
-							{
-								"li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content.",
-								"pre": "<li aria-haspopup=\"true\">\n  <button role=\"button\">Click me to reach sublevel</button>\n  <ul>\n    <li>Sub Level</li>\n  </ul>\n</li>",
 								"preLang": "markup"
 							},
 							{

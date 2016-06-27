@@ -12,6 +12,7 @@
     var endLocation = anchor.offsetTop;
     var distance = endLocation - startLocation;
     var increments = distance / duration;
+    var fullHeight = document.getElementById('main').offsetHeight - window.innerHeight;
     var stopAnimation;
 
     // Scroll the page by an increment, and check if it's time to stop
@@ -25,7 +26,7 @@
       // Stop animation when you reach the anchor OR the bottom of the page
       stopAnimation = function () {
         var travelled = window.pageYOffset;
-        if ((travelled >= (endLocation - increments))) {
+        if ((travelled >= (endLocation - increments) || travelled >= fullHeight)) {
           clearInterval(runAnimation);
           window.location.hash = dataID;
         }
@@ -64,7 +65,7 @@
         // Get anchor link and calculate distance from the top
         var dataID = toggle.getAttribute('href');
         var dataTarget = document.querySelector(dataID);
-
+        
         // If the anchor exists
         if (dataTarget) {
           // Scroll to the anchor

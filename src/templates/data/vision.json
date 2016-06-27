@@ -61,7 +61,7 @@
             "li": "Make sure that your images are of adequate resolution."
           },
           {
-            "li": "Your website should be responsive."
+            "li": "Users will increase the general page size. When increasing the Zoom it is like decreasing the screen size, thus a responsive design will cover this."
           },
           {
             "li": "Always have in mind that some users cannot differenciate/see colors."
@@ -69,11 +69,20 @@
         ]
       },
       {
-        "title": "Images",
+        "title": "Graphical elements",
         "paragraphs":
         [
           {
-            "li": "Users might zoom into the page to see details in visual elements, so make sure that your images are of adequate resolution. Find a good balance between loading time and resolution. Compress your images i.e. with <a href=\"https://tinypng.com/\">tiny png</a>. It might also be helpful to <a href=\"https://en.wikipedia.org/wiki/Lazy_loading\">lazyload</a> your graphical ressources or to use different images based on the window size."
+            "p": "Important graphical elements with high failure potential are image with text, maps, diagrams and graphs. Those should always <a href=\"#Testing---ressources\">be tested</a> against the various types."
+          },
+          {
+            "li": "For graphs and maps a legend/key tested against the various types should be provided. <a href=\"http://colorbrewer2.org/\">Colorbrewer</a> is a tool that provides you with a colorbling friendly color palette."
+          },
+          {
+            "li": "Not solely rely on colors, whenever possible also give other visual clues as the style, thickness, luminance/shades, contrast."
+          },
+          {
+            "li": "Users should be able to zoom into the page to see details in visual elements. Your images should scale as well. So make sure that your images are of adequate resolution. Find a good balance between loading time and resolution. Compress your images i.e. with <a href=\"https://tinypng.com/\">tiny png</a>. It might also be helpful to <a href=\"https://en.wikipedia.org/wiki/Lazy_loading\">lazyload</a> your graphical ressources or to use different images based on the window size."
           },
           {
             "li": "If you have a layer of text ontop of your images, make sure that the contrast does not solely rely on colors. Some contrasts might be perfect for us but are a nightmare for color blind users:",
@@ -81,12 +90,12 @@
             [
               {
                 "src": "assets/img/examples/vision/images1_0.png",
-                "alt": "Reg on Green contrast.",
+                "alt": "Red on Green contrast.",
                 "caption": "Users with <code>Deuteranopia</code> will have difficulties with red on green and vice versa."
               },
               {
                 "src": "assets/img/examples/vision/images1_1.png",
-                "alt": "Reg on Green contrast.",
+                "alt": "Red on Green contrast.",
                 "caption": "Also users with <code>Protanopia</code> will have difficulties with red on green and vice versa."
               },
               {
@@ -102,25 +111,115 @@
             ]
           },
           {
-            "li": "Always have in mind that some people cannot differenciate/see colors."
+            "li": "Have a contrast of 4.5:1 on your colors. Snook made a <a href=\"https://snook.ca/technical/colour_contrast/colour.html#fg=FFFFFF,bg=000000\">handy tool</a> to check your color contrasts."
           }
         ]
       },
       {
-        "title": "Section2",
+        "title": "Typography",
         "paragraphs":
         [
           {
-            "p": "dolor sit"
+            "p": "If you want that people actually read what you write a good typography is crucial."
           },
           {
-            "img": "only img"
+            "li": "A common false belief is that full black on full white is the best contrast. While the higher the contrast the better pure color combination are <a href=\"http://uxmovement.com/content/when-to-use-white-text-on-a-dark-background/\">actually very tiring</a> for the eye. Therefore, to reduce eye straint, use off black against off white. I.e. the text on this page is written in <code>#191919</code> black on <code>#F6F6F6</code> white."
+          },
+          {
+            "li": "Some users will have their own stylesheet that overwrite yours. It is important to allow that. That is one of the reasons why you should avoid using the <code>!important</code> rule in your css, which can not be easily overwritten."
+          },
+          {
+            "li": "The user should be able to resize the text to 200% of its size anywhere on the page, without the text being cut off or overlapping other text. You can test this by increasing your browsers zoom. On firefox under view > zoom."
+          },
+          {
+            "li": "While 12 pixels is a good reading size for printed documents, the font-size on screens should be higher. As a rule of thumb: between 16-18 for desktop and 12-14 on mobile."
+          },
+          {
+            "li": "Usually links are blue with a 4.5:1 contrast because almost all users will be able to differenciate blue. However, people with Tritanopia and those seeing only in Monochrome will still not be able to identify them. That is why inline/in-text links need an underline to help people with low vision and colorblinds distinguish them from the rest of the text. Also, that is why no other underlining should be used on the page. However, this rule is not necessary on other elements i.e. menu items do not have to be underlined or colored if it is obvious that the element is a menu."
+          },
+          {
+            "li": "Make sure to have hover & focus states that differ the initial state of your interactive elements. Optimally not subtle and not only by color. Otherwise, the user might not get that he can operate the element.",
+            "pre": ".interactive-elment {\n  color: blue;\n  text-decoration: underline;\n}\n\n.interactive-elment:hover,\n.interactive-elment:focus {\n  color: red;\n  text-decoration: none;\n}",
+            "preLang": "css"
+          },
+          {
+            "li": "Due to resizing issues it is a good practice to not have any text as image. Use real text styled with CSS or SVG text."
           }
-        ],
-        "subs":
+        ]
+      },
+      {
+        "title": "Menu / Navigation",
+        "paragraphs":
         [
           {
-            "title": "test2"
+            "p": "A menu server multiple purposes. To navigate a website but also to orientate the user."
+          },
+          {
+            "li": "Indicate the page the user is currently on. Have another indicator than just color. Here you have a full background on the selected page and the sections in the table of content are highlighted by weigth and size."
+          },
+          {
+            "li": "Avoid absolute sizing of elements. Use relative sizing so that the website adjusts as the screen size changes."
+          }
+        ]
+      },
+      {
+        "title": "Forms",
+        "paragraphs":
+        [
+          {
+            "p": "Your user should always be aware of where he is and what has to be done to achieve his goal."
+          },
+          {
+            "li": "Position highlights may be styled but should never be removed. They should stay prominent and obvious. It is important for the user to know where he is, blinking cursor lines are easily overlooked."
+          },
+          {
+            "li": "The fields with error should not only be highlighted with color. I.e. show a cross or exclamation on error and a checkmark on success."
+          },
+          {
+            "li": "Add a summary of all errors on top of the page briefly explaining why there was an error and how to fix it. This ways the errors can not be overseen. Global error messages should have a title tag and errors listed in an ul or ol. Ideally the errors are be linked to the corresponding field and those indicated on click."
+          },
+          {
+            "li": "It has somewhat become a standart to add asterisk to required fields. But you should still explain what those asterisk mean. You may just add the keyword “required”."
+          },
+          {
+            "li": "If you use background colors to indicate your errors, then make sure that everyone can see them. While black on red might be a bad idea, white on red has a very high contrast.",
+            "imgs":
+            [
+              {
+                "src": "assets/img/examples/vision/forms1_0.png",
+                "alt": "Black on red.",
+                "caption": "Users with <code>Monochromasy</code> will have difficulties to see this color contrast."
+              },
+              {
+                "src": "assets/img/examples/vision/forms1_1.png",
+                "alt": "White on red.",
+                "caption": "No user should have any difficulty with this contrast."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Testing & ressources",
+        "paragraphs":
+        [
+          {
+            "p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project."
+          },
+          {
+            "li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down on having responsive websites and stylesheets that can be overwritten."
+          },
+          {
+            "li": "There are a lot of tools to test your websites on color blindness. The most popular ones are <a href=\"http://colororacle.org/\">Color Oracle</a> (lacks of tests for Monochromasy) and <a href=\"https://michelf.ca/projects/sim-daltonism/\">Sim Daltonism</a> (Mac only). There is also a popular <a href=\"http://colorfilter.wickline.org/\">webpage checker</a>. None of the tests is 100% accurate but they give you a good glimpse."
+          },
+          {
+            "li": "References/Ressources used to write this page: <br>The Standart:<br><a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>.<br>Other:</br> <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
+          },
+          {
+            "p": "Open up the web for everyone!"
+          },
+          {
+            "p": "}&#x3C;)))*&#x3E;"
           }
         ]
       }

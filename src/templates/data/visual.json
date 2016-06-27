@@ -47,7 +47,7 @@
           },
           {
             "li": "To have elements visually hidden but still accessible for screen readers the <a href=\"https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements\">W3C suggests</a> this css method:",
-            "pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
+            "pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
             "preLang": "css"
           },
           {
@@ -275,7 +275,7 @@
             "li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. That heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
             "example":
             {
-              "pre": "<nav role=\"navigation\" aria-labelledby=\"mainmenu\">\n  <h2 id=\"mainmenu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
+              "pre": "<nav role=\"navigation\" aria-labelledby=\"menu\">\n  <h2 id=\"menu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
               "preLang": "markup",
               "play": "Listen ♫",
               "audio": "Navigation 'Main Menu', 2 items. -- Heading Level 2, Main Menu. -- Current. -- Home. -- Link, about. -- Link, contact."
@@ -295,6 +295,18 @@
                 "li": "Usually a drop down is another odered or unordered list inside the list item of the first ordered or unordered list:",
                 "pre": "<nav role=\"navigation\" aria-labelledby=\"exampleNav1\">\n  <h2 id=\"exampleNav1\">Some Example Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li><a href=\"#link\">Section2</a>\n      <!-- submenu start -->\n      <ul class=\"visuallyhidden\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n      <!-- submenu end -->\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
                 "preLang": "markup"
+              },
+              {
+                "li": "Consider having a toggling mechanism hiding/showing elements for screen readers as well if you have a very complex. This might be done by toggling the <code>aria-hidden</code> attribute. Here is an example:",
+                "pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly we have to set the focus on the first link element,\n      // otherwise screenreader do not notice the change (note how the button-pressing is not announced)\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
+                "preLang": "javascript",
+                "example":
+                {
+                  "pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2\">\n  <h2 id=\"exampleNav2\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
+                  "preLang": "markup",
+                  "play": "Listen ♫",
+                  "audio": "Navigation, 'Example Accessible Navigation', 2 items. -- Heading Level 2, Example Accessible Navigation. -- Link, Section 1. -- Link, Section 2. -- Open submenu for section 2, button. -.- Link, Section 2-1. -- Link, Section 2-2. -- Link, Section 3."
+                }
               }
             ]
           },
@@ -451,7 +463,7 @@
               "pre": "<img src=\"img.jpg\" alt=\"Chairmen of XY Corp\" usemap=\"#Map\" style=\"height:50px;\">\n<map id=\"Map\" name=\"Map\">\n    <area alt=\"Davy Jones\" shape=\"rect\" coords=\"176,14,323,58\" href=\"#link\" style=\"background-color: red;\">\n    <area alt=\"Harry Brown\" shape=\"rect\" coords=\"6,138,155,182\" href=\"#link\" style=\"background-color: red;\">\n</map>",
               "preLang": "markup",
               "play": "Listen ♫",
-              "audio": "Chairmen of XY Corp, image map -.. | Interact with Chairmen of XY Corp, image map, two items, link Davy Jones. -- Link, Harry Brown"
+              "audio": "Chairmen of XY Corp, image map -.- | Interact with Chairmen of XY Corp, image map, two items, link Davy Jones. -- Link, Harry Brown"
             }
           }
         ]
@@ -823,11 +835,6 @@
               {
                 "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed\">aria-grabbed</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">aria-dropeffect</a> indicates the state in a drag and drop operation. <code>aria-grabbed=\"true\"</code> indicates that an element is currently being dragged. <code>aria-grabbed=\"false\"</code> indicates that the element not being dragged but can be. The <code>aria-dropeffect</code> should be added to all elements where the currently dragged element can be dropped. It can have multiple values separated by a blank space: <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">copy</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">move</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">link</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">execute</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">popup</a>.",
                 "pre": "<div aria-grabbed=\"false\">Draggable</div>\n<div aria-dropeffect=\"move execute\">Target</div>",
-                "preLang": "markup"
-              },
-              {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup\">aria-haspopup</a> indicates that the element has a popup context menu or sub-level menu. A popup is generally a group of items that appear to be on top of the main page content.",
-                "pre": "<li aria-haspopup=\"true\">\n  <button role=\"button\">Click me to reach sublevel</button>\n  <ul>\n    <li>Sub Level</li>\n  </ul>\n</li>",
                 "preLang": "markup"
               },
               {

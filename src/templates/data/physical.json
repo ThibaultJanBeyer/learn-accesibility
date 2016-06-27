@@ -2,49 +2,170 @@
   "physical": 
   {
     "title": "Physical",
-    "subtitle": "Accessibility",
+    "subtitle": "& audio Accessibility",
     "letter": "P",
     "intro": 
     {
-      "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, temporibus iure cupiditate hic modi voluptatem officia atque maiores, obcaecati eum aspernatur rem, consequuntur quos. In et, illum nisi voluptas facere cumque inventore, sed repellendus aliquid consectetur amet ex culpa vel ab! Magni nemo, eos quis accusantium labore mollitia placeat!",
-      "img": 
-      {
-        "src": "assets/img/dummy.png",
-        "alt": "alt"
-      }
+      "p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use his keyboard only and/or special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of all american adults report having troubles hearing. Also, <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">according to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf bus also covers public places where the user might not be able to use audio. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eyetracking software or the like."
     },
     "sections": 
     [
       {
-        "title": "Hiding Elements",
+        "title": "Basics",
         "paragraphs": 
         [
           {
-            "li": "Most SR Obey <code class='language-css'>display:none</code> and <code class='language-css'>visibility:hidden</code> by not reading the text "
+            "li": "While background music can be ignored, any important audio content should have captions and/or visual equivalents i.e. visual alerts for live feeds."
           },
           {
-            "li": "The best way to hide text for users with vision but still let it be read out by screen readers is in css like this:",
-            "pre": ".visuallyhidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n}",
-            "preLang": "css"
+            "li": "Use visual bells when captioning does not make sense. I.e. a flashing/blinking element and/or blinking text in browsertabs."
           }
-        ],
-        "subs": 
+        ]
+      },
+      {
+        "title": "Videos",
+        "paragraphs": 
         [
           {
-            "title": "Section 1.1.",
-            "paragraphs": 
+            "p": "Add captions of high quality to your videos. The caption should be in sync with the spoken content, the people who are speaking should be indentified when they speak and the important sounds should be included (i.e. footsteps approaching, doors opening, water boiler overheating)."
+          },
+          {
+            "li": "The captions should be placed on a banner with distinctive background to be able to read it at any time. If it is only floating text, it might sometimes have bad contrast with its background."
+          },
+          {
+            "li": "Make sure that the captions do not cover up important parts of the video."
+          },
+          {
+            "li": "Style your captions so that they are easy to read. A common mistake is using all caps white text on black background. That is awefully difficult to read. The same principles as for normal text apply to captions. The most readable is a highly readable typeface in <a href=\"vision.html#Typography-2\">off-black on off-white</a> background."
+          },
+          {
+            "li": "Style sounds differently than spoken content. I.e. write your sounds in italic."
+          },
+          {
+            "li": "It is a good practice to add transcripts for videos & Audio. Doing so, not only people with hearing deficits and cognitive disabilities will benefit from it but also everyone who preffers reading over watching."
+          }
+        ]
+      },
+      {
+        "title": "Forms",
+        "paragraphs": 
+        [
+          {
+            "li": "Make sure that all elements can be accessed by tabbing and are in the right order. Usually users expect content to be read from left to right, top to bottom."
+          },
+          {
+            "li": "One field per line is way easier to navigate."
+          },
+          {
+            "li": "The standart for radio buttons is to be able to use arrow keys to select the right one. This should be implemented by default when using the <code>fieldset</code> tag. Here is an example of accessible radio buttons borrowed from <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
+            "example":
+            {
+              "pre": "<fieldset>\n  <legend>Choose a shipping method:</legend>\n  <input id=\"overnight\" type=\"radio\" name=\"shipping\" value=\"overnight\">\n  <label for=\"overnight\">Overnight</label>\n\n  <input id=\"twoday\" type=\"radio\" name=\"shipping\" value=\"twoday\">\n  <label for=\"twoday\">Two day</label>\n\n  <input id=\"ground\" type=\"radio\" name=\"shipping\" value=\"ground\">\n  <label for=\"ground\">Ground</label>\n</fieldset>",
+              "preLang": "markup"
+            }
+          },
+          {
+            "li": "If you have too many options, use a dropdown list. It can be selected by typing the first letters so make sure that the information at the start is not redundant so that the elements can be selected as fast as possible. Another example via <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
+            "example":
+            {
+              "pre": "<label for=\"favcity\">Choose your favorite city:</label>\n<select id=\"favcity\" name=\"select\">\n  <option value=\"1\">Amsterdam</option>\n  <option value=\"2\">Berlin</option>\n  <option value=\"3\">Delhi</option>\n  <option value=\"4\">Hong Kong</option>\n  <option value=\"5\">London</option>\n  <option value=\"6\">New York</option>\n  <option value=\"7\">Sao Paulo</option>\n  <option value=\"8\">Tokyo</option>\n</select>",
+              "preLang": "markup"
+            }
+          },
+          {
+            "li": "If the form fails, display a summary of errors at the top of the form additionally to those inline. Only inline might fail silently as the user might not scroll/look down. Ideally errors in the summary are also linked to the respective fields, so that the user can quickly jump to them."
+          }
+        ]
+      },
+      {
+        "title": "Popups",
+        "paragraphs": 
+        [
+          {
+            "p": "Popups are often a nightmare for usability, especially when they open easily (i.e. on hover or focus). They often break the reading flow and are hard to close (i.e. to small close button or not closable via keyboard). However, if done right, popups can add value to a page as for giving more information without leaving the page."
+          },
+          {
+            "li": "Popups should be easy to close and should only open if the user wants them to."
+          },
+          {
+            "li": "If a popup is opened the first thing that has focus should be the close button. Also, it is a good idea to “trap” the focus within its popup until closed. This mimics the normal behaviour and prevents the keyboard user from losing focus."
+          },
+          {
+            "li": "The user should be able to close popups by hitting the esc button."
+          },
+          {
+            "li": "Hugo Giraudel did quite a good job on <a href=\"https://github.com/edenspiekermann/a11y-dialog\">an accessible popup</a> for edenspiekermann_."
+          }
+        ]
+      },
+      {
+        "title": "Navigation & Menu",
+        "paragraphs":
+        [
+          {
+            "p": "Complex navigation hurt everyones usability. Reduce your navigation to a minimun."
+          },
+          {
+            "li": "Don’t remove the focus outline.. Avoid messing around with the tabindex. All usable elements have to be tabable."
+          },
+          {
+            "li": "Indicate the current page in your menu."
+          },
+          {
+            "li": "Have clear hover & focus states on your interactive elements. Try doing more than just a simple colorchange."
+          },
+          {
+            "li": "All elements including the drop-down should be usable with the keyboard."
+          },
+          {
+            "li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a best practice. That way the user do not have to taverse a lot of elements but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus.",
+            "pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
+            "preLang": "javascript",
+            "example":
+            {
+              "pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Jump to wanted link</a>\n<p>Annoying content</p>\n<a href=\"#link\">Annoying Link</a>\n<p id=\"linkNext\">Next item</p>\n<a href=\"#link\">Wanted Link</p>",
+              "preLang": "markup"
+            }
+          },
+          {
+            "li": "It is a good practice to have a table of content linking to each heading within a long text."
+          }
+        ],
+        "subs":
+        [
+          {
+            "title": "Drop Downs",
+            "paragraphs":
             [
               {
-                "li": "hahaha"
+                "p": "If possible try to reduce the complexity of your navigation before implementing drop downs."
+              },
+              {
+                "li": "Usually Submenus are individual lists <code>ul</code> or <code>ol</code>, nested in the parent’s list item <code>li</code>."
+              },
+              {
+                "li": "Drop downs should stay dropped down once activated or have a tolerance for a wavering mouse. This way prevents the menu from unintentionally closing when used by people with reduced dexterity. Same holds true for all appearing/disappearing elements. On this website an easy CSS technique was used to show/hide the link anchors with a delay. Here is a simplified example:",
+                "pre": "/*\n * 1. the second number is the animations delay\n */\n.anchor {\n  opacity: 0;\n  transition: opacity 0.5s 0.5s; /* 1. */\n}\n\n/*\n * 1. overwrite the delay and show it immediately\n *  if the element is not hovered (thus on blur) \n *  the rule above takes effect and add a delay\n */\n.anchor--li:hover .anchor,\n.anchor--li:focus .anchor {\n  opacity: 1;\n  transition: opacity 0.5s; /* 1. */\n}",
+                "preLang": "css"
+              },
+              {
+                "li": "Don’t open the submenu as soon as the focus enters the top-level menu item. A keyboard don’t want to step through all the submenu links to get to the next top-level item. One way would is that the top level is actually not a link but just an opener for the elements below. If this top level item should remain a real link you can delay the drop down on focus so that the user would be able to quickly fly over it. However, that comes with the disadvantage that the user will have to rest some time before seeing the subnav. Another solution would be to have the being able to navigate through the menu using the arrow keys. Left and right to navigate the top buttons then down and up to access the drop down. That is quite a bit tricky to code and some users might not get it. The easiest and probably best solution is to add, additionally to the hover of the whole item, a separate “show submenu” button (i.e. an arrowhead) that is accessible and will toggle the submenu. Here is an example:",
+                "pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly we have to set the focus on the first link element,\n      // otherwise screenreader do not notice the change\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
+                "preLang": "javascript",
+                "example":
+                {
+                  "pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2\">\n  <h2 id=\"exampleNav2\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
+                  "preLang": "markup"
+                }
               }
             ]
           },
           {
-            "title": "New Sub",
+            "title": "Scrolling",
             "paragraphs":
             [
               {
-                "li": "hahaha"
+                "li": ""
               }
             ]
           }

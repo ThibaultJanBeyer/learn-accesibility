@@ -14,7 +14,7 @@ for(var i = 0; i < anchorElements.length; i++) {
   var content = el.innerHTML;
   var contentText = (el.innerText || el.textContent);
   var replaceText = contentText.replace(/[^A-Za-z0-9]/g, '-');
-  var anchor = '<a class="anchor" href="#' + replaceText + '" aria-hidden="true">';
+  var anchor = '<a class="anchor" href="#' + replaceText + '" aria-hidden="true" tabindex="0">';
 
   el.innerHTML = anchor + svg + '</a>' + content;
   el.setAttribute('ID', replaceText);

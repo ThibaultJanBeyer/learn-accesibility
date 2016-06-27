@@ -28,3 +28,17 @@
     border: 1px solid $black01;
   }
 }
+
+#exampleNav2 {
+  .hidden {
+    display: none;
+  }
+
+  .exampleButton::after {
+    content: 'v'
+  }
+
+  .exampleButton.open::after {
+    content: '^';
+  }
+}

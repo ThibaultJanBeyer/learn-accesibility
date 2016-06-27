@@ -110,4 +110,31 @@
     }, 500);
   }, 1000);
 
+  /*
+   * Examples
+   */
+  var menuItems = document.querySelectorAll('.exampleButton');
+  for(var i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener('click',  function(e){
+      var button = this;
+      var buttonText = button.querySelector('.visuallyhidden');
+      var subMenu = button.parentNode.querySelector('.example-submenu');
+
+      if (!button.classList.contains('open')) {
+        button.classList.add('open');
+        buttonText.innerText = 'hide submenu';
+        subMenu.classList.remove('hidden');
+        subMenu.removeAttribute('aria-hidden');
+        // sadly we have to set the focus on the first link element,
+        // otherwise screenreader do not notice the change
+        subMenu.querySelector('a').focus();
+      } else {
+        button.classList.remove('open');
+        buttonText.innerText = 'show submenu';
+        subMenu.classList.add('hidden');
+        subMenu.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
 }})();
