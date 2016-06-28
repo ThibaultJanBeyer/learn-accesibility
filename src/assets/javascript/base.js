@@ -6,8 +6,8 @@ var MOUSE = {};
 var LOCATION = window.location.href;
 
 // Routes
-if ( LOCATION.indexOf('home') >= 0 ) {
-  const R_HOME = true;
+if ( LOCATION.indexOf('welcome') >= 0 ) {
+  const R_WELCOME = true;
 } else if ( LOCATION.indexOf('visual') >= 0 ||
 LOCATION.indexOf('vision') >= 0 ||
 LOCATION.indexOf('physical') >= 0 ||
@@ -15,5 +15,5 @@ LOCATION.indexOf('cognitive') >= 0 ) {
   const R_SITE = true;
   
 } else {
-  const R_WELCOME = true;
+  const R_HOME = true;
 }

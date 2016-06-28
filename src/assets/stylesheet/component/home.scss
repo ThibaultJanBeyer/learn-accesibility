@@ -3,6 +3,23 @@
   width: 100%;
 }
 
+.home__preloader {
+  background-color: $white;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.5s ease-out, visibility 0.5s 0.5s;
+  z-index: 99;
+}
+
+.home__preloader--loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .home__content {
   @include gradient;
   @include vertical-rhythm($gutter--large);

@@ -5,7 +5,7 @@ var jscs = require('gulp-jscs');
 var merge = require('merge-stream');
 
 var scssSrc = 
-  gulp.src(['./src/assets/stylesheet/**/*.scss', '!./src/assets/stylesheet/plugin/prism.scss'])
+  gulp.src(['./src/assets/stylesheet/**/*.scss', '!./src/assets/stylesheet/plugin/prism.scss', '!./src/assets/stylesheet/component/examples.scss'])
   .pipe(scsslint());
 
 var jsSrc =
