@@ -74,6 +74,9 @@
           },
           {
             "li": "If the form fails, display a summary of errors at the top of the form additionally to those inline. Only inline might fail silently as the user might not scroll/look down. Ideally errors in the summary are also linked to the respective fields, so that the user can quickly jump to them."
+          },
+          {
+            "li": "There shouldn’t be any timeout when filling in forms or the like, if there has to be, then be generous with the time, be clear that there is a timer and what the consequences will be."
           }
         ]
       },
@@ -165,27 +168,36 @@
             "paragraphs":
             [
               {
-                "li": ""
+                "li": "The Horizontal Scroll is a <a href=\"https://www.nngroup.com/articles/horizontal-scrolling/\">challenge for most users</a> and becomes an even greater pain for people with unsteady hands. Moreover, some modern browser Hide scrollbars which makes it even more difficult."
+              },
+              {
+                "li": "In general, users ignore horizontal scrolling even if there are arrows. Also the more on the right the content is the less it will be seen. If you still use horizontal scroll, always indicate how many items are hidden."
+              },
+              {
+                "li": "Also vertical scrolling is not always obvious. I.e. when having a full height header image, a lot of users do not know that they can actually scroll. So, provide a visual hint."
               }
             ]
           }
         ]
       },
       {
-        "title": "Section2",
+        "title": "Testing & ressources",
         "paragraphs":
         [
           {
-            "p": "dolor sit"
+            "p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project via github."
           },
           {
-            "img": "only img"
-          }
-        ],
-        "subs":
-        [
+            "li": "Actually, no useful automatic testing tools were found. Lucky, that testing for physical & audio disabilities is not a big deal:<br>1. Use your website with your keyboard only and see if every element is accessible.<br>2. Silulate an unsteady cursor by slightly shaking your mouse while using your page. See if everything is still easily usable (element sizes and appear/dissappear)<br>3. Turn your devices audio off to check for audio issues."
+          },
           {
-            "title": "test2"
+            "li": "References/Ressources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://verticalchallenge.org/\">Vertical Challenge</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
+          },
+          {
+            "p": "Open up the web for everyone!"
+          },
+          {
+            "p": "}&#x3C;)))*&#x3E;"
           }
         ]
       }

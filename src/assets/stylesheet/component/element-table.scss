@@ -8,10 +8,8 @@
   @include font-size-responsive($gamma, $primary-family, 700);
 }
 
-.element-table__tr {
-  &:nth-child(2n) {
-    background: $black005;
-  }
+.element-table__tr:nth-child(2n) {
+  background: $black005;
 }
 
 .element-table__th {

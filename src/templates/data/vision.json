@@ -207,13 +207,13 @@
             "p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project."
           },
           {
-            "li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down on having responsive websites and stylesheets that can be overwritten."
+            "li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down on having responsive websites and stylesheets that can be overwritten. Zoom your webpage and check for issues, on Firefox you’ll find the zoom under View > Zoom > Zoom In (CMD++)."
           },
           {
             "li": "There are a lot of tools to test your websites on color blindness. The most popular ones are <a href=\"http://colororacle.org/\">Color Oracle</a> (lacks of tests for Monochromasy) and <a href=\"https://michelf.ca/projects/sim-daltonism/\">Sim Daltonism</a> (Mac only). There is also a popular <a href=\"http://colorfilter.wickline.org/\">webpage checker</a>. None of the tests is 100% accurate but they give you a good glimpse."
           },
           {
-            "li": "References/Ressources used to write this page: <br>The Standart:<br><a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>.<br>Other:</br> <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
+            "li": "References/Ressources used to write this page: <br>The Standart:<br><a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>.<br>Other:</br> <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a>, <a href=\"http://www.somersault1824.com/blog/\">somersault1824</a>, <a href=\"http://www.colormatters.com/color-and-vision/color-and-vision-matters\">colormatters</a> <a href=\"http://www.uxmatters.com/\">uxmatters</a>, <a href=\"http://uxmovement.com/\">uxmovements</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
           },
           {
             "p": "Open up the web for everyone!"
