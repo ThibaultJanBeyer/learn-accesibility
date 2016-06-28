@@ -3,10 +3,10 @@
   margin: auto;
   max-width: 450px;
   padding: 0 $outbreaks;
+}
 
-  a {
-    @include link-styles;
-  }
+.section__link {
+  @include link-styles;
 }
 
 .section--sub {
@@ -42,4 +42,19 @@
 
 .section__title--sub::after {
   display: none;
+}
+
+.section__contribute {
+  color: $blue;
+  float: right;
+  margin-right: -$outbreaks;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.section__contribute:hover,
+.section__contribute:focus {
+  background: transparent;
+  opacity: 1;
+  text-decoration: underline;
 }

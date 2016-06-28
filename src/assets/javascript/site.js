@@ -111,6 +111,13 @@
   }, 1000);
 
   /*
+   * Add linkclass to all links within text
+   */
+  [...document.querySelectorAll('.section a')].forEach((e) => {
+    e.classList.add('section__link');
+  });
+
+  /*
    * Examples
    */
   var menuItems = document.querySelectorAll('.exampleButton');

@@ -479,6 +479,7 @@
 		]
 	},
 	"shared": {
+		"contribute": "https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md",
 		"toc": {
 			"title": "Table of contents for",
 			"V": 1,

@@ -2,8 +2,7 @@
   @include font-size-responsive($gamma);
   margin-bottom: $gutter--large;
   margin-top: -$gutter--medium;
-  padding-left: 40px;
-  padding: $gutter 15px 0 0;
+  padding-top: $gutter;
 }
 
 .element-example__pre {
@@ -28,21 +27,9 @@
 }
 
 .element-example__play {
-  background: $white;
   border: 1px solid $primary;
-  padding: 0 5px;
-  position: absolute;
-  right: 10px;
-  width: 60px;
-
-  @include media('>small') {
-    right: 30px;
-  }
-
-  @include media('>medium') {
-    margin-left: 430px;
-    right: auto;
-  }
+  float: right;
+  margin-right: -$outbreaks;
 }
 
 /*
