@@ -16,38 +16,25 @@
           "img": "assets/img/wobble_success.gif"
         },
         {
-          "screenReader": "You want everyone to use it. Right?",
-          "texts": [
-            "You want",
-            "everyone",
-            "to use it. Right?"],
-          "img": "assets/img/wobble_world.gif"
-        },
-        {
           "screenReader": "Then, why would you leave out eleven percent of the population?",
           "texts": [
             "Then, why would you leave out",
-            "around 11%",
+            "a huge part",
             "of the population?"],
           "img": "assets/img/wobble_heartbreak.gif"
         },
         {
-          "screenReader": "Imagine increasing sales by eleven percent, while doing good. Neat right?",
+          "screenReader": "Increase your sales by doing the right thing.",
           "texts": [
-            "Imagine your sales",
-            "increasing",
-            "by 11% while doing",
-            "good..."],
+            "Increase your",
+            "sales",
+            "by doing the",
+            "right",
+            "thing."],
           "img": "assets/img/wobble_money.gif"
         },
         {
-          "screenReader": "so...",
-          "texts": [
-            ".......",
-            "So..."]
-        },
-        {
-          "screenReader": "Open up your websites for the physically impaired. Make them accessible!",
+          "screenReader": "Open up your website. Make it accessible for everyone!",
           "texts": [
             "Open up your website.",
             "Make it",
@@ -56,16 +43,7 @@
           "img": "assets/img/wobble_luv.gif"
         },
         {
-          "screenReader": "It is not difficult, nor will it cost a fortune. You have no excuse.",
-          "texts": [
-            "It’s not difficult & it will",
-            "not cost",
-            "a fortune. You have",
-            "no excuse."],
-          "img": "assets/img/wobble_excuse.gif"
-        },
-        {
-          "screenReader": "Accessibility is like opening your door to everyone.",
+          "screenReader": "Accessibility is like opening your door.",
           "texts": [
             "Accessibility is just like",
             "opening",

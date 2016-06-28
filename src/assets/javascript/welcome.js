@@ -44,7 +44,7 @@
             // and remove that first contentblock after some time
             text[i].classList.add('visuallyhidden');
             // go to next animation
-            next(i + 5);
+            next(i + 1);
           }, 1500);
         }, 500);
       }, true);
@@ -67,7 +67,7 @@
             // after everything is deleted wait for some seconds
             setTimeout(function () {
               // then flyout all flyout elements
-              myLoop({ cd: flyOut.length - 1, dur: 150, cu: 0 }, (cd, dur, cu) => {
+              myLoop({ cd: flyOut.length - 1, dur: 5, cu: 0 }, (cd, dur, cu) => {
                 flyOut[cu].classList.remove('fly--in');
               });
               // wait again some seconds
@@ -95,7 +95,7 @@
       writeEach(wText[i], 0, wText[i].length - 1, () => {
         // when the writing is over, timeout the animation for some seconds
         setTimeout(function () {
-          finishing(i);
+          finishing(i + 1);
         }, 500);
       }, false, true);
     }
@@ -110,6 +110,8 @@
       var source = flyOut[i].getAttribute('src');
       // substring = everything without the "0.gif" part
       var substring = source.substring(0, source.length - 5);
+      console.log(substring);
+      
       // set the src respectively 1.gif, 2.gif, ...
       flyOut[i].setAttribute('src', substring + cu + '.gif');
 
@@ -167,10 +169,9 @@
           mover(specialWc, target, specialMove);
           // move normal text
           mover(wc, target, specialMove, () => {
-
             /*
-            * fly through door
-            */
+             * fly through door
+             */
             setTimeout(function() {
               // lock the screen by hiding overflow
               WELCOME.classList.add('lock');
@@ -187,7 +188,7 @@
               lock.classList.add('lock--locked');
               
               setTimeout(function() {
-                document.getElementsByClassName('welcome__button--skip')[0].click();
+                window.location.href = 'index.html#door';
               }, 400);
             }, 1000);
           });

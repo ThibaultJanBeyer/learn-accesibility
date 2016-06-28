@@ -1,36 +1,11 @@
 (function () {
   if (R_HOME) {
 
-    /*
-     * if a users has not been here,
-     * add a yummy coockie and redirect to welcome.html
-     */
-    if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, '$1') !== 'true') {
-      window.location.href = 'welcome.html';
-      document.cookie = 'doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
-    } else {
-      let preloader = document.querySelector('.home__preloader');
-      preloader.classList.add('home__preloader--loaded');
-    }
-
-    /* just for testing */
-    var reset = document.createElement('button');
-    reset.style.position = 'fixed';
-    reset.style.top = '0';
-    reset.style.width = '10px';
-    reset.style.height = '10px';
-    reset.style.background = 'red';
-    BODY.appendChild(reset);
-    reset.addEventListener('click', () => {
-      document.cookie = 'doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    });
-    /* just for testing */
-
     BODY.classList.add('lock');
     BODYCONTAINER.classList.add('lock');
 
     // after the animation
-    setTimeout(() => {
+    var animationEnd = function() {
       var start = document.getElementsByClassName('start')[0];
       var end = document.getElementsByClassName('end')[0];
 
@@ -38,7 +13,7 @@
       end.classList.remove('visuallyhidden');
 
       // reset window position to top
-      window.location.hash = '#accessibility';
+      window.location.hash = '#';
 
       /*
       * move Objects
@@ -163,8 +138,46 @@
           }, 200);
         });
       }
+    };
 
-    }, 9500);
+    /*
+     * if a users has not been here,
+     *  > add a yummy coockie and redirect to welcome.html
+     * if he has, check if he entered through the door
+     *  > play the animation
+     * if not then skip the animation
+     */
+    if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, '$1') !== 'true') {
+      // first time visit
+      window.location.href = 'welcome.html';
+      document.cookie = 'doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+    } else if(LOCATION.indexOf('door') >= 0) {
+      // second time visit (through door)
+      let preloader = document.querySelector('.home__preloader');
+      preloader.classList.add('home__preloader--loaded');
+      setTimeout(function() {
+        animationEnd();
+      }, 9500);
+    } else {
+      // >= third time visit
+      BODY.classList.add('skip');
+      animationEnd();
+      let preloader = document.querySelector('.home__preloader');
+      preloader.classList.add('home__preloader--loaded');
+    }
+
+    /* just for testing @TODO: remove */
+    var reset = document.createElement('button');
+    reset.style.position = 'fixed';
+    reset.style.top = '0';
+    reset.style.width = '10px';
+    reset.style.height = '10px';
+    reset.style.background = 'red';
+    BODY.appendChild(reset);
+    reset.addEventListener('click', () => {
+      document.cookie = 'doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    });
+    /* just for testing */
 
   }
 })();

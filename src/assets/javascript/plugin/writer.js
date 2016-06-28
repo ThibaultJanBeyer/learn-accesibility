@@ -31,7 +31,7 @@
 function writeEach(arr, pos, end, callback, del, splitter) {
   if(!del){
     //it loops through each character of the current element position in array 
-    myLoop({ cd: arr[pos].char.length -1, dur: 75, cu: 0 }, (cd, dur, cu) => {
+    myLoop({ cd: arr[pos].char.length -1, dur: 70, cu: 0 }, (cd, dur, cu) => {
       //writes each char
       if(!splitter) {
         arr[pos].el.innerHTML += arr[pos].char[cu];

@@ -251,3 +251,19 @@ $number-of-letters: 15;
     transform: scale(1, 1);
   }
 }
+
+/*
+ * ~~
+ * if animation is skipped
+ */
+.skip .end {
+  animation: appear 1s both;
+}
+
+.skip .home {
+  animation: gradient 0.1s forwards;
+}
+
+.skip .home-nav__options {
+  animation: popup 0.5s ease-out;
+}

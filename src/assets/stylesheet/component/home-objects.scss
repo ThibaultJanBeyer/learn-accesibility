@@ -1,8 +1,13 @@
 .home-objects__object {
+  animation-delay: 10s;
   position: absolute;
   border: 3px solid $white;
   z-index: 1;
   transition: transform 0.1s;
+}
+
+.skip .home-objects__object {
+  animation-delay: 0s;
 }
 
 /*
@@ -17,7 +22,6 @@
     left: 5% + random(95);
     animation-duration: 5000ms - ($i * random(300));
     animation-fill-mode: backwards;
-    animation-delay: 10s;
     animation-name: oFillUp--#{$i};
   }
 
