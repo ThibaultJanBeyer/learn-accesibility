@@ -6,8 +6,8 @@
 
 {% for section in page.sections %}
 <section role="region" class="section anchor--aria-labelledby" data-aria-labelledby="{{ section.title }}">
+  <a href="{{ shared.contribute }}" class="section__contribute"><span class="visuallyhidden">Contribute to this section</span>✎</a>
   <h2 class="section__title copy anchor--add edit--add">
-    <a href="{{ shared.contribute }}" class="section__contribute"><span class="visuallyhidden">Contribute to this section</span>✎</a>
     {{ section.title }}
   </h2>
 

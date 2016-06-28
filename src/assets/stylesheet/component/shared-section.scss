@@ -45,10 +45,12 @@
 }
 
 .section__contribute {
+  @include font-size-responsive($beta);
   color: $blue;
   float: right;
   margin-right: -$outbreaks;
-  opacity: 0.5;
+  margin-top: $gutter--large;
+  opacity: 0.4;
   transition: opacity 0.5s;
 }
 

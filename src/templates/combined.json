@@ -984,24 +984,17 @@
 					},
 					{
 						"li": "The <code>role=\"heading\"</code> is not necessary if you use h tags. It might be used to declare another element than an h tag as a heading with <code>role=\"heading\" aria-level=\"7\"</code>. I.e. to get deeper than h6"
-					}
-				],
-				"subs": [
+					},
 					{
-						"title": "Good headings",
-						"paragraphs": [
-							{
-								"li": "Write the key information at the beginning.",
-								"pre": "<!-- DO: -->\n<li>Great White Shark Facts</li>\n<li>Hammerhead Shark Facts</li>\n<!-- DONT: -->\n<li>Facts about great white sharks</li>\n<li>Facts about Hammerhead sharks</li>",
-								"preLang": "markup"
-							},
-							{
-								"li": "Usually the first heading is the page name or the overall heading, the second headings indicate the different sections"
-							},
-							{
-								"li": "Also have a look at the guidelines regarding <a href=\"headings\">headings for people with cognitive disabilities</a>."
-							}
-						]
+						"li": "Write the key information at the beginning.",
+						"pre": "<!-- DO: -->\n<li>Great White Shark Facts</li>\n<li>Hammerhead Shark Facts</li>\n<!-- DONT: -->\n<li>Facts about great white sharks</li>\n<li>Facts about Hammerhead sharks</li>",
+						"preLang": "markup"
+					},
+					{
+						"li": "Usually the first heading is the page name or the overall heading, the second headings indicate the different sections"
+					},
+					{
+						"li": "Also have a look at the guidelines regarding <a href=\"headings\">headings for people with cognitive disabilities</a>."
 					}
 				]
 			},
@@ -1405,26 +1398,21 @@
 					},
 					{
 						"li": "Provide instructions that apply to the form when necessary. For example, indicate any required and optional input, allowable data formats, input format and timing limitations."
+					},
+					{
+						"li": "Always add labels. Use <code>for=\"\"</code> attributes matching the form fields ID. If the context is clear visually you might <a href=\"#Hiding-Elements\">visually hide</a> the labels or only add an <code>aria-label=\"Search\"</code> attribute. If IDs cannot be provided you might encapsulate the field with its label.",
+						"example": {
+							"pre": "<label for=\"exampleName\">Name:</label>\n<input type=\"text\" name=\"name\" id=\"exampleName\">\n<!-- or -->\n<input type=\"email\" name=\"email\" aria-label=\"email:\">\n<!-- or -->\n<label>\n  Subscribe to newsletter: \n  <input type=\"checkbox\" name=\"subscribe\">\n</label>",
+							"preLang": "markup",
+							"play": "Listen ♫",
+							"audio": "Name:. -- Name:, edit text. -- Email:, edit text. -- Subscribe to newsletter:. -- Subscribe to newsletter:, checkbox."
+						}
+					},
+					{
+						"li": "Buttons don’t require labels but the if they have no text, then they need a <code>value=\"\"</code> attribute"
 					}
 				],
 				"subs": [
-					{
-						"title": "Labels",
-						"paragraphs": [
-							{
-								"li": "Buttons don’t require labels but the if they have no text, then they need a <code>value=\"\"</code> attribute"
-							},
-							{
-								"li": "Always add labels. Use <code>for=\"\"</code> attributes matching the form fields ID. If the context is clear visually you might <a href=\"#Hiding-Elements\">visually hide</a> the labels or only add an <code>aria-label=\"Search\"</code> attribute. If IDs cannot be provided you might encapsulate the field with its label.",
-								"example": {
-									"pre": "<label for=\"exampleName\">Name:</label>\n<input type=\"text\" name=\"name\" id=\"exampleName\">\n<!-- or -->\n<input type=\"email\" name=\"email\" aria-label=\"email:\">\n<!-- or -->\n<label>\n  Subscribe to newsletter: \n  <input type=\"checkbox\" name=\"subscribe\">\n</label>",
-									"preLang": "markup",
-									"play": "Listen ♫",
-									"audio": "Name:. -- Name:, edit text. -- Email:, edit text. -- Subscribe to newsletter:. -- Subscribe to newsletter:, checkbox."
-								}
-							}
-						]
-					},
 					{
 						"title": "Errors",
 						"paragraphs": [

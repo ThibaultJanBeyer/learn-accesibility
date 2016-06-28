@@ -18,7 +18,7 @@
 
 .toc__toggler {
   @include gradient;
-  width: 15px;
+  width: 20px;
   height: 100%;
   position: absolute;
 
@@ -31,7 +31,7 @@
   width: 30px;
 
   @include media('>large') {
-    width: 15px;
+    width: 20px;
   }
 }
 
@@ -72,28 +72,36 @@
 }
 
 /*
- * 1. To beautifully display an overflow scroll
+ * 1. beautifully display an overflow scroll
+ * 2. fix nav size bug (by removing width)
  */
 .toc__container {
   background: $white;
-  margin-left: 15px;
+  margin-left: 20px;
   max-height: 400px; /* 1. */
   max-height: calc(100vh - 80px); /* 1. */
+  max-width: 100%;
   overflow: auto; /* 1. */
   padding: 10px;
   transform: translateX(0);
-  transition: transform 0.5s;
+  transition: transform 0.5s, max-width 0.25s;
 
   @include media('>large') {
-    transform: translateX(-150%);
+    transform: translateX(-200%);
+    max-width: 1px; /* 2. */
   }
 }
 
+/*
+ * 1. fix nav size bug (by removing width)
+ */
 .toc__container--open {
-  transform: translateX(-150%);
+  transform: translateX(-200%);
+  max-width: 1px; /* 1. */
 
   @include media('>large') {
     transform: translateX(0);
+    max-width: 100%; /* 1. */
   }
 }
 
