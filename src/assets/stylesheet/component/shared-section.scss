@@ -9,6 +9,10 @@
   @include link-styles;
 }
 
+.section__strong {
+  font-weight: 700;
+}
+
 .section--sub {
   padding: 0 5px;
 }

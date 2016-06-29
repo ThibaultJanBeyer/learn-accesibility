@@ -7,6 +7,9 @@
 
 {% include "partials/shared/_global_skiplinks.html" %}
 
+{% import "partials/shared/_nav.html" as nav %}    
+{{ nav.nav(shared, route) }}
+
 <main class="site__content site__content--open" id="main" aria-label="Content">
 
   {% import "partials/shared/_toc.html" as toc %}    
@@ -16,9 +19,6 @@
   {{ section.section(route, shared) }}
 
 </main>
-
-{% import "partials/shared/_nav.html" as nav %}    
-{{ nav.nav(shared, route) }}
 
 <button type="button" class="site__toggler button" aria-hidden="true" role="presentation">
   <div class="site__toggler-bar"></div>

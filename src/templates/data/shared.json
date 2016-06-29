@@ -58,13 +58,8 @@
         },
         {
           "url": "selling.html",
-          "description": "selling",
-          "sr": "accessibility"
-        },
-        {
-          "url": "imprint.html",
-          "description": "imprint"
-        } 
+          "description": "selling accessibility"
+        }
       ]
     },
     "skipLinks": 

@@ -12,7 +12,6 @@
     siteToggler.classList.toggle('site__toggler--open');
   });
 
-
   var navLink = document.getElementsByClassName('nav__link');
 
   for (let i = 0; i < navLink.length; i++) {
@@ -26,13 +25,63 @@
   }
 
   // toc
-  var tocTogger = document.getElementsByClassName('toc__toggler')[0];
-  var tocContainer = document.getElementsByClassName('toc__container')[0];
+  if (document.getElementsByClassName('toc__toggler')[0]) {
+    // toggling
+    let tocToggler = document.getElementsByClassName('toc__toggler')[0];
+    let tocContainer = document.getElementsByClassName('toc__container')[0];
 
-  tocTogger.addEventListener('click', () => {
-    tocTogger.classList.toggle('toc__toggler--open');
-    tocContainer.classList.toggle('toc__container--open');
-  });
+    tocToggler.addEventListener('click', () => {
+      tocToggler.classList.toggle('toc__toggler--open');
+      tocContainer.classList.toggle('toc__container--open');
+    });
+
+    /*
+     * Check which sections the user is on to update the TOC flow accordingly
+     */
+    setTimeout(function() { // a small delay so that everything else is successfully rendered
+      // store the position of each section - 1/4 of the window height in an array
+      let sectionsPos = [];
+      [...document.getElementsByClassName('section__title')].forEach((e, i) => {
+        sectionsPos.push(e.offsetTop - window.innerHeight / 4);
+      });
+      sectionsPos.push(siteContent.offsetHeight);
+      
+      // store all Links in a variable.
+      let tocLinks = document.getElementsByClassName('toc__link');
+      // set a boolean that will see if we are scrolling
+      let scrolling = true;
+      // set that bool = true if we do
+      window.onscroll = () => { scrolling = true; };
+
+      // every x seconds check if a scroll has happened
+      setInterval(function() {
+        if (scrolling) {
+          // is so, then store the scroll position
+          let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+          
+          // and compare it to each sections position
+          for (let i = 0; i < tocLinks.length; i++) {
+            // store the corresponding link. How convenient, that we always have the same amout of links as sections
+            let tocLink = tocLinks[i];
+            // if it is within the range from the current one to the next one
+            if (scroll > sectionsPos[i] && scroll < sectionsPos[i + 1]) {
+              // give the link the current class 
+              tocLink.classList.add('toc__link--current');
+              tocLink.setAttribute('aria-label', 'current');
+              window.hash = tocLink.href;
+            } else {
+              // if it is not in range, then remove the class
+              tocLink.classList.remove('toc__link--current');
+              tocLink.removeAttribute('aria-label');
+            }
+          }
+        }
+        // and set the scrolling to false again until next scroll
+        scrolling = false;
+      }, 500);
+    }, 1000);
+
+  }
 
   /*
    * Objects
@@ -65,56 +114,13 @@
   }
 
   /*
-   * Check which sections the user is on to update the TOC flow accordingly
-   */
-  setTimeout(function() { // a small delay so that everything else is successfully rendered
-    // store the position of each section - 1/4 of the window height in an array
-    let sectionsPos = [];
-    [...document.getElementsByClassName('section__title')].forEach((e, i) => {
-      sectionsPos.push(e.offsetTop - window.innerHeight / 4);
-    });
-    sectionsPos.push(siteContent.offsetHeight);
-    
-    // store all Links in a variable.
-    let tocLinks = document.getElementsByClassName('toc__link');
-    // set a boolean that will see if we are scrolling
-    let scrolling = true;
-    // set that bool = true if we do
-    window.onscroll = () => { scrolling = true; };
-
-    // every x seconds check if a scroll has happened
-    setInterval(function() {
-      if (scrolling) {
-        // is so, then store the scroll position
-        let scroll = document.documentElement.scrollTop || document.body.scrollTop;
-        
-        // and compare it to each sections position
-        for (let i = 0; i < tocLinks.length; i++) {
-          // store the corresponding link. How convenient, that we always have the same amout of links as sections
-          let tocLink = tocLinks[i];
-          // if it is within the range from the current one to the next one
-          if (scroll > sectionsPos[i] && scroll < sectionsPos[i + 1]) {
-            // give the link the current class 
-            tocLink.classList.add('toc__link--current');
-            tocLink.setAttribute('aria-label', 'current');
-            window.hash = tocLink.href;
-          } else {
-            // if it is not in range, then remove the class
-            tocLink.classList.remove('toc__link--current');
-            tocLink.removeAttribute('aria-label');
-          }
-        }
-      }
-      // and set the scrolling to false again until next scroll
-      scrolling = false;
-    }, 500);
-  }, 1000);
-
-  /*
-   * Add linkclass to all links within text
+   * Add linkclass to all links within text and strongclass to all strong
    */
   [...document.querySelectorAll('.section a')].forEach((e) => {
     e.classList.add('section__link');
+  });
+  [...document.querySelectorAll('.section strong')].forEach((e) => {
+    e.classList.add('section__strong');
   });
 
   /*

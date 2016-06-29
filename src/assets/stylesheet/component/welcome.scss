@@ -1,5 +1,5 @@
 .welcome {
-  background: $fullBlack;
+  background: $full-black;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -21,7 +21,7 @@
   flex-wrap: wrap;
   height: 100%;
   margin-top: 30px;
-  text-shadow: 0 0 15px $fullBlack;
+  text-shadow: 0 0 15px $full-black;
   width: 100%;
 
   @include media('>small') {

@@ -1,0 +1,28 @@
+{
+  "selling":
+  {
+    "title": "Selling",
+    "subtitle": "Accessibility",
+    "letter": "S",
+    "intro": 
+    {
+      "p": "There is already enough work to do. We don’t have ressources to make our website accessible. The client is not paying us for that. Why put al this effort into making your website accessible when it’s such a small part of your audience? No disabled user is visiting our site anyways. – Yes, because of the anonymity an inaccessible website will failing silently. We can not see the impact. We can not see what we are missing. There are not enough studies that prove the positive benefits of accessibility. Maybe we haven’t met anyone with a disability yet and think, in our small bubble, that if we meet none, there is none. All this leads to people seeing accessibility as something that stands in the way of their goal. Let’s change that! Here are some facts why that small extra effort is worth it.",
+      "ul":
+      [
+        "<strong>It is the right thing to do</strong>: the web should not be a priviledge for only a few. Enhancing the life of others should always be something to strive for.",
+        "<strong>It is law</strong>: in many countries, when working on any public project, it is mandatory that this project is accessible for everyone. Check on your country laws.",
+        "<strong>You get more clients</strong>: there are a lot of clients who care about accessibility since their target group is made of users with disabilities. Or one of their relatives or friends or coworkers has a disability. Or they require it by law. In all these scenarios they will be looking for someone who has some accessibility as reference.",
+        "<strong>You earn more money</strong>: beside getting more clients, accessibility will give the clients you have a sales boost and thus they should pay you more.",
+        "<strong>More users</strong>: visual accessibility alone covers more than 7&nbsp;million people which is twice the population of los angeles. Let’s say only 1% will ever see your or your clients business, you’re still missing out on 70&nbsp;000 users. And that’s only the visual accessibility part. Taking all disabilities into consideration then we are not talking about a small marginal group anymore but you’ll affect the live of around every second human beeing this planet.",
+        "<strong>More sales</strong>: can you imagine how difficult it is for someone with any disability to go into a store shopping? However, if websites are accessible, it is by far more convenient to go buy product online.",
+        "<strong>Your SEO Page ranking rise</strong>: i.e. the google website crawler is by default blind, deaf, dislexic, ADHD and Keyboard-only user. Those bots profit from good accessibility and will rank accessible websites better than inaccessible ones.",
+        "<strong>General user experience increases</strong>: accessibility enhances usability and the user experience not only for the disabled user but for everyone."
+      ],
+      "paragraphs":
+      [
+        "Open up the web for everyone!",
+        "}&#x3C;ttt*&#x3E;"
+      ]
+    }
+  }
+}
