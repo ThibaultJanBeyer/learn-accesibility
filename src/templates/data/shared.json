@@ -49,16 +49,17 @@
       "options":
       [
         {
-          "url": "index.html",
-          "description": "home"
-        },
-        {
           "url": "welcome.html",
           "description": "intro"
         },
         {
+          "url": "index.html",
+          "description": "home"
+        },
+        {
           "url": "selling.html",
-          "description": "selling it"
+          "description": "selling",
+          "sr": "accessibility"
         },
         {
           "url": "imprint.html",

@@ -144,7 +144,7 @@ function animationEnd() {
       }, 200);
     });
   }
-};
+}
 
 function mouseMove(hoverX, hoverY, objects) {
   let halfWidth = window.innerWidth / 2;
@@ -178,4 +178,4 @@ function mouseMove(hoverX, hoverY, objects) {
 
     }
   }
-};
+}
