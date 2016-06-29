@@ -7,16 +7,12 @@
 .home-nav__options {
   background: $white;
   box-shadow: 0 10px 40px 0 $black03;
+  margin: -50px auto;
   max-width: 320px;
-  margin: auto;
-
-  @include media('>small') {
-    max-width: 400px;
-    padding: $gutter--xlarge;
-  }
 
   @include media('>medium') {
     max-width: 641px;
+    margin: auto;
     padding: $gutter--xlarge;
   }
 }
