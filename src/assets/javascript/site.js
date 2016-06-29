@@ -1,5 +1,12 @@
 (function () { if( R_SITE ){
 
+  let loading = document.getElementsByClassName('loading');
+  setTimeout(function() { // timeout to get rid of strange firefox flickering bug... 
+    for (let i = 0; i < loading.length; i++) {
+      loading[i].classList.add('loaded');
+    }
+  }, 500);
+
   /*
    * Navigation
    */
@@ -17,10 +24,7 @@
   for (let i = 0; i < navLink.length; i++) {
     navLink[i].addEventListener('click', () => {
       let clicked = this;
-      for (let i = 0; i < navLink.length; i++) {
-        navLink[i].classList.remove('nav__link--selected');
-      }
-      clicked.classList.add('nav__link--selected');
+      navLinkClick({clicked, navLink, loading});
     });
   }
 
@@ -127,7 +131,7 @@
    * Examples
    */
   var menuItems = document.querySelectorAll('.exampleButton');
-  for(var i = 0; i < menuItems.length; i++) {
+  for(let i = 0; i < menuItems.length; i++) {
     menuItems[i].addEventListener('click',  function(e){
       var button = this;
       var buttonText = button.querySelector('.visuallyhidden');
@@ -149,5 +153,14 @@
       }
     });
   }
-
 }})();
+
+function navLinkClick({ clicked, navLink, loading }) {
+  for (let i = 0; i < navLink.length; i++) {
+    navLink[i].classList.remove('nav__link--selected');
+  }
+  for (let i = 0; i < loading.length; i++) {
+    loading[i].classList.remove('loaded');
+  }
+  clicked.classList.add('nav__link--selected');
+}

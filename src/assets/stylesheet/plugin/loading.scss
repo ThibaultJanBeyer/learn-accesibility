@@ -1,0 +1,19 @@
+.loading--opacity {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.loading--opacity.loaded {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.loading--flyLeft {
+  transform: translateX(-120%);
+  transition: transform 0.5s;
+}
+
+.loading--flyLeft.loaded {
+  transform: translateX(0);
+  transition: transform 0.5s;
+}

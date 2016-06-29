@@ -5,7 +5,7 @@
 {% include "partials/shared/_section_intro.html" %}
 
 {% for section in page.sections %}
-<section role="region" class="section anchor--aria-labelledby" data-aria-labelledby="{{ section.title }}">
+<section role="region" class="section anchor--aria-labelledby loading loading--opacity" data-aria-labelledby="{{ section.title }}">
   <a href="{{ shared.contribute }}" class="section__contribute"><span class="visuallyhidden">Contribute to this section</span>✎</a>
   <h2 class="section__title copy anchor--add edit--add">
     {{ section.title }}
