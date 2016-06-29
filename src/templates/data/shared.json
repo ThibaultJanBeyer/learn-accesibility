@@ -14,7 +14,7 @@
     {
       "title": "Main menu",
       "selected": "current:",
-      "options": 
+      "options":
         [
           {
             "url": "visual.html",
@@ -41,6 +41,30 @@
             "sr": "accessibility"
           }
         ] 
+    },
+    "subnav":
+    {
+      "title": "Secondary navigation",
+      "selected": "current:",
+      "options":
+      [
+        {
+          "url": "index.html",
+          "description": "home"
+        },
+        {
+          "url": "welcome.html",
+          "description": "intro"
+        },
+        {
+          "url": "selling.html",
+          "description": "selling it"
+        },
+        {
+          "url": "imprint.html",
+          "description": "imprint"
+        } 
+      ]
     },
     "skipLinks": 
     {

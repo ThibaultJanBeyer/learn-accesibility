@@ -74,7 +74,7 @@ function animationEnd() {
   /*
    * Leaving animation
    */
-  var links = document.getElementsByTagName('a');
+  var links = document.getElementsByClassName('home-nav__link');
   var linkContainers = document.getElementsByClassName('home-nav__link-container');
   var linkHolders = document.getElementsByClassName('home-nav__link-holder');
   var homeLeaveringTargets = document.getElementsByClassName('home-leaving__target');

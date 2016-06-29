@@ -22,7 +22,6 @@
 
 .home__content {
   @include gradient;
-  @include vertical-rhythm($gutter--large);
   height: 100%;
   overflow: auto;
   overflow-x: hidden;
@@ -39,6 +38,7 @@
 .home__title {
   @include heading($mega, $primary-family, 700);
   color: $primary;
+  margin-top: $gutter;
   text-align: center;
   text-shadow: 5px 10px 10px $black03;
   text-transform: uppercase;

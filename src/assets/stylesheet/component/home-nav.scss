@@ -1,30 +1,27 @@
 .home-nav {
   @include vertical-rhythm;
   max-width: 760px;
-  margin: 0 auto $gutter--xlarge;
+  margin: auto;
 }
 
 .home-nav__options {
   background: $white;
   box-shadow: 0 10px 40px 0 $black03;
-  margin: -50px auto;
+  margin: auto;
   max-width: 320px;
 
   @include media('>medium') {
     max-width: 641px;
-    margin: auto;
     padding: $gutter--xlarge;
   }
 }
 
 .home-nav__option {
   height: 320px;
-  margin: $gutter--xlarge auto;
   width: 320px;
 
   @include media('>medium') {
     display: inline-block;
-    margin: 0;
   }
 }
 

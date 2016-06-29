@@ -36,6 +36,26 @@
 }
 
 /**
+ * Colored Background
+ */
+@mixin link-styles-background {
+  background-image: linear-gradient(to top, transparent 0%, transparent 2%, $blue 2%, $blue 6%, transparent 6%, transparent 100%);
+  color: $blue;
+  text-decoration: none;
+  text-shadow: 1px 0 $secondary, -1px 0 $secondary, -2px 0 $secondary, 2px 0 $secondary;
+
+  &:visited {
+    color: $blue;
+  }
+
+  &:hover,
+  &:focus {
+    background-image: none;
+    text-decoration: underline;
+  }
+}
+
+/**
  * Menu Link styles
  */
 @mixin link-styles-menu {
@@ -52,8 +72,4 @@
     text-decoration: none;
   }
 }
-
-/**
- * Link styles toc.
- */
 

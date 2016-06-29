@@ -1,0 +1,16 @@
+<!-- nunjucks home sub navigation -->
+
+<nav class="home-subnav" role="navigation" aria-labelledby="submenu">
+  <h2 id="submenu" class="visuallyhidden">{{ shared.subnav.title }}</h2>
+  <ul class="home-subnav__options">
+    {% for option in shared.subnav.options %}
+    {% if loop.index != 1 %}
+      <li class="home-subnav__option">
+        <a href="{{ option.url }}" class="home-subnav__link">
+          {{ option.description | safe }}
+        </a>
+      </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
