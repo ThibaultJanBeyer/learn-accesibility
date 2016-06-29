@@ -13,11 +13,22 @@
   overflow: auto;
 }
 
+.nav__container--secondary {
+  bottom: 0;
+  height: auto;
+  position: absolute;
+  width: 100%;
+}
+
 .nav__link {
   @include link-styles-menu;
   height: 100%;
   width: 100%;
   padding: 20px 0;
+}
+
+.nav__link--secondary {
+  padding: 10px 0;
 }
 
 .nav__link--selected {
