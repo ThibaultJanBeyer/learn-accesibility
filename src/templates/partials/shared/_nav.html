@@ -25,7 +25,7 @@
       {% for option in shared.subnav.options %}
       
       <li>
-        <a href="{{ option.url }}" class="nav__link nav__link--secondary center-align">
+        <a href="{{ option.url }}" class="nav__link nav__link--secondary center-align {{ 'nav__link--selected' if option.title == key.letter }}">
           <div class="nav__link-container">
             <p class="nav__link-description copy">
               {{ option.description | safe }} <span class="visuallyhidden">{{ option.sr }}</span>
