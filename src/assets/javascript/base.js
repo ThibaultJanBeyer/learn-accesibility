@@ -9,7 +9,6 @@ const BODYCONTAINER = (WELCOME || HOME ? document.getElementsByClassName('body__
 
 // Routes
 if ( WELCOME ) {
-  const BODYCONTAINER = document.getElementsByClassName('body__container')[0];
   const R_WELCOME = true;
 } else if ( SITE ) {
   const R_SITE = true;

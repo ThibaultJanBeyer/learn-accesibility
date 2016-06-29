@@ -74,12 +74,15 @@ function animationEnd() {
   /*
    * Leaving animation
    */
-  var links = document.getElementsByClassName('home-nav__link');
-  var linkContainers = document.getElementsByClassName('home-nav__link-container');
-  var linkHolders = document.getElementsByClassName('home-nav__link-holder');
-  var homeLeaveringTargets = document.getElementsByClassName('home-leaving__target');
-  var homeContent = document.getElementsByClassName('home__content')[0];
+  let links = document.getElementsByClassName('leaving-animation');
+  let linkContainers = document.getElementsByClassName('leaving-animation__container');
+  let linkHolders = document.getElementsByClassName('leaving-animation__holder');
+  let homeLeaveringTargets = document.getElementsByClassName('home-leaving__target');
+  let homeContent = document.getElementsByClassName('home__content')[0];
 
+  /*
+   * Normal Leaving
+   */
   for (let i = 0; i < links.length; i++) {
     // set the holder size = the container size
     // we will use it later to position elements before moving them
@@ -88,60 +91,10 @@ function animationEnd() {
     linkHolders[i].style.height = linkContainers[i].offsetHeight + 'px';
 
     // add the click listener to the links
-    links[i].addEventListener('click', function (e) {
+    links[i].addEventListener('click', function(e) {
+      let aLink = this;
+      leavingAnimation({linkContainers, aLink, linkHolders, homeContent, homeLeaveringTargets});
       e.preventDefault(); // prevent default pageleaving
-      var aLink = this;
-
-      for (let i = 0; i < linkContainers.length; i++) {
-        let el = linkContainers[i];
-        // give the containers a fixed position
-        el.style.position = 'fixed';
-        // move the now fixed containers to their original position 
-        mover(el, linkHolders[i], (element, xT, yT, xE, yE) => {
-          element.style.left = xT + 'px';
-          element.style.top = (yT - homeContent.scrollTop) + 'px';
-        });
-      }
-      // delay needed for mover to work properly
-      setTimeout(function () {
-        // add the leaving class, 'home-leaving.scss' will handle all the rest
-        BODY.classList.add('leaving');
-
-        for (let i = 0; i < linkContainers.length; i++) {
-          let target = homeLeaveringTargets[i];
-          let element = linkContainers[i];
-          // move the elements to the targets
-          mover(element, target);
-        }
-
-        // move the selection to the right item
-        setTimeout(function() {
-          homeContent.classList.add('top');
-          if (aLink.classList.contains('L')) {
-            homeContent.style.top = '110px';
-          } else if (aLink.classList.contains('P')) {
-            homeContent.style.top = '220px';
-          } else if (aLink.classList.contains('C')) {
-            homeContent.style.top = '330px';
-          }
-
-          // duplicate the elements
-          // move the elements to the outer DOM position to remove weird flickering bug in chrome
-          let temp = linkContainers.length - 1;
-          for (let i = 0; i < temp; i++) {
-            let element = linkContainers[i];
-            let target = homeLeaveringTargets[i];
-            let clone = document.importNode(element, true);
-            BODY.appendChild(clone);
-            mover(clone, target);
-          }
-
-          setTimeout(function() {
-            // go to location
-            window.location.href = aLink.href;
-          }, 1000);
-        }, 2500);
-      }, 200);
     });
   }
 }
@@ -178,4 +131,60 @@ function mouseMove(hoverX, hoverY, objects) {
 
     }
   }
+}
+
+function leavingAnimation({ linkContainers, aLink, linkHolders, homeContent, homeLeaveringTargets }) {
+  for (let i = 0; i < linkContainers.length; i++) {
+    let el = linkContainers[i];
+    // give the containers a fixed position
+    // move the now fixed containers to their original position 
+    mover(el, linkHolders[i], (element, xT, yT, xE, yE) => {
+      element.style.position = 'fixed';
+      element.style.left = xT + 'px';
+      element.style.top = (yT - homeContent.scrollTop) + 'px';  
+    });
+  }
+  // delay needed for mover to work properly
+  setTimeout(function () {
+    // add the leaving class, 'home-leaving.scss' will handle all the rest
+    BODY.classList.add('leaving');
+
+    for (let i = 0; i < linkContainers.length; i++) {
+      let target = homeLeaveringTargets[i];
+      let element = linkContainers[i];
+      // move the elements to the targets
+      mover(element, target);
+    }
+
+    // move the selection to the right item
+    let size = BODYCONTAINER.offsetWidth;
+    setTimeout(function() {
+      homeContent.classList.add('top');
+      if (aLink.classList.contains('L')) {
+        homeContent.style.top = (size > 800) ? '130px' : '85px';
+      } else if (aLink.classList.contains('P')) {
+        homeContent.style.top = (size > 800) ? '235px' : '165px';
+      } else if (aLink.classList.contains('C')) {
+        homeContent.style.top = (size > 800) ? '345px' : '245px';
+      } else if (aLink.classList.contains('S')) {
+        homeContent.style.top = 'calc(100% - 60px)';
+      }
+
+      // duplicate the elements
+      // move the elements to the outer DOM position to remove weird flickering bug in chrome
+      let temp = linkContainers.length - 1;
+      for (let i = 0; i < temp; i++) {
+        let element = linkContainers[i];
+        let target = homeLeaveringTargets[i];
+        let clone = document.importNode(element, true);
+        BODY.appendChild(clone);
+        mover(clone, target);
+      }
+
+      setTimeout(function() {
+        // go to location
+        window.location.href = aLink.href;
+      }, 1000);
+    }, 2500);
+  }, 200);
 }

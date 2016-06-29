@@ -481,7 +481,7 @@
 	"selling": {
 		"title": "Selling",
 		"subtitle": "Accessibility",
-		"letter": "s",
+		"letter": "S",
 		"intro": {
 			"p": "There is already enough work to do. We don’t have ressources to make our website accessible. The client is not paying us for that. Why put al this effort into making your website accessible when it’s such a small part of your audience? No disabled user is visiting our site anyways. – Yes, because of the anonymity an inaccessible website will failing silently. We can not see the impact. We can not see what we are missing. There are not enough studies that prove the positive benefits of accessibility. Maybe we haven’t met anyone with a disability yet and think, in our small bubble, that if we meet none, there is none. All this leads to people seeing accessibility as something that stands in the way of their goal. Let’s change that! Here are some facts why that small extra effort is worth it.",
 			"ul": [
@@ -545,15 +545,16 @@
 			"selected": "current:",
 			"options": [
 				{
-					"url": "welcome.html",
-					"description": "intro"
-				},
-				{
+					"title": "H",
 					"url": "index.html",
 					"description": "home"
 				},
 				{
-					"title": "s",
+					"url": "welcome.html",
+					"description": "intro"
+				},
+				{
+					"title": "S",
 					"url": "selling.html",
 					"description": "selling accessibility"
 				}

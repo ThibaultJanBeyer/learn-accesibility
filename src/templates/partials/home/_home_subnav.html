@@ -4,11 +4,15 @@
   <h2 id="submenu" class="visuallyhidden">{{ shared.subnav.title }}</h2>
   <ul class="home-subnav__options">
     {% for option in shared.subnav.options %}
-    {% if loop.index != 2 %}
+    {% if option.title != 'H' %}
       <li class="home-subnav__option">
-        <a href="{{ option.url }}" class="home-subnav__link">
-          {{ option.description | safe }}
-        </a>
+        <div class="home-nav__link-holder leaving-animation__holder">
+          <div class="home-nav__link-container leaving-animation__container">
+            <a href="{{ option.url }}" class="home-subnav__link {{ option.title }} {{ 'leaving-animation' if option.title == 'S' else 'leaving-animation-2' }}">
+              {{ option.description | safe }}
+            </a>
+          </div>
+        </div>
       </li>
     {% endif %}
     {% endfor %}

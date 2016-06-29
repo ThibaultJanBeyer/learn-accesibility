@@ -47,6 +47,15 @@
   }
 }
 
+.home-leaving__target:nth-child(5) {
+  bottom: 75px;
+  right: 75px;
+}
+
+.home-leaving__target:nth-child(6) {
+  bottom: 45px;
+  right: 95px;
+}
 
 .leaving .home {
   // scss-lint:disable ImportantRule
@@ -63,15 +72,16 @@
 /*
  * 1. have a nice break
  */
-.leaving .home-nav__link-description {
+.leaving .home-nav__link-description,
+.leaving .home-subnav__link {
   @include font-size-responsive($delta);
   padding: 0 6px; /* 1. */
   transition: font-size 1s, padding 1s;
 }
 
-.leaving .home-nav__link-container {
+.leaving .leaving-animation__container {
   min-width: 60px;
-  position: fixed;
+  text-align: center;
   transition: top 1s 0.5s, left 1s 0.5s, position 0.5s;
   z-index: 3;
 }
@@ -80,18 +90,23 @@
   overflow: hidden;
   position: fixed;
   width: 120px;
-  height: 110px;
+  height: 85px;
   right: 0;
   top: 0;
   padding: 0;
   transition: width 1s 1.5s, height 1s 1.5s, right 1s 1.5s, padding 1s 1.5s;
+
+  @include media('>medium') {
+    height: 110px;
+  }
 
   &.top {
     transition: top 1s;
   }
 }
 
-.leaving .home-nav__options {
+.leaving .home-nav__options,
+.leaving .home-subnav__options {
   background: transparent;
   box-shadow: none;
   transition: background 1s, box-shadow 1s;
@@ -105,9 +120,15 @@
   transition: opacity 1s, visibility 0.5s 0.5s;
 }
 
-.leaving .home-nav__link:hover,
-.leaving .home-nav__link:focus {
+.leaving .leaving-animation,
+.leaving .leaving-animation-2,
+.leaving .leaving-animation:hover,
+.leaving .leaving-animation:focus {
+  background-image: none;
   background: transparent;
+  color: $black !important;
+  text-decoration: none !important;
+  text-shadow: none;
   transition: background 1s;
 }
 
@@ -119,9 +140,14 @@
   height: 100%;
   top: 0;
   left: -150%;
+  z-index: 999999;
 }
 
 .leaving .home-leaving__contentfaker {
-  left: -100px;
+  left: 5px;
   transition: left 1s 3s;
+
+  @include media('>medium') {
+    left: -100px;
+  }
 }

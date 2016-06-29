@@ -28,7 +28,7 @@ function mover(elements, target, callback, endCallback){
   var xT = target.offsetLeft, yT = target.offsetTop, xE, yE;
   // is there are several elements
   if (elements.length > 0) {
-    myLoop({ cd: elements.length - 1, dur: 10, cu: 0 }, (cd, dur, cu) => {
+    myLoop({ cd: elements.length - 1, dur: 5, cu: 0 }, (cd, dur, cu) => {
       // store the elements coordinate
       xE = elements[cu].offsetLeft;
       yE = elements[cu].offsetTop;
