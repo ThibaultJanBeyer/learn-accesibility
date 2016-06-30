@@ -183,7 +183,7 @@ function leavingAnimation({ linkContainers, aLink, linkHolders, homeContent, hom
 
       setTimeout(function() {
         // go to location
-        window.location.href = aLink.href;
+        window.location.href = aLink.getAttribute('href');
       }, 1000);
     }, 2500);
   }, 200);

@@ -32,6 +32,7 @@ The "backend" (where textual content is pulled from) is found in these json file
 @ Possibility to Fold-Unfold the Table of Contents  
 @ Even smoother animations  
 @ Double check if the given examples are correct and make sense  
+@ Add a possibility to search the site  
   
 // Visual  
 @ Test with different Screen Readers  
