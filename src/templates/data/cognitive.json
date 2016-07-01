@@ -6,7 +6,11 @@
     "letter": "C",
     "intro": 
     {
-      "p": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. He may use ad/image blockers or other noise reducing tools and/or custom styles to overwrite the default styles. <a href=\"http://www.dyslexia-international.org/wp-content/uploads/2016/04/DI-Duke-Report-final-4-29-14.pdf\">According to Dislexia International</a> more than one out of 10 people and <a href=\"http://www.adhd-institute.com/burden-of-adhd/epidemiology/\">according to the ADHD Institute</a> ~6% of all children and ~3% of all adults have Attention Deficit Disorders. Accessibility in general but especially the cognitive accessibility improves general usability."
+      "p": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. He may use ad/image blockers or other noise reducing tools and/or custom styles to overwrite the default styles. <a href=\"http://www.dyslexia-international.org/wp-content/uploads/2016/04/DI-Duke-Report-final-4-29-14.pdf\">According to Dyslexia International</a> more than one out of 10 people and <a href=\"http://www.adhd-institute.com/burden-of-adhd/epidemiology/\">according to the ADHD Institute</a> ~6% of all children and ~3% of all adults have Attention Deficit Disorders. Every aspects of accessibility and especially the cognitive accessibility improve general usability.",
+      "ul":
+      [
+        "Users with cognitive disabilities are distracted very fast, have difficulties reading text and might quickly forget what they just read/did."
+      ]
     },
     "sections": 
     [
@@ -15,10 +19,13 @@
         "paragraphs": 
         [
           {
-            "li": "Since people with cognitive disabilities are distracted very fast, it is important that the main contents’ headline has a distinct visual style that invites the user to look at the main content first."
+            "p": "Since users with cognitive disabilities are distracted very fast, it is important that the main contents’ headline has a distinct visual style that invites the user to look at the main content first."
           },
           {
             "li": "Headings should have a different style than normal text or buttons, they should also serve as visual anchors and structuring elements."
+          },
+          {
+            "li": "Also, have a look at headings for <a href=\"visual.html#Headings\">Visual Accessibility</a>."
           }
         ]
       },
@@ -27,15 +34,18 @@
         "paragraphs": 
         [
           {
-            "li": "Keep your tables as simple as possible. If you have complex data, use several tables instead of one to represent it."
+            "p": "Complex tables often overwork users with cognitive disabilities. That is why you should keep your tables as simple as possible. If you have complex data, use several tables instead of one to represent it."
           },
           {
             "li": "To reduce confusion: give each element its own cell. Give table data a different look to table headings."
           },
           {
-            "li": "Zebra tables is a good idea for longer tables so that the user don’t get lost.",
+            "li": "Using zebra tables is a good idea for longer tables so that the user doesn’t get lost.",
             "pre": ".table-row:nth-child(2n) {\n  background-color: rgba(0, 0, 0, 0.5);\n}",
             "preLang": "css"
+          },
+          {
+            "li": "Also, have a look at tables for <a href=\"visual.html#Tables\">Visual Accessibility</a>."
           }
         ]
       },
@@ -44,25 +54,30 @@
         "paragraphs": 
         [
           {
-            "li": "A somewhat recent <a href=\"http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf\">study</a> has proven that sans-serif, roman and monospaced fonts have the best readability on screen while italic sonts decrease the readability. What roman and monospaced fonts have in comon is that usually they usually have letters of larger size and their letters differ stongly from each other; their characters (i.e. b, d, q, p) are not just flipped versions of each other. So it is adviced to use sans-serif, roman or monospaced fonts for copy text, that ideally have distinct characters."
+            "p": "A somewhat recent <a href=\"http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf\">study</a> has proven that sans-serif, roman and monospaced fonts have the best readability on screen while italic typefaces decrease the readability. What roman and monospaced fonts have in common is that they usually have letters of larger size and their letters differ strongly from each other; their characters (i.e. b, d, q, p) are not just flipped versions of each other. So it is advised to use sans-serif, roman or monospaced fonts for copy text, that ideally have distinct characters.",
+            "imgs":
+            [
+              {
+                "src": "assets/img/examples/cognitive/font1_0.png",
+                "alt": "",
+                "caption": "Example of sans-serif, roman and monospaced typefaces. However, roman fonts <a href=\"http://www.angelfire.com/tn3/writing/DesignUsersReadDis.pdf\">might also be hard to read</a>. Probably depending on the quality of the screen. You should stick to sans-serif or monospaced fonts for now."
+              }
+            ]
           },
           {
             "li": "As the user might replace your styles with custom stylesheets, you should avoid using text within images and avoid using <code>!important</code> in your css files."
           },
           {
-            "li": "The main text should be aligned on the left (in left-to-right languages)."
+            "li": "The main text should be aligned on the left (in left-to-right languages). Users with cognitive disabilities have difficulties reading center or right aligned text."
           },
           {
             "li": "<code>font-size</code> should not be smaller than 12pt and Lines of text not wider than 60-80 characters (helps users that have trouble keeping their place when reading long lines of text)."
           },
           {
-            "li": "Justified text should be avoided. Justifications create more unconsistant whitespace wich is a real problem for people with dislexia and a headache for everyone else. In some extreme cases lines seem to move around. Moreover, different Browsers treat justifications differently which gives you no control over your text."
+            "li": "<a href=\"http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/\">Justified text should be avoided</a>. Justifications create more inconsistent whitespace which is a real problem for people with dyslexia and a headache for everyone else. In some extreme cases lines seem to move around. Moreover, different Browsers treat justifications differently, which gives you no control over your text."
           },
           {
-            "li": "Also centered text is hard to read for people with cognitive disabilities and should be avoided."
-          },
-          {
-            "li": "While sentences should be kept short: 10-15 words a sentence is likely to be comfortable, paragraphs can be somewhat longer: around 5 sentences long is considered easy to read."
+            "li": "While sentences should be kept short: 10-15 words, paragraphs can be somewhat longer: around 5 sentences long is considered easy to read."
           },
           {
             "li": "Pure white on pure black will cause text to blur for people with cognitive disabilities. Use off-black text on an off-white background. This website uses <code>#191919</code> black and <code>#F6F6F6</code> white."
@@ -74,10 +89,13 @@
         "paragraphs": 
         [
           {
+            "p": "The navigation is an important element on a webpage. It helps the user orientate himself and also to find what he is looking for. That is why all accessibility sections have a Menu / Navigation section. Have a look at: <a href=\"visual.html#Navigation---Menus\">Visual</a>, <a href=\"vision.html#Menu---Navigation\">Low vision & Color</a> and <a href=\"physical-audio.html#Navigation---Menu\">Physical & Audio</a> part for a truly accessible navigation."
+          },
+          {
             "li": "The navigation should not change while navigating the website. It helps the user orientate."
           },
           {
-            "li": "The navigation should be as simple as possible and clearly indicate the current position (not only with color)."
+            "li": "The navigation should be as simple as possible and <a href=\"vision.html#Menu---Navigation-2\">clearly indicate the current position</a> (not only with color)."
           },
           {
             "li": "If there are many items a vertical menu should be preferred since it is easier to read one item a time. Often the main navigation is horizontal and the secondary vertical. Make sure, that the space between the links is high enough"
@@ -92,13 +110,12 @@
             "li": "Items containing a submenu should be marked in a way that is obvious. I.e. an arrow pointing down. A <a href=\"https://www.viget.com/articles/testing-accordion-menu-designs-iconography\">study</a> has shown that icons placed on the left are understood faster."
           },
           {
-            "li": "Also centered text is hard to read for people with cognitive disabilities and should be avoided."
-          },
-          {
             "li": "Thorough the whole website, all pages should have elements that are consistent: the overall look and feel, the global navigation and a consistent presentation of information."
           },
           {
-            "li": "Lastly, clearly indicate the hover/focus state, the items should change so that users know exactly where they are."
+            "li": "Lastly, clearly indicate the hover/focus state, the items should change so that users know exactly where they are.",
+            "pre": ".interactive-element {\n  color: blue;\n  text-decoration: underline;\n}\n\n.interactive-element:hover,\n.interactive-element:focus {\n  color: deepskyblue;\n  text-decoration-style: double;\n}",
+            "preLang": "css"
           }
         ],
         "subs":
@@ -108,10 +125,10 @@
             "paragraphs":
             [
               {
-                "li": "Is a good practice for longer text to have some kind of table of content. It helps the user to orient themselves, to quickly find the content they want and to be able to socially share the exact right part of the website."
+                "p": "It is a good practice for longer text to have some kind of table of content. It helps the user to orientate themselves, quickly find the content they seek and to be able to socially share the exact part of the website."
               },
               {
-                "li": "If possible, give a visual clue that there are anchorpoints. I.e. on this website they are indicated by anchor symbols."
+                "li": "If possible, give a visual clue that there are anchor-points. I.e. on this website they are indicated with the anchor symbols which gives the user a possibility to store and share specific parts of the website."
               }
             ]
           },
@@ -120,10 +137,15 @@
             "paragraphs":
             [
               {
-                "li": "It is a good practice to provide breadcrumbs on websites that have more than one or two levels of navigation."
+                "p": "It is a good practice to provide breadcrumbs on websites that have more than one or two levels of navigation."
               },
               {
-                "li": "Links in a breadcrumb navigation show a trail from the front page to the current page, with a link to every page on the way. Usually separated by arrows. The current page should not be linked and be the last item in the list."
+                "li": "Links in a breadcrumb navigation show a trail from the front page to the current page, with a link to every page on the way. Usually separated by arrows. The current page should not be linked and be the last item in the list. Here is how an accessible breadcrumb could look like (as seen on <a href=\"visual.html#Breadcrumbs\">Visual Accessibility</a>)",
+                "example":
+                {
+                  "pre": "<nav class=\"breadcrumb\" role=\"navigation\" aria-label=\"You are here:\">\n  <a href=\"#link\">Home</a>\n  >\n  <a href=\"#link\">About Sharks</a>\n  >\n  <span class=\"visuallyhidden\">Current:</span> Hammerhead Shark Facts.\n</nav>\n",
+                  "preLang": "markup"
+                }
               }
             ]
           },
@@ -132,10 +154,15 @@
             "paragraphs":
             [
               {
-                "li": "Providing a sitemap is usually a good practice on large websites. It can help users to understand what the site contains and how content is organized. It should list all links and their relation. A good example it the <a href=\"https://www.w3.org/WAI/sitemap.html\">WAI Sitemap</a>."
+                "p": "Providing a sitemap is usually a good practice for complex websites. It can help users to understand what the site contains and how content is organized. It should list all links and their relation. A good example, is the <a href=\"https://www.w3.org/WAI/sitemap.html\">WAI Sitemap</a>."
               },
               {
-                "li": "The possibility to search for content on your website should almost always be available. It helps users to find content and is often more efficient than going through the navigation. The ideal search provides suggestions that allows synonyms and spell-checks."
+                "li": "The possibility to search for content on your website should be available if possible. It helps users to find content and is often more efficient than going through the navigation. The ideal search provides suggestions that allow synonyms and check the spelling. This is how an accessible searchbar could look like (as seen on <a href=\"visual.html#Structure-3\">Visual Accessibility</a>):",
+                "example":
+                {
+                  "pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
+                  "preLang": "markup"
+                }
               }
             ]
           }
@@ -146,19 +173,21 @@
         "paragraphs":
         [
           {
-            "li": "Avoid text on patterns, no matter how sublte the pattern is. It makes it more difficult to see the words shape."
+            "p": "Avoid text on patterns, no matter how subtle the pattern is. It makes it more difficult to see the words shape."
           },
           {
-            "li": "Adding meaningful images, that add value to the content, break long sections and give visual markers to quickly find meaningful content is a good idea."
+            "li": "Using images, that add value to the content, break long sections and give visual markers is generally a good idea."
           },
           {
-            "li": "Adding icons to navigation elements can help dislexic users as well, so they don’t have to read text to find what they are looking for."
+            "li": "Adding icons to navigation elements can help dyslexic users as well. They won’t have to read text to find what they are looking for."
           },
           {
-            "li": "Animated images are strongly distracting for everyone. They can be a complete turnoff for people with dyslexia. So, they should only be used very carefully. The best solution is to give your users the control over such elements by only playing the animation when requested. For <code>.gif</code> images, <a href=\"https://github.com/krasimir/gifffer\">gifffer</a> is a usefull tool. Otherwise, give your animated images enough space from the content so that they can be hidden by scrolling further down."
+            "li": "Animated images are strongly distracting for everyone. They can be a complete turnoff for people with dyslexia. So, they should be used with care. The best solution is to give your users control over such elements by only playing the animation when requested. For <code>.gif</code> images, <a href=\"https://github.com/krasimir/gifffer\">gifffer</a> is a useful tool. Otherwise, give your animated images enough space from the content so that they can be hidden by scrolling further down.",
+            "pre": "Add example of giffer",
+            "preLang": "markup"
           },
           {
-            "li": "Remember that complex images can be difficult to understand by many people. So, providing long descriptions benefits many people and thus is a good practice. However, if it is possible to reduce your images complexity, do it.",
+            "li": "Remember that complex images can be difficult to understand by many people. So, providing long descriptions, benefits many people and thus is a good practice. However, if it is possible to reduce the images complexity, do it.",
             "pre": "<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london, described in detail below.\"\n    longdesc=\"#chart-longdesc\">\n  <figcaption id=\"chart-longdesc\">\n    <h2>Values</h2>\n    <table>\n      [...]\n    </table>\n  </figcaption>\n</figure>",
             "preLang": "markup"
           }
@@ -300,7 +329,7 @@
             "li": "Sadly we could not find any testing tools for cognitive accessibility. However, as most of the rules to improve cognitive accessibility are the same than the rules for usability of a website, it is adviced to gather information on general usability. Start by looking at the references below."
           },
           {
-            "li": "References/Ressources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://simplyaccessible.com/article/googles-no-captcha/\">Simply Accessible</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a>, <a href=\"http://www.uxmatters.com/\">usmatters</a> <a href=\"http://www.dyslexia-reading-well.com/dyslexia-font.html\">Dislexia Reading Well</a>, <a href=\"https://bdatech.org/\">BDA-Tech</a>, <a href=\"http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf\">Study: good fonts for dislexia</a>, <a href=\"https://uxmag.com/\">UX Magazine</a>, <a href=\"http://uxmyths.com/\">uxmyths</a>, <a href=\"http://ux.stackexchange.com/\">ux.stackexchange</a>, <a href=\"https://www.reddit.com/r/userexperience/\">Reddit</a>."
+            "li": "References/Ressources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://simplyaccessible.com/article/googles-no-captcha/\">Simply Accessible</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a>, <a href=\"http://www.uxmatters.com/\">usmatters</a> <a href=\"http://www.dyslexia-reading-well.com/dyslexia-font.html\">Dyslexia Reading Well</a>, <a href=\"https://bdatech.org/\">BDA-Tech</a>, <a href=\"http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf\">Study: good fonts for dyslexia</a>, <a href=\"https://uxmag.com/\">UX Magazine</a>, <a href=\"https://www.viget.com/articles\">viget</a> <a href=\"http://uxmyths.com/\">uxmyths</a>, <a href=\"http://ux.stackexchange.com/\">ux.stackexchange</a>, <a href=\"https://www.reddit.com/r/userexperience/\">Reddit</a>."
           },
           {
             "p": "Open up the web for everyone!"

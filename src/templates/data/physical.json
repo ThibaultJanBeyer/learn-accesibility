@@ -139,7 +139,7 @@
             "li": "All elements, including the drop-down should be accessible using just the keyboard."
           },
           {
-            "li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a best practice. That way the user do not have to traverse a lot of elements, but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus.",
+            "li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a best practice. That way the user do not have to traverse a lot of elements, but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus. You can try it out by traversing this example using the tab key.",
             "pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
             "preLang": "javascript",
             "example":
