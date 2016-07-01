@@ -284,7 +284,7 @@
 						"p": "Open up the web for everyone!"
 					},
 					{
-						"p": "}&#x3C;ttt*&#x3E;"
+						"p": "}&#x3C;)))*&#x3E;"
 					}
 				]
 			}
@@ -295,17 +295,17 @@
 		"subtitle": "& audio Accessibility",
 		"letter": "P",
 		"intro": {
-			"p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use his keyboard only and/or special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of all american adults report having troubles hearing. Also, <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">according to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf bus also covers public places where the user might not be able to use audio. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eyetracking software or the like."
+			"p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use only his keyboard and/or have special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of all American adults report having troubles hearing. <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">According to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf users, but covers public places where the user might not be able to use audio as well. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eye-tracking software."
 		},
 		"sections": [
 			{
 				"title": "Basics",
 				"paragraphs": [
 					{
-						"li": "While background music can be ignored, any important audio content should have captions and/or visual equivalents i.e. visual alerts for live feeds."
+						"li": "While background music can be ignored, any important audio content should have captions and/or visual equivalents."
 					},
 					{
-						"li": "Use visual bells when captioning does not make sense. I.e. a flashing/blinking element and/or blinking text in browsertabs."
+						"li": "Use visual bells when captioning does not make sense: i.e. add visual alerts on a chat (blinking browser tab, blinking chat window)."
 					}
 				]
 			},
@@ -313,22 +313,33 @@
 				"title": "Videos",
 				"paragraphs": [
 					{
-						"p": "Add captions of high quality to your videos. The caption should be in sync with the spoken content, the people who are speaking should be indentified when they speak and the important sounds should be included (i.e. footsteps approaching, doors opening, water boiler overheating)."
-					},
-					{
-						"li": "The captions should be placed on a banner with distinctive background to be able to read it at any time. If it is only floating text, it might sometimes have bad contrast with its background."
+						"p": "Add captions of high quality to your videos. The caption should be in sync with the spoken content, the people who are speaking should be identified when they speak and the important sounds should be included (i.e. footsteps approaching, doors opening, water boiler overheating)."
 					},
 					{
 						"li": "Make sure that the captions do not cover up important parts of the video."
 					},
 					{
-						"li": "Style your captions so that they are easy to read. A common mistake is using all caps white text on black background. That is awefully difficult to read. The same principles as for normal text apply to captions. The most readable is a highly readable typeface in <a href=\"vision.html#Typography-2\">off-black on off-white</a> background."
+						"li": "Style your captions so that they are easy to read. A common mistake is using all caps white text on full black background. That is awfully difficult to read. The same principles as for normal text apply to captions. Use a highly readable typeface on an opaque background. If the text is floating, it might sometimes have a bad contrast with the background.",
+						"imgs": [
+							{
+								"src": "assets/img/examples/audio/video1_0.png",
+								"alt": "Quote: “You talkin' to me?” from taxi driver.",
+								"caption": "White text on off-black background."
+							}
+						]
 					},
 					{
-						"li": "Style sounds differently than spoken content. I.e. write your sounds in italic."
+						"li": "Style sounds differently than spoken content. I.e. write your sounds in italic.",
+						"imgs": [
+							{
+								"src": "assets/img/examples/audio/video1_1.png",
+								"alt": "* foodsteps * from a horror movie.",
+								"caption": "Italic text with asterisks to indicate sounds."
+							}
+						]
 					},
 					{
-						"li": "It is a good practice to add transcripts for videos & Audio. Doing so, not only people with hearing deficits and cognitive disabilities will benefit from it but also everyone who preffers reading over watching."
+						"li": "It is a good practice to add transcripts for videos & Audio. Doing so, everyone who prefers reading over watching will benefit from it."
 					}
 				]
 			},
@@ -336,20 +347,20 @@
 				"title": "Forms",
 				"paragraphs": [
 					{
-						"li": "Make sure that all elements can be accessed by tabbing and are in the right order. Usually users expect content to be read from left to right, top to bottom."
+						"p": "Make sure that all elements can be accessed with the keyboard by using the tab-key. Make sure that the elements are in the right order. In our western world, the user expects content to be read from left to right, top to bottom."
 					},
 					{
-						"li": "One field per line is way easier to navigate."
+						"li": "One field per line is easier to navigate than multiple fields on one line."
 					},
 					{
-						"li": "The standart for radio buttons is to be able to use arrow keys to select the right one. This should be implemented by default when using the <code>fieldset</code> tag. Here is an example of accessible radio buttons borrowed from <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
+						"li": "Radio buttons should be able to traverse using the arrow keys. This is implemented by default when using the <code>fieldset</code> tag. Here is an example of accessible radio buttons borrowed from <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
 						"example": {
 							"pre": "<fieldset>\n  <legend>Choose a shipping method:</legend>\n  <input id=\"overnight\" type=\"radio\" name=\"shipping\" value=\"overnight\">\n  <label for=\"overnight\">Overnight</label>\n\n  <input id=\"twoday\" type=\"radio\" name=\"shipping\" value=\"twoday\">\n  <label for=\"twoday\">Two day</label>\n\n  <input id=\"ground\" type=\"radio\" name=\"shipping\" value=\"ground\">\n  <label for=\"ground\">Ground</label>\n</fieldset>",
 							"preLang": "markup"
 						}
 					},
 					{
-						"li": "If you have too many options, use a dropdown list. It can be selected by typing the first letters so make sure that the information at the start is not redundant so that the elements can be selected as fast as possible. Another example via <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
+						"li": "If there are many options, use a drop-down list. It can be selected by typing the first letters so make sure that the information at the start is not redundant. Elements should be selected as fast as possible. Here is an example via <a href=\"http://webaim.org/techniques/forms/controls\">WebAIM</a>:",
 						"example": {
 							"pre": "<label for=\"favcity\">Choose your favorite city:</label>\n<select id=\"favcity\" name=\"select\">\n  <option value=\"1\">Amsterdam</option>\n  <option value=\"2\">Berlin</option>\n  <option value=\"3\">Delhi</option>\n  <option value=\"4\">Hong Kong</option>\n  <option value=\"5\">London</option>\n  <option value=\"6\">New York</option>\n  <option value=\"7\">Sao Paulo</option>\n  <option value=\"8\">Tokyo</option>\n</select>",
 							"preLang": "markup"
@@ -360,6 +371,9 @@
 					},
 					{
 						"li": "There shouldn’t be any timeout when filling in forms or the like, if there has to be, then be generous with the time, be clear that there is a timer and what the consequences will be."
+					},
+					{
+						"p": "Also have a look on forms for <a href=\"visual.html#Forms\">Visual</a>, <a href=\"vision.html#Forms\">Low Vision & Color</a> and <a href=\"cognitive.html#Forms\">Cognitive Accessibility</a>."
 					}
 				]
 			},
@@ -367,7 +381,7 @@
 				"title": "Popups",
 				"paragraphs": [
 					{
-						"p": "Popups are often a nightmare for usability, especially when they open easily (i.e. on hover or focus). They often break the reading flow and are hard to close (i.e. to small close button or not closable via keyboard). However, if done right, popups can add value to a page as for giving more information without leaving the page."
+						"p": "Popups can be a nightmare, especially when they open easily (on hover or focus). They often break the reading flow and are hard to close (to small close button or not closable via keyboard). However, if done right, popups can add value to a page. I.e. giving more information without leaving the page."
 					},
 					{
 						"li": "Popups should be easy to close and should only open if the user wants them to."
@@ -376,10 +390,10 @@
 						"li": "If a popup is opened the first thing that has focus should be the close button. Also, it is a good idea to “trap” the focus within its popup until closed. This mimics the normal behaviour and prevents the keyboard user from losing focus."
 					},
 					{
-						"li": "The user should be able to close popups by hitting the esc button."
+						"li": "The user should be able to close popups by hitting the <code>esc</code> button."
 					},
 					{
-						"li": "Hugo Giraudel did quite a good job on <a href=\"https://github.com/edenspiekermann/a11y-dialog\">an accessible popup</a> for edenspiekermann_."
+						"li": "Hugo Giraudel did quite a good job creating an <a href=\"https://github.com/edenspiekermann/a11y-dialog\">accessible popup</a> for edenspiekermann_."
 					}
 				]
 			},
@@ -387,22 +401,24 @@
 				"title": "Navigation & Menu",
 				"paragraphs": [
 					{
-						"p": "Complex navigation hurt everyones usability. Reduce your navigation to a minimun."
+						"p": "Complex navigation hurt everyones usability. Reduce your navigation to a minimum."
 					},
 					{
-						"li": "Don’t remove the focus outline.. Avoid messing around with the tabindex. All usable elements have to be tabable."
+						"li": "You may style the focus outline the way you want but don’t remove it. Avoid messing around with the <code>tabindex</code>. All usable elements have to be accessible via keyboard."
 					},
 					{
-						"li": "Indicate the current page in your menu."
+						"li": "Indicate the current position in your menu <a href=\"visual.html#Breadcrumbs-2\">semantically</a> and <a href=\"vision.html#Menu---Navigation-2\">visually</a>."
 					},
 					{
-						"li": "Have clear hover & focus states on your interactive elements. Try doing more than just a simple colorchange."
+						"li": "Have clear hover & focus states on your interactive elements. Try doing more than just a simple color change.",
+						"pre": ".interactive-element {\n  color: blue;\n  text-decoration: underline;\n}\n\n.interactive-element:hover,\n.interactive-element:focus {\n  color: deepskyblue;\n  text-decoration-style: double;\n}",
+						"preLang": "css"
 					},
 					{
-						"li": "All elements including the drop-down should be usable with the keyboard."
+						"li": "All elements, including the drop-down should be accessible using just the keyboard."
 					},
 					{
-						"li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a best practice. That way the user do not have to taverse a lot of elements but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus.",
+						"li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a best practice. That way the user do not have to traverse a lot of elements, but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus.",
 						"pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
 						"preLang": "javascript",
 						"example": {
@@ -419,18 +435,18 @@
 						"title": "Drop Downs",
 						"paragraphs": [
 							{
-								"p": "If possible try to reduce the complexity of your navigation before implementing drop downs."
+								"p": "If possible, try to reduce the complexity of your navigation before implementing drop downs."
 							},
 							{
-								"li": "Usually Submenus are individual lists <code>ul</code> or <code>ol</code>, nested in the parent’s list item <code>li</code>."
+								"li": "Usually Submenus are individual lists <code>ul</code> or <code>ol</code>, nested in the parents list item <code>li</code>."
 							},
 							{
-								"li": "Drop downs should stay dropped down once activated or have a tolerance for a wavering mouse. This way prevents the menu from unintentionally closing when used by people with reduced dexterity. Same holds true for all appearing/disappearing elements. On this website an easy CSS technique was used to show/hide the link anchors with a delay. Here is a simplified example:",
+								"li": "Drop downs should stay dropped down once activated or have a tolerance for a wavering mouse. This way prevents the menu from unintentionally closing when used by people with reduced dexterity. The same holds true for all appearing/disappearing elements. On this website an easy CSS technique was used to show/hide the link anchors with a delay. Here is a simplified example:",
 								"pre": "/*\n * 1. the second number is the animations delay\n */\n.anchor {\n  opacity: 0;\n  transition: opacity 0.5s 0.5s; /* 1. */\n}\n\n/*\n * 1. overwrite the delay and show it immediately\n *  if the element is not hovered (thus on blur) \n *  the rule above takes effect and add a delay\n */\n.anchor--li:hover .anchor,\n.anchor--li:focus .anchor {\n  opacity: 1;\n  transition: opacity 0.5s; /* 1. */\n}",
 								"preLang": "css"
 							},
 							{
-								"li": "Don’t open the submenu as soon as the focus enters the top-level menu item. A keyboard don’t want to step through all the submenu links to get to the next top-level item. One way would is that the top level is actually not a link but just an opener for the elements below. If this top level item should remain a real link you can delay the drop down on focus so that the user would be able to quickly fly over it. However, that comes with the disadvantage that the user will have to rest some time before seeing the subnav. Another solution would be to have the being able to navigate through the menu using the arrow keys. Left and right to navigate the top buttons then down and up to access the drop down. That is quite a bit tricky to code and some users might not get it. The easiest and probably best solution is to add, additionally to the hover of the whole item, a separate “show submenu” button (i.e. an arrowhead) that is accessible and will toggle the submenu. Here is an example:",
+								"li": "Don’t open the submenu as soon as the focus enters the top-level menu item. A keyboard-only user doesn’t want to step through all the submenu links to get to the next top-level item. One way would be that the top level is actually not a link, but just a toggling button. If this top level item should remain a link to a page you can delay the drop down on focus so that the user would be able to quickly fly over it. Then, however, the user will have to wait some time before seeing the subnav when he actually wants to open it. Another solution is to be able to navigate through the menu using the arrow keys. Left and right to navigate the top buttons, down and up to access the sub-links. That is quite tricky to code and some users might not understand it. The easiest and probably best solution is to add a separate “show submenu” button (i.e. an arrowhead) that is accessible and will toggle the submenu. Here is an example:",
 								"pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly we have to set the focus on the first link element,\n      // otherwise screenreader do not notice the change\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
 								"preLang": "javascript",
 								"example": {
@@ -444,13 +460,13 @@
 						"title": "Scrolling",
 						"paragraphs": [
 							{
-								"li": "The Horizontal Scroll is a <a href=\"https://www.nngroup.com/articles/horizontal-scrolling/\">challenge for most users</a> and becomes an even greater pain for people with unsteady hands. Moreover, some modern browser Hide scrollbars which makes it even more difficult."
+								"p": "Horizontal Scrolling is a <a href=\"https://www.nngroup.com/articles/horizontal-scrolling/\">challenge for most users</a> and becomes an even greater pain for people with unsteady hands. Moreover, some modern browser hide the scrollbar which makes it even more difficult."
 							},
 							{
-								"li": "In general, users ignore horizontal scrolling even if there are arrows. Also the more on the right the content is the less it will be seen. If you still use horizontal scroll, always indicate how many items are hidden."
+								"li": "In general, users ignore horizontal scrolling even if there are arrows. Also the more on the right the content is, the less it will be seen. If you still use horizontal scroll, always indicate how many items are hidden."
 							},
 							{
-								"li": "Also vertical scrolling is not always obvious. I.e. when having a full height header image, a lot of users do not know that they can actually scroll. So, provide a visual hint."
+								"li": "Also, vertical scrolling is not always obvious. I.e. when having a full height header image, a lot of users do not notice that they can actually scroll. So, provide a visual hint."
 							}
 						]
 					}
@@ -463,7 +479,7 @@
 						"p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project via github."
 					},
 					{
-						"li": "Actually, no useful automatic testing tools were found. Lucky, that testing for physical & audio disabilities is not a big deal:<br>1. Use your website with your keyboard only and see if every element is accessible.<br>2. Silulate an unsteady cursor by slightly shaking your mouse while using your page. See if everything is still easily usable (element sizes and appear/dissappear)<br>3. Turn your devices audio off to check for audio issues."
+						"li": "Actually, no useful automatic testing tools was found. Luckily, testing for physical & audio disabilities is not a big deal:<br>1. Use your website with your keyboard only and see if every element is accessible.<br>2. Simulate an unsteady cursor by slightly shaking your mouse while using your page. See if everything is still easily usable (element sizes + appear/disappear)<br>3. Turn your audio off to check for audio issues."
 					},
 					{
 						"li": "References/Ressources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://verticalchallenge.org/\">Vertical Challenge</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
@@ -472,7 +488,7 @@
 						"p": "Open up the web for everyone!"
 					},
 					{
-						"p": "}&#x3C;ttt*&#x3E;"
+						"p": "}&#x3C;)))*&#x3E;"
 					}
 				]
 			}
@@ -497,7 +513,7 @@
 			"paragraphs": [
 				"Open up the web for everyone!",
 				"This project is open source. Do you want to <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a>?",
-				"}&#x3C;ttt*&#x3E;"
+				"}&#x3C;)))*&#x3E;"
 			]
 		}
 	},
@@ -599,7 +615,7 @@
 		"subtitle": "& Color Accessibility",
 		"letter": "L",
 		"intro": {
-			"p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses don’t help or are not worn) and/or sees colors differently. He may adjust the settings of his monitor, might use a screen magnifier or custom stylesheet but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the european population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8,5% of the US population is affected by colorblindness. Compared to a city that would be more than three times the population of New York. This section focuses on the partially sighted wo don’t use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
+			"p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses don’t help or are not worn) and/or sees color differently. He may adjust the settings of his computer monitor, might use a screen magnifier or custom stylesheet, but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the European population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8,5% of the US population are affected by color-blindness. Compared to a city that would be more than three times the population of New York. This section focuses on the partially sighted that don’t use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
 			"table": {
 				"caption": "types of color blindness",
 				"heads": [
@@ -649,10 +665,10 @@
 						"li": "Make sure that your images are of adequate resolution."
 					},
 					{
-						"li": "Users will increase the general page size. When increasing the Zoom it is like decreasing the screen size, thus a responsive design will cover this."
+						"li": "Users will increase the general page size. When increasing the Zoom it is like decreasing the screen size, thus a responsive design is needed."
 					},
 					{
-						"li": "Always have in mind that some users cannot differenciate/see colors."
+						"li": "Always have in mind that some users cannot differentiate colors."
 					}
 				]
 			},
@@ -660,44 +676,44 @@
 				"title": "Graphical elements",
 				"paragraphs": [
 					{
-						"p": "Important graphical elements with high failure potential are image with text, maps, diagrams and graphs. Those should always <a href=\"#Testing---ressources\">be tested</a> against the various types."
+						"p": "Important graphical elements with high failure potential are images with text, maps, diagrams and graphs. Those should always <a href=\"#Testing---ressources\">be tested</a> against the various types."
 					},
 					{
-						"li": "For graphs and maps a legend/key tested against the various types should be provided. <a href=\"http://colorbrewer2.org/\">Colorbrewer</a> is a tool that provides you with a colorbling friendly color palette."
+						"li": "For graphs and maps a legend/key tested against the various types should be provided. <a href=\"http://colorbrewer2.org/\">Colorbrewer</a> is a tool that provides you with a color-blind friendly color palette."
 					},
 					{
 						"li": "Not solely rely on colors, whenever possible also give other visual clues as the style, thickness, luminance/shades, contrast."
 					},
 					{
-						"li": "Users should be able to zoom into the page to see details in visual elements. Your images should scale as well. So make sure that your images are of adequate resolution. Find a good balance between loading time and resolution. Compress your images i.e. with <a href=\"https://tinypng.com/\">tiny png</a>. It might also be helpful to <a href=\"https://en.wikipedia.org/wiki/Lazy_loading\">lazyload</a> your graphical ressources or to use different images based on the window size."
+						"li": "Users should be able to zoom into the page to see details in visual elements. Your images should scale as well. So, make sure that your images are of adequate resolution. Find a good balance between loading time and resolution. Compress your images, i.e. with <a href=\"https://tinypng.com/\">tiny png</a>. It might also be helpful to <a href=\"https://en.wikipedia.org/wiki/Lazy_loading\">lazyload</a> your graphical resources and/or to use different image resolutions based on the viewport size."
 					},
 					{
-						"li": "If you have a layer of text ontop of your images, make sure that the contrast does not solely rely on colors. Some contrasts might be perfect for us but are a nightmare for color blind users:",
+						"li": "If you have a layer of text on-top of your images, make sure that the contrast does not solely rely on colors. Some contrasts might be perfect for us, but are a nightmare for color blind users:",
 						"imgs": [
 							{
 								"src": "assets/img/examples/vision/images1_0.png",
 								"alt": "Red on Green contrast.",
-								"caption": "Users with <code>Deuteranopia</code> will have difficulties with red on green and vice versa."
+								"caption": "Users with <code>Deuteranopia</code> have difficulties with red on green and vice versa."
 							},
 							{
 								"src": "assets/img/examples/vision/images1_1.png",
 								"alt": "Red on Green contrast.",
-								"caption": "Also users with <code>Protanopia</code> will have difficulties with red on green and vice versa."
+								"caption": "Users with <code>Protanopia</code> have difficulties with red on green and vice versa."
 							},
 							{
 								"src": "assets/img/examples/vision/images1_2.png",
 								"alt": "Blue on Yellow contrast.",
-								"caption": "Users with <code>Tritanopia</code> will have difficulties with a blue and yellow combination."
+								"caption": "Users with <code>Tritanopia</code> have difficulties with a blue and yellow combination."
 							},
 							{
 								"src": "assets/img/examples/vision/images1_3.png",
 								"alt": "Green on Blue with the same brightness.",
-								"caption": "For users with <code>Monochromacy</code> colors with simmiliar brightness will blend."
+								"caption": "For users with <code>Monochromacy</code> colors with similiar brightness will blend."
 							}
 						]
 					},
 					{
-						"li": "Have a contrast of 4.5:1 on your colors. Snook made a <a href=\"https://snook.ca/technical/colour_contrast/colour.html#fg=FFFFFF,bg=000000\">handy tool</a> to check your color contrasts."
+						"li": "Have a contrast of 4.5:1 on your colors. Jonathan Snook made a <a href=\"https://snook.ca/technical/colour_contrast/colour.html#fg=FFFFFF,bg=000000\">handy tool</a> to check your color contrasts."
 					}
 				]
 			},
@@ -705,30 +721,37 @@
 				"title": "Typography",
 				"paragraphs": [
 					{
-						"p": "If you want that people actually read what you write a good typography is crucial."
+						"p": "If you want that users actually read what you write a good typography is crucial. Beside this section, have a look at the <a href=\"cognitive.html#Text---Typography\">Typography for Cognitive Accessibility</a>."
 					},
 					{
-						"li": "A common false belief is that full black on full white is the best contrast. While the higher the contrast the better pure color combination are <a href=\"http://uxmovement.com/content/when-to-use-white-text-on-a-dark-background/\">actually very tiring</a> for the eye. Therefore, to reduce eye straint, use off black against off white. I.e. the text on this page is written in <code>#191919</code> black on <code>#F6F6F6</code> white."
+						"li": "A common false belief is that full black on full white is the best contrast. While the higher the contrast the better pure color combination are <a href=\"http://uxmovement.com/content/when-to-use-white-text-on-a-dark-background/\">actually very tiring</a> for the eye. Therefore, to reduce eye strain, use off-black against off-white. I.e. the text on this page is written in <code>#191919</code> black on <code>#F6F6F6</code> white.",
+						"imgs": [
+							{
+								"src": "assets/img/examples/vision/typo1_0.png",
+								"alt": "",
+								"caption": "Full contrast vs off-colors. High contrast, as black & white, can create a sense of vibration on the screen due to your monitors luminance and thus stress the eyes."
+							}
+						]
 					},
 					{
-						"li": "Some users will have their own stylesheet that overwrite yours. It is important to allow that. That is one of the reasons why you should avoid using the <code>!important</code> rule in your css, which can not be easily overwritten."
+						"li": "Some users use their own stylesheet to overwrite yours. It is important to allow that. That is one of the reasons why you should avoid using the <code>!important</code> key in your CSS, which is difficult to overwrite."
 					},
 					{
-						"li": "The user should be able to resize the text to 200% of its size anywhere on the page, without the text being cut off or overlapping other text. You can test this by increasing your browsers zoom. On firefox under view > zoom."
+						"li": "The user should be able to resize the text to 200% of the original size. This should work anywhere without the text being cut off, overlapping or pixelating. You can test this by increasing your browsers zoom. On Firefox under <code>view > zoom</code>."
 					},
 					{
-						"li": "While 12 pixels is a good reading size for printed documents, the font-size on screens should be higher. As a rule of thumb: between 16-18 for desktop and 12-14 on mobile."
+						"li": "While 12 pixels is a good reading size on printed documents, the font-size on screens should be higher since users usually sit further away from screens and because of irritations due to the screen luminance. As a rule of thumb: between 16-18 for desktop and 12-14 on mobile."
 					},
 					{
-						"li": "Usually links are blue with a 4.5:1 contrast because almost all users will be able to differenciate blue. However, people with Tritanopia and those seeing only in Monochrome will still not be able to identify them. That is why inline/in-text links need an underline to help people with low vision and colorblinds distinguish them from the rest of the text. Also, that is why no other underlining should be used on the page. However, this rule is not necessary on other elements i.e. menu items do not have to be underlined or colored if it is obvious that the element is a menu."
+						"li": "Usually links are blue with a 4.5:1 contrast because almost all users will be able to differentiate blue. However, users with Tritanopia and those seeing only in Monochrome will still have troubles. That is why inline/in-text links should have an underline to help distinguish them from the rest of the text. Also, that is why no other underlining should be used on the page. However, this rule is not necessary on other elements, i.e. menu items do not have to be underlined or colored if it is obvious that the element is a menu."
 					},
 					{
-						"li": "Make sure to have hover & focus states that differ the initial state of your interactive elements. Optimally not subtle and not only by color. Otherwise, the user might not get that he can operate the element.",
-						"pre": ".interactive-elment {\n  color: blue;\n  text-decoration: underline;\n}\n\n.interactive-elment:hover,\n.interactive-elment:focus {\n  color: red;\n  text-decoration: none;\n}",
+						"li": "Make sure to have hover & focus states that differ the initial state of your interactive elements. Optimally not subtle and not only by color. Otherwise, the user might not get that he can operate the element. Example:",
+						"pre": ".interactive-element {\n  color: blue;\n  text-decoration: underline;\n}\n\n.interactive-element:hover,\n.interactive-element:focus {\n  color: deepskyblue;\n  text-decoration-style: double;\n}",
 						"preLang": "css"
 					},
 					{
-						"li": "Due to resizing issues it is a good practice to not have any text as image. Use real text styled with CSS or SVG text."
+						"li": "Due to resizing issues it is a good practice to have any text as real text, not within an image. The best option right now is to style yout text with CSS."
 					}
 				]
 			},
@@ -736,10 +759,10 @@
 				"title": "Menu / Navigation",
 				"paragraphs": [
 					{
-						"p": "A menu server multiple purposes. To navigate a website but also to orientate the user."
+						"p": "A menu server multiple purposes. To navigate a website, but also to orientate the user. It is one of the websites key elements. Have a look at the navigation for <a href=\"visual.html#Navigation---Menus\">Visual</a>, <a href=\"physical-audio.html#Navigation---Menu\">Physical & Audio</a> and <a href=\"cognitive.html#Navigation\">Cognitive Accessibility</a>"
 					},
 					{
-						"li": "Indicate the page the user is currently on. Have another indicator than just color. Here you have a full background on the selected page and the sections in the table of content are highlighted by weigth and size."
+						"li": "Indicate the page the user is currently on. Have another indicator than just color. This website adds a background gradient on the current page and the current section in the table of content is highlighted by weight and size."
 					},
 					{
 						"li": "Avoid absolute sizing of elements. Use relative sizing so that the website adjusts as the screen size changes."
@@ -750,22 +773,22 @@
 				"title": "Forms",
 				"paragraphs": [
 					{
-						"p": "Your user should always be aware of where he is and what has to be done to achieve his goal."
+						"p": "The user should always know where he is and what he can do to achieve his goal. As the <a href=\"#Menu---Navigation\">navigation</a>, forms play a very important role on websites. That is why there are guidelines for <a href=\"visual.html#Forms\">Visual</a>,  <a href=\"visual.html#Forms\">Physical & Audio</a> and for <a href=\"visual.html#Forms\">Cognitive</a> Accessibility."
 					},
 					{
-						"li": "Position highlights may be styled but should never be removed. They should stay prominent and obvious. It is important for the user to know where he is, blinking cursor lines are easily overlooked."
+						"li": "Position highlights (as the focus outline) may be styled but should never be removed. They should stay prominent and obvious. It is important for the user to know where he is, blinking cursor lines are easily overlooked."
 					},
 					{
-						"li": "The fields with error should not only be highlighted with color. I.e. show a cross or exclamation on error and a checkmark on success."
+						"li": "Fields with error should not only be highlighted with color. I.e. you may add a cross or an exclamation mark to indicate error and a check-mark for success."
 					},
 					{
-						"li": "Add a summary of all errors on top of the page briefly explaining why there was an error and how to fix it. This ways the errors can not be overseen. Global error messages should have a title tag and errors listed in an ul or ol. Ideally the errors are be linked to the corresponding field and those indicated on click."
+						"li": "Add a summary of all errors on top of the page briefly explaining why there was an error and how to fix it. This way the errors cannot be overseen. Global error messages should have a <code>heading</code> and a <code>list</code> of errors. Ideally, errors are linked to the corresponding field."
 					},
 					{
-						"li": "It has somewhat become a standart to add asterisk to required fields. But you should still explain what those asterisk mean. You may just add the keyword “required”."
+						"li": "It has somewhat become a standard to add asterisks to required fields. You should still explain somewhere what they mean. You may instead just add the keyword “required” to the respective fields."
 					},
 					{
-						"li": "If you use background colors to indicate your errors, then make sure that everyone can see them. While black on red might be a bad idea, white on red has a very high contrast.",
+						"li": "If you use background colors to indicate errors, then make sure that everyone can see them. While black on red might be a bad idea, white on red has a very good contrast.",
 						"imgs": [
 							{
 								"src": "assets/img/examples/vision/forms1_0.png",
@@ -775,7 +798,7 @@
 							{
 								"src": "assets/img/examples/vision/forms1_1.png",
 								"alt": "White on red.",
-								"caption": "No user should have any difficulty with this contrast."
+								"caption": "Users should not have any difficulty with this contrast."
 							}
 						]
 					}
@@ -788,19 +811,19 @@
 						"p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project."
 					},
 					{
-						"li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down on having responsive websites and stylesheets that can be overwritten. Zoom your webpage and check for issues, on Firefox you’ll find the zoom under View > Zoom > Zoom In (CMD++)."
+						"li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down to responsive designs and stylesheets that can be overwritten. Zoom your page by 200% and check for common issues. On Firefox you’ll find the zoom under View > Zoom > Zoom In."
 					},
 					{
-						"li": "There are a lot of tools to test your websites on color blindness. The most popular ones are <a href=\"http://colororacle.org/\">Color Oracle</a> (lacks of tests for Monochromasy) and <a href=\"https://michelf.ca/projects/sim-daltonism/\">Sim Daltonism</a> (Mac only). There is also a popular <a href=\"http://colorfilter.wickline.org/\">webpage checker</a>. None of the tests is 100% accurate but they give you a good glimpse."
+						"li": "There is a lot of free tools to test your websites on color blindness. You should definitely grab one and use it. The most popular ones are <a href=\"http://colororacle.org/\">Color Oracle</a> (lacks of tests for Monochromasy) and <a href=\"https://michelf.ca/projects/sim-daltonism/\">Sim Daltonism</a> (Mac only). There is also a popular <a href=\"http://colorfilter.wickline.org/\">webpage checker</a>."
 					},
 					{
-						"li": "References/Ressources used to write this page: <br>The Standart:<br><a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>.<br>Other:</br> <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a>, <a href=\"http://www.somersault1824.com/blog/\">somersault1824</a>, <a href=\"http://www.colormatters.com/color-and-vision/color-and-vision-matters\">colormatters</a> <a href=\"http://www.uxmatters.com/\">uxmatters</a>, <a href=\"http://uxmovement.com/\">uxmovements</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
+						"li": "References/Ressources used to write this page: <a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>. <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a>, <a href=\"http://www.somersault1824.com/blog/\">somersault1824</a>, <a href=\"http://www.colormatters.com/color-and-vision/color-and-vision-matters\">colormatters</a> <a href=\"http://www.uxmatters.com/\">uxmatters</a>, <a href=\"http://uxmovement.com/\">uxmovements</a>, <a href=\"http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm\">Tigercolor</a>, <a href=\"http://www.pivotcomm.com/insights/a-guide-to-web-typography\">Pivots’ Blog</a>, the <a href=\"http://blog.thibaultjanbeyer.com/portfolio/quick-guide-to-web-typography/\">quick guide to web typography</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
 					},
 					{
 						"p": "Open up the web for everyone!"
 					},
 					{
-						"p": "}&#x3C;ttt*&#x3E;"
+						"p": "}&#x3C;)))*&#x3E;"
 					}
 				]
 			}
@@ -1124,13 +1147,13 @@
 							},
 							{
 								"li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually, but display them on focus to improve the usability of your page for keyboard users as well:",
-								"pre": "// Script to unhide Skip-links on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skip-links.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
+								"pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
 								"preLang": "javascript",
 								"example": {
-									"pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Skip annoying content to next item</a>\n<p>Annoying Content</p>\n<a href=\"#link\" id=\"linkNext\">Relevant Link</p>",
+									"pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Jump to wanted position</a>\n<p>Annoying content</p>\n<a href=\"#link\">Annoying Link</a>\n<p id=\"linkNext\">Next item</p>\n<a href=\"#link\">Wanted Link</p>",
 									"preLang": "markup",
 									"play": "Listen ♫",
-									"audio": "Item. -- Link, Skip annoying content to next item. -- Press link: Skip annoying content to next item -- Link, Relevant Link."
+									"audio": "Item. -- Link, Jump to wanted position. -- Press link: Jump to wanted position. -- Next item. -- Link, Wanted Link."
 								}
 							},
 							{
@@ -2008,7 +2031,7 @@
 						"p": "Open up the web for everyone!"
 					},
 					{
-						"p": "}&#x3C;ttt*&#x3E;"
+						"p": "}&#x3C;)))*&#x3E;"
 					}
 				]
 			}

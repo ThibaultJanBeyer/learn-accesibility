@@ -344,14 +344,14 @@
               },
               {
                 "li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually, but display them on focus to improve the usability of your page for keyboard users as well:",
-                "pre": "// Script to unhide Skip-links on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skip-links.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
+                "pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
                 "preLang": "javascript",
                 "example":
                 {
-                  "pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Skip annoying content to next item</a>\n<p>Annoying Content</p>\n<a href=\"#link\" id=\"linkNext\">Relevant Link</p>",
+                  "pre": "<p>Item</p>\n<a href=\"#linkNext\" class=\"visuallyhidden\">Jump to wanted position</a>\n<p>Annoying content</p>\n<a href=\"#link\">Annoying Link</a>\n<p id=\"linkNext\">Next item</p>\n<a href=\"#link\">Wanted Link</p>",
                   "preLang": "markup",
                   "play": "Listen ♫",
-                  "audio": "Item. -- Link, Skip annoying content to next item. -- Press link: Skip annoying content to next item -- Link, Relevant Link."
+                  "audio": "Item. -- Link, Jump to wanted position. -- Press link: Jump to wanted position. -- Next item. -- Link, Wanted Link."
                 }
               },
               {
@@ -1270,7 +1270,7 @@
             "p": "Open up the web for everyone!"
           },
           {
-            "p": "}&#x3C;ttt*&#x3E;"
+            "p": "}&#x3C;)))*&#x3E;"
           }
         ]
       }
