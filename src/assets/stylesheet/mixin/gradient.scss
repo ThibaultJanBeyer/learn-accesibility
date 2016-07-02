@@ -1,4 +1,0 @@
-@mixin gradient($from: $lime, $to: $aqua) {
-  background-color: $from; // fallback
-  background-image: linear-gradient($from, $to);
-}
