@@ -1,5 +1,5 @@
 #Contributions are more than welcome!
-Yes. Please contribute. It is such an important topic. Please help to make the world a better place for everyone.  
+Yes. This project is non-profit and open source. It is a very important to sensitize people for this open web topic. To do so, the project needs your contribution. Please help to make the web a better place for everyone.  
 Sure, there are some information sites as W3C and WebAIM, our websites aim however is to explain it better with more and easier to understand examples and a better user experience to help more people implementing accessibility in their workflow.  
 
 #How to?
