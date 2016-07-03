@@ -3,7 +3,7 @@ Yes. Please contribute. It is such an important topic. Please help to make the w
 Sure, there are some information sites as W3C and WebAIM, our websites aim however is to explain it better with more and easier to understand examples and a better user experience to help more people implementing accessibility in their workflow.  
 
 #How to?
-- It is not rocket science. However, before spending hours contributing, please be so kind and write a quick issue, asking if your contribution is welcome.   
+- It is not rocket science. However, before spending time contributing, please be so kind and write a quick issue, asking if your contribution is welcome.   
 - HOWEVER, if it is a small fix, i.e. of grammatical nature, please just make that fix straight away and it will be accepted.  
 - If you are adding a section not covered yet, please make sure to provide links to relevant sources supporting your attribution.  
 - If you want to make changes to the code itself, you are more than welcome to do so. Due to the short amount of time to realize this project the code suffered so nobody will be offended. Add a brief explanation why you would change it, if that makes sense we will change it.  
