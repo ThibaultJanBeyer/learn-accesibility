@@ -1,6 +1,8 @@
 # learn-accesibility
-A toolkit to learn web accessibility
+A platform to learn web accessibility
 
-(work in progress, ideally available in two weeks from today (3.Jul.16))
+available via [http://thibaultjanbeyer.github.io/learn-accesibility/](http://thibaultjanbeyer.github.io/learn-accesibility/)
 
-have a look at: [contribute.md](https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md).
+(work in progress, ideally fully presentable in two-three weeks from today (3.Jul.16))
+
+However, you can already contribute. Have a look at: [contribute.md](https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md).
