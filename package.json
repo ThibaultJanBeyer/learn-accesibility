@@ -15,6 +15,7 @@
     "gulp-concat": "*",
     "gulp-csso": "*",
     "gulp-data": "^1.2.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-htmlhint": "*",
     "gulp-htmlmin": "*",
     "gulp-imagemin": "*",
