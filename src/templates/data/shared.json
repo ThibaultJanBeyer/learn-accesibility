@@ -76,7 +76,7 @@
       "audio": "Screen reader",
       "example": "Code example",
       "skip": "skip code example to next item",
-      "warning": "> Note: ⇥ means that next element is only read when user press 'next item' button on his screen reader.<br> > Note: audio output when pressing on listen is not always accurate. But the text above these notes is."
+      "warning": "> Note: ⇥ = next element is only read when user press 'next item' button on screen reader.<br> > Note: audio output is not always accurate, but the text above these notes is."
     },
     "home":
     {

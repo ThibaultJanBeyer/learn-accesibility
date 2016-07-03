@@ -6,7 +6,7 @@
     "letter": "L",
     "intro": 
     {
-      "p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses don’t help or are not worn) and/or sees color differently. He may adjust the settings of his computer monitor, might use a screen magnifier or custom stylesheet, but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the European population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8,5% of the US population are affected by color-blindness. Compared to a city that would be more than three times the population of New York. This section focuses on the partially sighted that don’t use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
+      "p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses don’t help or are not worn) and/or sees color differently. He may adjust the settings of his computer monitor, might use a screen magnifier or custom stylesheet, but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the European population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8.5% of the US population are affected by color-blindness. Compared to a city that would be more than three times the population of New York. This section focuses on the partially sighted that don’t use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
       "table":
       {
         "caption": "types of color blindness",
@@ -221,13 +221,13 @@
             "li": "There is a lot of free tools to test your websites on color blindness. You should definitely grab one and use it. The most popular ones are <a href=\"http://colororacle.org/\">Color Oracle</a> (lacks of tests for Monochromasy) and <a href=\"https://michelf.ca/projects/sim-daltonism/\">Sim Daltonism</a> (Mac only). There is also a popular <a href=\"http://colorfilter.wickline.org/\">webpage checker</a>."
           },
           {
-            "li": "References/Ressources used to write this page: <a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>. <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a>, <a href=\"http://www.somersault1824.com/blog/\">somersault1824</a>, <a href=\"http://www.colormatters.com/color-and-vision/color-and-vision-matters\">colormatters</a> <a href=\"http://www.uxmatters.com/\">uxmatters</a>, <a href=\"http://uxmovement.com/\">uxmovements</a>, <a href=\"http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm\">Tigercolor</a>, <a href=\"http://www.pivotcomm.com/insights/a-guide-to-web-typography\">Pivots’ Blog</a>, the <a href=\"http://blog.thibaultjanbeyer.com/portfolio/quick-guide-to-web-typography/\">quick guide to web typography</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
+            "li": "References/Resources used to write this page: <a href=\"https://www.w3.org/WAI/WCAG20/quickref\">W3.org</a>, <a href=\"http://webaim.org/\">Webaim</a>. <a href=\"http://ux.stackexchange.com/questions/tagged/accessibility\">UX Stackexchange</a>, <a href=\"http://www.color-blindness.com/\">Color-Blindness</a>, <a href=\"http://www.somersault1824.com/blog/\">somersault1824</a>, <a href=\"http://www.colormatters.com/color-and-vision/color-and-vision-matters\">colormatters</a> <a href=\"http://www.uxmatters.com/\">uxmatters</a>, <a href=\"http://uxmovement.com/\">uxmovements</a>, <a href=\"http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm\">Tigercolor</a>, <a href=\"http://www.pivotcomm.com/insights/a-guide-to-web-typography\">Pivots’ Blog</a>, the <a href=\"http://blog.thibaultjanbeyer.com/portfolio/quick-guide-to-web-typography/\">quick guide to web typography</a> and <a href=\"https://www.reddit.com/r/ColorBlind/\">Reddit</a>."
           },
           {
             "p": "Open up the web for everyone!"
           },
           {
-            "p": "}&#x3C;)))*&#x3E;"
+            "p": "<a href=\"visual.html\">Visual</a> • Low Vision & Color • <a href=\"physical-audio.html\">Physical & Audio</a> • <a href=\"cognitive.html\">Cognitive</a> <br><a href=\"selling.html\">Selling Accessibility</a>"
           }
         ]
       }

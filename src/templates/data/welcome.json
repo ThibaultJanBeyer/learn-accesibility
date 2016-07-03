@@ -1,22 +1,22 @@
 {
   "welcome": {
       "title": "0. Why should you care?",
-      "screenReader": "Hello dear ScreenReader user, you are the best :)",
+      "screenReader": "Hello dear Screen-Reader user, you are the best :)",
       "skip": "skip intro",
       "writings": [
         {
-          "screenReader": "When you build a website or a webapp, you want it to be successfull. Right?",
+          "screenReader": "When you build a website, you want it to be successful. Right?",
           "texts": [
             "When you build a",
             "website,",
             "you want it to be",
-            "successfull.",
+            "successful.",
             "Right?"],
           "button": "YES",
           "img": "assets/img/wobble_success.gif"
         },
         {
-          "screenReader": "Then, why would you leave out eleven percent of the population?",
+          "screenReader": "Then, why would you leave out a huge part of the population?",
           "texts": [
             "Then, why would you leave out",
             "a huge part",
@@ -43,7 +43,7 @@
           "img": "assets/img/wobble_luv.gif"
         },
         {
-          "screenReader": "Accessibility is like opening your door.",
+          "screenReader": "Accessibility is just like opening your door.",
           "texts": [
             "Accessibility is just like",
             "opening",

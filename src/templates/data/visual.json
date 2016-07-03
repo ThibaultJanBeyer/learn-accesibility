@@ -6,7 +6,7 @@
     "letter": "V",
     "intro": 
     {
-      "p": "Visual Accessibility covers every user that is using a screen reader. This group the most pain points when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7,5 million people are blind or have a significant vision loss. That is approximately twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads the content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
+      "p": "Visual Accessibility covers every user that is using a screen reader. This group the most pain points when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7.5 million people are blind or have a significant vision loss. That is approximately twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads the content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
       "imgs":
       [
         {
@@ -1264,13 +1264,13 @@
             "li": "There are some automated testing tools as <a href=\"http://www.cynthiasays.com/\">CynthiaSays</a> and <a href=\"http://wave.webaim.org/\">WAVE</a> but because they cannot make judgment calls, they are not as good as a human testing. So, the best way to test your website for visual accessibility is to actually use a screen reader yourself. Now, as you don’t want to spend thousands of dollars, use the ones you can get for free. On a Mac OS you can use the built in <a href=\"https://www.apple.com/voiceover/info/guide/\">VoiceOver</a>. On a Windows OS there is <a href=\"http://www.nvaccess.org/\">NVDA</a>, which is backed by users and huge companies as Adobe and Google."
           },
           {
-            "li": "References/Ressources used to write this page: <br>The Standart: <a href=\"https://www.w3.org/TR/wai-aria/\">W3.org</a>, <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/\">MDN</a>, <a href=\"https://dev.opera.com/articles/introduction-to-wai-aria/\">dev.opera</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://www.section508.gov/content/learn\">Section508.gov</a>, <a href=\"https://www.paciellogroup.com/blog/\">Paciello Group</a> and <a href=\"https://www.w3.org/TR/WCAG20/\">WCAG 2.0</a>, <a href=\"https://www.w3.org/WAI/\">Web Accessibility Initiative</a>.<br>Other: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://www.standards-schmandards.com/\">Peter Krantz Blog</a>, <a href=\"http://4syllables.com.au/category/articles/accessibility/\">4syllables</a>, <a href=\"http://stackoverflow.com/questions/tagged/accessibility\">Stackoverflow</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
+            "li": "References/Resources used to write this page: <br>The Standart: <a href=\"https://www.w3.org/TR/wai-aria/\">W3.org</a>, <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/\">MDN</a>, <a href=\"https://dev.opera.com/articles/introduction-to-wai-aria/\">dev.opera</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://www.section508.gov/content/learn\">Section508.gov</a>, <a href=\"https://www.paciellogroup.com/blog/\">Paciello Group</a> and <a href=\"https://www.w3.org/TR/WCAG20/\">WCAG 2.0</a>, <a href=\"https://www.w3.org/WAI/\">Web Accessibility Initiative</a>.<br>Other: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://www.standards-schmandards.com/\">Peter Krantz Blog</a>, <a href=\"http://4syllables.com.au/category/articles/accessibility/\">4syllables</a>, <a href=\"http://stackoverflow.com/questions/tagged/accessibility\">Stackoverflow</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
           },
           {
             "p": "Open up the web for everyone!"
           },
           {
-            "p": "}&#x3C;)))*&#x3E;"
+            "p": "Visual • <a href=\"vision.html\">Low Vision & Color</a> • <a href=\"physical-audio.html\">Physical & Audio</a> • <a href=\"cognitive.html\">Cognitive</a> <br><a href=\"selling.html\">Selling Accessibility</a>"
           }
         ]
       }

@@ -6,7 +6,7 @@
     "letter": "C",
     "intro": 
     {
-      "p": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. He may use ad/image blockers or other noise reducing tools and/or custom styles to overwrite the default styles. <a href=\"http://www.dyslexia-international.org/wp-content/uploads/2016/04/DI-Duke-Report-final-4-29-14.pdf\">According to Dyslexia International</a> more than one out of 10 people and <a href=\"http://www.adhd-institute.com/burden-of-adhd/epidemiology/\">according to the ADHD Institute</a> ~6% of all children and ~3% of all adults have Attention Deficit Disorders. Every aspects of accessibility and especially the cognitive accessibility improve general usability.",
+      "p": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. He may use ad/image blockers or other noise reducing tools and/or custom styles to overwrite the default styles. <a href=\"http://www.dyslexia-international.org/wp-content/uploads/2016/04/DI-Duke-Report-final-4-29-14.pdf\">According to Dyslexia International</a> more than one out of 10 people and <a href=\"http://www.adhd-institute.com/burden-of-adhd/epidemiology/\">according to the ADHD Institute</a> ~6% of all children and ~3% of all adults have Attention Deficit Disorders. Every aspect of accessibility and especially the cognitive accessibility, improve general usability.",
       "ul":
       [
         "Users with cognitive disabilities are distracted very fast, have difficulties reading text and might quickly forget what they just read/did."
@@ -157,7 +157,7 @@
                 "p": "Providing a sitemap is usually a good practice for complex websites. It can help users to understand what the site contains and how content is organized. It should list all links and their relation. A good example, is the <a href=\"https://www.w3.org/WAI/sitemap.html\">WAI Sitemap</a>."
               },
               {
-                "li": "The possibility to search for content on your website should be available if possible. It helps users to find content and is often more efficient than going through the navigation. The ideal search provides suggestions that allow synonyms and check the spelling. This is how an accessible searchbar could look like (as seen on <a href=\"visual.html#Structure-3\">Visual Accessibility</a>):",
+                "li": "The possibility to search for content on your website should be available if possible. It helps users to find content and is often more efficient than going through the navigation. The ideal search provides suggestions that allow synonyms and check the spelling. This is how an accessible search-bar could look like (as seen on <a href=\"visual.html#Structure-3\">Visual Accessibility</a>):",
                 "example":
                 {
                   "pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
@@ -187,7 +187,7 @@
             "preLang": "markup"
           },
           {
-            "li": "Remember that complex images can be difficult to understand by many people. So, providing long descriptions, benefits many people and thus is a good practice. However, if it is possible to reduce the images complexity, do it.",
+            "li": "Remember that complex images can be difficult to understand by many people. So, providing long descriptions, benefits many people and thus is a good practice. However, if it is possible to reduce the image complexity, do it.",
             "pre": "<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london, described in detail below.\"\n    longdesc=\"#chart-longdesc\">\n  <figcaption id=\"chart-longdesc\">\n    <h2>Values</h2>\n    <table>\n      [...]\n    </table>\n  </figcaption>\n</figure>",
             "preLang": "markup"
           }
@@ -198,13 +198,13 @@
         "paragraphs":
         [
           {
-            "li": "Generally, sound should not play automatically. Give the user the choice to enable/disable sound."
+            "p": "In generally, sound should not play automatically. Give the user the choice to enable/disable sound."
           },
           {
             "li": "Advertisements should be static. If they are not, the animation should not loop."
           },
           {
-            "li": "Add it in a way that a user can hide it by scrolling up or down (below the fold). Then, the ad should be the only thing on that line."
+            "li": "Add your advertisements in a way that a user can hide them by scrolling up or down (below the fold). Then, the ad should be the only thing on that line."
           }
         ]
       },
@@ -213,10 +213,13 @@
         "paragraphs":
         [
           {
-            "li": "If filling out long forms, the progress should be auto saved or saveable. Users might take very long and get distracted a lot and might finish up another day."
+            "p": "Forms play a very important role. That is why you should also have a look at forms for <a href=\"visual.html#Forms\">Visual</a>, <a href=\"vision.html#Forms\">Low Vision & Color</a> and <a href=\"physical-audio.html#Forms\">Physical</a> Accessibility."
           },
           {
-            "li": "Consider breaking very long forms in smaller steps. If you do so, indicate the current progress in the <code>title</code>, <code>heading</code> and add a progress bar or step indicator to indicate the current position. It is a good idea that the user is able to navigate the different steps."
+            "li": "When filling out long forms, consider adding an option to auto save or being able to save the progress. Users might take very long and get distracted a lot and might finish up another day."
+          },
+          {
+            "li": "Consider breaking very long forms in smaller steps. If you do so, indicate the current progress in the <code>title</code>, <code>heading</code> and add a progress bar or a step indicator to indicate the current position. It is a good idea that the user is able to navigate the different steps."
           },
           {
             "li": "Provide inline instructions when necessary.",
@@ -237,10 +240,10 @@
             "paragraphs":
             [
               {
-                "li": "While placeholders are very helpful, they are not replacements for labels. Also, make sure to clearly differentiate placeholders from user input as users might also confuse placeholders with pre filled input"
+                "p": "While placeholders are very helpful, they are not replacements for labels. Make sure to clearly differentiate placeholders from user input as users might confuse placeholders with pre-filled input."
               },
               {
-                "li": "Do not repeat the labels as placeholders. I.e. instead of <code>email: [email]</code>, rather provide an example like <code>email: [example@email.com]</code>"
+                "li": "Repeating the labels in your placeholders is redundant. I.e. instead of <code>email: [email]</code>, rather provide an example like <code>email: [example@email.com]</code>."
               }
             ]
           },
@@ -249,19 +252,19 @@
             "paragraphs":
             [
               {
-                "li": "Provide an error/success feedback while typing or on blur (when focus of that particular element is lost). Sometimes a feedback while typing is nescessary but as it might be distracting, a feedback on blur is preferable."
+                "p": "Provide an error/success feedback while typing or on blur (when focus on that particular element is lost). Sometimes a feedback while typing is nescessary, but as it might be distracting, consider having a feedback on blur only."
               },
               {
-                "li": "It has become standard to add an asterisk (*) to required fields. This asterisk should be explained somewhere. Alternatively just add the keyword “required”."
+                "li": "It has become standard to add an asterisk (*) to required fields. This asterisk should be explained somewhere. Alternatively, just add the keyword “required”."
               },
               {
                 "li": "Users should be able to check their own input and correct it if necessary."
               },
               {
-                "li": "Show errors not only with colors. I.e. add a big border around fields with errors or a checkmarc for success and a cross or exclamation mark on errors."
+                "li": "Show errors not only with colors. I.e. add a big border around fields with errors or a check-mark for success and a cross or exclamation mark on errors."
               },
               {
-                "li": "Have a summary of all errors on top of the page as a list. Explaining the error and ideally linking to the respective fields. This way the errors are not overseen. That there were errors should also be indicated in the pages title."
+                "li": "Have a summary of all errors on top of the page as a list. Explaining the error and ideally linking to the respective fields. This way the errors are not overseen. That there were errors should also be indicated in the page title."
               }
             ]
           },
@@ -270,31 +273,13 @@
             "paragraphs":
             [
               {
-                "li": "As a general usability rule, try to avoid active anti-spams whenever possible."
+                "p": "Generally avoiding anti-spam increases usability. For every layer of complexity you add to your forms, you might lose users on the way."
               },
               {
-                "li": "If you use captchas make sure to also provide voice checks and add an alternative way to still reach the goal even if the captcha fails. I.e. an email address for direct contact."
+                "li": "If you use captchas make sure to also provide voice checks. Ideally add an alternative way that the user can still reach his goal, even if the captcha fails. I.e. a special email address for direct contact."
               },
               {
-                "li": "Simple tests as “write ‘Hello World’ into this field:” are o.k. just make sure not to ask for things a person with disabilities could not answer i.e. asking for colors."
-              },
-              {
-                "li": "Always make sure that your anti spam solutions are usable for everyone. Google did an <a href=\"http://simplyaccessible.com/article/googles-no-captcha/\">o.k. job</a> with their <a href=\"https://www.google.com/recaptcha/intro/index.html\">newest captcha</a>."
-              }
-            ]
-          },
-          {
-            "title": "Labels",
-            "paragraphs":
-            [
-              {
-                "li": "As a general usability rule, try to avoid active anti-spams whenever possible."
-              },
-              {
-                "li": "If you use captchas make sure to also provide voice checks and add an alternative way to still reach the goal even if the captcha fails. I.e. an email address for direct contact."
-              },
-              {
-                "li": "Simple tests as “write ‘Hello World’ into this field:” are o.k. just make sure not to ask for things a person with disabilities could not answer i.e. asking for colors."
+                "li": "Simple tests as “write ‘Hello World’ into this field:” are o.k. just make sure not to ask for things a person with disabilities could not answer, i.e. asking for colors."
               },
               {
                 "li": "Always make sure that your anti spam solutions are usable for everyone. Google did an <a href=\"http://simplyaccessible.com/article/googles-no-captcha/\">o.k. job</a> with their <a href=\"https://www.google.com/recaptcha/intro/index.html\">newest captcha</a>."
@@ -308,13 +293,13 @@
         "paragraphs":
         [
           {
-            "li": "Instructions should be kept as clear and as short as possible and available at any time."
+            "p": "Instructions should be kept as clear and as short as possible and available at any time."
           },
           {
-            "li": "They should be formatted as a list and important information should be highlighted."
+            "li": "Instructions should be formatted as a list and important information should be highlighted."
           },
           {
-            "li": "If a website has instructions as a video, they should also be written down. Some users have issues with audiovisual content while other find it easier than textual content."
+            "li": "If a website has instructions as a video or image, they should also be written down. Some users have issues with audiovisual content while others find it easier than textual content."
           }
         ]
       },
@@ -326,16 +311,16 @@
             "p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project via github."
           },
           {
-            "li": "Sadly we could not find any testing tools for cognitive accessibility. However, as most of the rules to improve cognitive accessibility are the same than the rules for usability of a website, it is adviced to gather information on general usability. Start by looking at the references below."
+            "li": "Sadly, no testing tool for cognitive accessibility was found. However, as most of the guidelines to improve cognitive accessibility are the same as general usability guidelines. It is advised to gather information on general usability. Start by looking at the references below."
           },
           {
-            "li": "References/Ressources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://simplyaccessible.com/article/googles-no-captcha/\">Simply Accessible</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a>, <a href=\"http://www.uxmatters.com/\">usmatters</a> <a href=\"http://www.dyslexia-reading-well.com/dyslexia-font.html\">Dyslexia Reading Well</a>, <a href=\"https://bdatech.org/\">BDA-Tech</a>, <a href=\"http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf\">Study: good fonts for dyslexia</a>, <a href=\"https://uxmag.com/\">UX Magazine</a>, <a href=\"https://www.viget.com/articles\">viget</a> <a href=\"http://uxmyths.com/\">uxmyths</a>, <a href=\"http://ux.stackexchange.com/\">ux.stackexchange</a>, <a href=\"https://www.reddit.com/r/userexperience/\">Reddit</a>."
+            "li": "References/Resources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://simplyaccessible.com/article/googles-no-captcha/\">Simply Accessible</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a>, <a href=\"http://www.uxmatters.com/\">usmatters</a> <a href=\"http://www.dyslexia-reading-well.com/dyslexia-font.html\">Dyslexia Reading Well</a>, <a href=\"https://bdatech.org/\">BDA-Tech</a>, <a href=\"http://dyslexiahelp.umich.edu/sites/default/files/good_fonts_for_dyslexia_study.pdf\">Study: good fonts for dyslexia</a>, <a href=\"https://uxmag.com/\">UX Magazine</a>, <a href=\"https://www.viget.com/articles\">viget</a> <a href=\"http://uxmyths.com/\">uxmyths</a>, <a href=\"http://ux.stackexchange.com/\">ux.stackexchange</a>, <a href=\"https://www.reddit.com/r/userexperience/\">Reddit</a>."
           },
           {
             "p": "Open up the web for everyone!"
           },
           {
-            "p": "}&#x3C;)))*&#x3E;"
+            "p": "<a href=\"visual.html\">Visual</a> • <a href=\"vision.html\">Low Vision & Color</a> • <a href=\"physical-audio.html\">Physical & Audio</a> • Cognitive <br><a href=\"selling.html\">Selling Accessibility</a>"
           }
         ]
       }

@@ -209,13 +209,13 @@
             "li": "Actually, no useful automatic testing tools was found. Luckily, testing for physical & audio disabilities is not a big deal:<br>1. Use your website with your keyboard only and see if every element is accessible.<br>2. Simulate an unsteady cursor by slightly shaking your mouse while using your page. See if everything is still easily usable (element sizes + appear/disappear)<br>3. Turn your audio off to check for audio issues."
           },
           {
-            "li": "References/Ressources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://verticalchallenge.org/\">Vertical Challenge</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
+            "li": "References/Resources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://verticalchallenge.org/\">Vertical Challenge</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
           },
           {
             "p": "Open up the web for everyone!"
           },
           {
-            "p": "}&#x3C;)))*&#x3E;"
+            "p": "<a href=\"visual.html\">Visual</a> • <a href=\"vision.html\">Low Vision & Color</a> • Physical & Audio • <a href=\"cognitive.html\">Cognitive</a> <br><a href=\"selling.html\">Selling Accessibility</a>"
           }
         ]
       }

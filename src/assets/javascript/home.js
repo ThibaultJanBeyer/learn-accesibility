@@ -30,19 +30,6 @@
       preloader.classList.add('home__preloader--loaded');
     }
 
-    /* just for testing @TODO: remove */
-    var reset = document.createElement('button');
-    reset.style.position = 'fixed';
-    reset.style.top = '0';
-    reset.style.width = '10px';
-    reset.style.height = '10px';
-    reset.style.background = 'red';
-    BODY.appendChild(reset);
-    reset.addEventListener('click', () => {
-      document.cookie = 'doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    });
-    /* just for testing */
-
   }
 })();
 

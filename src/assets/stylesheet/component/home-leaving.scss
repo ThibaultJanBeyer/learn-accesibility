@@ -124,6 +124,7 @@
 .leaving .leaving-animation-2,
 .leaving .leaving-animation:hover,
 .leaving .leaving-animation:focus {
+  // scss-lint:disable ImportantRule
   background-image: none;
   background: transparent;
   color: $black !important;
