@@ -30,6 +30,7 @@
 
   // toc
   if (document.getElementsByClassName('toc__toggler')[0]) {
+
     // toggling
     let tocToggler = document.getElementsByClassName('toc__toggler')[0];
     let tocContainer = document.getElementsByClassName('toc__container')[0];
@@ -43,12 +44,11 @@
      * Check which sections the user is on to update the TOC flow accordingly
      */
     setTimeout(function() { // a small delay so that everything else is successfully rendered
-      // store the position of each section - 1/4 of the window height in an array
-      let sectionsPos = [];
-      [...document.getElementsByClassName('section__title')].forEach((e, i) => {
-        sectionsPos.push(e.offsetTop - window.innerHeight / 4);
-      });
-      sectionsPos.push(siteContent.offsetHeight);
+      let sectionsPos = getSectionPos({siteContent});
+      // to prevent extremely slow devices from breaking, set these elements every x seconds 
+      setInterval(() => {
+        sectionsPos = getSectionPos({siteContent});
+      }, 10000);
       
       // store all Links in a variable.
       let tocLinks = document.getElementsByClassName('toc__link');
@@ -163,4 +163,13 @@ function navLinkClick({ clicked, navLink, loading }) {
     loading[i].classList.remove('loaded');
   }
   clicked.classList.add('nav__link--selected');
+}
+
+function getSectionPos({ siteContent }) {
+  let sectionsPos = [];
+  [...document.getElementsByClassName('section__title')].forEach((e, i) => {
+    sectionsPos.push(e.offsetTop - window.innerHeight / 4);
+  });
+  sectionsPos.push(siteContent.offsetHeight);
+  return sectionsPos;
 }

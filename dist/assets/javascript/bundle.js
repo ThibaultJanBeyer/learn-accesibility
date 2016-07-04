@@ -251,6 +251,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       // toc
       if (document.getElementsByClassName('toc__toggler')[0]) {
         (function () {
+
           // toggling
           var tocToggler = document.getElementsByClassName('toc__toggler')[0];
           var tocContainer = document.getElementsByClassName('toc__container')[0];
@@ -265,12 +266,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
            */
           setTimeout(function () {
             // a small delay so that everything else is successfully rendered
-            // store the position of each section - 1/4 of the window height in an array
-            var sectionsPos = [];
-            [].concat(_toConsumableArray(document.getElementsByClassName('section__title'))).forEach(function (e, i) {
-              sectionsPos.push(e.offsetTop - window.innerHeight / 4);
-            });
-            sectionsPos.push(siteContent.offsetHeight);
+            var sectionsPos = getSectionPos({ siteContent: siteContent });
+            // to prevent extremely slow devices from breaking, set these elements every x seconds
+            setInterval(function () {
+              sectionsPos = getSectionPos({ siteContent: siteContent });
+            }, 10000);
 
             // store all Links in a variable.
             var tocLinks = document.getElementsByClassName('toc__link');
@@ -401,6 +401,17 @@ function navLinkClick(_ref) {
     loading[_i5].classList.remove('loaded');
   }
   clicked.classList.add('nav__link--selected');
+}
+
+function getSectionPos(_ref2) {
+  var siteContent = _ref2.siteContent;
+
+  var sectionsPos = [];
+  [].concat(_toConsumableArray(document.getElementsByClassName('section__title'))).forEach(function (e, i) {
+    sectionsPos.push(e.offsetTop - window.innerHeight / 4);
+  });
+  sectionsPos.push(siteContent.offsetHeight);
+  return sectionsPos;
 }
 'use strict';
 
