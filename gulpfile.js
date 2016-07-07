@@ -12,6 +12,8 @@ gulp.task('sass', require('./gulp-tasks/sass'));
 gulp.task('svg', require('./gulp-tasks/svg'));
 gulp.task('stylechecker', require('./gulp-tasks/stylechecker'));
 gulp.task('watch', require('./gulp-tasks/watch'));
+
+// deploy
 gulp.task('deploy', require('./gulp-tasks/deploy'));
 
 // Globs

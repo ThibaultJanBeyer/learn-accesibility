@@ -166,9 +166,7 @@
 						"li": "Adding icons to navigation elements can help dyslexic users as well. They won’t have to read text to find what they are looking for."
 					},
 					{
-						"li": "Animated images are strongly distracting for everyone. They can be a complete turnoff for people with dyslexia. So, they should be used with care. The best solution is to give your users control over such elements by only playing the animation when requested. For <code>.gif</code> images, <a href=\"https://github.com/krasimir/gifffer\">gifffer</a> is a useful tool. Otherwise, give your animated images enough space from the content so that they can be hidden by scrolling further down.",
-						"pre": "Add example of giffer",
-						"preLang": "markup"
+						"li": "Animated images are strongly distracting for everyone. They can be a complete turnoff for people with dyslexia. So, they should be used with care. The best solution is to give your users control over such elements by only playing the animation when requested. For <code>.gif</code> images, <a href=\"https://github.com/krasimir/gifffer\">gifffer</a> is a useful tool that automatically adds a play/pause function. Otherwise, give your animated images enough space from the content so that they can be hidden by scrolling further down."
 					},
 					{
 						"li": "Remember that complex images can be difficult to understand by many people. So, providing long descriptions, benefits many people and thus is a good practice. However, if it is possible to reduce the image complexity, do it.",

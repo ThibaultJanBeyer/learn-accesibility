@@ -8,6 +8,12 @@ var size = require('gulp-size');
 var jsSrc = './src/assets/javascript/**/*.js',
     jsDst = './dist/assets/javascript/';
 
+var uglifyOptions = {
+  compress: {
+    drop_console: true
+  }
+};
+
 module.exports = function () {
   return gulp.src(jsSrc)
     .pipe(plumber({
@@ -18,7 +24,7 @@ module.exports = function () {
     }))
     .pipe(babel({ presets: ['es2015'] }))
     .pipe(concat('bundle.js'))
-    //.pipe(uglify())
+    .pipe(uglify(uglifyOptions))
     .pipe(size({title: 'JS'}))
     .pipe(gulp.dest(jsDst));
 };
