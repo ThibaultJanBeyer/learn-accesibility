@@ -168,10 +168,9 @@ function leavingAnimation({ linkContainers, aLink, linkHolders, homeContent, hom
         mover(clone, target);
       }
 
-      setTimeout(function() {
-        // go to location
-        window.location.href = aLink.getAttribute('href');
-      }, 1000);
+      // go to location
+      window.location.href = aLink.getAttribute('href');
+
     }, 2500);
   }, 200);
 }

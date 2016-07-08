@@ -187,9 +187,7 @@
               let lock = document.getElementsByClassName('lock--locker')[0];
               lock.classList.add('lock--locked');
               
-              setTimeout(function() {
-                window.location.href = 'index.html#door';
-              }, 400);
+              window.location.href = 'index.html#door';
             }, 1000);
           });
         }, 2000);
