@@ -1,8 +1,8 @@
-# learn-accesibility
-A platform to learn web accessibility
+# Learn Accesibility
+### Internet is not a privilege, it is a right! Open up your websites for everyone!
+A platform to learn web accessibility.  
+Available via [http://learn-accessibility.org/](http://learn-accessibility.org/)
 
-available via [http://thibaultjanbeyer.github.io/learn-accesibility/](http://thibaultjanbeyer.github.io/learn-accesibility/)
+This project is non-profit and open-source. If you would like to do something good, contribute. Have a look at: [contribute.md](https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md).
 
-(work in progress, ideally fully presentable in two-three weeks from today (3.Jul.16))
-
-However, you can already contribute. Have a look at: [contribute.md](https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md).
+[![Visit learn-accessibility](http://i.imgur.com/1OWpsAU.png)](http://learn-accessibility.org/)
