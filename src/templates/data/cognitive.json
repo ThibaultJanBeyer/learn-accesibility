@@ -19,7 +19,7 @@
         "paragraphs": 
         [
           {
-            "p": "Since users with cognitive disabilities are distracted very fast, it is important that the main contents’ headline has a distinct visual style that invites the user to look at the main content first."
+            "p": "Since users with cognitive disabilities are distracted very fast, it is important that the main content’s headline has a distinct visual style that invites the user to look at the main content first."
           },
           {
             "li": "Headings should have a different style than normal text or buttons, they should also serve as visual anchors and structuring elements."
@@ -34,13 +34,13 @@
         "paragraphs": 
         [
           {
-            "p": "Complex tables often overwork users with cognitive disabilities. That is why you should keep your tables as simple as possible. If you have complex data, use several tables instead of one to represent it."
+            "p": "Complex tables often overwhelm users with cognitive disabilities. That is why you should keep your tables as simple as possible. If you have complex data, use several tables instead of one to represent it."
           },
           {
-            "li": "To reduce confusion: give each element its own cell. Give table data a different look to table headings."
+            "li": "To reduce confusion: Give each element its own cell. Give table data a different look to table headings."
           },
           {
-            "li": "Using zebra tables is a good idea for longer tables so that the user doesn’t get lost.",
+            "li": "Using zebra tables is a good idea for longer tables so that the user does not get lost.",
             "pre": ".table-row:nth-child(2n) {\n  background-color: rgba(0, 0, 0, 0.5);\n}",
             "preLang": "css"
           },
@@ -74,10 +74,10 @@
             "li": "<code>font-size</code> should not be smaller than 12pt and Lines of text not wider than 60-80 characters (helps users that have trouble keeping their place when reading long lines of text)."
           },
           {
-            "li": "<a href=\"http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/\">Justified text should be avoided</a>. Justifications create more inconsistent whitespace which is a real problem for people with dyslexia and a headache for everyone else. In some extreme cases lines seem to move around. Moreover, different Browsers treat justifications differently, which gives you no control over your text."
+            "li": "<a href=\"http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/\">Justified text should be avoided</a>. Justifications create more inconsistent whitespace which is a real problem for people with dyslexia and a headache for everyone else. In some extreme cases lines seem to move around. Moreover, different browsers treat justifications differently, which gives you no control over your text."
           },
           {
-            "li": "While sentences should be kept short: 10-15 words, paragraphs can be somewhat longer: around 5 sentences long is considered easy to read."
+            "li": "While sentences should be kept short: 10-15 words, paragraphs can be somewhat longer: Around 5 sentences long is considered easy to read."
           },
           {
             "li": "Pure white on pure black will cause text to blur for people with cognitive disabilities. Use off-black text on an off-white background. This website uses <code>#191919</code> black and <code>#F6F6F6</code> white."
@@ -89,7 +89,7 @@
         "paragraphs": 
         [
           {
-            "p": "The navigation is an important element on a webpage. It helps the user orientate himself and also to find what he is looking for. That is why all accessibility sections have a Menu / Navigation section. Have a look at: <a href=\"visual.html#Navigation---Menus\">Visual</a>, <a href=\"vision.html#Menu---Navigation\">Low vision & Color</a> and <a href=\"physical-audio.html#Navigation---Menu\">Physical & Audio</a> part for a truly accessible navigation."
+            "p": "The navigation is an important element on a webpage. It helps the users orientate themselves and also to find what they are looking for. That is why all accessibility sections have a Menu / Navigation section. Have a look at: <a href=\"visual.html#Navigation---Menus\">Visual</a>, <a href=\"vision.html#Menu---Navigation\">Low vision & Color</a> and <a href=\"physical-audio.html#Navigation---Menu\">Physical & Audio</a> part for a truly accessible navigation."
           },
           {
             "li": "The navigation should not change while navigating the website. It helps the user orientate."
@@ -98,7 +98,7 @@
             "li": "The navigation should be as simple as possible and <a href=\"vision.html#Menu---Navigation-2\">clearly indicate the current position</a> (not only with color)."
           },
           {
-            "li": "If there are many items a vertical menu should be preferred since it is easier to read one item a time. Often the main navigation is horizontal and the secondary vertical. Make sure, that the space between the links is high enough"
+            "li": "If there are many items, a vertical menu should be preferred since it is easier to read one item a time. Often the main navigation is horizontal and the secondary vertical. Make sure, that the space between the links is high enough."
           },
           {
             "li": "Vertical menus are usually positioned left near to the content while horizontal menus usually start on the top left."
@@ -110,7 +110,7 @@
             "li": "Items containing a submenu should be marked in a way that is obvious. I.e. an arrow pointing down. A <a href=\"https://www.viget.com/articles/testing-accordion-menu-designs-iconography\">study</a> has shown that icons placed on the left are understood faster."
           },
           {
-            "li": "Thorough the whole website, all pages should have elements that are consistent: the overall look and feel, the global navigation and a consistent presentation of information."
+            "li": "Throughout the whole website, all pages should have elements that are consistent: The overall look and feel, the global navigation and a consistent presentation of information."
           },
           {
             "li": "Lastly, clearly indicate the hover/focus state, the items should change so that users know exactly where they are.",
@@ -125,10 +125,10 @@
             "paragraphs":
             [
               {
-                "p": "It is a good practice for longer text to have some kind of table of content. It helps the user to orientate themselves, quickly find the content they seek and to be able to socially share the exact part of the website."
+                "p": "It is a good practice for longer text to have some kind of table of content. It helps the users to orientate themselves, quickly find the content they seek and to be able to socially share the exact part of the website."
               },
               {
-                "li": "If possible, give a visual clue that there are anchor-points. I.e. on this website they are indicated with the anchor symbols which gives the user a possibility to store and share specific parts of the website."
+                "li": "If possible, give a visual clue that there are anchor-points. I.e. on this website they are indicated with the anchor symbols, giving the user an easy way to store and share specific parts of the website."
               }
             ]
           },
@@ -176,10 +176,10 @@
             "p": "Avoid text on patterns, no matter how subtle the pattern is. It makes it more difficult to see the words shape."
           },
           {
-            "li": "Using images, that add value to the content, break long sections and give visual markers is generally a good idea."
+            "li": "Using images that add value to the content, breaking up long sections and giving visual markers is generally a good idea."
           },
           {
-            "li": "Adding icons to navigation elements can help dyslexic users as well. They won’t have to read text to find what they are looking for."
+            "li": "Adding icons to navigation elements can help dyslexic users as well. They will not have to read text to find what they are looking for."
           },
           {
             "li": "Animated images are strongly distracting for everyone. They can be a complete turnoff for people with dyslexia. So, they should be used with care. The best solution is to give your users control over such elements by only playing the animation when requested. For <code>.gif</code> images, <a href=\"https://github.com/krasimir/gifffer\">gifffer</a> is a useful tool that automatically adds a play/pause function. Otherwise, give your animated images enough space from the content so that they can be hidden by scrolling further down."
@@ -214,7 +214,7 @@
             "p": "Forms play a very important role. That is why you should also have a look at forms for <a href=\"visual.html#Forms\">Visual</a>, <a href=\"vision.html#Forms\">Low Vision & Color</a> and <a href=\"physical-audio.html#Forms\">Physical</a> Accessibility."
           },
           {
-            "li": "When filling out long forms, consider adding an option to auto save or being able to save the progress. Users might take very long and get distracted a lot and might finish up another day."
+            "li": "When filling out long forms, consider adding an option to auto save or being able to save the progress. Users might take very long and get distracted often. They might want to finish up another day."
           },
           {
             "li": "Consider breaking very long forms in smaller steps. If you do so, indicate the current progress in the <code>title</code>, <code>heading</code> and add a progress bar or a step indicator to indicate the current position. It is a good idea that the user is able to navigate the different steps."
@@ -250,10 +250,10 @@
             "paragraphs":
             [
               {
-                "p": "Provide an error/success feedback while typing or on blur (when focus on that particular element is lost). Sometimes a feedback while typing is nescessary, but as it might be distracting, consider having a feedback on blur only."
+                "p": "Provide an error/success feedback while typing or on blur (when focus on that particular element is lost). Sometimes a feedback while typing is necessary, but as it might be distracting, consider having a feedback on blur only."
               },
               {
-                "li": "It has become standard to add an asterisk (*) to required fields. This asterisk should be explained somewhere. Alternatively, just add the keyword “required”."
+                "li": "It has become a standard to add an asterisk (*) to required fields. This asterisk should be explained somewhere. Alternatively, just add the keyword “required”."
               },
               {
                 "li": "Users should be able to check their own input and correct it if necessary."

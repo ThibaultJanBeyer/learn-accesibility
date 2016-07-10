@@ -6,13 +6,13 @@
     "letter": "V",
     "intro": 
     {
-      "p": "Visual Accessibility covers every user that is using a screen reader. This group the most pain points when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7.5 million people are blind or have a significant vision loss. That is approximately twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads the content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
+      "p": "Visual Accessibility covers every user that is using a screen reader. This group encounters the most pain points when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7.5 million people in the United States are blind or have a significant vision loss. That is approximately twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads the content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
       "imgs":
       [
         {
           "src": "assets/img/sr-stats.png",
           "alt": "Chart of primary screen reader usage showing decreases in JAWS, NVDA, VoiceOver, SA and significant increases in ZoomText and Window-Eyes.",
-          "caption": "Chart based on Data from <a href=\"http://webaim.org/projects/screenreadersurvey6/#primary\">webaim.org</a> a textual description can be found there."
+          "caption": "Chart based on Data from <a href=\"http://webaim.org/projects/screenreadersurvey6/#primary\">webaim.org</a>. A textual description can be found there."
         }
       ],
       "ul":
@@ -73,7 +73,7 @@
         "paragraphs": 
         [
           {
-            "p": "The typical behaviour of screen reader is to read the page from top to bottom. So, it is critical that all your element positioning follows a typical HTML flow. As all modern screen reader use and understand CSS & JavaScript it is important not to mess with that logical flow."
+            "p": "The typical behaviour of screen reader is to read the page from top to bottom. So, it is critical that all your element positioning follows a typical HTML flow. As all modern screen readers use and understand CSS & JavaScript it is important not to mess with the established and logical flow."
           },
           {
             "li": "The document outline should be respected. Read more on this in the <a href=\"#Headings\">Headings section</a>. A tool to check your document outline is the <a href=\"https://gsnedders.html5.org/outliner/\">html5 outliner</a>."
@@ -103,10 +103,10 @@
             "li": "Any supplementary element (that do not fit in the main tag) belongs in an <code>aside</code> tag with <code>role=\"complementary\"</code>."
           },
           {
-            "li": "The searc hbar (with its input, label, button, etc.) should be in a container (can be a form element) with <code>role=\"search\"</code>. Some screen reader allow users to jump directly to the search bar. As seen in the <a href=\"#Structure-3\">example above</a>."
+            "li": "The search bar (with its input, label, button, etc.) should be in a container (can be a form element) with <code>role=\"search\"</code>. Some screen readers allow users to jump directly to the search bar. As seen in the <a href=\"#Structure-3\">example above</a>."
           },
           {
-            "li": "To group content of a page you can divide it in sections with the <code>section</code> tag and the generic <code>role=\"region\"</code>. On this page the different sections were grouped using this method, but not their subsections:",
+            "li": "To group the content of a page you can divide it in sections with the <code>section</code> tag and the generic <code>role=\"region\"</code>. This method was used to group the different sections on this page but not for their subsections:",
             "example":
             {
               "pre": "<section role=\"region\" aria-labelledby=\"SomeTitle\">\n  <h2 id=\"SomeTitle\">\n    Structure\n  </h2>\n\n  [...]\n\n  <div>\n    <h3 id=\"SomeSubtitle\">\n      Subtitle of Structure\n    </h3>\n\n    [...]\n\n  </div>\n</section>",
@@ -116,7 +116,7 @@
             }
           },
           {
-            "li": "When structuring your element, the best practice is to use the <code>aria-labelledby</code> attribute and give it the <code>id</code> of the elements heading since all modern screen readers can list headings but not sections. If there is no descriptive heading, at least the <code>aria-label</code> attribute should be used. Let’s demonstrate the different behaviours:",
+            "li": "When structuring your element, the best practice is to use the <code>aria-labelledby</code> attribute and give it the <code>id</code> of the element’s heading since all modern screen readers can list headings but not sections. If there is no descriptive heading, at least the <code>aria-label</code> attribute should be used. Let’s demonstrate the different behaviours:",
             "example":
             {
               "pre": "<section role=\"region\" aria-label=\"about\">\n  <h2 id=\"about\">About Sharks</h2>\n  [...]\n</section>\nOR\n<section role=\"region\" aria-label=\"Shark Fakts\">\n  [...]\n</section>\nOR\n<section role=\"region\">\n  [...]\n</section>",
@@ -226,7 +226,7 @@
         "paragraphs":
         [
           {
-            "p": "Beside giving a visual clue, screen reader can list all headings. A screen reader user will typically scan a pages headings and then jump immediately to that section. Therefor the logical flow of headings is important. Nest headings accordingly: h1 > h2 > h3 > ... without skipping a level."
+            "p": "Beside giving a visual clue, screen reader can list all headings. A screen reader user will typically scan a pages headings and then jump immediately to that section. Therefore the logical flow of headings is important. Nest headings accordingly: h1 > h2 > h3 > ... without skipping a level."
           },
           {
             "li": "Therefore, it is important to give all your page sections a specific heading with <code>aria-labelledby</code> <a href=\"#Structure-10\">as seen before under Structure</a>."
@@ -278,7 +278,7 @@
             "li": "Indicate the current page by adding 'Current Page:' in front of the respective element in the menu. Additionally, to make sure that the current page is obvious, the current page should not be linked. See the <a href=\"#Navigation---Menus-4\">example below</a>."
           },
           {
-            "li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. That heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
+            "li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. This heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
             "example":
             {
               "pre": "<nav role=\"navigation\" aria-labelledby=\"menu\">\n  <h2 id=\"menu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
@@ -295,7 +295,7 @@
             "paragraphs":
             [
               {
-                "p": "Drop downs might be only visually hidden to be accessible for screen reader. Ideally the visuallyhidden class would then be toggled via javascript. See <a href=\"#Hiding-Elements\">hiding elements</a>. However, if your menu is complex you will have to use some javascript to <a href=\"#Drop-Downs-3\">correctly hide and show your submenus for both</a>."
+                "p": "Drop downs can be only visually hidden to still be fully accessible for screen readers. Ideally the visuallyhidden class would then be toggled via javascript. See <a href=\"#Hiding-Elements\">hiding elements</a>. However, if your menu is complex you will have to use some javascript to <a href=\"#Drop-Downs-3\">correctly hide and show your submenus for all users</a> (thus also for the screen reader users since otherwise they would be obliged to traverse everything everytime)."
               },
               {
                 "li": "Usually a drop down is another ordered or unordered list inside the list item of the first ordered or unordered list:",
@@ -303,7 +303,7 @@
                 "preLang": "markup"
               },
               {
-                "li": "Consider having a toggling mechanism hiding/showing elements for screen readers as well if you have a very complex. This might be done by toggling the <code>aria-hidden</code> attribute. Here is an example:",
+                "li": "Consider having a toggling mechanism hiding/showing elements for screen readers as well, if you have a very complex menu. This might be done by toggling the <code>aria-hidden</code> attribute. Here is an example:",
                 "pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly, we have to set the focus on the first link element,\n      // otherwise the screen reader does not notice the change (note how the press-button event is not announced)\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
                 "preLang": "javascript",
                 "example":
@@ -321,7 +321,7 @@
             "paragraphs":
             [
               {
-                "p": "Breadcrumbs are a great way to contribute to the users overall understanding of a website, they are a great way to improve <a href=\"cognitive.html#Breadcrumbs\">cognitive accessibility</a> and user experience in general."
+                "p": "Breadcrumbs are a great way to contribute to the users overall understanding of a website and they are a great way to improve <a href=\"cognitive.html#Breadcrumbs\">cognitive accessibility</a> and user experience in general."
               },
               {
                 "li": "Use a <code>nav</code> tag with <code>role=\"navigation\"</code> and <code>aria-label=\"you are here\"</code>. Also add a visually hidden clue like the word “current” to the last item.",
@@ -340,10 +340,10 @@
             "paragraphs":
             [
               {
-                "p": "Not every screen reader has advanced mechanism to jump to sections, headings, links, etc. or to skip repetitive blocks of content as tables, code blocks, graphics, etc. So, probably one of the most important things for a good screen reader user experience, is to provide links to jump immediately to relevant sections and/or to skip repetitive content. On this page skip links were added before each code example to skip it. Moreover, visually hidden skip links were added at the beginning of the page, granting screen reader users the possibility to jump directly to either the table of contents, the menu or the content itself. Skip-links is also a best practice for <a href=\"physical-audio.html#Navigation---Menu-6\">physical accessibility</a> since they have to traverse the whole page as well. You can reveal skip-links on this page by using your keyboard and tabbing through the page."
+                "p": "Not every screen reader has an advanced mechanism to jump to sections, headings, links, etc. or to skip repetitive blocks of content as tables, code blocks, graphics, etc. So, probably one of the most important things for a good screen reader user experience, is to provide links that allow to jump immediately to relevant sections and/or to skip repetitive content. On this page skip links were added before each code example to skip it. Moreover, visually hidden skip links were added at the beginning of the page, granting screen reader users the possibility to jump directly to either the table of contents, the menu or the content itself. Skip-links is also a best practice for <a href=\"physical-audio.html#Navigation---Menu-6\">physical accessibility</a> since they have to traverse the whole page as well. You can reveal skip-links on this page by using your keyboard and tabbing through the page."
               },
               {
-                "li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually, but display them on focus to improve the usability of your page for keyboard users as well:",
+                "li": "Skip links are like normal links pointing to anchors (elements with IDs) on your page. You might want to hide them visually, but should display them on focus to improve the usability of your page for keyboard users as well:",
                 "pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
                 "preLang": "javascript",
                 "example":
@@ -355,7 +355,7 @@
                 }
               },
               {
-                "li": "Another kind of skip links, but visual for everyone, is to have a table of content linking to each heading within a long text. A table of content is nothing other than a <a href=\"#Navigation-Menus\">navigation menu</a> but with an ordered list."
+                "li": "Another kind of skip links, this one being visible for everyone, is to have a table of content linking to each heading within a long text. A table of content is nothing other than a <a href=\"#Navigation-Menus\">navigation menu</a> but with an ordered list."
               }
             ]
           }
@@ -366,10 +366,10 @@
         "paragraphs":
         [
           {
-            "p": "Any tabular data should be written in Tables as some screen reader have special features to recognize tables. Beside reading this section, have a look at tables for <a href=\"cognitive.html#Tables\">cognitive disabilities</a>."
+            "p": "Any tabular data should be written in tables as some screen readers have special features to recognize tables. Beside reading this section, have a look at tables for <a href=\"cognitive.html#Tables\">cognitive disabilities</a>."
           },
           {
-            "li": "It is a good practice to add captions to your tables explaining what they are about. If it is obvious, <a href=\"#Hiding-Elements\">hide it for visual users</a>."
+            "li": "It is a good practice to add captions to your tables explaining what they are about. If it is obvious, just <a href=\"#Hiding-Elements\">hide it for visual users</a>."
           },
           {
             "li": "To make sure that the screen readers read your tables correctly, include scoping. Use <code>scope=\"col\"</code> to identify the columns and <code>scope=\"row\"</code> to identify rows and <code>scope=\"colgroup\"</code> whenever a column spans over more than one item. This is how a complex accessible table could look like:",
@@ -382,10 +382,10 @@
             }
           },
           {
-            "li": "Do not use tables for layout purpose, that is not what they are intended for. It would probably mess up the screen reader."
+            "li": "Avoid using tables for layout purposes; that is not what they are intended for. This is likely to disturb and limit a screen reader’s ability to navigate the page correctly."
           },
           {
-            "li": "Keep it simple. If you have complex data, use several Tables to represent it instead of one."
+            "li": "Keep it simple. If you have complex data, use several tables to represent it instead of one."
           }
         ]
       },
@@ -394,13 +394,13 @@
         "paragraphs":
         [
           {
-            "p": "Due to responsive web-design, SVG elements are on the rise. Currently SVGs are used to display visual content and thus the guidelines are very similar to those for <a href=\"#Images\">images</a> but that will change in near future. Today you can already do way more with SVGs than just displaying images. However, you can still use your SVGs within an <code>img</code> tag. Then, regarding screen readers, it is basically the same as any regular <a href=\"#Images\">image</a>."
+            "p": "Due to responsive web-design, SVG elements are on the rise. Currently SVGs are used to display visual content and thus the guidelines are very similar to those for <a href=\"#Images\">images</a>, but this will change in near future. Today you can already do way more with SVGs than just displaying images. However, you can still use your SVGs within an <code>img</code> tag. Then, regarding screen readers, it is basically the same as any regular <a href=\"#Images\">image</a>."
           },
           {
-            "li": "If your SVGs are a collection of elements that form an image, then add <code>role=\"img\"</code> to your container and a <code>role=\"presentation\"</code> to the SVG elements to hide them from the screen reader, as seen in the <a href=\"#SVG-3\">example below</a>."
+            "li": "If your SVGs are a collection of elements that form an image, you should generally add <code>role=\"img\"</code> to your container and a <code>role=\"presentation\"</code> to the SVG elements to hide them from the screen reader, as seen in the <a href=\"#SVG-3\">example below</a>."
           },
           {
-            "li": "If they are not <a href=\"#Purely-Decorative\">purely decorative elements</a> usually a <code>title</code> with the respective <code>aria-labelledby=\"titleID descID\"</code> should be added. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
+            "li": "If they are not <a href=\"#Purely-Decorative\">purely decorative elements</a>, usually a <code>title</code> with the respective <code>aria-labelledby=\"titleID descID\"</code> should be added. Here is an example borrowed from the <a href=\"https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/\">paciellogroup</a>:",
             "example":
             {
               "pre": "<svg xmlns=http://www.w3.org/2000/svg role=\"img\" aria-labelledby=\"title  desc\">\n   <title id=\"title\">Circle</title>\n   <desc id=\"desc\">Large circle with a fat border</desc>\n   <circle role=\"presentation\" cy=\"60\" cx=\"60\" r=\"35\" stroke=\"black\" stroke-width=\"2\" \n   fill=\"grey\" />\n</svg>",
@@ -423,7 +423,7 @@
             "li": "If your SVG contains content that is interactive, you’ll need to make sure that the interactive elements are targetable. That might be done with the <code>role=\"link\"</code>."
           },
           {
-            "li": "Have a look at the <a href=\"#Purely-Decorative\">purely decorative elements</a> section to knows if your elements should be hidden or not."
+            "li": "Have a look at the <a href=\"#Purely-Decorative\">purely decorative elements</a> section to find out whether your elements should be hidden or not."
           },
           {
             "li": "To learn when and how to add a title & description, see the <a href=\"#alternative-description\">Alternative Description</a> section."
@@ -458,7 +458,7 @@
             }
           },
           {
-            "li": "In some cases the image is <a href=\"#Purely-Decorative\">purely decorative</a>. If so, you should still provide an alt attribute but leave it empty. Otherwise, some elder screen reader will read the image filename instead. To be sure that it does not get read add a <code>role=\"presentation\"</code> and/or <code>aria-hidden=\"true\"</code>.",
+            "li": "In some cases the image is <a href=\"#Purely-Decorative\">purely decorative</a>. If so, you should still provide an alt attribute but leave it empty. Otherwise, some older screen readers will read the image filename instead. To be sure that it does not get read add a <code>role=\"presentation\"</code> and/or <code>aria-hidden=\"true\"</code>.",
             "pre": "<img src=\"img.jpg\" alt=\"\" aria-hidden=\"true\">",
             "preLang": "markup"
           },
@@ -475,11 +475,11 @@
         ]
       },
       {
-        "title": "alternative description",
+        "title": "Alternative description",
         "paragraphs":
         [
           {
-            "p": "Here is explained when and how to label elements based on images, but it is not limited to just images, same comes true for any other visual element on your page. The <a href=\"#Good-alt-ernatives\">good alternatives</a> sub-section gives you more general information on how to label. Also, have a look at the <a href=\"#Purely-Decorative\">purely decorative elements</a> sub-section to know when not to label."
+            "p": "In the following section it will be explained when and how to label elements based on image examples. But these alternative description guidelines are not limited to just images. Any other visual element on your page can profit from alternative descriptions. The <a href=\"#Good-alt-ernatives\">good alternatives</a> sub-section gives you more general information on how to label. Also, have a look at the <a href=\"#Purely-Decorative\">purely decorative elements</a> sub-section to know when not to label."
           },
           {
             "li": "Any element with text should be accessible. So, if there is text in your image, add an <code>alt</code> attribute containing that text. However, nowadays it is possible to style text with css. Thus, textual elements should be real text. For Mathematical Formulas see <a href=\"https://www.w3.org/Math/\">MathML</a>."
@@ -491,7 +491,7 @@
           },
           {
             "li": "When your element supplements other information, add an alternative:",
-            "pre": "<img src=\"fire-extinguisher-car.jpg\" alt=\"Fire extinguisher in a cars’ trunk.\">\nDon’t forget to equip you car with a fire extinguisher",
+            "pre": "<img src=\"fire-extinguisher-car.jpg\" alt=\"Fire extinguisher in a cars’ trunk.\">\ndo not forget to equip you car with a fire extinguisher",
             "preLang": "markup"
           },
           {
@@ -510,20 +510,20 @@
             "preLang": "markup"
           },
           {
-            "li": "Do not describe your logos in detail (no matter how cool it is), the brands name and maybe claim is sufficient."
+            "li": "In general, do not describe your logos in detail (no matter how cool they are), the brand’s name and maybe the claim is sufficient."
           },
           {
-            "li": "If your element conveys further information within a link, that infromation should be accessible for everyone:",
+            "li": "If your element conveys further information within a link, that information should be accessible for everyone:",
             "pre": "<a href=\"#link\" target=\"_blank\">\n  Google <img src=\"new-window.png\" alt=\"open in new window\">\n</a>\n<!-- svg -->\n<a href=\"#link\" target=\"_blank\">\n  Google\n  <svg xmlns=http://www.w3.org/2000/svg role=\"img\" aria-labelledby=\"title\">\n    <title id=\"title\">open in new window</title>\n    <circle role=\"presentation\" cy=\"60\" cx=\"60\" r=\"35\" stroke=\"black\" stroke-width=\"2\" fill=\"grey\" />\n  </svg>\n</a>",
             "preLang": "markup"
           },
           {
-            "li": "If your graphical element have a functional value, it is important to convey that same value to everyone:",
+            "li": "If your graphical elements have a functional value, it is important to convey that same value to everyone:",
             "pre": "<a href=\"javascript:print()\">\n  <img src=\"print.png\" alt=\"Print this page\">\n</a>\n<!-- instead of alt=\"Printer\" -->",
             "preLang": "markup"
           },
           {
-            "li": "For more complex images you will need a two-part alternative. The first part is a brief description to identify the image, the second part is a long description near the visual element as text or on as an external link pointing to a text. Use the <code>longdesc=\"#longdesc\"</code> attribute to link to the long description and <code>aria-describedby=\"longdesc\"</code> if the long description is not directly adjacent. Using the longdesc alone is not a good idea since it lacks support and it leaves out visual users. See the <a href=\"#SVG-3\">SVG example<a> for SVGs.",
+            "li": "For more complex images you will need a two-part alternative. The first part is a brief description to identify the image, the second part is a long description near the visual element as text or as an external link pointing to a text. Use the <code>longdesc=\"#longdesc\"</code> attribute to link to the long description and <code>aria-describedby=\"longdesc\"</code> if the long description is not directly adjacent. Using the longdesc alone is not a good idea since it lacks support and it leaves out visual users. See the <a href=\"#SVG-3\">SVG example<a> for SVGs.",
             "pre": "<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london\">\n  <figcaption>\n    <a href=\"#link\">Ethnic groups (text description of the pie chart)</a>\n  </figcaption>\n</figure>\n<!-- or -->\n<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london, described in detail below.\"\n    longdesc=\"#chart-longdesc\">\n  <figcaption id=\"chart-longdesc\">\n    <h2>Values</h2>\n    <table>\n      [...]\n    </table>\n  </figcaption>\n</figure>",
             "preLang": "markup"
           },
@@ -540,7 +540,7 @@
             "paragraphs":
             [
               {
-                "p": "don’t describe your elements if they are <a href=\"#Purely-Decorative\">purely decorative</a>. If they are not, follow the guidelines below."
+                "p": "do not describe your elements if they are <a href=\"#Purely-Decorative\">purely decorative</a>. If they are not, follow the guidelines below."
               },
               {
                 "li": "Aim to put the most important information at the beginning of your sentence.",
@@ -551,13 +551,13 @@
                 "li": "Add a <a href=\"#alternative-description-11\">long description</a> if anything more than a short phrase is needed to describe the element."
               },
               {
-                "li": "Alternative descriptions are not cryptic messages for specialists, they will be read as every normal text. That is why you should use the same punctuation and write normal sentences in your alternative just as any normal text would be. Also, avoid abbreviations."
+                "li": "Alternative descriptions are not cryptic messages for specialists, they will be read like every normal text. That is why you should use the same punctuation and write normal sentences in your alternative just as any normal text would be. Also, avoid abbreviations."
               },
               {
-                "li": "The text has to give the same information as the image. That is, if someone cannot see the image, they should still get the important information. How would you describe a friend that image he cannot see?"
+                "li": "The text has to give the same information as the image. That is, if someone cannot see the image, they should still get the important information."
               },
               {
-                "li": "Keywords as “image”, “button”, “icon”, or “picture” in the alternative are redundant as they are announced by the screen reader."
+                "li": "Keywords like “image”, “button”, “icon”, or “picture” in the alternative are redundant as they are announced by the screen reader."
               },
               {
                 "li": "Here are some examples for extensive descriptions (borrowed from <a href=\"http://4syllables.com.au/articles/decorative-images/\">4syllabes</a>):",
@@ -581,13 +581,13 @@
             "paragraphs": 
             [
               {
-                "p": "Visual elements that do not add any value should not be seen by screen reader. The Web Content Accessibility Guidelines 2.0 defines purely decorative images as: “serving only an aesthetic purpose, providing no information, and having no functionality”"
+                "p": "Visual elements that do not add any value should not be seen by screen readers. The Web Content Accessibility Guidelines 2.0 defines purely decorative images as: “serving only an aesthetic purpose, providing no information, and having no functionality”"
               },
               {
-                "li": "Do not to add titles, descriptions or anything that could possibly be read. For images, make sure that there is an empty alt attribute without any space characters <code>alt=\"\"</code> otherwise screen reader might read the filename instead. Just to be sure, add the <code>role=\"presentation\"</code> or/and <code>aria-hidden=\"true\"</code> which are supported by modern screen reader and will hide the element."
+                "li": "Do not to add titles, descriptions or anything that could possibly be read. For images, make sure that there is an empty alt attribute without any space characters <code>alt=\"\"</code> otherwise screen reader might read the filename instead. Just to be sure, add the <code>role=\"presentation\"</code> or/and <code>aria-hidden=\"true\"</code> which are supported by modern screen readers and will hide the element."
               },
               {
-                "li": "Note that traditional methods used to hide elements as <code>visibility=\"hidden\"</code> or <code>display=\"none\"</code> hide elements for everyone, also for screen reader. If you want to hide elements for visual users, but keep them available for screen reader users use the technique described in the <a href=\"#Hiding-Elements\">Hiding Elements section</a>. If you want to hide elements only for screen reader users and keep them visible for visual users use the attribute <code>aria-hidden=\"true\"</code>."
+                "li": "Note that traditional methods used to hide elements as <code>visibility=\"hidden\"</code> or <code>display=\"none\"</code> hide elements for everyone, also for screen readers. If you want to hide elements for users with vision, but keep them available for screen reader users, use the technique described in the <a href=\"#Hiding-Elements\">Hiding Elements section</a>. If you want to hide elements only for screen reader users and keep them visible for users with vision, use the attribute <code>aria-hidden=\"true\"</code>."
               },
               {
                 "li": "Elements used as part of the design as borders, ornaments and similar are purely decorative elements and should not be accessible."
@@ -601,13 +601,13 @@
                 "preLang": "markup"
               },
               {
-                "li": "Elements used for ambience may not be accessible unless that ambience is an important information."
+                "li": "Elements used for ambience should generally not be accessible unless that ambience is an important information."
               },
               {
-                "li": "Elements that convey branding, feelings, moods and anything else that is not related to the content are purely decorative. Face the fact that most users are there for the information not to check out how cool the branding is. Brand values or messages can be communicated in text, but they require something more creative than a simple description of the content of an image."
+                "li": "Elements that convey branding, feelings, moods and anything else that is not related to the content are purely decorative. Face the fact that most users are there for the information and not to check out how cool the branding is. Brand values or messages can be communicated in text, but they require something more creative than a simple description of the content of an image."
               },
               {
-                "li": "According to <a href=\"http://4syllables.com.au/articles/decorative-images/\">Dey Alexanders observations</a> during user-tests: screen reader users, even very experienced ones, sometimes become confused by text alternatives for decorative images. Some might even try to click on images (that aren’t links) because the text alternative mentioned a word or phrase related to their task."
+                "li": "According to <a href=\"http://4syllables.com.au/articles/decorative-images/\">Dey Alexanders observations</a> during user-tests: screen reader users, even very experienced ones, sometimes become confused by text alternatives for decorative images. Some might even try to click on images (that are not links) because the text alternative mentioned a word or phrase related to their task."
               },
               {
                 "li": "Background images, article banners, thumbnails and small elements supporting links are most likely purely decorative."
@@ -624,7 +624,7 @@
         "paragraphs":
         [
           {
-            "p": "Use the right types for your fields. As filling out forms has ever been one of the most important task on the web, the screen reader support is very good. That being said, forms touch all forms of accessibility, so make sure to check the form guidelines for <a href=\"vision.html#Forms\">Low Vision and Colorblind Accessibility</a>, <a href=\"physical-audio.html#Forms\">Physical and Audio Accessibility</a> as well as the forms for <a href=\"cognitive.html#Forms\">Cognitive Accessibility</a>.",
+            "p": "Use the right types for your fields. As filling out forms has always been one of the most important task on the web, the screen reader support is very good. That being said, forms touch all forms of accessibility, so make sure to check the form guidelines for <a href=\"vision.html#Forms\">Low Vision and Colorblind Accessibility</a>, <a href=\"physical-audio.html#Forms\">Physical and Audio Accessibility</a> as well as the forms for <a href=\"cognitive.html#Forms\">Cognitive Accessibility</a>.",
             "table":
             {
               "caption": "which type is for what?",
@@ -703,7 +703,7 @@
             }
           },
           {
-            "li": "Buttons don’t require labels, but if they have no text, then they need a <code>value=\"\"</code> attribute. Giving your button <a href=\"#Roles\">roles</a> as, i.e. <code>role=\"button\"</code>, is a good idea to clarify the buttons purpose."
+            "li": "Buttons do not require labels, but if they have no text, they will need a <code>value=\"\"</code> attribute. Giving your button <a href=\"#Roles\">roles</a> as, i.e. <code>role=\"button\"</code>, is a good idea to clarify the buttons purpose."
           }
         ],
         "subs":
@@ -713,7 +713,7 @@
             "paragraphs":
             [
               {
-                "p": "Show errors not only with color. Write them out. Adding a text explaining which part was incorrect and why near the label and bundled errors on top (ideally with <a href=\"#Skip-Links\">skip-links</a> to jump to the incorrect form-field) enhance the user experience."
+                "p": "Show errors not only with color. Write them out. Adding a text explaining which part was incorrect and why near the label and bundled errors on top (ideally with <a href=\"#Skip-Links\">skip-links</a> to jump to the incorrect form-field) enhances the user experience."
               },
               {
                 "li": "Use <code>role=\"alert\"</code> with <code>aria-live=\"assertive\"</code> or <code>aria-live=\"polite\"</code>. Assertive will be pushed immediately to the screen reader as soon as the element appears while Polite will wait until the screen reader is done with its current task. <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role\">Read more on MDN</a>. It is a good practice to add it on the title of your error summaries.",
@@ -751,7 +751,7 @@
                 "p": "Indicate required fields not only visually. It has become a convention to add an asterisk *, but explain that asterisk somewhere. You can also simply add the keyword “required”. Also, provide inline instructions when necessary."
               },
               {
-                "li": "Use the <code>required</code> attribute and the <code>aria-required=\"true\"</code> on required fields. Note that the screen reader will read required twice (once from the label and once from the aria).",
+                "li": "Use the <code>required</code> attribute and <code>aria-required=\"true\"</code> on required fields. Note that the screen reader will read required twice (once from the label and once from the aria).",
                 "example":
                 {
                   "pre": "<label for=\"name\">Name (required): </label>\n<input type=\"text\" name=\"name\" id=\"name\" required aria-required=\"true\">",
@@ -778,7 +778,7 @@
             "p": "A common myth is that screen reader do not support javascript. However, the shiny truth is that <a href=\"http://webaim.org/projects/screenreadersurvey5/#javascript\">they do support javascript</a>. That is great news. Nonetheless, accessibility is not only about screen reader users and there are <a href=\"https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/\">~1% of users without javascript</a> for <a href=\"http://www.punkchip.com/why-support-javascript-disabled/\">diverse reasons</a>. Ideally build your websites so that they work without javascript and then add a javascript layer on top of it."
           },
           {
-            "li": "Have accessibility in mind when using javascript. Provide a way to have users be aware of changes triggered via javascript, try to not disable the normal functionalities of the browser and make it device independent. Unfortunately, there is no one-fits-all solutions. However, a common mistake is i.e. removing the link href and adding an onclick event that handles the link. A better approach is to keep the default behaviour, but then prevent it with javascript:",
+            "li": "Have accessibility in mind when using javascript. Provide a way to have users be aware of changes triggered via javascript, try to not disable the normal functionalities of the browser and make it device independent. Unfortunately, there is no one-fits-all solution. However, a common mistake is i.e. removing the link href and adding an onclick event that handles the link. A better approach is to keep the default behaviour, but then prevent it with javascript:",
             "pre": "var specialLinks = document.getElementsByClassName('specialLink');\n\nfor(var i = 0; i < specialLinks.length; i++) { \n  specialLinks[i].addEventListener('click', function(e){\n    var link = this; // save the clicked link\n    e.preventDefault(); // prevent normal behaviour\n\n    // do stuff\n\n    window.location.href = link.getAttribute('href'); // go to target\n  });\n}",
             "preLang": "javascript"
           },
@@ -795,7 +795,7 @@
         "paragraphs":
         [
           {
-            "p": "WAI-ARIA stands for Web Accessibility Initiative - Accessible Rich Internet Applications. It is a W3C Standard, thus those features should be used even if not announced by screen readers yet. If it is not supported yet, it will be in near future. Moreover, they give screen reader useful semantic information. WAI-ARIA allows interaction with even extremely complex websites declaring certain elements on the page with roles and attributes. It works by adding metadata to the HTML tags. Here, some of the most important are explained. A full reference is up on W3C for all <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties\">attributes</a>, <a href=\"https://www.w3.org/TR/wai-aria/roles\">roles and landmarks</a>."
+            "p": "WAI-ARIA stands for Web Accessibility Initiative - Accessible Rich Internet Applications. It is a W3C Standard, thus those features should be used even if not announced by screen readers yet. If it is not supported yet, it will be in near future. Moreover, they give screen reader useful semantic information. WAI-ARIA allows interaction with even extremely complex websites declaring certain elements on the page with roles and attributes. It works by adding metadata to the HTML tags. Some of the most important attributes are explained in the following. A full reference is up on W3C for all <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties\">attributes</a>, <a href=\"https://www.w3.org/TR/wai-aria/roles\">roles and landmarks</a>."
           }
         ],
         "subs":
@@ -810,17 +810,17 @@
                 "preLang": "markup"
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls\">aria-controls</a> identify elements whose contents are controlled by the current element. Similar to the <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-owns\">aria-owns</a> attribute which identifies a visual, functional, or contextual parent/child relationship when it cannot be provided in the markup.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls\">aria-controls</a> identifies elements whose contents are controlled by the current element. Similar to the <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-owns\">aria-owns</a> attribute which identifies a visual, functional, or contextual parent/child relationship when it cannot be provided in the markup.",
                 "pre": "<button role=\"button\" aria-controls=\"amount\">Increase amount by 1</button>\n<p id=\"amount\">1</p>\n\n<div aria-owns=\"child\">Parent</div>\n<div id=\"child\">Child</div>",
                 "preLang": "markup"
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby\">aria-describedby</a> identify elements that describe the current element.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby\">aria-describedby</a> identifies elements that describe the current element.",
                 "pre": "<div aria-describedby=\"#exampleDescription\">Strange Thing</div>\n<p id=\"exampleDescription\">Representing [...]</p>",
                 "preLang": "markup"
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled\">aria-disabled</a> indicate disabled elements, those should additionally be visually grayed out and the tabindex should be removed. Which is similar to <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly\">aria-readonly</a>, which also indicate elements where the user cannot change the value, but with readonly the user is still able to navigate to descendants.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled\">aria-disabled</a> indicates disabled elements, those should additionally be visually grayed out and the tabindex should be removed. Which is similar to <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly\">aria-readonly</a>, which also indicates elements where the user cannot change the value, but with readonly the user is still able to navigate to descendants.",
                 "example":
                 {
                   "pre": "<input type=\"checkbox\" aria-disabled=\"true\" disabled>",
@@ -830,7 +830,7 @@
                 }
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed\">aria-grabbed</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">aria-dropeffect</a> indicates the state in a drag and drop operation. <code>aria-grabbed=\"true\"</code> indicates that an element is currently being dragged. <code>aria-grabbed=\"false\"</code> indicates that the element not being dragged but can be. The <code>aria-dropeffect</code> should be added to all elements where the currently dragged element can be dropped. It can have multiple values separated by a blank space: <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">copy</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">move</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">link</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">execute</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">popup</a>.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed\">aria-grabbed</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">aria-dropeffect</a> indicate the state in a drag and drop operation. <code>aria-grabbed=\"true\"</code> indicates that an element is currently being dragged. <code>aria-grabbed=\"false\"</code> indicates that the element not being dragged but can be. The <code>aria-dropeffect</code> should be added to all elements where the currently dragged element can be dropped. It can have multiple values separated by a blank space: <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">copy</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">move</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">link</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">execute</a>, <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect\">popup</a>.",
                 "pre": "<div aria-grabbed=\"false\">Draggable</div>\n<div aria-dropeffect=\"move execute\">Target</div>",
                 "preLang": "markup"
               },
@@ -850,7 +850,7 @@
                 }
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid\">aria-invalid</a> announce screen reader users that the elements have invalid data. I.e. you should add this to any form where the value entered by the user has failed validation.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid\">aria-invalid</a> announces to screen reader users that the elements have invalid data. I.e. you should add this to any form where the value entered by the user has failed validation.",
                 "example":
                 {
                   "pre": "<input type=\"text\" aria-invalid=\"true\">\n<input type=\"text\" aria-invalid=\"grammar\">\n<input type=\"text\" aria-invalid=\"spelling\">",
@@ -890,12 +890,12 @@
                 "preLang": "markup"
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete\">aria-autocomplete</a> indicate if completion suggestions are provided.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete\">aria-autocomplete</a> indicates if completion suggestions are provided.",
                 "pre": "<textarea aria-autocomplete=\"inline\">The suggestions are provided inline, after the users input.</textarea>\n<textarea aria-autocomplete=\"list\">A list of choices appears from which the user can choose.</textarea>\n<textarea aria-autocomplete=\"both\">Both types are provided.</textarea>",
                 "preLang": "markup"
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded\">aria-expanded</a> indicate if the element is currently collapsed or expanded.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded\">aria-expanded</a> indicates if the element is currently collapsed or expanded.",
                 "example":
                 {
                   "pre": "<button aria-expanded=\"false\" role=\"button\">Toggle 1</button>\n<button aria-expanded=\"true\" role=\"button\">Toggle 2</button>",
@@ -905,7 +905,7 @@
                 }
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-level\">aria-level</a> indicate the level of an element. I.e. to <a href=\"#Headings-4\">expand the headings</a> further down than level 6.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-level\">aria-level</a> indicates the level of an element. I.e. to <a href=\"#Headings-4\">expand the headings</a> further down than level 6.",
                 "example":
                 {
                   "pre": "<p role=\"heading\" aria-level=\"9000\">wow</p>",
@@ -915,17 +915,17 @@
                 }
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-multiline\">aria-multiline</a> indicates whether a text box accepts multiple lines of input or only a single line. This changes the default behaviour in forms, if set to true the enter button will not submit the form.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-multiline\">aria-multiline</a> indicates whether a text box accepts multiple lines of input or only a single line. This changes the default behaviour in forms: If set to true the enter button will not submit the form.",
                 "pre": "<textarea aria-autocomplete=\"inline\">The suggestions are provided inline, after the users input.</textarea>\n<textarea aria-autocomplete=\"list\">A list of choices appears from which the user can choose.</textarea>\n<textarea aria-autocomplete=\"both\">Both types are provided.</textarea>",
                 "preLang": "markup"
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable\">aria-multiselectable</a> Indicates that the user may select more than one item from the current selectable descendants. Here is an example by <a href=\"http://cookiecrook.com/test/aria/multiselect/listbox.html\">James Craig</a>:",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable\">aria-multiselectable</a> indicates that the user may select more than one item from the current selectable descendants. Here is an example by <a href=\"http://cookiecrook.com/test/aria/multiselect/listbox.html\">James Craig</a>:",
                 "pre": "<div role=\"application\">\n  <h1 id=\"listlabel\">ARIA Multiselectable Listbox Example</h1>\n  <ul id=\"list0\" role=\"listbox\" aria-labelledby=\"listlabel\" aria-activedescendant=\"list0_item1\" aria-multiselectable=\"true\" tabindex=\"0\">\n    <li id=\"list0_item0\" role=\"option\" aria-selected=\"false\">foo</li>\n    <li id=\"list0_item1\" role=\"option\" aria-selected=\"false\">bar</li>\n    <li id=\"list0_item2\" role=\"option\" aria-selected=\"false\">baz</li>\n  </ul>\n</div>",
                 "preLang": "markup"
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation\">aria-orientation</a> used in scrollbar, separator and slider to show whether the element and orientation is horizontal or vertical. Example via <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute\">MDN</a>:",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation\">aria-orientation</a> is used in scrollbars, separators and sliders to show whether the element and orientation is horizontal or vertical. Example via <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute\">MDN</a>:",
                 "pre": "<a href=\"#\" id=\"handle_zoomSlider\"\n   role=\"slider\"\n   aria-orientation=\"vertical\"\n   aria-valuemin=\"0\"\n   aria-valuemax=\"17\"\n   aria-valuenow=\"14\">\n  <span>11</span>\n</a>",
                 "preLang": "markup"
               },
@@ -933,7 +933,7 @@
                 "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-pressed\">aria-pressed</a> as for <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-pressed\">aria-checked</a> and <a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-pressed\">aria-selected</a> does what the name suggest, they indicate whether the element is checked, selected or pressed. They can be set to true, false or mixed. Mixed being a mixed mode value for a tri-state element. However, selected has no mixed value. Usually when using standard HTML elements as buttons the state is identified by default and does not require extra aria attributes. They might make sense if you construct your own elements."
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-required\">aria-required</a> indicates that user input is required. As seen under <a href=\"#Required-Fields-2\">required fields</a> This should be added to any required form-field, don’t forget to provide a visual clue as well.",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-required\">aria-required</a> indicates that user input is required. As seen under <a href=\"#Required-Fields-2\">required fields</a> This should be added to any required form-field. do not forget to provide a visual clue as well.",
                 "example": {
                   "pre": "<input type=\"text\" name=\"name\" required aria-required=\"true\">",
                   "preLang": "markup",
@@ -942,7 +942,7 @@
                 }
               },
               {
-                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-sort\">aria-sort</a> indicates if items in a table or grid are sorted in ascending or descending order. Simplified example of the one from <a href=\"http://maxdesign.com.au/jobs/sample-accessibility/07-tables/15-sortable.html\">maxdesign</a>:",
+                "li": "<a href=\"https://www.w3.org/TR/wai-aria/states_and_properties#aria-sort\">aria-sort</a> indicates whether items in a table or grid are sorted in ascending or descending order. Simplified example of the one from <a href=\"http://maxdesign.com.au/jobs/sample-accessibility/07-tables/15-sortable.html\">maxdesign</a>:",
                 "pre": "<table id=\"exampleTable\">\n  <thead>\n  <tr>\n    <th aria-label=\"Account name: Ascending sort applied, activate to apply a descending sort\" aria-sort=\"ascending\" aria-controls=\"exampleTable\" role=\"columnheader\" scope=\"col\" tabindex=\"0\">\n      Account name </th>\n  </tr>\n  </thead>\n  <tbody aria-relevant=\"all\" aria-live=\"polite\">\n  <tr>\n    <td>Personal account</td>\n    <td>Main Account</td>\n  </tr>\n  </tbody>\n</table>",
                 "preLang": "markup"
               }
@@ -1261,7 +1261,7 @@
             "p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project via github."
           },
           {
-            "li": "There are some automated testing tools as <a href=\"http://www.cynthiasays.com/\">CynthiaSays</a> and <a href=\"http://wave.webaim.org/\">WAVE</a> but because they cannot make judgment calls, they are not as good as a human testing. So, the best way to test your website for visual accessibility is to actually use a screen reader yourself. Now, as you don’t want to spend thousands of dollars, use the ones you can get for free. On a Mac OS you can use the built in <a href=\"https://www.apple.com/voiceover/info/guide/\">VoiceOver</a>. On a Windows OS there is <a href=\"http://www.nvaccess.org/\">NVDA</a>, which is backed by users and huge companies as Adobe and Google."
+            "li": "There are some automated testing tools as <a href=\"http://www.cynthiasays.com/\">CynthiaSays</a> and <a href=\"http://wave.webaim.org/\">WAVE</a> but because they cannot make judgment calls, they are not as good as human testing. So, the best way to test your website for visual accessibility is to actually use a screen reader yourself. Now, as you do not want to spend thousands of dollars, use the ones you can get for free. On a Mac OS you can use the built in <a href=\"https://www.apple.com/voiceover/info/guide/\">VoiceOver</a>. On a Windows OS there is <a href=\"http://www.nvaccess.org/\">NVDA</a>, which is backed by users and huge companies like Adobe and Google."
           },
           {
             "li": "References/Resources used to write this page: <br>The Standart: <a href=\"https://www.w3.org/TR/wai-aria/\">W3.org</a>, <a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/\">MDN</a>, <a href=\"https://dev.opera.com/articles/introduction-to-wai-aria/\">dev.opera</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://www.section508.gov/content/learn\">Section508.gov</a>, <a href=\"https://www.paciellogroup.com/blog/\">Paciello Group</a> and <a href=\"https://www.w3.org/TR/WCAG20/\">WCAG 2.0</a>, <a href=\"https://www.w3.org/WAI/\">Web Accessibility Initiative</a>.<br>Other: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://www.standards-schmandards.com/\">Peter Krantz Blog</a>, <a href=\"http://4syllables.com.au/category/articles/accessibility/\">4syllables</a>, <a href=\"http://stackoverflow.com/questions/tagged/accessibility\">Stackoverflow</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."

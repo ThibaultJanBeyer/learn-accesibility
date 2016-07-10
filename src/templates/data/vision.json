@@ -6,7 +6,7 @@
     "letter": "L",
     "intro": 
     {
-      "p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses don’t help or are not worn) and/or sees color differently. He may adjust the settings of his computer monitor, might use a screen magnifier or custom stylesheet, but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the European population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8.5% of the US population are affected by color-blindness. Compared to a city that would be more than three times the population of New York. This section focuses on the partially sighted that don’t use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
+      "p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses do not help or are not worn) and/or sees color differently. He may adjust the settings of his computer monitor, might use a screen magnifier or custom stylesheet, but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the European population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8.5% of the US population is affected by color-blindness. Compared to a city that would be more than three times the population of New York City. This section focuses on the partially sighted that do not use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
       "table":
       {
         "caption": "types of color blindness",
@@ -61,7 +61,7 @@
             "li": "Make sure that your images are of adequate resolution."
           },
           {
-            "li": "Users will increase the general page size. When increasing the Zoom it is like decreasing the screen size, thus a responsive design is needed."
+            "li": "Users will increase the general page size. Increasing the zoom factor is like decreasing the screen size, thus a responsive design is necessary."
           },
           {
             "li": "Always have in mind that some users cannot differentiate colors."
@@ -120,10 +120,10 @@
         "paragraphs":
         [
           {
-            "p": "If you want that users actually read what you write a good typography is crucial. Beside this section, have a look at the <a href=\"cognitive.html#Text---Typography\">Typography for Cognitive Accessibility</a>."
+            "p": "If you want users to actually read your content, good typography will be crucial. Beside this section, have a look at the <a href=\"cognitive.html#Text---Typography\">Typography for Cognitive Accessibility</a>."
           },
           {
-            "li": "A common false belief is that full black on full white is the best contrast. While the higher the contrast the better pure color combination are <a href=\"http://uxmovement.com/content/when-to-use-white-text-on-a-dark-background/\">actually very tiring</a> for the eye. Therefore, to reduce eye strain, use off-black against off-white. I.e. the text on this page is written in <code>#191919</code> black on <code>#F6F6F6</code> white.",
+            "li": "A common false belief is that full black on full white is the best contrast. Although the contrast is higher by using pure color combinations, this can be <a href=\"http://uxmovement.com/content/when-to-use-white-text-on-a-dark-background/\">very tiring</a> for the eye. Therefore, to reduce eye strain, use off-black against off-white. I.e. the text on this page is written in <code>#191919</code> black on <code>#F6F6F6</code> white.",
             "imgs":
             [
               {
@@ -151,7 +151,7 @@
             "preLang": "css"
           },
           {
-            "li": "Due to resizing issues it is a good practice to have any text as real text, not within an image. The best option right now is to style yout text with CSS."
+            "li": "Due to resizing issues it is a good practice to have any text as real text, not within an image. The best option right now is to style your text with CSS."
           }
         ]
       },
@@ -160,7 +160,7 @@
         "paragraphs":
         [
           {
-            "p": "A menu server multiple purposes. To navigate a website, but also to orientate the user. It is one of the websites key elements. Have a look at the navigation for <a href=\"visual.html#Navigation---Menus\">Visual</a>, <a href=\"physical-audio.html#Navigation---Menu\">Physical & Audio</a> and <a href=\"cognitive.html#Navigation\">Cognitive Accessibility</a>"
+            "p": "A menu serves multiple purposes. To navigate a website, of course, but also to give the user a sense of orientation. It is one of the websites key elements. Have a look at the navigation for <a href=\"visual.html#Navigation---Menus\">Visual</a>, <a href=\"physical-audio.html#Navigation---Menu\">Physical & Audio</a> and <a href=\"cognitive.html#Navigation\">Cognitive Accessibility</a>"
           },
           {
             "li": "Indicate the page the user is currently on. Have another indicator than just color. This website adds a background gradient on the current page and the current section in the table of content is highlighted by weight and size."
@@ -175,13 +175,13 @@
         "paragraphs":
         [
           {
-            "p": "The user should always know where he is and what he can do to achieve his goal. As the <a href=\"#Menu---Navigation\">navigation</a>, forms play a very important role on websites. That is why there are guidelines for <a href=\"visual.html#Forms\">Visual</a>,  <a href=\"visual.html#Forms\">Physical & Audio</a> and for <a href=\"visual.html#Forms\">Cognitive</a> Accessibility."
+            "p": "The user should always know where he is and what he can do to achieve his goal. Similar to the <a href=\"#Menu---Navigation\">navigation</a>, forms, too, play a very important role on websites. That is why there are guidelines for <a href=\"visual.html#Forms\">Visual</a>,  <a href=\"visual.html#Forms\">Physical & Audio</a> and for <a href=\"visual.html#Forms\">Cognitive</a> Accessibility."
           },
           {
             "li": "Position highlights (as the focus outline) may be styled but should never be removed. They should stay prominent and obvious. It is important for the user to know where he is, blinking cursor lines are easily overlooked."
           },
           {
-            "li": "Fields with error should not only be highlighted with color. I.e. you may add a cross or an exclamation mark to indicate error and a check-mark for success."
+            "li": "Fields with errors should not only be highlighted with color. For example: You may add a cross or an exclamation mark to indicate an error and a check-mark for success."
           },
           {
             "li": "Add a summary of all errors on top of the page briefly explaining why there was an error and how to fix it. This way the errors cannot be overseen. Global error messages should have a <code>heading</code> and a <code>list</code> of errors. Ideally, errors are linked to the corresponding field."
@@ -215,7 +215,7 @@
             "p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project."
           },
           {
-            "li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down to responsive designs and stylesheets that can be overwritten. Zoom your page by 200% and check for common issues. On Firefox you’ll find the zoom under View > Zoom > Zoom In."
+            "li": "You do not need to buy expensive <a href=\"http://www.lowvisionsimulators.com/find-the-right-low-vision-simulator/full-set\">low vision simulation goggles</a>. Low vision actually really comes down to responsive designs and stylesheets that can be overwritten. Zoom your page by 200% and check for common issues."
           },
           {
             "li": "There is a lot of free tools to test your websites on color blindness. You should definitely grab one and use it. The most popular ones are <a href=\"http://colororacle.org/\">Color Oracle</a> (lacks of tests for Monochromasy) and <a href=\"https://michelf.ca/projects/sim-daltonism/\">Sim Daltonism</a> (Mac only). There is also a popular <a href=\"http://colorfilter.wickline.org/\">webpage checker</a>."

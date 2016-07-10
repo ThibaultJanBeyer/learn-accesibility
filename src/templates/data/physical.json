@@ -6,7 +6,7 @@
     "letter": "P",
     "intro": 
     {
-      "p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use only his keyboard and/or have special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of all American adults report having troubles hearing. <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">According to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf users, but covers public places where the user might not be able to use audio as well. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eye-tracking software."
+      "p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use only his keyboard and/or have special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of the US adults report having troubles hearing. <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">According to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf users, but covers public places where the user might not be able to use audio as well. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eye-tracking software."
     },
     "sections": 
     [
@@ -18,7 +18,7 @@
             "li": "While background music can be ignored, any important audio content should have captions and/or visual equivalents."
           },
           {
-            "li": "Use visual bells when captioning does not make sense: i.e. add visual alerts on a chat (blinking browser tab, blinking chat window)."
+            "li": "Use visual bells when simple captioning is not sufficient or does not make sense. For example: Add visual bells on a chat (blinking browser tab & blinking chat window)."
           }
         ]
       },
@@ -55,7 +55,7 @@
             ]
           },
           {
-            "li": "It is a good practice to add transcripts for videos & Audio. Doing so, everyone who prefers reading over watching will benefit from it."
+            "li": "It is a good practice to add transcripts for video & audio. By doing so, everyone who prefers reading over watching will benefit from it."
           }
         ]
       },
@@ -89,7 +89,7 @@
             "li": "If the form fails, display a summary of errors at the top of the form additionally to those inline. Only inline might fail silently as the user might not scroll/look down. Ideally errors in the summary are also linked to the respective fields, so that the user can quickly jump to them."
           },
           {
-            "li": "There shouldn’t be any timeout when filling in forms or the like, if there has to be, then be generous with the time, be clear that there is a timer and what the consequences will be."
+            "li": "There should not be any timeout when filling in forms or the like. If there has to be, then be generous with the time, be clear that there is a timer and what the consequences of running out will be."
           },
           {
             "p": "Also have a look on forms for <a href=\"visual.html#Forms\">Visual</a>, <a href=\"vision.html#Forms\">Low Vision & Color</a> and <a href=\"cognitive.html#Forms\">Cognitive Accessibility</a>."
@@ -101,13 +101,13 @@
         "paragraphs": 
         [
           {
-            "p": "Popups can be a nightmare, especially when they open easily (on hover or focus). They often break the reading flow and are hard to close (to small close button or not closable via keyboard). However, if done right, popups can add value to a page. I.e. giving more information without leaving the page."
+            "p": "Popups can be a nightmare, especially when they open easily (on hover or focus). They often break the reading flow and are hard to close (too small close button or not closable via keyboard). However, if done right, popups can add value to a page. I.e. giving more information without leaving the page."
           },
           {
             "li": "Popups should be easy to close and should only open if the user wants them to."
           },
           {
-            "li": "If a popup is opened the first thing that has focus should be the close button. Also, it is a good idea to “trap” the focus within its popup until closed. This mimics the normal behaviour and prevents the keyboard user from losing focus."
+            "li": "If a popup is opened, the first thing that has focus should be the close button. Also, it is a good idea to “trap” the focus within its popup until closed. This mimics the normal behaviour and prevents the keyboard user from losing focus."
           },
           {
             "li": "The user should be able to close popups by hitting the <code>esc</code> button."
@@ -125,7 +125,7 @@
             "p": "Complex navigation hurt everyones usability. Reduce your navigation to a minimum."
           },
           {
-            "li": "You may style the focus outline the way you want but don’t remove it. Avoid messing around with the <code>tabindex</code>. All usable elements have to be accessible via keyboard."
+            "li": "You may style the focus outline the way you want but do not remove it. Avoid messing around with the <code>tabindex</code>. All usable elements have to be accessible via keyboard."
           },
           {
             "li": "Indicate the current position in your menu <a href=\"visual.html#Breadcrumbs-2\">semantically</a> and <a href=\"vision.html#Menu---Navigation-2\">visually</a>."
@@ -139,7 +139,7 @@
             "li": "All elements, including the drop-down should be accessible using just the keyboard."
           },
           {
-            "li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a best practice. That way the user do not have to traverse a lot of elements, but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus. You can try it out by traversing this example using the tab key.",
+            "li": "Using skip links as introduced in <a href=\"visual.html#Skip-Links\">visual accessibility</a> is a good practice. That way users do not have to traverse a lot of elements, but can jump immediately to specific sections. If you have them visually hidden, reveal them on focus. You can try it out by traversing this example using the tab key.",
             "pre": "// Script to unhide Skiplinks on focus\nvar skiplinks = document.querySelectorAll('a.visuallyhidden');\nfor (var i = 0; i < skiplinks.length; i++) {\n  var el = skiplinks[i];\n  el.addEventListener('focus', function() {\n    el.classList.remove('visuallyhidden');\n  });\n  el.addEventListener('blur', function() {\n    el.classList.add('visuallyhidden');\n  }); }",
             "preLang": "javascript",
             "example":
@@ -165,12 +165,12 @@
                 "li": "Usually Submenus are individual lists <code>ul</code> or <code>ol</code>, nested in the parents list item <code>li</code>."
               },
               {
-                "li": "Drop downs should stay dropped down once activated or have a tolerance for a wavering mouse. This way prevents the menu from unintentionally closing when used by people with reduced dexterity. The same holds true for all appearing/disappearing elements. On this website an easy CSS technique was used to show/hide the link anchors with a delay. Here is a simplified example:",
+                "li": "Drop downs should stay dropped down once activated or have a tolerance for a wavering mouse. This prevents the menu from unintentionally closing when used by people with reduced dexterity. The same holds true for all appearing/disappearing elements. On this website an easy CSS technique was used to show/hide the link anchors with a delay. Here is a simplified example:",
                 "pre": "/*\n * 1. the second number is the animations delay\n */\n.anchor {\n  opacity: 0;\n  transition: opacity 0.5s 0.5s; /* 1. */\n}\n\n/*\n * 1. overwrite the delay and show it immediately\n *  if the element is not hovered (thus on blur) \n *  the rule above takes effect and add a delay\n */\n.anchor--li:hover .anchor,\n.anchor--li:focus .anchor {\n  opacity: 1;\n  transition: opacity 0.5s; /* 1. */\n}",
                 "preLang": "css"
               },
               {
-                "li": "Don’t open the submenu as soon as the focus enters the top-level menu item. A keyboard-only user doesn’t want to step through all the submenu links to get to the next top-level item. One way would be that the top level is actually not a link, but just a toggling button. If this top level item should remain a link to a page you can delay the drop down on focus so that the user would be able to quickly fly over it. Then, however, the user will have to wait some time before seeing the subnav when he actually wants to open it. Another solution is to be able to navigate through the menu using the arrow keys. Left and right to navigate the top buttons, down and up to access the sub-links. That is quite tricky to code and some users might not understand it. The easiest and probably best solution is to add a separate “show submenu” button (i.e. an arrowhead) that is accessible and will toggle the submenu. Here is an example:",
+                "li": "do not open the submenu as soon as the focus enters the top-level menu item. A keyboard-only user does not want to step through all the submenu links to get to the next top-level item. One way would be that the top level is actually not a link, but just a toggling button. If this top level item should remain a link to a page you can delay the drop down on focus so that the user would be able to quickly fly over it. Then, however, the user will have to wait some time before seeing the subnav when he actually wants to open it. Another solution is to be able to navigate through the menu using the arrow keys. Left and right to navigate the top buttons, down and up to access the sub-links. That is quite tricky to code and some users might not understand it. The easiest and probably best solution is to add a separate “show submenu” button (i.e. an arrowhead) that is accessible and will toggle the submenu. Here is an example:",
                 "pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly we have to set the focus on the first link element,\n      // otherwise screenreader do not notice the change\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
                 "preLang": "javascript",
                 "example":
@@ -189,7 +189,7 @@
                 "p": "Horizontal Scrolling is a <a href=\"https://www.nngroup.com/articles/horizontal-scrolling/\">challenge for most users</a> and becomes an even greater pain for people with unsteady hands. Moreover, some modern browser hide the scrollbar which makes it even more difficult."
               },
               {
-                "li": "In general, users ignore horizontal scrolling even if there are arrows. Also the more on the right the content is, the less it will be seen. If you still use horizontal scroll, always indicate how many items are hidden."
+                "li": "In general, users ignore horizontal scrolling even if there are arrows. Also, the more to the right the content is, the less it will be seen. If you still use horizontal scroll, always indicate how many items are hidden."
               },
               {
                 "li": "Also, vertical scrolling is not always obvious. I.e. when having a full height header image, a lot of users do not notice that they can actually scroll. So, provide a visual hint."
@@ -206,7 +206,7 @@
             "p": "Found an error or have an addition? Please <a href=\"https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md\">contribute</a> to this project via github."
           },
           {
-            "li": "Actually, no useful automatic testing tools was found. Luckily, testing for physical & audio disabilities is not a big deal:<br>1. Use your website with your keyboard only and see if every element is accessible.<br>2. Simulate an unsteady cursor by slightly shaking your mouse while using your page. See if everything is still easily usable (element sizes + appear/disappear)<br>3. Turn your audio off to check for audio issues."
+            "li": "Actually, no useful automatic testing tools were found. Luckily, testing for physical & audio disabilities is not a big deal:<br>1. Use your website with your keyboard only and see if every element is accessible.<br>2. Simulate an unsteady cursor by slightly shaking your mouse while using your page. See if everything is still easily usable (element sizes + appear/disappear)<br>3. Turn your audio off to check for audio issues."
           },
           {
             "li": "References/Resources used to write this page: <a href=\"https://www.amazon.com/Accessibility-Handbook-Katie-Cunningham-ebook/dp/B0092UB21U/\">Accessibility Handbook</a>, <a href=\"http://verticalchallenge.org/\">Vertical Challenge</a>, <a href=\"https://www.nngroup.com/articles/\">Nielsen Norman Group</a>, <a href=\"http://webaim.org/\">Webaim</a>, <a href=\"https://www.w3.org/WAI/tutorials/\">WAI Tutorials</a>, <a href=\"http://uxmovement.com/\">uxmovement</a> and <a href=\"https://www.reddit.com/r/accessibility/\">Reddit</a>."
