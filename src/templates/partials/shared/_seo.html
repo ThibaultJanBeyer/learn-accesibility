@@ -8,7 +8,7 @@
 <meta name="description" content="{{ key.SEO.desc }}">
 <meta name="keywords" content="{{ key.SEO.kw }}{{ shared.kw }}">
 <!-- Facebook -->
-<meta property="og:image" content="{{ key.SEO.img }}">
+<meta property="og:image" content="{{ shared.url }}{{ key.SEO.img }}">
 <meta property="og:description" content="{{ key.SEO.desc }}">
 <meta property="og:title" content="{{ key.SEO.title }} {{ shared.name }}">
 <meta property="og:site_name" content="{{ shared.name }}">
@@ -17,10 +17,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ key.SEO.title }} {{ shared.name }}">
 <meta name="twitter:description" content="{{ key.SEO.desc }}">
-<meta name="twitter:image" content="{{ key.SEO.img }}">
+<meta name="twitter:image" content="{{ shared.url }}{{ key.SEO.img }}">
 <!-- Google -->
 <meta itemprop="name" content="{{ key.SEO.title }} {{ shared.name }}">
 <meta itemprop="description" content="{{ key.SEO.desc }}">
-<meta itemprop="image" content="{{ key.SEO.img }}">
+<meta itemprop="image" content="{{ shared.url }}{{ key.SEO.img }}">
 
 {% endmacro %}
