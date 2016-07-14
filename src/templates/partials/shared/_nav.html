@@ -12,10 +12,10 @@
         <span class="visuallyhidden">{{ nav.selected }}</span>
         {% endif %}
         <span class="nav__link-container">
-          <p class="nav__link-title copy">{{ option.title }}</p>
-          <p class="nav__link-description copy">
+          <span class="nav__link-title copy">{{ option.title }}</span>
+          <span class="nav__link-description copy">
             {{ option.description | safe }} <span class="visuallyhidden">{{ option.sr }}</span>
-          </p>
+          </span>
         </span>
       </a>
     </li>
@@ -28,9 +28,9 @@
         <li>
           <a href="{{ option.url }}" class="nav__link nav__link--secondary center-align {{ 'nav__link--selected' if option.title == key.letter }}">
             <span class="nav__link-container">
-              <p class="nav__link-description copy">
+              <span class="nav__link-description copy">
                 {{ option.description | safe }} <span class="visuallyhidden">{{ option.sr }}</span>
-              </p>
+              </span>
             </span>
           </a>
         </li>

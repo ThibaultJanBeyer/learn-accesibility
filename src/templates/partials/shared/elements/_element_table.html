@@ -30,11 +30,7 @@
       {% endfor %}
       </td>
     {% else %}
-      {% if loop.index == 1 %}
-        <td class="element-table__td copy" scope="row">{{ cell | safe }}</td>
-        {% else %}
-        <td class="element-table__td copy">{{ cell | safe }}</td>
-      {% endif %}
+      <td class="element-table__td copy">{{ cell | safe }}</td>
     {% endif %}
     {% endfor %}
   </tr>

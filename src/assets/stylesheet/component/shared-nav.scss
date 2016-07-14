@@ -46,6 +46,7 @@
 
 .nav__link-title {
   @include heading($beta, $secondary-family, $secondary-weight);
+  display: block;
   text-align: center;
 }
 
@@ -54,6 +55,7 @@
  */
 .nav__link-description {
   @include font-size-responsive($delta);
+  display: block;
   text-align: center;
   padding: 0 6px; /* 1. */
 }

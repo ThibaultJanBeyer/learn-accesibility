@@ -380,10 +380,10 @@
             "li": "It is a good practice to add captions to your tables explaining what they are about. If it is obvious, just <a href=\"#Hiding-Elements\">hide it for visual users</a>."
           },
           {
-            "li": "To make sure that the screen readers read your tables correctly, include scoping. Use <code>scope=\"col\"</code> to identify the columns and <code>scope=\"row\"</code> to identify rows and <code>scope=\"colgroup\"</code> whenever a column spans over more than one item. This is how a complex accessible table could look like:",
+            "li": "To make sure that the screen readers read your tables correctly, include scoping. Use <code>scope=\"col\"</code> to identify the columns and <code>scope=\"row\"</code> to identify rows (only placed on the th tag) and <code>scope=\"colgroup\"</code> whenever a column spans over more than one item. This is how a complex accessible table could look like:",
             "example":
             {
-              "pre": "<table class=\"exampletable\">\n  <caption>Edible elements:</caption>\n  <tr>\n    <td scope=\"col\"></td>\n    <th scope=\"col\">Edible</th>\n    <th colspan=\"2\" scope=\"colgroup\">Not Edible</th>\n    <th scope=\"col\">Maybe Edible</th>\n  </tr>\n  <tr>\n    <th>Apple</th>\n    <td scope=\"row\">Fruit</td>\n    <td>Computer</td>\n    <td>Corporation</td>\n    <td>Special</td>\n  </tr>\n</table>",
+              "pre": "<table class=\"exampletable\">\n  <caption>Edible elements:</caption>\n  <tr>\n    <td></td>\n    <th scope=\"col\">Edible</th>\n    <th colspan=\"2\" scope=\"colgroup\">Not Edible</th>\n    <th scope=\"col\">Maybe Edible</th>\n  </tr>\n  <tr>\n    <th scope=\"row\">Apple</th>\n    <td>Fruit</td>\n    <td>Computer</td>\n    <td>Corporation</td>\n    <td>Special</td>\n  </tr>\n</table>",
               "preLang": "markup",
               "play": "Listen ♫",
               "audio": "Edible elements, table 5 columns, 2 rows. -- Edible, column 2. -- Spans 2 columns, Not edible, column 3. -- Maybe edible, colum 5. -- Row 2, Apple. -- Edible, Fruit, column 2. -- Not edible, Computer, column 3 -- Corporation. -- Maybe edible, Special, column 5."

@@ -56,10 +56,14 @@
 .site__toggler-bar,
 .site__toggler-bar::before,
 .site__toggler-bar::after {
-  width: 30px;
-  height: 5px;
   background: $black;
+  height: 5px;
   position: absolute;
+  width: 30px;
+}
+
+.site__toggler-bar {
+  display: block;
 }
 
 .site__toggler-bar::before {
