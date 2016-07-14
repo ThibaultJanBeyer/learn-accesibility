@@ -19,7 +19,7 @@
   .home-objects__object:nth-child(#{$i}) {
     top: 10% + random(80);
     left: 5% + random(95);
-    animation-duration: 5000ms - ($i * random(300));
+    animation-duration: 6100ms - ($i * random(200));
     animation-fill-mode: backwards;
     animation-name: oFillUp--#{$i};
   }

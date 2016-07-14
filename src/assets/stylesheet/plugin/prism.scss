@@ -114,7 +114,6 @@ pre.line-numbers > code {
 
 .line-numbers .line-numbers-rows {
 	position: absolute;
-	pointer-events: none;
 	top: 0;
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
@@ -129,7 +128,6 @@ pre.line-numbers > code {
 }
 
 	.line-numbers-rows > span {
-		pointer-events: none;
 		display: block;
 		counter-increment: linenumber;
 	}
