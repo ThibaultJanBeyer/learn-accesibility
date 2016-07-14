@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 
 
-var mSrc = './src/assets/pdf/*',
-    mDst = './dist/assets/pdf/';
+var mSrc = './src/assets/misc/*',
+    mDst = './dist/';
 
 module.exports = function () {
    return gulp.src(mSrc)
