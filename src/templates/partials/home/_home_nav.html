@@ -7,9 +7,9 @@
     {% for option in shared.nav.options %}
     {% if option.title %}
       {% if loop.index % 2 != 0 %}
-      <div class="home-nav__options-container">
+      <li class="home-nav__options-container">
       {% endif %}
-        <li class="home-nav__option">
+        <span class="home-nav__option">
           <a href="{{ option.url }}" class="home-nav__link center-align {{ option.title }} leaving-animation">
             <span class="home-nav__link-holder leaving-animation__holder">
               <span class="home-nav__link-container leaving-animation__container">
@@ -18,9 +18,9 @@
               </span>
             </span>
           </a>
-        </li>
+        </span>
       {% if loop.index % 2 == 0 %}
-      </div>
+      </li>
       {% endif %}
     {% endif %}
     {% endfor %}

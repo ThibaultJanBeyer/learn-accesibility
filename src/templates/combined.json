@@ -152,7 +152,7 @@
 							{
 								"li": "The possibility to search for content on your website should be available if possible. It helps users to find content and is often more efficient than going through the navigation. The ideal search provides suggestions that allow synonyms and check the spelling. This is how an accessible search-bar could look like (as seen on <a href=\"visual.html#Structure-3\">Visual Accessibility</a>):",
 								"example": {
-									"pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
+									"pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\" src=\"\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
 									"preLang": "markup"
 								}
 							}
@@ -473,7 +473,7 @@
 								"pre": "var menuItems = document.querySelectorAll('.exampleButton');\n\nfor(var i = 0; i < menuItems.length; i++) {\n  menuItems[i].addEventListener('click',  function(e){\n    var button = this;\n    var buttonText = button.querySelector('.visuallyhidden');\n    var subMenu = button.parentNode.querySelector('.example-submenu');\n\n    if (!button.classList.contains('open')) {\n      button.classList.add('open');\n      buttonText.innerText = 'hide submenu';\n      subMenu.classList.remove('hidden');\n      subMenu.removeAttribute('aria-hidden');\n      // sadly we have to set the focus on the first link element,\n      // otherwise screenreader do not notice the change\n      subMenu.querySelector('a').focus();\n    } else {\n      button.classList.remove('open');\n      buttonText.innerText = 'show submenu';\n      subMenu.classList.add('hidden');\n      subMenu.setAttribute('aria-hidden', 'true');\n    }\n  });\n}",
 								"preLang": "javascript",
 								"example": {
-									"pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2\">\n  <h2 id=\"exampleNav2\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
+									"pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2title\">\n  <h2 id=\"exampleNav2title\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
 									"preLang": "markup"
 								}
 							}

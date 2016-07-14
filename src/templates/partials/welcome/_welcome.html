@@ -28,8 +28,8 @@
     </p>
     <div class="welcome__img-container">
       {% if writing.img %}
-      <span class="fly__container">
-        <img src="{{ writing.img }}" aria-hidden="true" role="presentation" class="fly--out welcome__img">
+      <div class="fly__container">
+        <img src="{{ writing.img }}" aria-hidden="true" role="presentation" alt="" class="fly--out welcome__img">
         {% if writing.last %}
           <div class="welcome__target"></div>
           <div class="lock--locker"></div>
@@ -37,11 +37,11 @@
               {{ writing.last }}
             </a>
         {% endif %}
-      </span>
+      </div>
       {% endif %}
       {% if writing.button %}
       <span class="fly__container">
-        <button aria-hidden="true" role="presentation"  class="button button--next metalink metalink--alt welcome__button fly--out">
+        <button aria-hidden="true" class="button button--next metalink metalink--alt welcome__button fly--out">
           {{ writing.button }}
         </button>
       </span>
