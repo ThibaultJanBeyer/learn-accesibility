@@ -168,7 +168,7 @@
                 "li": "The possibility to search for content on your website should be available if possible. It helps users to find content and is often more efficient than going through the navigation. The ideal search provides suggestions that allow synonyms and check the spelling. This is how an accessible search-bar could look like (as seen on <a href=\"visual.html#Structure-3\">Visual Accessibility</a>):",
                 "example":
                 {
-                  "pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\" src=\"\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
+                  "pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\" src=\"logo.png\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
                   "preLang": "markup"
                 }
               }

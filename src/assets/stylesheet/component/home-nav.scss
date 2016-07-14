@@ -43,10 +43,12 @@
 
 .home-nav__link-title {
   @include heading($mega, $secondary-family, $secondary-weight);
+  display: block;
   text-align: center;
 }
 
 .home-nav__link-description {
   @include font-size-responsive;
+  display: block;
   text-align: center;
 }

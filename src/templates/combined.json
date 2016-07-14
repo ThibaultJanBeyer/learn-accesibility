@@ -152,7 +152,7 @@
 							{
 								"li": "The possibility to search for content on your website should be available if possible. It helps users to find content and is often more efficient than going through the navigation. The ideal search provides suggestions that allow synonyms and check the spelling. This is how an accessible search-bar could look like (as seen on <a href=\"visual.html#Structure-3\">Visual Accessibility</a>):",
 								"example": {
-									"pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\" src=\"\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
+									"pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\" src=\"logo.png\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
 									"preLang": "markup"
 								}
 							}
@@ -895,7 +895,7 @@
 			],
 			"ul": [
 				"All concepts introduced on this page were tested (so far) with VoiceOver June 2016.",
-				"In example outputs, the headings where replaced by <strong> tags and the sections with <div> tags to not confuse screen reader users browsing this page."
+				"In example outputs, the headings where replaced by <code>strong</code> tags and the sections with <code>div</code> tags to not confuse screen reader users browsing this page."
 			]
 		},
 		"sections": [
@@ -953,7 +953,7 @@
 					{
 						"li": "Use the <code>header</code> tag with <code>role=\"banner\"</code> for the heading of your website (often containing the logo and a search bar). I.e. like this:",
 						"example": {
-							"pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
+							"pre": "<header role=\"banner\">\n  <img alt=\"Google\" style=\"height:70px\" src=\"logo.png\">\n  <div role=\"search\">\n    <input type=\"search\" aria-label=\"Search\">\n    <button type=\"submit\">Search</button>\n  </div>\n</header>",
 							"preLang": "markup",
 							"play": "Listen ♫",
 							"audio": "Banner, 2 items. -- Google image. -- Search, 2 items. -- search input. -- search button."
