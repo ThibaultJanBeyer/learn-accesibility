@@ -2,7 +2,10 @@
 
 {% extends "layout.html" %}
 
-{% block title %}Visual Accessibility – {% endblock %}
+{% block head %}
+  {% import "partials/shared/_seo.html" as seo %}
+  {{ seo.seo(shared, visual.SEO) }}
+{% endblock %}
 
 {% block content %}
 {% set route = visual %}

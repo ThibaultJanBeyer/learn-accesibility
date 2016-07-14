@@ -2,7 +2,10 @@
 
 {% extends "layout.html" %}
 
-{% block title %}Physical & Audio Accessibility – {% endblock %}
+{% block head %}
+  {% import "partials/shared/_seo.html" as seo %}
+  {{ seo.seo(shared, physical.SEO) }}
+{% endblock %}
 
 {% block content %}
 {% set route = physical %}

@@ -2,7 +2,10 @@
 
 {% extends "layout.html" %}
 
-{% block title %}Selling Accessibility – {% endblock %}
+{% block head %}
+  {% import "partials/shared/_seo.html" as seo %}
+  {{ seo.seo(shared, selling.SEO) }}
+{% endblock %}
 
 {% block content %}
 {% set route = selling %}

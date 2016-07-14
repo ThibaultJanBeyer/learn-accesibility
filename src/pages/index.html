@@ -2,6 +2,11 @@
 
 {% extends "layout.html" %}
 
+{% block head %}
+  {% import "partials/shared/_seo.html" as seo %}
+  {{ seo.seo(shared, shared.home.SEO) }}
+{% endblock %}
+
 {% block content %}
 <div class="body__container">
 

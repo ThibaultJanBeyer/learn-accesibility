@@ -4,6 +4,14 @@
     "title": "Cognitive",
     "subtitle": "Accessibility",
     "letter": "C",
+    "SEO":
+    {
+      "title": "Cognitive Accessibility –",
+      "url": "cognitive.html",
+      "desc": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. Learn how to make your website accessible for this usergroup...",
+      "kw": "dyslexia, adhd, adhs, usability, ux, ui, user experience",
+      "img": "assets/img/cognitive.png"
+    },
     "intro": 
     {
       "p": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. He may use ad/image blockers or other noise reducing tools and/or custom styles to overwrite the default styles. <a href=\"http://www.dyslexia-international.org/wp-content/uploads/2016/04/DI-Duke-Report-final-4-29-14.pdf\">According to Dyslexia International</a> more than one out of 10 people and <a href=\"http://www.adhd-institute.com/burden-of-adhd/epidemiology/\">according to the ADHD Institute</a> ~6% of all children and ~3% of all adults have Attention Deficit Disorders. Every aspect of accessibility and especially the cognitive accessibility, improve general usability.",

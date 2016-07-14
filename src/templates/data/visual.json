@@ -4,6 +4,14 @@
     "title": "Visual",
     "subtitle": "Accessibility",
     "letter": "V",
+    "SEO":
+    {
+      "title": "Visual Accessibility –",
+      "url": "visual.html",
+      "desc": "Visual Accessibility covers every user that is using a screen reader. This group encounters the most pain points when surfing the web. Learn how to improve user experience for this usergroup...",
+      "kw": "blind, wai-aria, jaws, zoom text, voiceover, hiding, alt, skiplinks",
+      "img": "assets/img/visual.png"
+    },
     "intro": 
     {
       "p": "Visual Accessibility covers every user that is using a screen reader. This group encounters the most pain points when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7.5 million people in the United States are blind or have a significant vision loss. That is approximately twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads the content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",

@@ -1,5 +1,13 @@
 {
   "welcome": {
+      "SEO":
+      {
+        "title": "Why –",
+        "url": "welcome.html",
+        "desc": "When you build a website, you want it to be successful. Right? Then, why would you leave out a huge part of the population? Open up your website. Make it accessible for everyone!",
+        "kw": "why, care, intro, animation",
+        "img": "assets/img/intro.png"
+      },
       "title": "0. Why should you care?",
       "screenReader": "Hello dear Screen-Reader user, you are the best :)",
       "skip": "skip intro",

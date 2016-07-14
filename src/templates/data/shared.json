@@ -1,6 +1,9 @@
 {
   "shared": 
   {
+    "name": "Learn Accessibility",
+    "url": "http://learn-accessibility.org/",
+    "kw": "accessibility, accessible website, web, website, examples, visually impaired, colorblind, screen reader, physical, cognitive, audio, learn, usability, ux, ui, user experience, guidelines, open up the web for everyone",
     "contribute": "https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md",
     "toc": 
     {
@@ -82,7 +85,15 @@
     {
       "letters": [ "A","c","c","e","s","s","i","b","i","l","i","t","y","i","s" ],
       "title": "Accessibility",
-      "subtitle": "for everyone"
+      "subtitle": "for everyone",
+      "SEO":
+      {
+        "title": "",
+        "url": "",
+        "desc": "Learn how to improve the user experience of your site. Learn guidelines to build an accessible website. One that is accessible for everyone, not just a few. Learn Visual Accessibility, Low Vision Accessibility, Color Accessibility (colorblind), Physical Accessibility, Audio Accessibility, Cognitive Accessibility.",
+        "kw": "",
+        "img": "assets/img/index.png"
+      }
     }
   }
 }

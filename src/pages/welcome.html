@@ -2,7 +2,10 @@
 
 {% extends "layout.html" %}
 
-{% block title %}Introduction – {% endblock %}
+{% block head %}
+  {% import "partials/shared/_seo.html" as seo %}
+  {{ seo.seo(shared, welcome.SEO) }}
+{% endblock %}
 
 {% block content %}
 <div class="body__container">

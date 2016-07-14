@@ -3,6 +3,13 @@
 		"title": "Cognitive",
 		"subtitle": "Accessibility",
 		"letter": "C",
+		"SEO": {
+			"title": "Cognitive Accessibility –",
+			"url": "cognitive.html",
+			"desc": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. Learn how to make your website accessible for this usergroup...",
+			"kw": "dyslexia, adhd, adhs, usability, ux, ui, user experience",
+			"img": "assets/img/cognitive.png"
+		},
 		"intro": {
 			"p": "Cognitive accessibility covers every user having difficulties to read, write and/or concentrate. He may use ad/image blockers or other noise reducing tools and/or custom styles to overwrite the default styles. <a href=\"http://www.dyslexia-international.org/wp-content/uploads/2016/04/DI-Duke-Report-final-4-29-14.pdf\">According to Dyslexia International</a> more than one out of 10 people and <a href=\"http://www.adhd-institute.com/burden-of-adhd/epidemiology/\">according to the ADHD Institute</a> ~6% of all children and ~3% of all adults have Attention Deficit Disorders. Every aspect of accessibility and especially the cognitive accessibility, improve general usability.",
 			"ul": [
@@ -303,6 +310,13 @@
 		"title": "Physical",
 		"subtitle": "& audio Accessibility",
 		"letter": "P",
+		"SEO": {
+			"title": "Physical & Audio Accessibility –",
+			"url": "physical-audio.html",
+			"desc": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use only his keyboard and/or have special hearing devices. Learn how to improve user experience for this usergroup...",
+			"kw": "mouse, keyboard, captions",
+			"img": "assets/img/physical.png"
+		},
 		"intro": {
 			"p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use only his keyboard and/or have special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of the US adults report having troubles hearing. <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">According to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf users, but covers public places where the user might not be able to use audio as well. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eye-tracking software."
 		},
@@ -507,12 +521,19 @@
 		"title": "Selling",
 		"subtitle": "Accessibility",
 		"letter": "S",
+		"SEO": {
+			"title": "Selling Accessibility –",
+			"url": "selling.html",
+			"desc": "We can easily see from these few examples the business value of an accessible website. Accessibility is more than just “the blind people” and actually pays out.",
+			"kw": "selling, law, business, value, marketing, seo, sales, advertisement, reputation, facts, ranking, search engines, win clients",
+			"img": "assets/img/selling.png"
+		},
 		"intro": {
 			"p": "Working on a new project can be an exciting, even exhilarating experience. The first concepts are fabulous, the client seems friendly, everyone adds their input on how glorious they see the end result and seeing something different to your last big one-year project makes you feel more alive. Soon, however, the reality strikes back and big ambitions are undermined by tight deadlines, small budgets, understaffed teams and oversized customer requests. In the end, it is the budget of a project that decides over the quality of work. So it is no wonder that the project manager, worried about the completion in a timely manner, has reserved feelings on whether to implement accessibility guidelines or not. The client might have told him that he does not care about the blind people anyways since they are not part of his target group. That client probably has not enough proof of positive benefits and is only worried about his money bag, he might even feel that it is some sneaky tactic to make him pay more. However, there are a few undeniable facts underpinning the necessity and benefits of accessible work.",
 			"ul": [
 				"First of all, it is <strong>the right thing</strong> to do. Your websites should not be a privilege for only a few. Closing your door to a minority is not only hateful and thus damaging your image, it also hurts your business. Imagine these 2 very simplified examples: You have a small stand selling sweets for kids, but there comes a blind person, being unable to read the price tag, asking you how much a bunch of sweets costs. Who in the world would tell him to leave the stand if he can not read the signs? Another day comes a potential customer in a wheelchair, also asking you about the price of your sweets because your price tags are too elevated for him to be able to read them. Would you just ignore him and watch how he goes to your competitor’s stand who has placed his price tags in a more convenient manner? On the other hand, if you would be known as friendly, having accessible price tags and showing good will towards every customer, my friend, you can be sure that your sales will be tripled next week. Because a good reputation is the best advertisement you can have.",
 				"Maybe I am wrong, implying that <strong>you get a larger user base, more sales and that the extra effort is worth it</strong>. Maybe the examples I mentioned are too far away from reality and do not match your scenario. As I’m just a human I often make mistakes. So let’s put all the subjective projections, thoughts, imaginary examples and feelings aside and look at the facts. Let’s just look at the number of visually impaired people in the states. Based on <a href=\"https://nfb.org/blindness-statistics\">statistics from the NFB</a> there are more than 7.5 million visually impaired people in the USA (~2.35%). As Los Angeles has a total population of around 8.4 million, it is safe to say that having an inaccessible website is like excluding almost anyone living in New York City. But that’s only for the visually impaired and an accessible website will also improve the usability for color blind users (<a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">~8.5%</a>), people with hearing loss (<a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">~15%</a>), people with physical disabilities (<a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">~15.1%</a>) and cognitive disabilities (<a href=\"http://www.dyslexia-international.org/wp-content/uploads/2016/04/DI-Duke-Report-final-4-29-14.pdf\">~10% dyslexia</a> + <a href=\"http://www.adhd-institute.com/burden-of-adhd/epidemiology/\">~3% ADHD</a>). So, statistically speaking, accessibility touches around 53,95% of the population (that is not a marginal group but touches almost anyone). Now, in the USA that would be about 172 Million potential users. Now let’s say only 0.1% of those actually rely on accessible websites and will ever visit yours and out of those 0.1% only 1% will ever buy a product. In terms of figures, you should still have at least 1700 more sales.",
-				"Further, having an accessible website will <strong>enhance the page’s rating in search engines</strong>. The so-called crawlers or search bots that index and analyze your website to decide whether your content is relevant or not will rank accessible websites higher. It might change in near future, but for now, those bots are quite likely blind, deaf, dyslexic, ADHD and keyboard-only users.",
+				"Further, having an accessible website will <strong>enhance the page’s ranking in search engines</strong>. The so-called crawlers or search bots that index and analyze your website to decide whether your content is relevant or not will rank accessible websites higher. It might change in near future, but for now, those bots are quite likely blind, deaf, dyslexic, ADHD and keyboard-only users.",
 				"Lastly, it may surprise some people to learn that <strong>accessibility is actually a law</strong> <a href=\"http://webaim.org/articles/laws/world/\">in most countries</a>. For example France, Germany, Austria, Ireland, Portugal, Spain, Switzerland, Australia, New Zealand, United Kingdom, Canada, USA, China and Japan, to name a few, all have special laws ensuring equal opportunities for people with disabilities in the public sector. Although it might be morally questionable to use fear as an argument, it is a fact that you might get sued when working on a public project without caring about accessibility. To prevent this eventuality, when public organisations are looking for businesses that solve their problems, they are most likely to search for companies that already have references of accessible work and as humans tend to be reluctant to incorporate accessibility guidelines to their workflow, there is a high chance that <strong>you get those big extra clients</strong>."
 			],
 			"paragraphs": [
@@ -524,6 +545,9 @@
 		}
 	},
 	"shared": {
+		"name": "Learn Accessibility",
+		"url": "http://learn-accessibility.org/",
+		"kw": "accessibility, accessible website, web, website, examples, visually impaired, colorblind, screen reader, physical, cognitive, audio, learn, usability, ux, ui, user experience, guidelines, open up the web for everyone",
 		"contribute": "https://github.com/ThibaultJanBeyer/learn-accesibility/blob/master/CONTRIBUTE.md",
 		"toc": {
 			"title": "Table of contents for",
@@ -613,13 +637,27 @@
 				"s"
 			],
 			"title": "Accessibility",
-			"subtitle": "for everyone"
+			"subtitle": "for everyone",
+			"SEO": {
+				"title": "",
+				"url": "",
+				"desc": "Learn how to improve the user experience of your site. Learn guidelines to build an accessible website. One that is accessible for everyone, not just a few. Learn Visual Accessibility, Low Vision Accessibility, Color Accessibility (colorblind), Physical Accessibility, Audio Accessibility, Cognitive Accessibility.",
+				"kw": "",
+				"img": "assets/img/index.png"
+			}
 		}
 	},
 	"vision": {
 		"title": "Low vision",
 		"subtitle": "& Color Accessibility",
 		"letter": "L",
+		"SEO": {
+			"title": "Low Vision & Color Accessibility –",
+			"url": "vision.html",
+			"desc": "Low vision and color accessibility covers every user that has a lower eyesight than average and/or sees color differently. He may adjust the settings of his computer monitor, might use a screen magnifier or custom stylesheet, but is not using a screen reader. Learn how to improve user experience for this usergroup...",
+			"kw": "color, zoom, Deuteranopia, Monochromasy, Protanopia, Tritanopia",
+			"img": "assets/img/vision.png"
+		},
 		"intro": {
 			"p": "Low vision and color accessibility covers every user that has a lower eyesight than average (glasses do not help or are not worn) and/or sees color differently. He may adjust the settings of his computer monitor, might use a screen magnifier or custom stylesheet, but is not using a screen reader. <a href=\"http://www.euroblind.org/resources/information/\">According to the EBU</a> more than 4% of the European population is blind or partially sighted and <a href=\"http://webvision.med.utah.edu/book/part-viii-gabac-receptors/color-perception/\">according to Webvision</a> ~8.5% of the US population is affected by color-blindness. Compared to a city that would be more than three times the population of New York City. This section focuses on the partially sighted that do not use a <a href=\"visual.html\">screen reader</a> and the colorblind. There are different types color blindness:",
 			"table": {
@@ -839,6 +877,13 @@
 		"title": "Visual",
 		"subtitle": "Accessibility",
 		"letter": "V",
+		"SEO": {
+			"title": "Visual Accessibility –",
+			"url": "visual.html",
+			"desc": "Visual Accessibility covers every user that is using a screen reader. This group encounters the most pain points when surfing the web. Learn how to improve user experience for this usergroup...",
+			"kw": "blind, wai-aria, jaws, zoom text, voiceover, hiding, alt, skiplinks",
+			"img": "assets/img/visual.png"
+		},
 		"intro": {
 			"p": "Visual Accessibility covers every user that is using a screen reader. This group encounters the most pain points when surfing the web. <a href=\"https://nfb.org/blindness-statistics\">According to the NFB</a> more than 7.5 million people in the United States are blind or have a significant vision loss. That is approximately twice the population of Los Angeles. This section focuses on the ones using a screen reader. A screen reader is a tool that reads the content aloud. There are different types of screen readers, the most popular Screen Readers are JAWS and Zoom Text:",
 			"imgs": [
@@ -2044,6 +2089,13 @@
 		]
 	},
 	"welcome": {
+		"SEO": {
+			"title": "Why –",
+			"url": "welcome.html",
+			"desc": "When you build a website, you want it to be successful. Right? Then, why would you leave out a huge part of the population? Open up your website. Make it accessible for everyone!",
+			"kw": "why, care, intro, animation",
+			"img": "assets/img/intro.png"
+		},
 		"title": "0. Why should you care?",
 		"screenReader": "Hello dear Screen-Reader user, you are the best :)",
 		"skip": "skip intro",

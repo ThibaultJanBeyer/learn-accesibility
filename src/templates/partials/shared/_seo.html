@@ -1,0 +1,21 @@
+<!-- macro seo nunjuck -->
+{% macro seo(shared, key) %}
+
+<title>{{ key.title }} {{ shared.name }}</title>
+<!-- General -->
+<link rel="canonical" href="{{ shared.url }}{{ key.url }}" />
+<meta name="description" content="{{ key.desc }}">
+<meta name="keywords" content="{{ key.kw }}{{ shared.kw }}">
+<!-- Facebook -->
+<meta property="og:image" content="{{ key.img }}">
+<meta property="og:description" content="{{ key.desc }}">
+<meta property="og:title" content="{{ key.title }} {{ shared.name }}">
+<meta property="og:site_name" content="{{ shared.name }}">
+<meta property="og:see_also" content="{{ shared.url }}">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ key.title }} {{ shared.name }}">
+<meta name="twitter:description" content="{{ key.desc }}">
+<meta name="twitter:image" content="{{ key.img }}">
+
+{% endmacro %}

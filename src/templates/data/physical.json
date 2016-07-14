@@ -4,6 +4,14 @@
     "title": "Physical",
     "subtitle": "& audio Accessibility",
     "letter": "P",
+    "SEO":
+    {
+      "title": "Physical & Audio Accessibility –",
+      "url": "physical-audio.html",
+      "desc": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use only his keyboard and/or have special hearing devices. Learn how to improve user experience for this usergroup...",
+      "kw": "mouse, keyboard, captions",
+      "img": "assets/img/physical.png"
+    },
     "intro": 
     {
       "p": "Physical and Audio accessibility covers every user that has difficulties using a regular mouse and/or difficulties to hear audio. He may use only his keyboard and/or have special hearing devices. <a href=\"https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing\">According to the NIDCD</a> 2-3 out of 1000 children are born with hearing loss and ~15% of the US adults report having troubles hearing. <a href=\"http://www.cdc.gov/nchs/fastats/disability.htm\">According to the CDC</a> ~15% of the US Adults have physical disabilities. Audio accessibility is not only about deaf users, but covers public places where the user might not be able to use audio as well. Physical accessibility covers every user using a keyboard, disabilities causing the hand to tremble/shake and users using eye-tracking software."
