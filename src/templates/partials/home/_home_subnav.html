@@ -6,13 +6,13 @@
     {% for option in shared.subnav.options %}
     {% if option.title != 'H' %}
       <li class="home-subnav__option">
-        <div class="home-nav__link-holder leaving-animation__holder">
-          <div class="home-nav__link-container leaving-animation__container">
+        <span class="home-nav__link-holder leaving-animation__holder">
+          <span class="home-nav__link-container leaving-animation__container">
             <a href="{{ option.url }}" class="home-subnav__link {{ option.title }} {{ 'leaving-animation' if option.title == 'S' else 'leaving-animation-2' }}">
               {{ option.description | safe }}
             </a>
-          </div>
-        </div>
+          </span>
+        </span>
       </li>
     {% endif %}
     {% endfor %}

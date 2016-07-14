@@ -5,8 +5,10 @@
 {% for paragraph in section.paragraphs %}
 
   {% if paragraph.p %}
+  <li>
     {% import "partials/shared/elements/_element_p.html" as p %}
     {{ p.p(paragraph.p) }}
+  </li>
   {% endif %}
 
   {% if paragraph.li %}
@@ -15,23 +17,31 @@
   {% endif %}
 
   {% if paragraph.pre %}
+  <li>
     {% import "partials/shared/elements/_element_example.html" as example %}
     {{ example.example(section, page, sectionIndex, shared, paragraph, loop.index, false) }}
+  </li>
   {% endif %}
 
   {% if paragraph.imgs %}
+  <li>
     {% import "partials/shared/elements/_element_imgs.html" as imgs %}    
     {{ imgs.imgs(paragraph.imgs) }}
+  </li>
   {% endif %}
 
   {% if paragraph.example %}
+  <li>
     {% import "partials/shared/elements/_element_example.html" as example %}    
     {{ example.example(section, page, sectionIndex, shared, paragraph, loop.index, true) }}
+  </li>
   {% endif %}
 
   {% if paragraph.table %}
+  <li>
     {% import "partials/shared/elements/_element_table.html" as table %}
     {{ table.table(paragraph.table) }}
+  </li>
   {% endif %}
 
 {% endfor %}

@@ -23,7 +23,7 @@ if the next paragraph has a li element, hence if the next element is a li -->
     {% endif %}
     <div class="element-example__code">
       <span class="element-example__output">{{ shared.sections.output }}:</span>
-      {{ paragraph.example.pre | replace(r/\[...\]/g, '&lsqb;...&rsqb;') | replace(r/h1|h2|h3|h4|h5|h6/g, 'strong') | safe }}
+      {{ paragraph.example.pre | replace(r/\[...\]/g, '&lsqb;...&rsqb;') | replace(r/h1|h2|h3|h4|h5|h6/g, 'strong') | replace(r/section/g, 'div') | safe }}
     </div>
     {% if paragraph.example.audio %}
     <span class="element-example__transcript" aria-hidden="true">

@@ -26,7 +26,7 @@
       "ul":
       [
         "All concepts introduced on this page were tested (so far) with VoiceOver June 2016.",
-        "In example outputs, the headings where replaced by <strong> tags to not confuse screen reader users browsing this page."
+        "In example outputs, the headings where replaced by <strong> tags and the sections with <div> tags to not confuse screen reader users browsing this page."
       ]
     },
     "sections": 
@@ -286,7 +286,7 @@
             "li": "Indicate the current page by adding 'Current Page:' in front of the respective element in the menu. Additionally, to make sure that the current page is obvious, the current page should not be linked. See the <a href=\"#Navigation---Menus-4\">example below</a>."
           },
           {
-            "li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> and a heading to label the menu. This heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
+            "li": "Wrap the menu in a <code>nav</code> tag with <code>role=\"navigation\"</code> (to support old browsers that do not <a href=\"https://www.w3.org/WAI/tutorials/menus/structure/#identifying-the-menu\">apply the role implicitly</a>) and a heading to label the menu. This heading can be visually hidden. This is an accessible menu that enables users to find it when listing all the headings or menus:",
             "example":
             {
               "pre": "<nav role=\"navigation\" aria-labelledby=\"menu\">\n  <h2 id=\"menu\" class=\"visuallyhidden\">Main Menu</h2>\n  <ul>\n    <li><span class=\"visuallyhidden\">Current: </span>Home</li>\n    <li><a href=\"#link\">About</a></li>\n    <li><a href=\"#link\">Contact</a></li>\n  </ul>\n</nav>",
@@ -316,7 +316,7 @@
                 "preLang": "javascript",
                 "example":
                 {
-                  "pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2\">\n  <h2 id=\"exampleNav2\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
+                  "pre": "<nav id=\"exampleNav2\" role=\"navigation\" aria-labelledby=\"exampleNav2title\">\n  <h2 id=\"exampleNav2title\">Example Accessible Navigation</h2>\n  <ul>\n    <li><a href=\"#link\">Section1</a></li>\n    <li>\n      <a href=\"#link\">Section2</a>\n      <button class=\"exampleButton\">\n        <span class=\"visuallyhidden\">show submenu</span>\n      </button>\n      <ul class=\"example-submenu hidden\" aria-hidden=\"true\">\n        <li><a href=\"#link\">Section2-1</a></li>\n        <li><a href=\"#link\">Section2-2</a></li>\n      </ul>\n    </li>\n    <li><a href=\"#link\">Section3</a></li>\n  </ul>\n</nav>",
                   "preLang": "markup",
                   "play": "Listen ♫",
                   "audio": "Navigation, 'Example Accessible Navigation', 2 items. -- Heading Level 2, Example Accessible Navigation. -- Link, Section 1. -- Link, Section 2. -- Open submenu for section 2, button. -.- Link, Section 2-1. -- Link, Section 2-2. -- Link, Section 3."
@@ -466,7 +466,7 @@
             }
           },
           {
-            "li": "In some cases the image is <a href=\"#Purely-Decorative\">purely decorative</a>. If so, you should still provide an alt attribute but leave it empty. Otherwise, some older screen readers will read the image filename instead. To be sure that it does not get read add a <code>role=\"presentation\"</code> and/or <code>aria-hidden=\"true\"</code>.",
+            "li": "In some cases the image is <a href=\"#Purely-Decorative\">purely decorative</a>. If so, you should still provide an alt attribute but leave it empty. Otherwise, some older screen readers will read the image filename instead. To be sure that it does not get read add <code>aria-hidden=\"true\"</code>.",
             "pre": "<img src=\"img.jpg\" alt=\"\" aria-hidden=\"true\">",
             "preLang": "markup"
           },
@@ -531,7 +531,7 @@
             "preLang": "markup"
           },
           {
-            "li": "For more complex images you will need a two-part alternative. The first part is a brief description to identify the image, the second part is a long description near the visual element as text or as an external link pointing to a text. Use the <code>longdesc=\"#longdesc\"</code> attribute to link to the long description and <code>aria-describedby=\"longdesc\"</code> if the long description is not directly adjacent. Using the longdesc alone is not a good idea since it lacks support and it leaves out visual users. See the <a href=\"#SVG-3\">SVG example<a> for SVGs.",
+            "li": "For more complex images you will need a two-part alternative. The first part is a brief description to identify the image, the second part is a long description near the visual element as text or as an external link pointing to a text. Use the <code>longdesc=\"#longdesc\"</code> attribute to link to the long description and <code>aria-describedby=\"longdesc\"</code> if the long description is not directly adjacent. Using the longdesc alone is not a good idea since it lacks support and it leaves out visual users. See the <a href=\"#SVG-3\">SVG example</a> for SVGs.",
             "pre": "<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london\">\n  <figcaption>\n    <a href=\"#link\">Ethnic groups (text description of the pie chart)</a>\n  </figcaption>\n</figure>\n<!-- or -->\n<figure role=\"group\">\n  <img src=\"chart.png\" alt=\"Pie chart showing ethnic groups in london, described in detail below.\"\n    longdesc=\"#chart-longdesc\">\n  <figcaption id=\"chart-longdesc\">\n    <h2>Values</h2>\n    <table>\n      [...]\n    </table>\n  </figcaption>\n</figure>",
             "preLang": "markup"
           },
@@ -592,7 +592,7 @@
                 "p": "Visual elements that do not add any value should not be seen by screen readers. The Web Content Accessibility Guidelines 2.0 defines purely decorative images as: “serving only an aesthetic purpose, providing no information, and having no functionality”"
               },
               {
-                "li": "Do not to add titles, descriptions or anything that could possibly be read. For images, make sure that there is an empty alt attribute without any space characters <code>alt=\"\"</code> otherwise screen reader might read the filename instead. Just to be sure, add the <code>role=\"presentation\"</code> or/and <code>aria-hidden=\"true\"</code> which are supported by modern screen readers and will hide the element."
+                "li": "Do not to add titles, descriptions or anything that could possibly be read. For images, make sure that there is an empty alt attribute without any space characters <code>alt=\"\"</code> otherwise screen reader might read the filename instead. Just to be sure, add the <code>aria-hidden=\"true\"</code> attribute which is supported by modern screen readers and will hide the element."
               },
               {
                 "li": "Note that traditional methods used to hide elements as <code>visibility=\"hidden\"</code> or <code>display=\"none\"</code> hide elements for everyone, also for screen readers. If you want to hide elements for users with vision, but keep them available for screen reader users, use the technique described in the <a href=\"#Hiding-Elements\">Hiding Elements section</a>. If you want to hide elements only for screen reader users and keep them visible for users with vision, use the attribute <code>aria-hidden=\"true\"</code>."
@@ -621,7 +621,7 @@
                 "li": "Background images, article banners, thumbnails and small elements supporting links are most likely purely decorative."
               },
               {
-                "li": "The W3C Web Accessibility initiative put up a valuable <a href=\"https://www.w3.org/WAI/tutorials/images/decision-tree/\">decision tree</a> that describes how to use the alt attribute of the <img> element in various situations."
+                "li": "The W3C Web Accessibility initiative put up a valuable <a href=\"https://www.w3.org/WAI/tutorials/images/decision-tree/\">decision tree</a> that describes how to use the alt attribute of the <code>img</code> element in various situations."
               }
             ]
           }

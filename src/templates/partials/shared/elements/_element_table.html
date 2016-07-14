@@ -7,7 +7,7 @@
   {% if key.heads %}
   <tr class="element-table__tr">
     {% for head in key.heads %}
-    <th class="element-table__th copy" scope="col">{{ head }}</th>
+      <th class="element-table__th copy" scope="col">{{ head }}</th>
     {% endfor %}
   </tr>
   {% endif %}
@@ -17,7 +17,7 @@
   <tr class="element-table__tr">
     {% for cell in row %}
     {% if cell.manyMore %}
-      <td class="element-table__td copy" scope="{{ 'row' if loop.index == 1 }}" colspan="{{ cell.manyMoreSpan }}">
+      <td class="element-table__td copy" colspan="{{ cell.manyMoreSpan }}">
         {{ cell.manyMoreTitle }}:
       {% for more in cell.manyMore %}
         {% if cell.manyMoreUrlHash == 'NO' %}
@@ -30,7 +30,11 @@
       {% endfor %}
       </td>
     {% else %}
-    <td class="element-table__td copy" scope="{{ 'row' if loop.index == 1 }}">{{ cell | safe }}</td>
+      {% if loop.index == 1 %}
+        <td class="element-table__td copy" scope="row">{{ cell | safe }}</td>
+        {% else %}
+        <td class="element-table__td copy">{{ cell | safe }}</td>
+      {% endif %}
     {% endif %}
     {% endfor %}
   </tr>
