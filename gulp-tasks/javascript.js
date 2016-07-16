@@ -10,7 +10,7 @@ var jsSrc = './src/assets/javascript/**/*.js',
 
 var uglifyOptions = {
   compress: {
-    drop_console: true
+//    drop_console: true
   }
 };
 

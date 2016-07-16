@@ -70,20 +70,22 @@ function animationEnd() {
   /*
    * Normal Leaving
    */
-  for (let i = 0; i < links.length; i++) {
-    // set the holder size = the container size
-    // we will use it later to position elements before moving them
-    // to prevent weirt jumping
-    linkHolders[i].style.width = linkContainers[i].offsetWidth + 'px';
-    linkHolders[i].style.height = linkContainers[i].offsetHeight + 'px';
+  setTimeout(function() { // timeout to fix safari position bug while animation
+    for (let i = 0; i < links.length; i++) {
+      // set the holder size = the container size
+      // we will use it later to position elements before moving them
+      // to prevent weirt jumping
+      linkHolders[i].style.width = linkContainers[i].getBoundingClientRect().width + 'px';
+      linkHolders[i].style.height = linkContainers[i].getBoundingClientRect().height + 'px';
 
-    // add the click listener to the links
-    links[i].addEventListener('click', function(e) {
-      let aLink = this;
-      leavingAnimation({linkContainers, aLink, linkHolders, homeContent, homeLeaveringTargets});
-      e.preventDefault(); // prevent default pageleaving
-    });
-  }
+      // add the click listener to the links
+      links[i].addEventListener('click', function(e) {
+        let aLink = this;
+        leavingAnimation({linkContainers, aLink, linkHolders, homeContent, homeLeaveringTargets});
+        e.preventDefault(); // prevent default pageleaving
+      });
+    }
+  }, 	800);
 }
 
 function mouseMove(hoverX, hoverY, objects) {

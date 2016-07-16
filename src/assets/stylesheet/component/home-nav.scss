@@ -8,7 +8,11 @@
   background: $white;
   box-shadow: 0 10px 40px 0 $black03;
   margin: auto;
-  max-width: 320px;
+  max-width: 240px;
+
+  @include media('>small') {
+    max-width: 480px;
+  }
 
   @include media('>medium') {
     max-width: 641px;
@@ -18,11 +22,19 @@
 
 .home-nav__option {
   display: block;
-  height: 320px;
-  width: 320px;
+  height: 240px;
+  width: 240px;
+
+  @include media('>small') {
+    display: inline-block;
+    height: 240px;
+    width: 240px;
+  }
 
   @include media('>medium') {
     display: inline-block;
+    height: 320px;
+    width: 320px;
   }
 }
 
