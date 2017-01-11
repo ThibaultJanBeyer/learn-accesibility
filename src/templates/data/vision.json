@@ -81,7 +81,7 @@
         "paragraphs":
         [
           {
-            "p": "Important graphical elements with high failure potential are images with text, maps, diagrams and graphs. Those should always <a href=\"#Testing---ressources\">be tested</a> against the various types."
+            "p": "Important graphical elements with high failure potential are images with text, maps, diagrams and graphs. Those should always <a href=\"#Testing---resources\">be tested</a> against the various types."
           },
           {
             "li": "For graphs and maps a legend/key tested against the various types should be provided. <a href=\"http://colorbrewer2.org/\">Colorbrewer</a> is a tool that provides you with a color-blind friendly color palette."
@@ -216,7 +216,7 @@
         ]
       },
       {
-        "title": "Testing & ressources",
+        "title": "Testing & resources",
         "paragraphs":
         [
           {
